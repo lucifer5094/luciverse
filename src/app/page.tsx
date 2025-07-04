@@ -341,7 +341,7 @@ export default function Home() {
                 transition={{ delay: 3.4, duration: 0.6 }}
                 className="text-4xl md:text-5xl font-bold text-light-text dark:text-white mb-6"
               >
-                Let's Connect
+                Let&apos;s Connect
               </motion.h2>
 
               <motion.p
@@ -350,7 +350,7 @@ export default function Home() {
                 transition={{ delay: 3.6, duration: 0.6 }}
                 className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
               >
-                Ready to collaborate on something amazing? Let's discuss your ideas and bring them to life together.
+                Ready to collaborate on something amazing? Let&apos;s discuss your ideas and bring them to life together.
               </motion.p>
 
               <motion.div
@@ -469,8 +469,8 @@ export default function Home() {
                   transition={{ delay: 1.2, duration: 0.6 }}
                   className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed"
                 >
-                  I'm a passionate developer crafting digital experiences that blend creativity with cutting-edge technology.
-                  From web applications to experimental projects, I explore the boundaries of what's possible.
+                  I&apos;m a passionate developer crafting digital experiences that blend creativity with cutting-edge technology.
+                  From web applications to experimental projects, I explore the boundaries of what&apos;s possible.
                 </motion.p>
 
                 <motion.div

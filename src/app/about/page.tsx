@@ -86,7 +86,7 @@ export default function AboutPage() {
                                     Background & Education
                                 </h3>
                                 <p>
-                                    Hey! I'm <span className="font-semibold text-accent">Ankit Raj</span>, currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning. My journey started not from coaching centers or big-city schools—but from deep curiosity, a laptop, and countless nights of self-learning.
+                                    Hey! I&apos;m <span className="font-semibold text-accent">Ankit Raj</span>, currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning. My journey started not from coaching centers or big-city schools—but from deep curiosity, a laptop, and countless nights of self-learning.
                                 </p>
                             </div>
                             <div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
                         </h2>
                         <div className="space-y-4 text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                             <p>
-                                <strong>What drives me?</strong> The infinite possibilities of artificial intelligence fascinate me. It's not just about building smart systems—it's about creating technology that understands, learns, and adapts like we do.
+                                <strong>What drives me?</strong> The infinite possibilities of artificial intelligence fascinate me. It&apos;s not just about building smart systems—it&apos;s about creating technology that understands, learns, and adapts like we do.
                             </p>
                             <div className="grid md:grid-cols-2 gap-6 mt-6">
                                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                                         Human-AI Synergy
                                     </h4>
                                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                                        I'm passionate about creating AI that amplifies human creativity rather than replacing it. The future lies in collaboration, not competition.
+                                        I&apos;m passionate about creating AI that amplifies human creativity rather than replacing it. The future lies in collaboration, not competition.
                                     </p>
                                 </div>
                                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -158,7 +158,7 @@ export default function AboutPage() {
                                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-600">
                                     <h3 className="font-bold text-gray-800 dark:text-white mb-3 flex items-center">
                                         <span className="mr-2">🤝</span>
-                                        Empower, Don't Replace
+                                        Empower, Don&apos;t Replace
                                     </h3>
                                     <p className="text-sm text-gray-600 dark:text-gray-400">
                                         AI should enhance human creativity and potential, creating a future where humans and AI work together harmoniously.
@@ -167,7 +167,7 @@ export default function AboutPage() {
                             </div>
                             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border-l-4 border-accent">
                                 <p className="text-base italic text-gray-700 dark:text-gray-300">
-                                    "Philosophically, I admire the beauty of the cosmos — hence the name <span className="text-accent font-semibold bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Luciverse</span>. My dream is to contribute to the future of human-AI collaboration."
+                                    &ldquo;Philosophically, I admire the beauty of the cosmos — hence the name <span className="text-accent font-semibold bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Luciverse</span>. My dream is to contribute to the future of human-AI collaboration.&rdquo;
                                 </p>
                             </div>
                         </div>
@@ -319,7 +319,7 @@ export default function AboutPage() {
                         </h2>
                         <div className="space-y-4 text-gray-700 dark:text-gray-300">
                             <p className="text-lg">
-                                <strong>Music is my constant companion—</strong> no matter what I'm doing, there's usually a song playing in the background. I don't stick to just one genre; instead, I explore every type of music based on my mood and the moment.
+                                <strong>Music is my constant companion—</strong> no matter what I&apos;m doing, there&apos;s usually a song playing in the background. I don&apos;t stick to just one genre; instead, I explore every type of music based on my mood and the moment.
                             </p>
                             <div className="grid md:grid-cols-3 gap-4 mt-6">
                                 <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
@@ -336,7 +336,7 @@ export default function AboutPage() {
                                 </div>
                             </div>
                             <p className="text-base italic bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-accent">
-                                "Music, for me, isn't just entertainment—it's therapy, motivation, and imagination fuel. It sets the tone for my thoughts, helps me concentrate, and brings back memories that make me feel alive."
+                                &ldquo;Music, for me, isn&apos;t just entertainment—it&apos;s therapy, motivation, and imagination fuel. It sets the tone for my thoughts, helps me concentrate, and brings back memories that make me feel alive.&rdquo;
                             </p>
                         </div>
                     </div>
@@ -346,10 +346,10 @@ export default function AboutPage() {
                 <motion.section variants={itemVariants}>
                     <div className="bg-gradient-to-r from-accent/10 to-purple-500/10 dark:from-accent/20 dark:to-purple-500/20 rounded-2xl p-8 text-center shadow-lg border border-accent/20">
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-4">
-                            Let's Create Something Remarkable
+                            Let&apos;s Create Something Remarkable
                         </h2>
                         <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                            This website isn't just a portfolio. It's a canvas of my thoughts, my experiments, my dreams. Feel free to dive deeper into any section — whether you're here to explore my work, collaborate, or just get inspired.
+                            This website isn&apos;t just a portfolio. It&apos;s a canvas of my thoughts, my experiments, my dreams. Feel free to dive deeper into any section — whether you&apos;re here to explore my work, collaborate, or just get inspired.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <span className="text-lg">Thanks for being here! 😊</span>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { isAuthenticated } from '@/utils/auth';
 import { Edit, Settings, Eye, Users, FileText, BarChart3, Save, Plus, Trash2, Image, Link, Type } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -30,13 +30,7 @@ export default function OwnerDashboard({ isVisible, onClose }: OwnerDashboardPro
     lastUpdate: new Date().toLocaleDateString()
   });
 
-  useEffect(() => {
-    setIsOwner(isAuthenticated());
-    // Load editable sections from localStorage or API
-    loadEditableSections();
-  }, []);
-
-  const loadEditableSections = () => {
+  const loadEditableSections = useCallback(() => {
     // This would typically load from a database or API
     const mockSections: EditableSection[] = [
       {
@@ -65,14 +59,20 @@ export default function OwnerDashboard({ isVisible, onClose }: OwnerDashboardPro
       }
     ];
     setEditableSections(mockSections);
-    setStats({
-      ...stats,
+    setStats(prevStats => ({
+      ...prevStats,
       totalSections: mockSections.length,
       recentEdits: mockSections.filter(s => 
         new Date().getTime() - s.lastModified.getTime() < 24 * 60 * 60 * 1000
       ).length
-    });
-  };
+    }));
+  }, []);
+
+  useEffect(() => {
+    setIsOwner(isAuthenticated());
+    // Load editable sections from localStorage or API
+    loadEditableSections();
+  }, [loadEditableSections]);
 
   const handleDeleteSection = (sectionId: string) => {
     setEditableSections(prev => prev.filter(s => s.id !== sectionId));
@@ -269,6 +269,7 @@ export default function OwnerDashboard({ isVisible, onClose }: OwnerDashboardPro
                             <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
                               {section.type === 'text' && <Type className="h-4 w-4" />}
                               {section.type === 'textarea' && <FileText className="h-4 w-4" />}
+                              {/* eslint-disable-next-line jsx-a11y/alt-text */}
                               {section.type === 'image' && <Image className="h-4 w-4" />}
                               {section.type === 'link' && <Link className="h-4 w-4" />}
                             </div>

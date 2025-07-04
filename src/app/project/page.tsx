@@ -385,7 +385,7 @@ export default function ProjectsPage() {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">No projects found</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Try adjusting your search criteria or filters to find what you're looking for.
+              Try adjusting your search criteria or filters to find what you&apos;re looking for.
             </p>
             <button
               onClick={() => {
@@ -411,7 +411,7 @@ export default function ProjectsPage() {
             Interested in collaborating?
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, innovative projects, and creative collaborations.
+            I&apos;m always open to discussing new opportunities, innovative projects, and creative collaborations.
           </p>
           <Link
             href="/contact"

@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import InlineEdit from '@/components/InlineEdit';
 
 const ColorPalette = () => {
   const [selectedColor, setSelectedColor] = useState("#3B82F6");
   const [autoRotate, setAutoRotate] = useState(false);
-  const colors = ["#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6", "#F97316"];
+  const colors = useMemo(() => ["#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6", "#F97316"], []);
   
   React.useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -366,7 +366,7 @@ const RandomQuoteGenerator = () => {
     <div className="p-4 border rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
       <h4 className="font-semibold mb-3">💬 Live Quote Generator</h4>
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded mb-3 italic text-center min-h-[80px] flex items-center justify-center transition-all duration-500">
-        "{quotes[currentQuote]}"
+        &ldquo;{quotes[currentQuote]}&rdquo;
       </div>
       <div className="flex gap-2">
         <button
@@ -842,7 +842,7 @@ export default function LabPage() {
                 <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded text-sm space-y-2">
                   <div className="flex">
                     <strong className="text-blue-600 dark:text-blue-400">Bot:</strong>
-                    <span className="ml-2">Hello! I'm a simple demo chatbot.</span>
+                    <span className="ml-2">Hello! I&apos;m a simple demo chatbot.</span>
                   </div>
                   <div className="flex">
                     <strong className="text-green-600 dark:text-green-400">User:</strong>
@@ -850,7 +850,7 @@ export default function LabPage() {
                   </div>
                   <div className="flex">
                     <strong className="text-blue-600 dark:text-blue-400">Bot:</strong>
-                    <span className="ml-2">I'm doing great! Thanks for asking. 🤖</span>
+                    <span className="ml-2">I&apos;m doing great! Thanks for asking. 🤖</span>
                   </div>
                 </div>
               </div>

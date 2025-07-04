@@ -157,7 +157,7 @@ export default function ContactPage() {
                             maxLength={200}
                             inline={true}
                         >
-                            Ready to bring your ideas to life? Let's collaborate and create something amazing together.
+                            Ready to bring your ideas to life? Let&apos;s collaborate and create something amazing together.
                         </InlineEdit>
                     </p>
                 </motion.div>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                             className="bg-white dark:bg-dark-surface p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700"
                         >
                             <h2 className="text-2xl font-bold text-light-text dark:text-white mb-6">
-                                Let's Connect
+                                Let&apos;s Connect
                             </h2>
 
                             <div className="space-y-6">
@@ -529,7 +529,7 @@ export default function ContactPage() {
                                             </svg>
                                         </motion.div>
                                         <h3 className="text-xl font-semibold text-light-text dark:text-white mb-2">Message Sent!</h3>
-                                        <p className="text-gray-600 dark:text-gray-400">Thank you for reaching out. I'll get back to you soon!</p>
+                                        <p className="text-gray-600 dark:text-gray-400">Thank you for reaching out. I&apos;ll get back to you soon!</p>
                                     </motion.div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="space-y-6">

@@ -53,7 +53,7 @@ export default function AboutPage() {
                     className="max-w-4xl text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-6"
                 >
                     <p>
-                        Hey! I'm <span className="font-semibold text-accent">Ankit Raj</span>, currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning. My journey started not from coaching centers or big-city schools—but from deep curiosity, a laptop, and countless nights of self-learning.
+                        Hey! I&apos;m <span className="font-semibold text-accent">Ankit Raj</span>, currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning. My journey started not from coaching centers or big-city schools—but from deep curiosity, a laptop, and countless nights of self-learning.
                     </p>
 
                     <p>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                     </p>
 
                     <p>
-                        I’ve worked on a variety of projects including:
+                        I&apos;ve worked on a variety of projects including:
                     </p>
                     <ul className="list-disc ml-6 space-y-2">
                         <li>🔹 <strong>Luciverse</strong> — a personalized universe of my creations and ideas.</li>
@@ -72,39 +72,39 @@ export default function AboutPage() {
 
                     <p>🎯 Personal Interests</p>
                     <ul className='list-disc ml-6 space-y-2'>
-                        <li><strong> 🎬 Fantasy, Thriller & Suspense Web Series — </strong> There's nothing like a mind-bending plot or a cleverly &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;written twist to keep me hooked. I especially enjoy stories that blur the line between reality and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imagination, often with deep philosophical or psychological undertones.</li>
+                        <li><strong> 🎬 Fantasy, Thriller & Suspense Web Series — </strong> There&apos;s nothing like a mind-bending plot or a cleverly written twist to keep me hooked. I especially enjoy stories that blur the line between reality and imagination, often with deep philosophical or psychological undertones.</li>
 
-                        <li> <strong> 📚 Hindi Novels — </strong> I’ve got a soft spot for Hindi literature, especially those filled with emotion, mystery, or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; social realism. Reading helps me unwind, reflect, and sometimes even inspire my creative process.</li>
+                        <li> <strong> 📚 Hindi Novels — </strong> I&apos;ve got a soft spot for Hindi literature, especially those filled with emotion, mystery, or social realism. Reading helps me unwind, reflect, and sometimes even inspire my creative process.</li>
 
-                        <li><strong> ♟️ Chess — </strong> A perfect mix of logic and foresight. Chess isn’t just a game for me—it’s a mental workout that &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; helps sharpen my strategic thinking and patience. </li>
+                        <li><strong> ♟️ Chess — </strong> A perfect mix of logic and foresight. Chess isn&apos;t just a game for me—it&apos;s a mental workout that helps sharpen my strategic thinking and patience. </li>
 
                     </ul>
 
                     <br />
                     <h1 className='font-bold text-accentone' >🎧 Music – My Daily Companion </h1 >
 
-                    <p> <strong> Music is my constant companion— </strong> no matter what I’m doing, there’s usually a song playing in the background. I don’t stick to just one genre; instead, I explore every type of music based on my mood and the moment.
+                    <p> <strong> Music is my constant companion— </strong> no matter what I&apos;m doing, there&apos;s usually a song playing in the background. I don&apos;t stick to just one genre; instead, I explore every type of music based on my mood and the moment.
 
                         <ul className='list-disc ml-6 space-y-2'>
-                            <li> &nbsp; Sometimes it's soft instrumental or lofi beats when I’m focused and coding deep into the night. </li>
+                            <li> Sometimes it&apos;s soft instrumental or lofi beats when I&apos;m focused and coding deep into the night. </li>
 
-                            <li> &nbsp; Other times, I go for high-energy tracks to match my vibe or emotional Hindi songs that hit differently. </li>
+                            <li> Other times, I go for high-energy tracks to match my vibe or emotional Hindi songs that hit differently. </li>
 
-                            <li> &nbsp;  Be it classic oldies, modern Bollywood, English pop, or even OSTs from movies or anime, I enjoy diving into &nbsp; the emotion and rhythm of it all. </li>
+                            <li> Be it classic oldies, modern Bollywood, English pop, or even OSTs from movies or anime, I enjoy diving into the emotion and rhythm of it all. </li>
                         </ul>
 
-                        Music, for me, isn’t just entertainment—it’s therapy, motivation, and sometimes even imagination fuel. It sets the tone for my thoughts, helps me concentrate, and brings back memories that make me feel alive. </p>
+                        Music, for me, isn&apos;t just entertainment—it&apos;s therapy, motivation, and sometimes even imagination fuel. It sets the tone for my thoughts, helps me concentrate, and brings back memories that make me feel alive. </p>
 
                     <p>
-                        Philosophically, I admire the beauty of the cosmos — hence the name <span className="text-accent font-medium">Luciverse</span>. My dream is to contribute to the future of human-AI collaboration. Whether it's AI art, language models, or drone swarms — I want to build tools that empower, not replace.
+                        Philosophically, I admire the beauty of the cosmos — hence the name <span className="text-accent font-medium">Luciverse</span>. My dream is to contribute to the future of human-AI collaboration. Whether it&apos;s AI art, language models, or drone swarms — I want to build tools that empower, not replace.
                     </p>
 
                     <p>
-                        This website isn’t just a portfolio. It’s a canvas of my thoughts, my experiments, my dreams. Feel free to dive deeper into any section — whether you’re here to explore my work, collaborate, or just get inspired. 😊
+                        This website isn&apos;t just a portfolio. It&apos;s a canvas of my thoughts, my experiments, my dreams. Feel free to dive deeper into any section — whether you&apos;re here to explore my work, collaborate, or just get inspired. 😊
                     </p>
 
                     <p>
-                        Thanks for being here. Let’s connect and create something remarkable!
+                        Thanks for being here. Let&apos;s connect and create something remarkable!
                     </p>
                 </motion.div>
             </motion.div>
