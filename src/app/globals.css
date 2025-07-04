@@ -2,26 +2,246 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Smooth transitions for theme changes */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text transition-colors duration-300;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Link styling (remove underline, add hover effect) */
+a {
+  @apply text-accent no-underline transition-colors duration-300;
+}
+
+/* Enhanced Custom Button Styles */
+button, .btn {
+  @apply px-5 py-2 font-medium rounded-lg transition duration-300 ease-in-out focus:outline-none relative overflow-hidden;
+  border: 1px solid transparent;
+  z-index: 1;
+}
+
+button::before, .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: currentColor;
+  opacity: 0.1;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+button:hover::before, .btn:hover::before {
+  transform: scaleX(1);
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+button:active, .btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar-specific buttons */
+.nav-btn {
+  @apply text-light-text dark:text-white border border-transparent;
+}
+
+.nav-btn:hover {
+  color: white;
+  background-color: theme('colors.accent');
+  border-color: theme('colors.accent');
+}
+
+/* Primary CTA Button */
+.btn-primary {
+  background-color: theme('colors.accent');
+  color: white;
+  border-color: theme('colors.accent');
+}
+
+.btn-primary:hover {
+  background-color: theme('colors.sky.500');
+  border-color: theme('colors.sky.500');
+}
+
+.dark .btn-primary {
+  background-color: #6D28D9; /* violet-700 */
+  border-color: #6D28D9;
+}
+
+.dark .btn-primary:hover {
+  background-color: #2563EB; /* blue-600 */
+  border-color: #2563EB;
+}
+
+/* Outline CTA Button */
+.btn-outline {
+  background-color: transparent;
+  border-color: theme('colors.accent');
+  color: theme('colors.accent');
+}
+
+.btn-outline:hover {
+  background-color: theme('colors.accent');
+  color: white;
+}
+
+.dark .btn-outline {
+  border-color: #6D28D9; /* violet-700 */
+  color: #6D28D9;
+}
+
+.dark .btn-outline:hover {
+  background-color: #2563EB; /* blue-600 */
+  border-color: #2563EB;
+  color: white;
+}
+
+/* Glassmorphism effect */
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Line clamp utility for project descriptions */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced card hover effects */
+.card-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+  z-index: 10;
+}
+
+.card-hover:hover::before {
+  left: 100%;
+}
+
+/* Pulse animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(125, 211, 252, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(125, 211, 252, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+  background: linear-gradient(-45deg, #7dd3fc, #4CA080, #7dd3fc, #4CA080);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4CA080, #7dd3fc);
+}
+
+/* Owner Edit Mode Styles */
+.owner-edit-mode .inline-edit-wrapper {
+  @apply ring-2 ring-purple-300 ring-opacity-50 rounded-md;
+}
+
+.owner-edit-mode .inline-edit-wrapper:hover {
+  @apply ring-purple-500 ring-opacity-75 bg-purple-50 dark:bg-purple-900/20;
+}
+
+/* Enhanced hover effects for editable content */
+.inline-edit-wrapper {
+  @apply transition-all duration-200;
+}
+
+.inline-edit-wrapper:hover {
+  @apply shadow-sm;
+}
+
+/* Improved focus states */
+.inline-edit-input:focus {
+  @apply ring-2 ring-purple-500 ring-opacity-50 border-purple-500;
+}
+
+/* Animation for owner controls */
+@keyframes pulse-purple {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
+  }
+}
+
+.owner-pulse {
+  animation: pulse-purple 2s infinite;
 }
