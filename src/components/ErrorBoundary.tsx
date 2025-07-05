@@ -36,7 +36,7 @@ export default class ErrorBoundary extends Component<Props, State> {
               Oops! Something went wrong in the Luciverse
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Don't worry, even the best universes have glitches sometimes.
+              Don&apos;t worry, even the best universes have glitches sometimes.
             </p>
             <button 
               onClick={() => this.setState({ hasError: false })}

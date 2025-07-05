@@ -201,7 +201,7 @@ export default function ContactPage() {
                             inline={true}
                         >
                             {pageTitle.includes('Connect') ? (
-                                <>Let's <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Connect</span></>
+                                <>Let&apos;s <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Connect</span></>
                             ) : pageTitle.includes('Touch') ? (
                                 <>Get In <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Touch</span></>
                             ) : (

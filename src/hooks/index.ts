@@ -60,7 +60,7 @@ export function useAsyncData<T>(
         setLoading(false)
       }
     }
-  }, dependencies)
+  }, [fetcher, ...dependencies])
 
   useEffect(() => {
     fetchData()

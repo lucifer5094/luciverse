@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { dataAPI, isDevelopmentMode } from '@/utils/dataAPI'
 import { Document } from '@/utils/vaultUtils'
@@ -23,12 +23,7 @@ export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<'vault' | 'content' | 'highlights'>('vault')
   const [editingDoc, setEditingDoc] = useState<Document | null>(null)
 
-  // Check if user is authorized and authenticated
-  useEffect(() => {
-    checkAuthorization()
-  }, [])
-
-  const checkAuthorization = async () => {
+  const checkAuthorization = useCallback(async () => {
     try {
       const authorized = isDevelopmentMode()
       setIsAuthorized(authorized)
@@ -54,7 +49,12 @@ export default function AdminPage() {
     } finally {
       setAuthLoading(false)
     }
-  }
+  }, [])
+
+  // Check if user is authorized and authenticated
+  useEffect(() => {
+    checkAuthorization()
+  }, [checkAuthorization])
 
   const handleLogin = async (password: string): Promise<boolean> => {
     try {
@@ -783,7 +783,7 @@ function HighlightsManager({
           {highlights.length === 0 && (
             <div className="text-center py-8 text-gray-500">
               <p>No highlights added yet.</p>
-              <p className="text-sm">Click "Add Highlight" to showcase your achievements!</p>
+              <p className="text-sm">Click &quot;Add Highlight&quot; to showcase your achievements!</p>
             </div>
           )}
         </div>
