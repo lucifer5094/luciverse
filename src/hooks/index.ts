@@ -117,21 +117,33 @@ export function useIntersectionObserver(
   return { elementRef, isVisible, hasBeenVisible }
 }
 
-// Hook for media queries
+// Hook for media queries with SSR safety
 export function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+
     const media = window.matchMedia(query)
-    if (media.matches !== matches) {
-      setMatches(media.matches)
-    }
+    setMatches(media.matches)
     
     const listener = (e: MediaQueryListEvent) => setMatches(e.matches)
-    media.addListener(listener)
     
-    return () => media.removeListener(listener)
-  }, [matches, query])
+    // Use the modern addEventListener method
+    if (media.addEventListener) {
+      media.addEventListener('change', listener)
+      return () => media.removeEventListener('change', listener)
+    } else {
+      // Fallback for older browsers
+      media.addListener(listener)
+      return () => media.removeListener(listener)
+    }
+  }, [isClient, query])
 
   return matches
 }
