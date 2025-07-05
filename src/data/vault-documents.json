@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "React Performance Optimization Guide",
+    "type": "note",
+    "content": "# React Performance Optimization Guide\n\n## Key Strategies\n\n### 1. Memoization\n- Use React.memo for functional components\n- Use useMemo for expensive calculations\n- Use useCallback for function references\n\n### 2. Code Splitting\n- Implement React.lazy for component-level splitting\n- Use dynamic imports for route-based splitting\n- Consider bundle analysis tools\n\n### 3. Virtual DOM Optimization\n- Minimize unnecessary re-renders\n- Use keys properly in lists\n- Avoid inline object creation in render\n\n### 4. State Management\n- Keep state as local as possible\n- Use context wisely\n- Consider external state management for complex apps\n\n## Performance Monitoring\n- React DevTools Profiler\n- Chrome DevTools Performance tab\n- Web Vitals metrics",
+    "tags": ["react", "performance", "optimization", "frontend"],
+    "createdAt": "2024-01-15T00:00:00.000Z",
+    "updatedAt": "2024-01-20T00:00:00.000Z",
+    "isPrivate": false,
+    "description": "Comprehensive guide on optimizing React application performance",
+    "author": "Lucifer"
+  },
+  {
+    "id": "2",
+    "title": "AI Prompt Engineering Masterclass",
+    "type": "prompt-dump",
+    "content": "# AI Prompt Engineering Collection\n\n## Code Generation Prompts\n\n### 1. React Component Generator\n\"Create a React functional component that [description]. Include proper TypeScript types, error handling, and accessibility features. Add comments explaining the logic.\"\n\n### 2. API Integration\n\"Generate a custom hook for fetching data from [API endpoint]. Include loading states, error handling, caching, and proper TypeScript interfaces.\"\n\n### 3. Database Schema Design\n\"Design a database schema for [domain]. Include relationships, indexes, constraints, and sample queries. Explain the design decisions.\"\n\n## Writing & Content Prompts\n\n### 1. Technical Documentation\n\"Write comprehensive documentation for [feature/API]. Include overview, setup instructions, examples, and troubleshooting guide.\"\n\n### 2. Blog Post Structure\n\"Create an engaging blog post about [topic]. Include hooks, subheadings, practical examples, and actionable takeaways.\"\n\n## Analysis Prompts\n\n### 1. Code Review\n\"Review this code for performance, security, maintainability, and best practices. Provide specific suggestions with examples.\"\n\n### 2. Architecture Assessment\n\"Analyze this system architecture and suggest improvements for scalability, reliability, and maintainability.\"",
+    "tags": ["ai", "prompts", "engineering", "productivity"],
+    "createdAt": "2024-02-01T00:00:00.000Z",
+    "updatedAt": "2024-02-10T00:00:00.000Z",
+    "isPrivate": false,
+    "description": "Collection of proven AI prompts for development and content creation",
+    "author": "Lucifer"
+  },
+  {
+    "id": "3",
+    "title": "System Design Patterns Handbook",
+    "type": "pdf",
+    "content": "",
+    "tags": ["system-design", "patterns", "architecture", "scalability"],
+    "createdAt": "2024-01-28T00:00:00.000Z",
+    "updatedAt": "2024-01-28T00:00:00.000Z",
+    "isPrivate": true,
+    "fileUrl": "/vault/documents/system-design-patterns.pdf",
+    "description": "Comprehensive handbook covering scalable system design patterns",
+    "fileSize": 2048576,
+    "author": "Lucifer"
+  },
+  {
+    "id": "4",
+    "title": "Daily Development Scratchpad",
+    "type": "scratchpad",
+    "content": "# Daily Development Notes\n\n## 2024-02-20\n- Fixed bug in authentication middleware\n- Implemented new caching strategy\n- TODO: Optimize database queries in user service\n\n## 2024-02-19\n- Refactored API endpoints for better error handling\n- Added integration tests for payment flow\n- Meeting notes: Discussed new feature requirements\n\n## Quick Commands\n```bash\n# Docker cleanup\ndocker system prune -a\n\n# Git branch cleanup\ngit branch --merged | grep -v master | xargs git branch -d\n\n# NPM cache clear\nnpm cache clean --force\n```\n\n## Code Snippets\n```typescript\n// Custom hook for local storage\nconst useLocalStorage = <T>(key: string, initialValue: T) => {\n  // Implementation here...\n}\n```",
+    "tags": ["daily", "notes", "development", "snippets"],
+    "createdAt": "2024-02-15T00:00:00.000Z",
+    "updatedAt": "2024-02-20T00:00:00.000Z",
+    "isPrivate": false,
+    "description": "Ongoing scratchpad for daily development thoughts and snippets",
+    "author": "Lucifer"
+  },
+  {
+    "id": "5",
+    "title": "Awesome Development Resources",
+    "type": "link",
+    "content": "https://github.com/sindresorhus/awesome",
+    "tags": ["resources", "tools", "development", "learning"],
+    "createdAt": "2024-02-05T00:00:00.000Z",
+    "updatedAt": "2024-02-05T00:00:00.000Z",
+    "isPrivate": false,
+    "description": "Curated list of awesome development tools and resources",
+    "author": "Lucifer"
+  },
+  {
+    "id": "6",
+    "title": "TypeScript Advanced Patterns",
+    "type": "note",
+    "content": "# TypeScript Advanced Patterns\n\n## Utility Types\n- Partial<T>\n- Required<T>\n- Readonly<T>\n- Pick<T, K>\n- Omit<T, K>\n- Record<K, T>\n\n## Conditional Types\n```typescript\ntype IsArray<T> = T extends any[] ? true : false\ntype NonNullable<T> = T extends null | undefined ? never : T\n```\n\n## Mapped Types\n```typescript\ntype Optional<T> = {\n  [P in keyof T]?: T[P]\n}\n\ntype Nullable<T> = {\n  [P in keyof T]: T[P] | null\n}\n```",
+    "tags": ["typescript", "patterns", "advanced", "types"],
+    "createdAt": "2024-01-10T00:00:00.000Z",
+    "updatedAt": "2024-01-15T00:00:00.000Z",
+    "isPrivate": false,
+    "description": "Advanced TypeScript patterns and techniques",
+    "author": "Lucifer"
+  },
+  {
+    "id": "7",
+    "title": "Project Ideas Brainstorm",
+    "type": "scratchpad",
+    "content": "# Project Ideas\n\n## Web Applications\n1. **Personal Finance Tracker**\n   - Features: Budget planning, expense tracking, investment portfolio\n   - Tech: Next.js, Prisma, PostgreSQL\n\n2. **Developer Portfolio Generator**\n   - Features: Template-based, GitHub integration, analytics\n   - Tech: React, Node.js, MongoDB\n\n3. **Team Collaboration Tool**\n   - Features: Real-time chat, task management, file sharing\n   - Tech: Socket.io, Express, Redis\n\n## Mobile Apps\n1. **Habit Tracker**\n   - Features: Daily habits, streaks, analytics\n   - Tech: React Native, Firebase\n\n2. **Local Event Discovery**\n   - Features: Location-based events, social features\n   - Tech: Flutter, Google Maps API\n\n## Dev Tools\n1. **API Documentation Generator**\n   - Features: Auto-generate from code comments\n   - Tech: TypeScript, CLI tool\n\n2. **Code Snippet Manager**\n   - Features: Searchable, categorized, shareable\n   - Tech: Electron, SQLite",
+    "tags": ["ideas", "projects", "brainstorming", "development"],
+    "createdAt": "2024-02-12T00:00:00.000Z",
+    "updatedAt": "2024-02-18T00:00:00.000Z",
+    "isPrivate": false,
+    "description": "Collection of project ideas and concepts to explore",
+    "author": "Lucifer"
+  },
+  {
+    "id": "8",
+    "title": "Machine Learning Cheatsheet",
+    "type": "pdf",
+    "content": "",
+    "tags": ["machine-learning", "ai", "algorithms", "cheatsheet"],
+    "createdAt": "2024-01-22T00:00:00.000Z",
+    "updatedAt": "2024-01-22T00:00:00.000Z",
+    "isPrivate": false,
+    "fileUrl": "/vault/documents/ml-cheatsheet.pdf",
+    "description": "Quick reference for common ML algorithms and techniques",
+    "fileSize": 1536000,
+    "author": "Lucifer"
+  }
+]

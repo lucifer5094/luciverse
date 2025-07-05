@@ -3,10 +3,11 @@
 
 import Link from 'next/link'
 import { motion, useScroll, useTransform, Variants } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import OwnerControls from '@/components/OwnerControls'
 import OwnerEditPanel from '@/components/OwnerEditPanel'
 import InlineEdit from '@/components/InlineEdit'
+import { dataAPI } from '@/utils/dataAPI'
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -20,10 +21,56 @@ export default function Home() {
 
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
   const [showEditPanel, setShowEditPanel] = useState(false)
+  const [loading, setLoading] = useState(true)
 
-  // Editable content state
+  // Editable content state - loaded from JSON
   const [heroTitle, setHeroTitle] = useState('Welcome to Luciverse')
   const [heroSubtitle, setHeroSubtitle] = useState('Dive into my universe of development, design, and digital experiments')
+
+  // Load content from JSON file
+  useEffect(() => {
+    loadSiteContent()
+  }, [])
+
+  const loadSiteContent = async () => {
+    try {
+      setLoading(true)
+      const content = await dataAPI.getSiteContent()
+      setHeroTitle(content.heroTitle)
+      setHeroSubtitle(content.heroSubtitle)
+    } catch (error) {
+      console.error('Failed to load site content:', error)
+      // Keep default values if loading fails
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleSaveHeroTitle = async (newTitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        heroTitle: newTitle
+      })
+      setHeroTitle(newTitle)
+    } catch (error) {
+      console.error('Failed to save hero title:', error)
+    }
+  }
+
+  const handleSaveHeroSubtitle = async (newSubtitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        heroSubtitle: newSubtitle
+      })
+      setHeroSubtitle(newSubtitle)
+    } catch (error) {
+      console.error('Failed to save hero subtitle:', error)
+    }
+  }
 
   const cardVariants: Variants = {
     hidden: {
@@ -92,7 +139,7 @@ export default function Home() {
             <InlineEdit
               type="text"
               value={heroTitle}
-              onSave={setHeroTitle}
+              onSave={handleSaveHeroTitle}
               placeholder="Enter hero title..."
               maxLength={50}
               inline={true}
@@ -119,7 +166,7 @@ export default function Home() {
               <InlineEdit
                 type="textarea"
                 value={heroSubtitle}
-                onSave={setHeroSubtitle}
+                onSave={handleSaveHeroSubtitle}
                 placeholder="Enter hero subtitle..."
                 maxLength={200}
                 inline={true}

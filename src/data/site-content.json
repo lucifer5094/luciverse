@@ -1,0 +1,13 @@
+{
+  "heroTitle": "Welcome to Luciverse",
+  "heroSubtitle": "Dive into my universe of development, design, and digital experiments",
+  "aboutTitle": "About Me",
+  "aboutSubtitle": "Developer • AI Enthusiast • Creative Thinker",
+  "aboutContent": "Welcome to my digital space! I'm a passionate developer who thrives on turning complex problems into elegant solutions. My journey in technology began with curiosity and has evolved into a deep love for creating meaningful digital experiences.\n\nFrom building responsive web applications to experimenting with AI and machine learning, I'm constantly pushing the boundaries of what's possible. Each project is an opportunity to learn, grow, and contribute to the ever-evolving landscape of technology.",
+  "contactInfo": {
+    "email": "contact@luciverse.dev",
+    "location": "Digital Universe",
+    "availability": "Open to collaborations"
+  },
+  "lastUpdated": "2025-07-05T00:00:00.000Z"
+}
