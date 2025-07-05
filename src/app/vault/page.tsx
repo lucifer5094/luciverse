@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Search, Filter, Plus, Download, Eye, Tag, Calendar, Edit, Trash2, Upload, FileDown } from 'lucide-react'
+import { Search, Filter, Plus, Download, Eye, Tag, Calendar, Edit, Trash2, Upload, FileDown, Lightbulb } from 'lucide-react'
 import OwnerControls from '@/components/OwnerControls'
 import { Document, documentTypes, getDocumentTypeInfo, formatFileSize, generateDocumentId, validateDocument, sanitizeTags, exportToJson, importFromJson } from '@/utils/vaultUtils'
 import { dataAPI } from '@/utils/dataAPI'
@@ -16,6 +16,7 @@ export default function VaultPage() {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc')
   const [showAddForm, setShowAddForm] = useState(false)
   const [editingDoc, setEditingDoc] = useState<Document | null>(null)
+  const [selectedDocument, setSelectedDocument] = useState<Document | null>(null)
   const [loading, setLoading] = useState(true)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -31,7 +32,13 @@ export default function VaultPage() {
     try {
       setLoading(true)
       const docs = await dataAPI.getVaultDocuments()
-      setDocuments(docs)
+      // Convert date strings to Date objects
+      const processedDocs = docs.map(doc => ({
+        ...doc,
+        createdAt: new Date(doc.createdAt),
+        updatedAt: new Date(doc.updatedAt)
+      }))
+      setDocuments(processedDocs)
     } catch (error) {
       console.error('Failed to load documents:', error)
       // Fallback to empty array if loading fails
@@ -115,7 +122,10 @@ export default function VaultPage() {
           break
         case 'date':
         default:
-          comparison = a.updatedAt.getTime() - b.updatedAt.getTime()
+          // Ensure dates are Date objects
+          const dateA = a.updatedAt instanceof Date ? a.updatedAt : new Date(a.updatedAt)
+          const dateB = b.updatedAt instanceof Date ? b.updatedAt : new Date(b.updatedAt)
+          comparison = dateA.getTime() - dateB.getTime()
           break
       }
       return sortOrder === 'asc' ? comparison : -comparison
@@ -140,8 +150,9 @@ export default function VaultPage() {
   }
 
   // Consistent date formatting to avoid hydration issues
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-US', {
+  const formatDate = (date: Date | string) => {
+    const dateObj = date instanceof Date ? date : new Date(date)
+    return dateObj.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric'
@@ -187,8 +198,7 @@ export default function VaultPage() {
   const handleDocumentAction = async (action: string, doc: Document) => {
     switch (action) {
       case 'view':
-        // In a real app, this would open the document viewer
-        console.log('Viewing document:', doc.title)
+        setSelectedDocument(doc)
         break
       case 'edit':
         setEditingDoc(doc)
@@ -356,6 +366,78 @@ export default function VaultPage() {
             </div>
           )}
         </motion.div>
+
+        {/* Featured GFG Leadership Section */}
+        {documents.some(doc => doc.tags.includes('gfg') || doc.tags.includes('leadership')) && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8"
+          >
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-8 border-2 border-green-200 dark:border-green-800 shadow-lg">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-green-500 p-3 rounded-full">
+                  <Lightbulb className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">🧠 Featured: Leadership & Recognition</h2>
+                  <p className="text-gray-600 dark:text-gray-400">Your badge of honor and community impact</p>
+                </div>
+              </div>
+              
+              {documents
+                .filter(doc => doc.tags.includes('gfg') || doc.tags.includes('leadership'))
+                .slice(0, 1)
+                .map(doc => (
+                  <div key={doc.id} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <span className="text-3xl">{getTypeIcon(doc.type)}</span>
+                        <div>
+                          <h3 className="font-bold text-xl text-gray-900 dark:text-white">
+                            {doc.title}
+                          </h3>
+                          <div className="flex items-center gap-2 mt-2">
+                            <span className="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+                              GFG Leadership
+                            </span>
+                            <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
+                              Community Impact
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                      {doc.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {doc.tags.slice(0, 4).map(tag => (
+                          <span
+                            key={tag}
+                            className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded text-xs"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                      <button
+                        onClick={() => setSelectedDocument(doc)}
+                        className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
+                      >
+                        <Eye className="w-4 h-4" />
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </motion.div>
+        )}
 
         {/* Document Grid */}
         <motion.div
@@ -545,6 +627,94 @@ export default function VaultPage() {
                   setEditingDoc(null)
                 }}
               />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Document Viewer Modal */}
+      <AnimatePresence>
+        {selectedDocument && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            onClick={() => setSelectedDocument(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-white dark:bg-dark-surface rounded-xl p-6 w-full max-w-4xl max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">{getTypeIcon(selectedDocument.type)}</span>
+                  <div>
+                    <h2 className="text-2xl font-bold text-light-text dark:text-dark-text">
+                      {selectedDocument.title}
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400 capitalize">
+                      {selectedDocument.type.replace('-', ' ')}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedDocument(null)}
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
+                >
+                  ×
+                </button>
+              </div>
+
+              {selectedDocument.description && (
+                <div className="mb-6">
+                  <h3 className="font-semibold mb-2 text-light-text dark:text-dark-text">Description</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{selectedDocument.description}</p>
+                </div>
+              )}
+
+              <div className="mb-6">
+                <h3 className="font-semibold mb-2 text-light-text dark:text-dark-text">Content</h3>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 max-h-96 overflow-y-auto">
+                  {selectedDocument.type === 'link' ? (
+                    <a 
+                      href={selectedDocument.content} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {selectedDocument.content}
+                    </a>
+                  ) : (
+                    <pre className="whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-300">
+                      {selectedDocument.content || 'No content available'}
+                    </pre>
+                  )}
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {selectedDocument.tags.map(tag => (
+                  <span
+                    key={tag}
+                    className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                <div>
+                  Created: {formatDate(selectedDocument.createdAt)}
+                </div>
+                <div>
+                  Updated: {formatDate(selectedDocument.updatedAt)}
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}

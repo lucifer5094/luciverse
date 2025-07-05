@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import InlineEdit from '@/components/InlineEdit'
+import { dataAPI } from '@/utils/dataAPI'
 
 // Types
 interface Project {
@@ -106,13 +107,74 @@ const categories = ['All', 'AI/ML', 'Web Dev', 'Hardware', 'College'] as const
 const statuses = ['All', 'completed', 'ongoing', 'notable'] as const
 
 export default function ProjectsPage() {
-  // Editable content state
+  // Editable content state - loaded from JSON
   const [pageTitle, setPageTitle] = useState('All Projects')
-  const [pageDescription, setPageDescription] = useState('Showcasing all completed, ongoing, and notable works across AI/ML, Web Development, Hardware, and College projects')
+  const [pageSubtitle, setPageSubtitle] = useState('Showcasing innovative solutions and creative experiments')
+  const [pageDescription, setPageDescription] = useState('Explore my portfolio of projects spanning AI/ML, web development, and experimental technologies. Each project represents a unique challenge and learning opportunity.')
+  const [loading, setLoading] = useState(true)
   
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [selectedStatus, setSelectedStatus] = useState<string>('All')
   const [searchQuery, setSearchQuery] = useState('')
+
+  // Load content from JSON file
+  useEffect(() => {
+    loadSiteContent()
+  }, [])
+
+  const loadSiteContent = async () => {
+    try {
+      setLoading(true)
+      const content = await dataAPI.getSiteContent()
+      setPageTitle(content.projectsTitle)
+      setPageSubtitle(content.projectsSubtitle)
+      setPageDescription(content.projectsDescription)
+    } catch (error) {
+      console.error('Failed to load site content:', error)
+      // Keep default values if loading fails
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleSaveTitle = async (newTitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        projectsTitle: newTitle
+      })
+      setPageTitle(newTitle)
+    } catch (error) {
+      console.error('Failed to save projects title:', error)
+    }
+  }
+
+  const handleSaveSubtitle = async (newSubtitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        projectsSubtitle: newSubtitle
+      })
+      setPageSubtitle(newSubtitle)
+    } catch (error) {
+      console.error('Failed to save projects subtitle:', error)
+    }
+  }
+
+  const handleSaveDescription = async (newDescription: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        projectsDescription: newDescription
+      })
+      setPageDescription(newDescription)
+    } catch (error) {
+      console.error('Failed to save projects description:', error)
+    }
+  }
 
   // Filter projects based on selected filters and search query
   const filteredProjects = useMemo(() => {
@@ -198,23 +260,33 @@ export default function ProjectsPage() {
             <InlineEdit
               type="text"
               value={pageTitle}
-              onSave={setPageTitle}
+              onSave={handleSaveTitle}
               placeholder="Enter page title..."
               inline={true}
             >
-              All Projects
+              {pageTitle}
             </InlineEdit>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-4">
+            <InlineEdit
+              type="text"
+              value={pageSubtitle}
+              onSave={handleSaveSubtitle}
+              placeholder="Enter page subtitle..."
+              inline={true}
+            >
+              {pageSubtitle}
+            </InlineEdit>
+          </p>
+          <p className="text-base text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             <InlineEdit
               type="textarea"
               value={pageDescription}
-              onSave={setPageDescription}
+              onSave={handleSaveDescription}
               placeholder="Enter page description..."
               maxLength={300}
-              inline={true}
             >
-              Showcasing all completed, ongoing, and notable works across AI/ML, Web Development, Hardware, and College projects
+              {pageDescription}
             </InlineEdit>
           </p>
         </motion.div>

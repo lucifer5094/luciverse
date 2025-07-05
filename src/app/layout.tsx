@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import OwnerAccessBanner from '@/components/OwnerAccessBanner'
 import OwnerFloatingControls from '@/components/OwnerFloatingControls'
+import ErrorBoundary from '@/components/ErrorBoundary'
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
@@ -16,14 +17,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className='min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text'>
-        <OwnerAccessBanner />
-        <Navbar />
-        <main>
-          {children}
-          <Analytics/>
-        </main>
-        <Footer />
-        <OwnerFloatingControls />
+        <ErrorBoundary>
+          <OwnerAccessBanner />
+          <Navbar />
+          <main>
+            {children}
+            <Analytics/>
+          </main>
+          <Footer />
+          <OwnerFloatingControls />
+        </ErrorBoundary>
       </body>
     </html>
   )

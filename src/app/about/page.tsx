@@ -2,17 +2,75 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import InlineEdit from '@/components/InlineEdit'
+import { dataAPI } from '@/utils/dataAPI'
 
 export default function AboutPage() {
-    // Editable content state
+    // Editable content state - loaded from JSON
     const [pageTitle, setPageTitle] = useState('About Me')
     const [pageSubtitle, setPageSubtitle] = useState('Developer • AI Enthusiast • Creative Thinker')
-    const [journeyTitle, setJourneyTitle] = useState('My Journey')
-    const [journeyContent, setJourneyContent] = useState(`Welcome to my digital space! I'm a passionate developer who thrives on turning complex problems into elegant solutions. My journey in technology began with curiosity and has evolved into a deep love for creating meaningful digital experiences.
+    const [pageContent, setPageContent] = useState('Welcome to my digital space! I\'m a passionate developer who thrives on turning complex problems into elegant solutions. My journey in technology began with curiosity and has evolved into a deep love for creating meaningful digital experiences.\n\nFrom building responsive web applications to experimenting with AI and machine learning, I\'m constantly pushing the boundaries of what\'s possible. Each project is an opportunity to learn, grow, and contribute to the ever-evolving landscape of technology.')
+    const [loading, setLoading] = useState(true)
 
-    From building responsive web applications to experimenting with AI and machine learning, I'm constantly pushing the boundaries of what's possible. Each project is an opportunity to learn, grow, and contribute to the ever-evolving landscape of technology.`)
+    // Load content from JSON file
+    useEffect(() => {
+        loadSiteContent()
+    }, [])
+
+    const loadSiteContent = async () => {
+        try {
+            setLoading(true)
+            const content = await dataAPI.getSiteContent()
+            setPageTitle(content.aboutTitle)
+            setPageSubtitle(content.aboutSubtitle)
+            setPageContent(content.aboutContent)
+        } catch (error) {
+            console.error('Failed to load site content:', error)
+            // Keep default values if loading fails
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    const handleSaveTitle = async (newTitle: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent()
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutTitle: newTitle
+            })
+            setPageTitle(newTitle)
+        } catch (error) {
+            console.error('Failed to save about title:', error)
+        }
+    }
+
+    const handleSaveSubtitle = async (newSubtitle: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent()
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutSubtitle: newSubtitle
+            })
+            setPageSubtitle(newSubtitle)
+        } catch (error) {
+            console.error('Failed to save about subtitle:', error)
+        }
+    }
+
+    const handleSaveContent = async (newContent: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent()
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutContent: newContent
+            })
+            setPageContent(newContent)
+        } catch (error) {
+            console.error('Failed to save about content:', error)
+        }
+    }
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -49,11 +107,15 @@ export default function AboutPage() {
                     <InlineEdit
                         type="text"
                         value={pageTitle}
-                        onSave={setPageTitle}
+                        onSave={handleSaveTitle}
                         placeholder="Enter page title..."
                         inline={true}
                     >
-                        About <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Me</span>
+                        {pageTitle.includes('Me') ? (
+                            <>About <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Me</span></>
+                        ) : (
+                            pageTitle
+                        )}
                     </InlineEdit>
                 </motion.h1>
 
@@ -64,13 +126,30 @@ export default function AboutPage() {
                     <InlineEdit
                         type="text"
                         value={pageSubtitle}
-                        onSave={setPageSubtitle}
+                        onSave={handleSaveSubtitle}
                         placeholder="Enter page subtitle..."
                         inline={true}
                     >
-                        Developer • AI Enthusiast • Creative Thinker
+                        {pageSubtitle}
                     </InlineEdit>
                 </motion.p>
+
+                {/* About Content Section */}
+                <motion.section variants={itemVariants} className="mb-12">
+                    <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                        <div className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                            <InlineEdit
+                                type="textarea"
+                                value={pageContent}
+                                onSave={handleSaveContent}
+                                placeholder="Enter about content..."
+                                maxLength={1000}
+                            >
+                                {pageContent}
+                            </InlineEdit>
+                        </div>
+                    </div>
+                </motion.section>
 
                 {/* Your Journey Section */}
                 <motion.section variants={itemVariants} className="mb-12">

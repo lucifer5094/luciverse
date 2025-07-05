@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import InlineEdit from '@/components/InlineEdit';
+import { dataAPI } from '@/utils/dataAPI';
 
 const ColorPalette = () => {
   const [selectedColor, setSelectedColor] = useState("#3B82F6");
@@ -579,12 +580,73 @@ const TodoList = () => {
 };
 
 export default function LabPage() {
-  // Editable content state
-  const [pageTitle, setPageTitle] = useState('LuciLab – Experiments Page')
-  const [pageSubtitle, setPageSubtitle] = useState('/lab → Interactive demos and mini tools')
+  // Editable content state - loaded from JSON
+  const [pageTitle, setPageTitle] = useState('The Lab')
+  const [pageSubtitle, setPageSubtitle] = useState('Experimental Zone • Interactive Demos • Creative Coding')
+  const [pageDescription, setPageDescription] = useState('Welcome to my digital laboratory! This is where I experiment with new technologies, test creative ideas, and build interactive demos.')
   const [warningText, setWarningText] = useState('WIP – things might break 🚧')
+  const [loading, setLoading] = useState(true)
   
   const [activeTab, setActiveTab] = useState("tools");
+
+  // Load content from JSON file
+  useEffect(() => {
+    loadSiteContent()
+  }, [])
+
+  const loadSiteContent = async () => {
+    try {
+      setLoading(true)
+      const content = await dataAPI.getSiteContent()
+      setPageTitle(content.labTitle)
+      setPageSubtitle(content.labSubtitle)
+      setPageDescription(content.labDescription)
+    } catch (error) {
+      console.error('Failed to load site content:', error)
+      // Keep default values if loading fails
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleSaveTitle = async (newTitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        labTitle: newTitle
+      })
+      setPageTitle(newTitle)
+    } catch (error) {
+      console.error('Failed to save lab title:', error)
+    }
+  }
+
+  const handleSaveSubtitle = async (newSubtitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        labSubtitle: newSubtitle
+      })
+      setPageSubtitle(newSubtitle)
+    } catch (error) {
+      console.error('Failed to save lab subtitle:', error)
+    }
+  }
+
+  const handleSaveDescription = async (newDescription: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        labDescription: newDescription
+      })
+      setPageDescription(newDescription)
+    } catch (error) {
+      console.error('Failed to save lab description:', error)
+    }
+  }
 
   // Dynamic progress bars for experiments
   const [algorithmProgress, setAlgorithmProgress] = useState(75);
@@ -618,22 +680,33 @@ export default function LabPage() {
           <InlineEdit
             type="text"
             value={pageTitle}
-            onSave={setPageTitle}
+            onSave={handleSaveTitle}
             placeholder="Enter page title..."
             inline={true}
           >
-            LuciLab – Experiments Page
+            {pageTitle}
           </InlineEdit>
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 text-lg">
+        <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
           <InlineEdit
             type="text"
             value={pageSubtitle}
-            onSave={setPageSubtitle}
+            onSave={handleSaveSubtitle}
             placeholder="Enter page subtitle..."
             inline={true}
           >
-            /lab → Interactive demos and mini tools
+            {pageSubtitle}
+          </InlineEdit>
+        </p>
+        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <InlineEdit
+            type="textarea"
+            value={pageDescription}
+            onSave={handleSaveDescription}
+            placeholder="Enter page description..."
+            maxLength={300}
+          >
+            {pageDescription}
           </InlineEdit>
         </p>
       </div>

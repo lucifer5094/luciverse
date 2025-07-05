@@ -4,23 +4,29 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { useLocalStorage, useMediaQuery } from '@/hooks'
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode, themeLoaded] = useLocalStorage('theme', false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+  const isMobile = useMediaQuery('(max-width: 768px)')
+  const prefersDark = useMediaQuery('(prefers-color-scheme: dark)')
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme')
-    const isDark = storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    if (isDark) {
+    if (!themeLoaded) return
+    
+    // Use stored theme or system preference
+    const shouldBeDark = darkMode || (!darkMode && prefersDark)
+    
+    if (shouldBeDark) {
       document.documentElement.classList.add('dark')
       setDarkMode(true)
     } else {
       document.documentElement.classList.remove('dark')
       setDarkMode(false)
     }
-  }, [])
+  }, [darkMode, prefersDark, themeLoaded, setDarkMode])
 
   const toggleTheme = () => {
     const newMode = !darkMode

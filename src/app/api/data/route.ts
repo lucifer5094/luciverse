@@ -69,15 +69,35 @@ export async function POST(request: NextRequest) {
     
     const filePath = path.join(process.cwd(), 'src', 'data', `${type}.json`)
     
-    // Add lastUpdated timestamp
+    // Generate timestamp in IST (Indian Standard Time)
+    const now = new Date()
+    const istTimestamp = new Date(now.getTime() + (5.5 * 60 * 60 * 1000)).toISOString()
+    
+    // Add lastUpdated timestamp for all data types
     const updatedData = {
       ...data,
-      lastUpdated: new Date().toISOString()
+      lastUpdated: istTimestamp
     }
     
     fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2))
     
-    return NextResponse.json({ success: true, message: 'Data updated successfully' })
+    // Format timestamp for response (readable format)
+    const readableTime = new Date(istTimestamp).toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    })
+    
+    return NextResponse.json({ 
+      success: true, 
+      message: 'Data updated successfully',
+      timestamp: readableTime,
+      lastUpdated: istTimestamp
+    })
   } catch (error) {
     console.error('Error updating data:', error)
     return NextResponse.json({ error: 'Failed to update data' }, { status: 500 })

@@ -1,8 +1,12 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { Calendar, Clock, Code, BookOpen, Lightbulb, Star, Filter, Plus, X, Save } from 'lucide-react'
 import InlineEdit from '@/components/InlineEdit'
+import OwnerControls from '@/components/OwnerControls'
+import OwnerEditPanel from '@/components/OwnerEditPanel'
+import { dataAPI } from '@/utils/dataAPI'
+import { isAuthenticated } from '@/utils/auth'
 
 // Types for timeline entries
 interface TimelineEntry {
@@ -19,6 +23,78 @@ interface TimelineEntry {
 const sampleEntries: TimelineEntry[] = [
   {
     id: '1',
+    date: '2025 July',
+    topic: 'GFG Campus Body Launch - Our First Info Session',
+    description: '🎉 Successfully launched GFG Campus Chapter at GITAM Jhajjar! Conducted our first info session with 80+ attendees. Introduced GFG ecosystem, chapter objectives, and future roadmap. Amazing response from students across all years!',
+    category: 'growth',
+    tags: ['gfg', 'leadership', 'chapter-launch', 'community'],
+    importance: 3
+  },
+  {
+    id: '2',
+    date: '2024-09-15',
+    topic: 'Team Formation & Onboarding',
+    description: '🤝 Formed the core team for GFG chapter. Onboarded 5 dedicated team members as event coordinators, content creators, and technical leads. Conducted team orientation and assigned responsibilities. Great synergy already showing!',
+    category: 'growth',
+    tags: ['team-building', 'leadership', 'onboarding', 'delegation'],
+    importance: 3
+  },
+  {
+    id: '3',
+    date: '2024-10-05',
+    topic: 'Workshop on DSA Fundamentals',
+    description: '📚 Organized our first technical workshop on Data Structures & Algorithms. 120+ students attended! Covered arrays, linked lists, and basic algorithms. Interactive coding session and doubt clearing. Students loved the hands-on approach.',
+    category: 'growth',
+    tags: ['workshop', 'dsa', 'teaching', 'community-impact'],
+    importance: 3
+  },
+  {
+    id: '4',
+    date: '2024-10-20',
+    topic: 'Internal Hackathon Highlights',
+    description: '💻 Conducted our first internal hackathon "CodeFest 2024" - 24-hour coding marathon! 15 teams participated, built amazing projects ranging from web apps to mobile solutions. Great learning experience for everyone including me as an organizer.',
+    category: 'growth',
+    tags: ['hackathon', 'event-management', 'innovation', 'leadership'],
+    importance: 3
+  },
+  {
+    id: '5',
+    date: '2024-11-10',
+    topic: 'Challenges & Learning from Event Management',
+    description: '😅 Faced major challenges during our coding contest - venue booking issues, tech setup problems, and registration chaos. But team rallied together! Learned valuable lessons about contingency planning and stakeholder communication.',
+    category: 'growth',
+    tags: ['challenges', 'problem-solving', 'resilience', 'learning'],
+    importance: 2
+  },
+  {
+    id: '6',
+    date: '2024-11-25',
+    topic: 'Mentorship Program Launch',
+    description: '🌱 Launched peer mentorship program connecting seniors with juniors. 30 mentor-mentee pairs formed! Created structured guidance framework for coding journey. Personally mentoring 5 first-year students in competitive programming.',
+    category: 'growth',
+    tags: ['mentorship', 'guidance', 'community-building', 'impact'],
+    importance: 3
+  },
+  {
+    id: '7',
+    date: '2024-12-15',
+    topic: 'College Administration Partnership',
+    description: '🏛️ Successfully established official partnership with college administration. Got dedicated lab space for chapter activities, funding approval for events, and academic credit recognition for participation. Major milestone achieved!',
+    category: 'growth',
+    tags: ['partnership', 'negotiation', 'official-recognition', 'achievement'],
+    importance: 3
+  },
+  {
+    id: '8',
+    date: '2025-01-10',
+    topic: 'Future Plans & Expansion',
+    description: '🎯 Planning major initiatives for 2025: Inter-college coding championship, industry guest lectures, placement preparation bootcamp, and collaboration with other GFG chapters. Aiming to make our chapter a model for others!',
+    category: 'growth',
+    tags: ['planning', 'expansion', 'vision', 'ambitious-goals'],
+    importance: 3
+  },
+  {
+    id: '9',
     date: '2025-06-15',
     topic: 'Graph Algorithms',
     description: 'Learned Graph Algorithms, added XYZ project with pathfinding visualization',
@@ -27,7 +103,7 @@ const sampleEntries: TimelineEntry[] = [
     importance: 3
   },
   {
-    id: '2',
+    id: '10',
     date: '2025-05-20',
     topic: 'Suno-style Music Generation',
     description: 'Experimented with Suno-style music generation using AI models',
@@ -36,7 +112,7 @@ const sampleEntries: TimelineEntry[] = [
     importance: 2
   },
   {
-    id: '3',
+    id: '11',
     date: '2025-06-01',
     topic: 'React Performance Optimization',
     description: 'Deep dive into React performance patterns, memoization, and lazy loading',
@@ -45,7 +121,7 @@ const sampleEntries: TimelineEntry[] = [
     importance: 2
   },
   {
-    id: '4',
+    id: '12',
     date: '2025-05-05',
     topic: 'Portfolio Website',
     description: 'Built and deployed personal portfolio with Next.js and Tailwind CSS',
@@ -54,7 +130,7 @@ const sampleEntries: TimelineEntry[] = [
     importance: 3
   },
   {
-    id: '5',
+    id: '13',
     date: '2025-04-28',
     topic: 'TypeScript Advanced Types',
     description: 'Mastered conditional types, mapped types, and utility types in TypeScript',
@@ -144,7 +220,11 @@ function GitHubStyleHeatmap({ data }: { data: { [key: string]: number } }) {
 }
 
 // Timeline card component
-function TimelineCard({ entry }: { entry: TimelineEntry }) {
+function TimelineCard({ entry, onUpdate, isOwner }: { 
+  entry: TimelineEntry; 
+  onUpdate?: (id: string, field: string, value: any) => void;
+  isOwner?: boolean;
+}) {
   const categoryIcons = {
     learning: BookOpen,
     building: Code,
@@ -159,6 +239,12 @@ function TimelineCard({ entry }: { entry: TimelineEntry }) {
     project: 'bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700'
   }
   
+  // Special styling for GFG-related entries
+  const isGFGEntry = entry.tags.includes('gfg') || entry.tags.includes('leadership') || entry.tags.includes('community')
+  const cardClass = isGFGEntry 
+    ? 'bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border-2 border-green-300 dark:border-green-600 shadow-lg'
+    : categoryColors[entry.category]
+  
   const Icon = categoryIcons[entry.category]
   const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -167,8 +253,19 @@ function TimelineCard({ entry }: { entry: TimelineEntry }) {
   })
   
   return (
-    <div className={`p-6 rounded-lg border-2 ${categoryColors[entry.category]} 
-                     hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
+    <div className={`p-6 rounded-lg border-2 ${cardClass} 
+                     hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative
+                     ${isOwner ? 'owner-editable' : ''}`}>
+      {isGFGEntry && (
+        <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+          GFG Leadership
+        </div>
+      )}
+      {isOwner && (
+        <div className="absolute top-2 left-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full font-medium opacity-0 hover:opacity-100 transition-opacity">
+          ✏️ Editable
+        </div>
+      )}
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-2">
           <Icon className="w-5 h-5" />
@@ -184,11 +281,35 @@ function TimelineCard({ entry }: { entry: TimelineEntry }) {
       </div>
       
       <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-        {entry.topic}
+        {isOwner ? (
+          <InlineEdit
+            type="text"
+            value={entry.topic}
+            onSave={(value) => onUpdate?.(entry.id, 'topic', value)}
+            placeholder="Enter topic..."
+            inline={true}
+          >
+            {entry.topic}
+          </InlineEdit>
+        ) : (
+          entry.topic
+        )}
       </h3>
       
       <p className="text-gray-700 dark:text-gray-300 mb-4">
-        {entry.description}
+        {isOwner ? (
+          <InlineEdit
+            type="textarea"
+            value={entry.description}
+            onSave={(value) => onUpdate?.(entry.id, 'description', value)}
+            placeholder="Enter description..."
+            maxLength={500}
+          >
+            {entry.description}
+          </InlineEdit>
+        ) : (
+          entry.description
+        )}
       </p>
       
       <div className="flex items-center justify-between">
@@ -424,14 +545,86 @@ function AddEntryModal({ isOpen, onClose, onAdd }: {
 }
 
 export default function LogsPage() {
-  // Editable content state
-  const [pageTitle, setPageTitle] = useState('📆 Work Logs & Timeline')
-  const [pageDescription, setPageDescription] = useState('Time-wise track of your learning, building & growth journey')
+  // Editable content state - loaded from JSON
+  const [pageTitle, setPageTitle] = useState('Development Logs')
+  const [pageSubtitle, setPageSubtitle] = useState('My Journey • Learning • Building • Growing')
+  const [pageDescription, setPageDescription] = useState('Track my development journey, learning milestones, and project progress through detailed logs and reflections.')
+  const [loading, setLoading] = useState(true)
+  
+  // Owner controls state
+  const [showEditPanel, setShowEditPanel] = useState(false)
+  const [isOwner, setIsOwner] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   
   const [entries, setEntries] = useState<TimelineEntry[]>(sampleEntries)
   const [filter, setFilter] = useState<string>('all')
   const [sortBy, setSortBy] = useState<'date' | 'importance'>('date')
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // Check if user is owner
+  useEffect(() => {
+    setIsMounted(true)
+    setIsOwner(isAuthenticated())
+  }, [])
+
+  // Load content from JSON file
+  useEffect(() => {
+    loadSiteContent()
+  }, [])
+
+  const loadSiteContent = async () => {
+    try {
+      setLoading(true)
+      const content = await dataAPI.getSiteContent()
+      setPageTitle(content.logsTitle)
+      setPageSubtitle(content.logsSubtitle)
+      setPageDescription(content.logsDescription)
+    } catch (error) {
+      console.error('Failed to load site content:', error)
+      // Keep default values if loading fails
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleSaveTitle = async (newTitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        logsTitle: newTitle
+      })
+      setPageTitle(newTitle)
+    } catch (error) {
+      console.error('Failed to save logs title:', error)
+    }
+  }
+
+  const handleSaveSubtitle = async (newSubtitle: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        logsSubtitle: newSubtitle
+      })
+      setPageSubtitle(newSubtitle)
+    } catch (error) {
+      console.error('Failed to save logs subtitle:', error)
+    }
+  }
+
+  const handleSaveDescription = async (newDescription: string) => {
+    try {
+      const currentContent = await dataAPI.getSiteContent()
+      await dataAPI.updateSiteContent({
+        ...currentContent,
+        logsDescription: newDescription
+      })
+      setPageDescription(newDescription)
+    } catch (error) {
+      console.error('Failed to save logs description:', error)
+    }
+  }
   
   const heatmapData = useMemo(() => generateHeatmapData(entries), [entries])
   
@@ -441,6 +634,12 @@ export default function LogsPage() {
       id: Date.now().toString() // Simple ID generation
     }
     setEntries(prev => [newEntry, ...prev])
+  }
+
+  const updateEntry = (id: string, field: string, value: any) => {
+    setEntries(prev => prev.map(entry => 
+      entry.id === id ? { ...entry, [field]: value } : entry
+    ))
   }
   
   const filteredAndSortedEntries = useMemo(() => {
@@ -474,6 +673,14 @@ export default function LogsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12">
+      <style jsx>{`
+        .owner-editable:hover {
+          box-shadow: 0 0 0 2px #8b5cf6;
+        }
+        .owner-editable:hover .absolute.top-2.left-2 {
+          opacity: 1 !important;
+        }
+      `}</style>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -481,23 +688,33 @@ export default function LogsPage() {
             <InlineEdit
               type="text"
               value={pageTitle}
-              onSave={setPageTitle}
+              onSave={handleSaveTitle}
               placeholder="Enter page title..."
               inline={true}
             >
-              📆 Work Logs & Timeline
+              {pageTitle}
             </InlineEdit>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
+            <InlineEdit
+              type="text"
+              value={pageSubtitle}
+              onSave={handleSaveSubtitle}
+              placeholder="Enter page subtitle..."
+              inline={true}
+            >
+              {pageSubtitle}
+            </InlineEdit>
+          </p>
+          <p className="text-base text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             <InlineEdit
               type="textarea"
               value={pageDescription}
-              onSave={setPageDescription}
+              onSave={handleSaveDescription}
               placeholder="Enter page description..."
-              maxLength={200}
-              inline={true}
+              maxLength={300}
             >
-              Time-wise track of your learning, building & growth journey
+              {pageDescription}
             </InlineEdit>
           </p>
         </div>
@@ -517,8 +734,83 @@ export default function LogsPage() {
             <p className="text-3xl font-bold text-purple-600">{stats.categories.building || 0}</p>
           </div>
           <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Projects</h3>
-            <p className="text-3xl font-bold text-yellow-600">{stats.categories.project || 0}</p>
+            <h3 className="text-lg font-semibold mb-2">Growth & Leadership</h3>
+            <p className="text-3xl font-bold text-orange-600">{stats.categories.growth || 0}</p>
+          </div>
+        </div>
+
+        {/* GFG Leadership Highlights */}
+        <div className="mb-8">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-8 rounded-xl shadow-lg border border-green-200 dark:border-green-800">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-green-500 p-3 rounded-full">
+                <Lightbulb className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">🧠 GFG Campus Leadership Journey</h2>
+                <p className="text-gray-600 dark:text-gray-400">Events • Experience • Community Building</p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="font-semibold text-lg mb-2 text-green-600">📛 Current Role</h3>
+                <p className="text-gray-700 dark:text-gray-300">Campus Mantri, GFG Chapter Lead @ GITAM, Jhajjar</p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="font-semibold text-lg mb-2 text-blue-600">🏁 Chapter Launched</h3>
+                <p className="text-gray-700 dark:text-gray-300">September 2024 - Successfully established first GFG chapter</p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="font-semibold text-lg mb-2 text-purple-600">🎯 Community Impact</h3>
+                <p className="text-gray-700 dark:text-gray-300">150+ active members, 12+ workshops, 85% participation rate</p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <h3 className="font-semibold text-lg mb-3 text-orange-600">🚀 Key Achievements & Future Plans</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-medium mb-2">✅ Completed Milestones:</h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                    <li>• Chapter establishment & official recognition</li>
+                    <li>• Core team formation & onboarding</li>
+                    <li>• Regular workshops & hackathons</li>
+                    <li>• Mentorship program launch</li>
+                    <li>• College administration partnership</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-medium mb-2">🎯 Upcoming Initiatives:</h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                    <li>• Inter-college coding championship</li>
+                    <li>• Industry guest lecture series</li>
+                    <li>• Placement preparation bootcamp</li>
+                    <li>• Multi-chapter collaboration projects</li>
+                    <li>• Advanced technical certification programs</li>
+                  </ul>
+                </div>
+              </div>
+              
+              {/* Owner-only editable section */}
+              {isMounted && isOwner && (
+                <div className="mt-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+                  <h4 className="font-medium mb-2 text-purple-600 dark:text-purple-400">🔧 Owner Notes & Updates:</h4>
+                  <InlineEdit
+                    type="textarea"
+                    value="Add your private notes, progress updates, or internal planning details here. This section is only visible to authenticated owners."
+                    onSave={(value) => {
+                      // In a real implementation, this would save to the backend
+                      console.log('Owner notes updated:', value)
+                    }}
+                    placeholder="Enter your owner notes..."
+                    maxLength={500}
+                  >
+                    Add your private notes, progress updates, or internal planning details here. This section is only visible to authenticated owners.
+                  </InlineEdit>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -567,7 +859,12 @@ export default function LogsPage() {
         {/* Timeline Cards */}
         <div className="space-y-6">
           {filteredAndSortedEntries.map((entry) => (
-            <TimelineCard key={entry.id} entry={entry} />
+            <TimelineCard 
+              key={entry.id} 
+              entry={entry} 
+              onUpdate={updateEntry}
+              isOwner={isOwner}
+            />
           ))}
         </div>
 
@@ -577,25 +874,34 @@ export default function LogsPage() {
               No entries found for the selected filter.
             </p>
           </div>
+        )}        {/* Add Entry Button - Only for Owners */}
+        {isMounted && isOwner && (
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg 
+                         transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto"
+            >
+              <Plus className="w-5 h-5" />
+              Add New Entry
+            </button>
+          </div>
         )}
-
-        {/* Add Entry Button */}
-        <div className="text-center mt-12">
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg 
-                       transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto"
-          >
-            <Plus className="w-5 h-5" />
-            Add New Entry
-          </button>
-        </div>
 
         {/* Add Entry Modal */}
         <AddEntryModal 
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           onAdd={addNewEntry}
+        />
+
+        {/* Owner Controls */}
+        <OwnerControls onOpenEditor={() => setShowEditPanel(true)} />
+
+        {/* Owner Edit Panel */}
+        <OwnerEditPanel 
+          isVisible={showEditPanel} 
+          onClose={() => setShowEditPanel(false)} 
         />
       </div>
     </div>

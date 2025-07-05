@@ -1,3 +1,4 @@
+
 {
   "heroTitle": "Welcome to Luciverse",
   "heroSubtitle": "Dive into my universe of development, design, and digital experiments",
@@ -9,5 +10,37 @@
     "location": "Digital Universe",
     "availability": "Open to collaborations"
   },
-  "lastUpdated": "2025-07-05T00:00:00.000Z"
+  "projectsTitle": "My Projects",
+  "projectsSubtitle": "Showcasing innovative solutions and creative experiments",
+  "projectsDescription": "Explore my portfolio of projects spanning AI/ML, web development, and experimental technologies. Each project represents a unique challenge and learning opportunity.",
+  "labTitle": "The Lab",
+  "labSubtitle": "Experimental Zone • Interactive Demos • Creative Coding",
+  "labDescription": "Welcome to my digital laboratory! This is where I experiment with new technologies, test creative ideas, and build interactive demos.",
+  "contactTitle": "Let's Connect",
+  "contactSubtitle": "Ready to collaborate, discuss ideas, or just say hello? I'd love to hear from you!",
+  "logsTitle": "Development Logs",
+  "logsSubtitle": "My Journey • Learning • Building • Growing",
+  "logsDescription": "Track my development journey, learning milestones, and project progress through detailed logs and reflections.",
+  "adminTitle": "Admin Dashboard",
+  "adminSubtitle": "Content Management • System Controls",
+  "adminDescription": "Administrative interface for managing site content, vault documents, and system settings.",
+  "highlights": [
+    {
+      "id": 1751746678590,
+      "title": "GfG Campus Body - GITAM , Jhajjar",
+      "description": "The GeeksforGeeks Campus Body at GITAM, Jhajjar is a student-led initiative established under the official GFG Campus Program. As the Campus Mantri, I aim to build a thriving coding culture in our college by organizing workshops, contests, and community events. This chapter acts as a bridge between students and real-world tech exposure, empowering peers to grow through consistent learning, collaboration, and innovation.",
+      "icon": "🏫",
+      "image": "/Assets/Campus Mantri Logo.jpg",
+      "date": "2025-07",
+      "category": "Learning",
+      "featured": true
+    }
+  ],
+  "stats": {
+    "projects": 15,
+    "years": 3,
+    "technologies": 24,
+    "achievements": 8
+  },
+  "lastUpdated": "2025-01-06T20:45:00.000Z"
 }

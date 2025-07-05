@@ -1,27 +1,73 @@
 import { Document } from './vaultUtils'
 
+// Simple in-memory cache
+const cache = new Map<string, { data: any; timestamp: number }>()
+const CACHE_TTL = 5 * 60 * 1000 // 5 minutes
+
 // API base URL - automatically detects environment
 const getApiUrl = () => {
   if (typeof window === 'undefined') return 'http://localhost:3000' // Server side
   return window.location.origin // Client side
 }
 
-// Fetch data from JSON files via API
-export async function fetchData<T>(type: string): Promise<T> {
+// Enhanced error handling
+class DataAPIError extends Error {
+  constructor(message: string, public statusCode?: number) {
+    super(message)
+    this.name = 'DataAPIError'
+  }
+}
+
+// Fetch data from JSON files via API with caching
+export async function fetchData<T>(type: string, useCache = true): Promise<T> {
+  const cacheKey = `data_${type}`
+  
+  // Check cache first
+  if (useCache) {
+    const cached = cache.get(cacheKey)
+    if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+      return cached.data
+    }
+  }
+
   try {
     const response = await fetch(`${getApiUrl()}/api/data?type=${type}`)
     if (!response.ok) {
-      throw new Error(`Failed to fetch ${type}: ${response.statusText}`)
+      throw new DataAPIError(
+        `Failed to fetch ${type}: ${response.statusText}`,
+        response.status
+      )
     }
-    return await response.json()
+    
+    const data = await response.json()
+    
+    // Cache the result
+    if (useCache) {
+      cache.set(cacheKey, { data, timestamp: Date.now() })
+    }
+    
+    return data
   } catch (error) {
     console.error(`Error fetching ${type}:`, error)
+    
+    // Return cached data if available, even if expired
+    const cached = cache.get(cacheKey)
+    if (cached) {
+      console.warn(`Using stale cache for ${type}`)
+      return cached.data
+    }
+    
     throw error
   }
 }
 
-// Update data (only works in development/localhost)
+// Update data (only works in development/localhost) with optimistic updates
 export async function updateData<T>(type: string, data: T): Promise<void> {
+  const cacheKey = `data_${type}`
+  
+  // Optimistic update - update cache immediately
+  cache.set(cacheKey, { data, timestamp: Date.now() })
+  
   try {
     const response = await fetch(`${getApiUrl()}/api/data`, {
       method: 'POST',
@@ -33,11 +79,14 @@ export async function updateData<T>(type: string, data: T): Promise<void> {
     
     if (!response.ok) {
       const error = await response.json()
-      throw new Error(error.message || 'Failed to update data')
+      throw new DataAPIError(error.message || 'Failed to update data', response.status)
     }
     
-    console.log(`${type} updated successfully`)
+    const result = await response.json()
+    console.log(`${type} updated successfully at ${result.timestamp}`)
   } catch (error) {
+    // Rollback optimistic update on failure
+    cache.delete(cacheKey)
     console.error(`Error updating ${type}:`, error)
     throw error
   }
@@ -60,6 +109,20 @@ export const dataAPI = {
     aboutSubtitle: string
     aboutContent: string
     contactInfo: any
+    projectsTitle: string
+    projectsSubtitle: string
+    projectsDescription: string
+    labTitle: string
+    labSubtitle: string
+    labDescription: string
+    contactTitle: string
+    contactSubtitle: string
+    logsTitle: string
+    logsSubtitle: string
+    logsDescription: string
+    adminTitle: string
+    adminSubtitle: string
+    adminDescription: string
     lastUpdated: string
   }> => fetchData('site-content'),
   

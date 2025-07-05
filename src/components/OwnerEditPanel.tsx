@@ -2,15 +2,35 @@
 
 import { useState, useEffect } from 'react';
 import { isAuthenticated } from '@/utils/auth';
-import { Edit3, Plus, Save, X, Image, Type, Layout, Palette, Settings, Monitor, Smartphone, Tablet } from 'lucide-react';
+import { dataAPI } from '@/utils/dataAPI';
+import { Edit3, Plus, Save, X, Image, Type, Layout, Palette, Settings, Monitor, Smartphone, Tablet, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Notification from './Notification';
 
-interface ContentSection {
-  id: string;
-  type: 'hero' | 'about' | 'project' | 'contact' | 'navigation' | 'footer';
-  title: string;
-  content: any;
-  editable: boolean;
+interface SiteContent {
+  heroTitle: string;
+  heroSubtitle: string;
+  aboutTitle: string;
+  aboutSubtitle: string;
+  aboutContent: string;
+  contactInfo: any;
+  projectsTitle: string;
+  projectsSubtitle: string;
+  projectsDescription: string;
+  labTitle: string;
+  labSubtitle: string;
+  labDescription: string;
+  contactTitle: string;
+  contactSubtitle: string;
+  logsTitle: string;
+  logsSubtitle: string;
+  logsDescription: string;
+  adminTitle: string;
+  adminSubtitle: string;
+  adminDescription: string;
+  highlights: any[];
+  stats: any;
+  lastUpdated: string;
 }
 
 interface OwnerEditPanelProps {
@@ -22,59 +42,18 @@ export default function OwnerEditPanel({ isVisible, onClose }: OwnerEditPanelPro
   const [activeTab, setActiveTab] = useState('content');
   const [previewMode, setPreviewMode] = useState('desktop');
   const [isEditing, setIsEditing] = useState(false);
-  const [contentSections, setContentSections] = useState<ContentSection[]>([
-    {
-      id: 'hero',
-      type: 'hero',
-      title: 'Hero Section',
-      content: {
-        title: 'Welcome to Luciverse',
-        subtitle: 'Dive into my universe of development, design, and digital experiments',
-        backgroundGradient: 'from-light-background via-white to-gray-50',
-      },
-      editable: true,
-    },
-    {
-      id: 'navigation',
-      type: 'navigation',
-      title: 'Navigation Menu',
-      content: {
-        items: [
-          { name: 'Home', href: '/', visible: true },
-          { name: 'About', href: '/about', visible: true },
-          { name: 'Projects', href: '/projects', visible: true },
-          { name: 'Contact', href: '/contact', visible: true },
-        ]
-      },
-      editable: true,
-    },
-    {
-      id: 'projects',
-      type: 'project',
-      title: 'Featured Projects',
-      content: {
-        projects: [
-          {
-            title: 'AI-Powered Web App',
-            description: 'A sophisticated web application leveraging machine learning to provide intelligent user experiences.',
-            tech: ['React', 'Python', 'TensorFlow'],
-            gradient: 'from-blue-500 to-purple-600',
-            icon: '🤖',
-            visible: true,
-          },
-          {
-            title: 'E-Commerce Platform',
-            description: 'Full-stack e-commerce solution with modern design and seamless user experience.',
-            tech: ['Next.js', 'Node.js', 'PostgreSQL'],
-            gradient: 'from-green-500 to-teal-600',
-            icon: '🛒',
-            visible: true,
-          },
-        ]
-      },
-      editable: true,
-    },
-  ]);
+  const [siteContent, setSiteContent] = useState<SiteContent | null>(null);
+  const [lastSaved, setLastSaved] = useState<string>('');
+  const [isSaving, setIsSaving] = useState(false);
+  const [notification, setNotification] = useState<{
+    message: string;
+    type: 'success' | 'error' | 'info';
+    isVisible: boolean;
+  }>({
+    message: '',
+    type: 'info',
+    isVisible: false
+  });
 
   const [themeSettings, setThemeSettings] = useState({
     primaryColor: '#8b5cf6',
@@ -98,45 +77,116 @@ export default function OwnerEditPanel({ isVisible, onClose }: OwnerEditPanelPro
     { id: 'mobile', name: 'Mobile', icon: Smartphone },
   ];
 
-  const handleSaveChanges = () => {
-    // Here you would typically save to a database or CMS
-    console.log('Saving changes...', { contentSections, themeSettings });
-    setIsEditing(false);
-    // Show success notification
+  // Load site content on component mount
+  useEffect(() => {
+    const loadSiteContent = async () => {
+      try {
+        const content = await dataAPI.getSiteContent();
+        setSiteContent(content as SiteContent);
+        if (content.lastUpdated) {
+          const date = new Date(content.lastUpdated);
+          setLastSaved(date.toLocaleString('en-IN', {
+            timeZone: 'Asia/Kolkata',
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          }));
+        }
+      } catch (error) {
+        console.error('Failed to load site content:', error);
+      }
+    };
+
+    if (isVisible) {
+      loadSiteContent();
+    }
+  }, [isVisible]);
+
+  const handleSaveChanges = async () => {
+    if (!siteContent) return;
+    
+    setIsSaving(true);
+    setNotification({ message: '', type: 'info', isVisible: false });
+    
+    try {
+      await dataAPI.updateSiteContent(siteContent);
+      
+      // Update the last saved timestamp
+      const now = new Date();
+      const formattedTime = now.toLocaleString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+      
+      setLastSaved(formattedTime);
+      setIsEditing(false);
+      setNotification({
+        message: 'Content saved successfully! ✨',
+        type: 'success',
+        isVisible: true
+      });
+      
+    } catch (error) {
+      console.error('Failed to save content:', error);
+      setNotification({
+        message: 'Failed to save content. Please try again.',
+        type: 'error',
+        isVisible: true
+      });
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleUpdateContent = (field: string, value: string) => {
+    if (!siteContent) return;
+    
+    setSiteContent(prev => prev ? ({
+      ...prev,
+      [field]: value
+    } as SiteContent) : null);
+    setIsEditing(true);
+  };
+
+  const handleUpdateHighlight = (index: number, field: string, value: any) => {
+    if (!siteContent) return;
+    
+    setSiteContent(prev => prev ? ({
+      ...prev,
+      highlights: prev.highlights.map((highlight: any, i: number) => 
+        i === index ? { ...highlight, [field]: value } : highlight
+      )
+    } as SiteContent) : null);
+    setIsEditing(true);
   };
 
   const handleAddSection = () => {
-    const newSection: ContentSection = {
-      id: `section_${Date.now()}`,
-      type: 'project',
-      title: 'New Section',
-      content: { title: 'New Section', description: 'Edit this content...' },
-      editable: true,
-    };
-    setContentSections([...contentSections, newSection]);
-    setIsEditing(true);
-  };
-
-  const handleUpdateSection = (sectionId: string, newContent: any) => {
-    setContentSections(sections =>
-      sections.map(section =>
-        section.id === sectionId
-          ? { ...section, content: { ...section.content, ...newContent } }
-          : section
-      )
-    );
-    setIsEditing(true);
+    // This would add a new highlight or content section
+    console.log('Add new section functionality');
   };
 
   const handleDeleteSection = (sectionId: string) => {
-    setContentSections(sections => sections.filter(section => section.id !== sectionId));
-    setIsEditing(true);
+    // This would remove a content section
+    console.log('Delete section:', sectionId);
   };
 
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
+    <>
+      <Notification
+        message={notification.message}
+        type={notification.type}
+        isVisible={notification.isVisible}
+        onClose={() => setNotification(prev => ({ ...prev, isVisible: false }))}
+      />
+      <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -161,9 +211,15 @@ export default function OwnerEditPanel({ isVisible, onClose }: OwnerEditPanelPro
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                   Content Management
                 </h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Edit your website content and design
-                </p>
+                <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>Edit your website content and design</span>
+                  {lastSaved && (
+                    <div className="flex items-center space-x-1">
+                      <Clock className="h-3 w-3" />
+                      <span>Last saved: {lastSaved}</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -191,10 +247,11 @@ export default function OwnerEditPanel({ isVisible, onClose }: OwnerEditPanelPro
                 {isEditing && (
                   <button
                     onClick={handleSaveChanges}
-                    className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    disabled={isSaving}
+                    className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Save className="h-4 w-4" />
-                    <span>Save Changes</span>
+                    <Save className={`h-4 w-4 ${isSaving ? 'animate-spin' : ''}`} />
+                    <span>{isSaving ? 'Saving...' : 'Save Changes'}</span>
                   </button>
                 )}
                 <button
@@ -230,95 +287,104 @@ export default function OwnerEditPanel({ isVisible, onClose }: OwnerEditPanelPro
 
               {/* Tab Content */}
               <div className="p-4 space-y-4">
-                {activeTab === 'content' && (
+                {activeTab === 'content' && siteContent && (
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                        Content Sections
-                      </h3>
-                      <button
-                        onClick={handleAddSection}
-                        className="flex items-center space-x-1 px-3 py-1 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors text-sm"
-                      >
-                        <Plus className="h-4 w-4" />
-                        <span>Add</span>
-                      </button>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      Site Content
+                    </h3>
+
+                    {/* Hero Section */}
+                    <div className="bg-white dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">Hero Section</h4>
+                      <div className="space-y-3">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            Hero Title
+                          </label>
+                          <input
+                            type="text"
+                            value={siteContent.heroTitle}
+                            onChange={(e) => handleUpdateContent('heroTitle', e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            Hero Subtitle
+                          </label>
+                          <textarea
+                            value={siteContent.heroSubtitle}
+                            onChange={(e) => handleUpdateContent('heroSubtitle', e.target.value)}
+                            rows={2}
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                          />
+                        </div>
+                      </div>
                     </div>
 
-                    {contentSections.map(section => (
-                      <div
-                        key={section.id}
-                        className="bg-white dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-700"
-                      >
-                        <div className="flex items-center justify-between mb-3">
-                          <h4 className="font-medium text-gray-900 dark:text-white">
-                            {section.title}
-                          </h4>
-                          <button
-                            onClick={() => handleDeleteSection(section.id)}
-                            className="text-red-500 hover:text-red-700 transition-colors"
-                          >
-                            <X className="h-4 w-4" />
-                          </button>
+                    {/* About Section */}
+                    <div className="bg-white dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">About Section</h4>
+                      <div className="space-y-3">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            About Title
+                          </label>
+                          <input
+                            type="text"
+                            value={siteContent.aboutTitle}
+                            onChange={(e) => handleUpdateContent('aboutTitle', e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                          />
                         </div>
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            About Content
+                          </label>
+                          <textarea
+                            value={siteContent.aboutContent}
+                            onChange={(e) => handleUpdateContent('aboutContent', e.target.value)}
+                            rows={6}
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                          />
+                        </div>
+                      </div>
+                    </div>
 
-                        {section.type === 'hero' && (
-                          <div className="space-y-3">
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                Title
-                              </label>
-                              <input
-                                type="text"
-                                value={section.content.title}
-                                onChange={(e) => handleUpdateSection(section.id, { title: e.target.value })}
-                                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                              />
-                            </div>
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                Subtitle
-                              </label>
-                              <textarea
-                                value={section.content.subtitle}
-                                onChange={(e) => handleUpdateSection(section.id, { subtitle: e.target.value })}
-                                rows={3}
-                                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                              />
-                            </div>
-                          </div>
-                        )}
-
-                        {section.type === 'navigation' && (
-                          <div className="space-y-2">
-                            {section.content.items.map((item: any, index: number) => (
-                              <div key={index} className="flex items-center space-x-2">
-                                <input
-                                  type="checkbox"
-                                  checked={item.visible}
-                                  onChange={(e) => {
-                                    const newItems = [...section.content.items];
-                                    newItems[index].visible = e.target.checked;
-                                    handleUpdateSection(section.id, { items: newItems });
-                                  }}
-                                  className="rounded"
-                                />
+                    {/* Highlights Section */}
+                    {siteContent.highlights && siteContent.highlights.length > 0 && (
+                      <div className="bg-white dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                        <h4 className="font-medium text-gray-900 dark:text-white mb-3">Highlights</h4>
+                        {siteContent.highlights.map((highlight: any, index: number) => (
+                          <div key={highlight.id || index} className="mb-4 p-3 border border-gray-200 dark:border-gray-600 rounded-md">
+                            <div className="space-y-3">
+                              <div>
+                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                  Title
+                                </label>
                                 <input
                                   type="text"
-                                  value={item.name}
-                                  onChange={(e) => {
-                                    const newItems = [...section.content.items];
-                                    newItems[index].name = e.target.value;
-                                    handleUpdateSection(section.id, { items: newItems });
-                                  }}
-                                  className="flex-1 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
+                                  value={highlight.title}
+                                  onChange={(e) => handleUpdateHighlight(index, 'title', e.target.value)}
+                                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                                 />
                               </div>
-                            ))}
+                              <div>
+                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                  Description
+                                </label>
+                                <textarea
+                                  value={highlight.description}
+                                  onChange={(e) => handleUpdateHighlight(index, 'description', e.target.value)}
+                                  rows={4}
+                                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                                />
+                              </div>
+                            </div>
                           </div>
-                        )}
+                        ))}
                       </div>
-                    ))}
+                    )}
                   </div>
                 )}
 
@@ -449,26 +515,43 @@ export default function OwnerEditPanel({ isVisible, onClose }: OwnerEditPanelPro
               }`}>
                 <div className="h-full bg-white dark:bg-gray-800 rounded-lg m-4 shadow-lg overflow-auto">
                   <div className="p-8">
-                    <div className="text-center mb-8">
-                      <h1 className="text-4xl font-bold mb-4" style={{ color: themeSettings.primaryColor }}>
-                        {contentSections.find(s => s.id === 'hero')?.content.title || 'Welcome to Luciverse'}
-                      </h1>
-                      <p className="text-lg text-gray-600 dark:text-gray-400">
-                        {contentSections.find(s => s.id === 'hero')?.content.subtitle || 'Preview your changes here'}
-                      </p>
-                    </div>
-
-                    <div className="grid gap-6">
-                      {contentSections.map(section => (
-                        <div
-                          key={section.id}
-                          className="p-6 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg"
-                        >
-                          <h3 className="text-lg font-semibold mb-2">{section.title}</h3>
-                          <p className="text-sm text-gray-500">Section preview</p>
+                    {siteContent && (
+                      <>
+                        <div className="text-center mb-8">
+                          <h1 className="text-4xl font-bold mb-4" style={{ color: themeSettings.primaryColor }}>
+                            {siteContent.heroTitle}
+                          </h1>
+                          <p className="text-lg text-gray-600 dark:text-gray-400">
+                            {siteContent.heroSubtitle}
+                          </p>
                         </div>
-                      ))}
-                    </div>
+
+                        <div className="grid gap-6">
+                          <div className="p-6 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg">
+                            <h3 className="text-lg font-semibold mb-2">{siteContent.aboutTitle}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
+                              {siteContent.aboutContent}
+                            </p>
+                          </div>
+                          
+                          {siteContent.highlights && siteContent.highlights.length > 0 && (
+                            <div className="p-6 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg">
+                              <h3 className="text-lg font-semibold mb-2">Highlights</h3>
+                              <div className="space-y-2">
+                                {siteContent.highlights.map((highlight: any, index: number) => (
+                                  <div key={index} className="text-sm">
+                                    <strong>{highlight.title}</strong>
+                                    <p className="text-gray-600 dark:text-gray-400 line-clamp-2">
+                                      {highlight.description}
+                                    </p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -477,5 +560,6 @@ export default function OwnerEditPanel({ isVisible, onClose }: OwnerEditPanelPro
         </motion.div>
       </motion.div>
     </AnimatePresence>
+    </>
   );
 }

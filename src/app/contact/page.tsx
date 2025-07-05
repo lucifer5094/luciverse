@@ -4,11 +4,13 @@
 import { motion, useInView } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import InlineEdit from '@/components/InlineEdit'
+import { dataAPI } from '@/utils/dataAPI'
 
 export default function ContactPage() {
-    // Editable content state
+    // Editable content state - loaded from JSON
     const [pageTitle, setPageTitle] = useState("Let's Connect")
     const [pageSubtitle, setPageSubtitle] = useState('Ready to collaborate, discuss ideas, or just say hello? I\'d love to hear from you!')
+    const [loading, setLoading] = useState(true)
     
     const [formData, setFormData] = useState({
         name: '',
@@ -27,6 +29,59 @@ export default function ContactPage() {
     const isFormInView = useInView(formRef, { once: true, amount: 0.3 })
 
     // Set client-side flag and initialize time
+    useEffect(() => {
+        setIsClient(true)
+        setCurrentTime(new Date())
+        const timer = setInterval(() => {
+            setCurrentTime(new Date())
+        }, 60000)
+        return () => clearInterval(timer)
+    }, [])
+
+    // Load content from JSON file
+    useEffect(() => {
+        loadSiteContent()
+    }, [])
+
+    const loadSiteContent = async () => {
+        try {
+            setLoading(true)
+            const content = await dataAPI.getSiteContent()
+            setPageTitle(content.contactTitle)
+            setPageSubtitle(content.contactSubtitle)
+        } catch (error) {
+            console.error('Failed to load site content:', error)
+            // Keep default values if loading fails
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    const handleSaveTitle = async (newTitle: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent()
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                contactTitle: newTitle
+            })
+            setPageTitle(newTitle)
+        } catch (error) {
+            console.error('Failed to save contact title:', error)
+        }
+    }
+
+    const handleSaveSubtitle = async (newSubtitle: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent()
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                contactSubtitle: newSubtitle
+            })
+            setPageSubtitle(newSubtitle)
+        } catch (error) {
+            console.error('Failed to save contact subtitle:', error)
+        }
+    }
     useEffect(() => {
         setIsClient(true)
         setCurrentTime(new Date())
@@ -141,18 +196,24 @@ export default function ContactPage() {
                         <InlineEdit
                             type="text"
                             value={pageTitle}
-                            onSave={setPageTitle}
+                            onSave={handleSaveTitle}
                             placeholder="Enter page title..."
                             inline={true}
                         >
-                            Get In <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Touch</span>
+                            {pageTitle.includes('Connect') ? (
+                                <>Let's <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Connect</span></>
+                            ) : pageTitle.includes('Touch') ? (
+                                <>Get In <span className="text-accent bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Touch</span></>
+                            ) : (
+                                pageTitle
+                            )}
                         </InlineEdit>
                     </h1>
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         <InlineEdit
                             type="textarea"
                             value={pageSubtitle}
-                            onSave={setPageSubtitle}
+                            onSave={handleSaveSubtitle}
                             placeholder="Enter page subtitle..."
                             maxLength={200}
                             inline={true}

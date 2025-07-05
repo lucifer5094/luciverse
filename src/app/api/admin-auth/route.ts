@@ -85,3 +85,24 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ authenticated: false }, { status: 401 })
   }
 }
+
+export async function DELETE(request: NextRequest) {
+  try {
+    const response = NextResponse.json({ success: true, message: 'Logged out successfully' })
+    
+    // Clear the httpOnly session cookie
+    response.cookies.set('admin-session', '', {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 0, // Expire immediately
+      expires: new Date(0) // Set to past date
+    })
+    
+    return response
+    
+  } catch (error) {
+    console.error('Logout error:', error)
+    return NextResponse.json({ error: 'Logout failed' }, { status: 500 })
+  }
+}
