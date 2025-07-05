@@ -167,7 +167,7 @@ export default function AboutPage() {
                 soundEffects.current.toggle()
             }
         }
-    }, [])
+    }, [soundEnabled])
 
     // Handle scroll effects
     useEffect(() => {
@@ -555,7 +555,7 @@ export default function AboutPage() {
                                             <div className="w-2 h-2 bg-white rounded-full"></div>
                                         </div>
                                         <h4 className="font-bold text-gray-800 dark:text-white mb-2">The Beginning (2020)</h4>
-                                        <p>Started with curiosity about how things work. First "Hello World" led to building mini-bots and exploring automation.</p>
+                                        <p>Started with curiosity about how things work. First &ldquo;Hello World&rdquo; led to building mini-bots and exploring automation.</p>
                                     </div>
                                     <div className="relative pl-8 border-l-4 border-purple-500">
                                         <div className="absolute -left-3 top-0 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
@@ -578,7 +578,7 @@ export default function AboutPage() {
                                 <div className="space-y-6">
                                     <div className="bg-gradient-to-r from-accent/10 to-purple-500/10 p-6 rounded-2xl border-l-4 border-accent">
                                         <h4 className="font-bold text-gray-800 dark:text-white mb-3">Core Belief</h4>
-                                        <p className="italic">"Technology should enhance human creativity and potential, not replace it. The future lies in collaboration between humans and AI."</p>
+                                        <p className="italic">&ldquo;Technology should enhance human creativity and potential, not replace it. The future lies in collaboration between humans and AI.&rdquo;</p>
                                     </div>
                                     <div className="grid md:grid-cols-3 gap-4">
                                         <div className="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-xl">
