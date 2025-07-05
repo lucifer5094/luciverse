@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import OwnerAccessBanner from '@/components/OwnerAccessBanner'
 import OwnerFloatingControls from '@/components/OwnerFloatingControls'
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'Luciverse',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>
           {children}
+          <Analytics/>
         </main>
         <Footer />
         <OwnerFloatingControls />
