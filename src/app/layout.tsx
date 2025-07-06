@@ -72,14 +72,13 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/icons/icon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-16.svg', sizes: '16x16', type: 'image/svg+xml' },
+      { url: '/favicon-32.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/logo-enhanced.svg', sizes: 'any', type: 'image/svg+xml' },
     ],
+    shortcut: '/favicon-32.svg',
     apple: [
-      { url: '/icons/icon-180x180.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'mask-icon', url: '/icons/safari-pinned-tab.svg', color: '#8b5cf6' },
+      { url: '/logo-enhanced.svg', sizes: '180x180', type: 'image/svg+xml' },
     ],
   },
   appleWebApp: {

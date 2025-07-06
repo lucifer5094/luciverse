@@ -10,8 +10,9 @@ const STATIC_FILES = [
   '/vault',
   '/contact',
   '/manifest.json',
-  '/next.svg',
-  '/vercel.svg'
+  '/logo-enhanced.svg',
+  '/favicon-32.svg',
+  '/favicon-16.svg'
 ]
 
 // Install event - cache static files
