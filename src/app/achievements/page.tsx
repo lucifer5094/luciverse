@@ -801,7 +801,7 @@ export default function AchievementsPage() {
                   Share Achievement
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Share "{showShareModal.title}" with others
+                  Share &quot;{showShareModal.title}&quot; with others
                 </p>
               </div>
               
