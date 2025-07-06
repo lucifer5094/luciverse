@@ -148,6 +148,8 @@ export default function Home() {
               placeholder="Enter hero title..."
               maxLength={50}
               inline={true}
+              fieldName="heroTitle"
+              section="hero"
             >
               Welcome to{' '}
               <motion.span
@@ -175,6 +177,8 @@ export default function Home() {
                 placeholder="Enter hero subtitle..."
                 maxLength={200}
                 inline={true}
+                fieldName="heroSubtitle"
+                section="hero"
               >
                 Dive into my universe of{' '}
                 <motion.span

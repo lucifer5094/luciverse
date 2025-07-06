@@ -8,6 +8,192 @@ import { Document } from '@/utils/vaultUtils'
 import LoginForm from '@/components/LoginForm'
 import InlineEdit from '@/components/InlineEdit'
 import Notification from '@/components/Notification'
+import AnalyticsDashboard from '@/components/AnalyticsDashboard'
+
+// Overview Dashboard Component
+interface OverviewDashboardProps {
+  achievements: Achievement[]
+  vaultDocuments: Document[]
+  siteContent: any
+}
+
+function OverviewDashboard({ achievements, vaultDocuments, siteContent }: OverviewDashboardProps) {
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Vault Documents</h3>
+          <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">{vaultDocuments.length}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Total documents</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Achievements</h3>
+          <p className="text-3xl font-bold text-green-600 dark:text-green-400">{achievements.length}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Total achievements</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Site Content</h3>
+          <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">{Object.keys(siteContent).length}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Content sections</p>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Activity</h3>
+        <p className="text-gray-500 dark:text-gray-400">System overview and recent changes will appear here.</p>
+      </div>
+    </div>
+  )
+}
+
+// Site Content Editor Component
+interface SiteContentEditorProps {
+  content: any
+  onSave: (newContent: any) => Promise<void>
+}
+
+function SiteContentEditor({ content, onSave }: SiteContentEditorProps) {
+  const [editingContent, setEditingContent] = useState(content)
+
+  const handleSave = async () => {
+    await onSave(editingContent)
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Site Configuration</h3>
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Site Title
+            </label>
+            <input
+              type="text"
+              value={editingContent?.title || ''}
+              onChange={(e) => setEditingContent({ ...editingContent, title: e.target.value })}
+              className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Site Description
+            </label>
+            <textarea
+              value={editingContent?.description || ''}
+              onChange={(e) => setEditingContent({ ...editingContent, description: e.target.value })}
+              rows={3}
+              className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            />
+          </div>
+          <button
+            onClick={handleSave}
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Highlights Manager Component
+interface HighlightsManagerProps {
+  content: any
+  onSave: (newContent: any) => Promise<void>
+}
+
+function HighlightsManager({ content, onSave }: HighlightsManagerProps) {
+  const [highlights, setHighlights] = useState(content?.highlights || [])
+
+  const handleSave = async () => {
+    await onSave({ ...content, highlights })
+  }
+
+  const addHighlight = () => {
+    setHighlights([...highlights, { title: '', description: '', value: '', icon: '' }])
+  }
+
+  const removeHighlight = (index: number) => {
+    setHighlights(highlights.filter((_: any, i: number) => i !== index))
+  }
+
+  const updateHighlight = (index: number, field: string, value: string) => {
+    const updated = highlights.map((highlight: any, i: number) => 
+      i === index ? { ...highlight, [field]: value } : highlight
+    )
+    setHighlights(updated)
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Homepage Highlights</h3>
+          <button
+            onClick={addHighlight}
+            className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
+          >
+            Add Highlight
+          </button>
+        </div>
+        
+        <div className="space-y-4">
+          {highlights.map((highlight: any, index: number) => (
+            <div key={index} className="border border-gray-200 dark:border-gray-600 rounded-lg p-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  placeholder="Title"
+                  value={highlight.title}
+                  onChange={(e) => updateHighlight(index, 'title', e.target.value)}
+                  className="p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                />
+                <input
+                  type="text"
+                  placeholder="Value"
+                  value={highlight.value}
+                  onChange={(e) => updateHighlight(index, 'value', e.target.value)}
+                  className="p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                />
+                <input
+                  type="text"
+                  placeholder="Description"
+                  value={highlight.description}
+                  onChange={(e) => updateHighlight(index, 'description', e.target.value)}
+                  className="p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                />
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    placeholder="Icon"
+                    value={highlight.icon}
+                    onChange={(e) => updateHighlight(index, 'icon', e.target.value)}
+                    className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  />
+                  <button
+                    onClick={() => removeHighlight(index)}
+                    className="bg-red-500 text-white px-3 py-2 rounded hover:bg-red-600 transition-colors"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <button
+          onClick={handleSave}
+          className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Save Highlights
+        </button>
+      </div>
+    </div>
+  )
+}
 
 export default function AdminPage() {
   // Editable content state - loaded from JSON
@@ -557,11 +743,7 @@ export default function AdminPage() {
 
         {/* Analytics Tab */}
         {activeTab === 'analytics' && (
-          <AnalyticsDashboard 
-            achievements={achievements}
-            vaultDocuments={vaultDocuments}
-            siteContent={siteContent}
-          />
+          <AnalyticsDashboard />
         )}
         {activeTab === 'vault' && (
           <div>
@@ -962,394 +1144,6 @@ function DocumentEditor({
   )
 }
 
-// Site Content Editor Component
-function SiteContentEditor({ 
-  content, 
-  onSave 
-}: { 
-  content: any
-  onSave: (content: any) => void 
-}) {
-  const [editedContent, setEditedContent] = useState(content)
-
-  return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
-      <div className="space-y-6">
-        <div>
-          <label className="block text-sm font-medium mb-2">Hero Title</label>
-          <input
-            type="text"
-            value={editedContent.heroTitle || ''}
-            onChange={(e) => setEditedContent({ ...editedContent, heroTitle: e.target.value })}
-            className="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium mb-2">Hero Subtitle</label>
-          <textarea
-            value={editedContent.heroSubtitle || ''}
-            onChange={(e) => setEditedContent({ ...editedContent, heroSubtitle: e.target.value })}
-            rows={3}
-            className="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium mb-2">About Title</label>
-          <input
-            type="text"
-            value={editedContent.aboutTitle || ''}
-            onChange={(e) => setEditedContent({ ...editedContent, aboutTitle: e.target.value })}
-            className="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium mb-2">About Subtitle</label>
-          <input
-            type="text"
-            value={editedContent.aboutSubtitle || ''}
-            onChange={(e) => setEditedContent({ ...editedContent, aboutSubtitle: e.target.value })}
-            className="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium mb-2">About Content</label>
-          <textarea
-            value={editedContent.aboutContent || ''}
-            onChange={(e) => setEditedContent({ ...editedContent, aboutContent: e.target.value })}
-            rows={6}
-            className="w-full p-3 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
-          />
-        </div>
-        
-        <button
-          onClick={() => onSave(editedContent)}
-          className="bg-accent text-white px-6 py-3 rounded-lg hover:bg-accent/90 transition-colors"
-        >
-          Save Site Content
-        </button>
-      </div>
-    </div>
-  )
-}
-
-// Highlights Manager Component
-function HighlightsManager({ 
-  content, 
-  onSave 
-}: { 
-  content: any
-  onSave: (content: any) => void 
-}) {
-  const [editedContent, setEditedContent] = useState(content)
-  const [editingHighlight, setEditingHighlight] = useState<any>(null)
-  const [showAddForm, setShowAddForm] = useState(false)
-
-  const highlights = editedContent.highlights || []
-  const stats = editedContent.stats || { projects: 0, years: 0, technologies: 0, achievements: 0 }
-
-  const handleAddHighlight = () => {
-    const newHighlight = {
-      id: Date.now(),
-      title: '',
-      description: '',
-      icon: '🚀',
-      image: '',
-      date: new Date().toISOString().substring(0, 7), // YYYY-MM format
-      category: 'Development',
-      featured: true
-    }
-    setEditingHighlight(newHighlight)
-    setShowAddForm(true)
-  }
-
-  const handleSaveHighlight = (highlight: any) => {
-    let updatedHighlights
-    if (highlights.find((h: any) => h.id === highlight.id)) {
-      updatedHighlights = highlights.map((h: any) => h.id === highlight.id ? highlight : h)
-    } else {
-      updatedHighlights = [...highlights, highlight]
-    }
-
-    const updatedContent = {
-      ...editedContent,
-      highlights: updatedHighlights
-    }
-    setEditedContent(updatedContent)
-    setEditingHighlight(null)
-    setShowAddForm(false)
-  }
-
-  const handleDeleteHighlight = (id: number) => {
-    const updatedHighlights = highlights.filter((h: any) => h.id !== id)
-    const updatedContent = {
-      ...editedContent,
-      highlights: updatedHighlights
-    }
-    setEditedContent(updatedContent)
-  }
-
-  const handleUpdateStats = (field: string, value: number) => {
-    const updatedStats = { ...stats, [field]: value }
-    const updatedContent = {
-      ...editedContent,
-      stats: updatedStats
-    }
-    setEditedContent(updatedContent)
-  }
-
-  return (
-    <div className="space-y-8">
-      {/* Statistics Section */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-          Homepage Statistics
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {Object.entries(stats).map(([key, value]) => (
-            <div key={key} className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 capitalize">
-                {key}
-              </label>
-              <input
-                type="number"
-                value={value as number}
-                onChange={(e) => handleUpdateStats(key, parseInt(e.target.value) || 0)}
-                className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600"
-                min="0"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Highlights Section */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-            Work Highlights ({highlights.length})
-          </h3>
-          <button
-            onClick={handleAddHighlight}
-            className="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors flex items-center gap-2"
-          >
-            <span>➕</span>
-            Add Highlight
-          </button>
-        </div>
-
-        <div className="space-y-4">
-          {highlights.map((highlight: any) => (              <div key={highlight.id} className="border border-gray-200 dark:border-gray-600 rounded-lg p-4">
-                <div className="flex justify-between items-start">
-                  <div className="flex gap-3 flex-1">
-                    {/* Image/Icon Preview */}
-                    <div className="flex-shrink-0">
-                      {highlight.image ? (
-                        <div className="w-12 h-12 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 border">
-                          <Image 
-                            src={highlight.image} 
-                            alt={highlight.title}
-                            width={48}
-                            height={48}
-                            className="w-full h-full object-cover"
-                            onError={(e) => {
-                              // Fallback to icon if image fails to load
-                              e.currentTarget.style.display = 'none';
-                              const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-                              if (fallback) fallback.style.display = 'flex';
-                            }}
-                          />
-                          <div className="w-full h-full bg-gray-100 dark:bg-gray-700 items-center justify-center text-xl hidden">
-                            {highlight.icon}
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-xl border">
-                          {highlight.icon}
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <h4 className="font-semibold text-gray-900 dark:text-white">{highlight.title}</h4>
-                        <span className="text-xs bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded">
-                          {highlight.category}
-                        </span>
-                      </div>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{highlight.description}</p>
-                      <div className="flex items-center gap-4 text-xs text-gray-500">
-                        <span>📅 {highlight.date}</span>
-                        <span>{highlight.featured ? '⭐ Featured' : '📌 Regular'}</span>
-                        {highlight.image && <span>🖼️ Has Image</span>}
-                      </div>
-                    </div>
-                  </div>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => {
-                      setEditingHighlight(highlight)
-                      setShowAddForm(true)
-                    }}
-                    className="text-blue-600 hover:text-blue-800 text-sm px-2 py-1"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDeleteHighlight(highlight.id)}
-                    className="text-red-600 hover:text-red-800 text-sm px-2 py-1"
-                  >
-                    Delete
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {highlights.length === 0 && (
-            <div className="text-center py-8 text-gray-500">
-              <p>No highlights added yet.</p>
-              <p className="text-sm">Click &quot;Add Highlight&quot; to showcase your achievements!</p>
-            </div>
-          )}
-        </div>
-
-        {/* Save Button */}
-        <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
-          <button
-            onClick={() => onSave(editedContent)}
-            className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            Save All Changes
-          </button>
-        </div>
-      </div>
-
-      {/* Add/Edit Highlight Modal */}
-      {showAddForm && editingHighlight && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
-            <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-              {editingHighlight.title ? 'Edit Highlight' : 'Add New Highlight'}
-            </h3>
-            
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">Title</label>
-                <input
-                  type="text"
-                  value={editingHighlight.title}
-                  onChange={(e) => setEditingHighlight({...editingHighlight, title: e.target.value})}
-                  className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600"
-                  placeholder="Achievement or project title"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">Description</label>
-                <textarea
-                  value={editingHighlight.description}
-                  onChange={(e) => setEditingHighlight({...editingHighlight, description: e.target.value})}
-                  className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600"
-                  rows={3}
-                  placeholder="Brief description of the achievement"
-                />
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Icon</label>
-                  <input
-                    type="text"
-                    value={editingHighlight.icon}
-                    onChange={(e) => setEditingHighlight({...editingHighlight, icon: e.target.value})}
-                    className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600"
-                    placeholder="🚀"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Date</label>
-                  <input
-                    type="month"
-                    value={editingHighlight.date}
-                    onChange={(e) => setEditingHighlight({...editingHighlight, date: e.target.value})}
-                    className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-1">Image URL (Optional)</label>
-                <input
-                  type="url"
-                  value={editingHighlight.image || ''}
-                  onChange={(e) => setEditingHighlight({...editingHighlight, image: e.target.value})}
-                  className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600"
-                  placeholder="https://example.com/image.jpg or leave empty to use icon"
-                />
-                <p className="text-xs text-gray-500 mt-1">
-                  💡 Tip: If you add an image URL, it will be displayed instead of the icon
-                </p>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">Category</label>
-                <select
-                  value={editingHighlight.category}
-                  onChange={(e) => setEditingHighlight({...editingHighlight, category: e.target.value})}
-                  className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600"
-                >
-                  <option value="Development">Development</option>
-                  <option value="AI/ML">AI/ML</option>
-                  <option value="Design">Design</option>
-                  <option value="Achievement">Achievement</option>
-                  <option value="Learning">Learning</option>
-                  <option value="Project">Project</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={editingHighlight.featured}
-                    onChange={(e) => setEditingHighlight({...editingHighlight, featured: e.target.checked})}
-                    className="rounded"
-                  />
-                  <span className="text-sm">Featured highlight</span>
-                </label>
-              </div>
-            </div>
-            
-            <div className="flex gap-2 mt-6">
-              <button
-                onClick={() => handleSaveHighlight(editingHighlight)}
-                className="flex-1 bg-accent text-white py-2 rounded hover:bg-accent/90 transition-colors"
-                disabled={!editingHighlight.title.trim()}
-              >
-                Save
-              </button>
-              <button
-                onClick={() => {
-                  setShowAddForm(false)
-                  setEditingHighlight(null)
-                }}
-                className="flex-1 bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition-colors"
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
-
 // Achievement Editor Component
 function AchievementEditor({ 
   achievement, 
@@ -1360,220 +1154,116 @@ function AchievementEditor({
   onSave: (achievement: Achievement) => void
   onCancel: () => void 
 }) {
-  const [achieve, setAchieve] = useState(achievement)
-
-  const handleSkillsChange = (skillsString: string) => {
-    const skills = skillsString.split(',').map(s => s.trim()).filter(s => s.length > 0)
-    setAchieve({ ...achieve, skills })
-  }
+  const [ach, setAch] = useState(achievement)
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-          {!achievement.id || achievement.id === '' ? 'Add New Achievement' : 'Edit Achievement'}
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <h3 className="text-xl font-semibold mb-4">
+          {achievement.id ? 'Edit Achievement' : 'Add New Achievement'}
         </h3>
         
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Title</label>
+            <label className="block text-sm font-medium mb-1">Title</label>
             <input
               type="text"
-              value={achieve.title}
-              onChange={(e) => setAchieve({ ...achieve, title: e.target.value })}
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              placeholder="Achievement title"
+              value={ach.title}
+              onChange={(e) => setAch({ ...ach, title: e.target.value })}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Organization</label>
+            <label className="block text-sm font-medium mb-1">Organization</label>
             <input
               type="text"
-              value={achieve.organization}
-              onChange={(e) => setAchieve({ ...achieve, organization: e.target.value })}
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              placeholder="Issuing organization"
+              value={ach.organization}
+              onChange={(e) => setAch({ ...ach, organization: e.target.value })}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Description</label>
+            <label className="block text-sm font-medium mb-1">Date</label>
+            <input
+              type="date"
+              value={ach.date}
+              onChange={(e) => setAch({ ...ach, date: e.target.value })}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium mb-1">Category</label>
+            <select
+              value={ach.category}
+              onChange={(e) => setAch({ ...ach, category: e.target.value as any })}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+            >
+              <option value="certification">Certification</option>
+              <option value="award">Award</option>
+              <option value="achievement">Achievement</option>
+              <option value="competition">Competition</option>
+              <option value="leadership">Leadership</option>
+              <option value="project">Project</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium mb-1">Description</label>
             <textarea
-              value={achieve.description}
-              onChange={(e) => setAchieve({ ...achieve, description: e.target.value })}
-              rows={3}
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              placeholder="Achievement description"
+              value={ach.description}
+              onChange={(e) => setAch({ ...ach, description: e.target.value })}
+              rows={4}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
             />
           </div>
           
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Date</label>
-              <input
-                type="date"
-                value={achieve.date}
-                onChange={(e) => setAchieve({ ...achieve, date: e.target.value })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Issue Date (Optional)</label>
-              <input
-                type="date"
-                value={achieve.issueDate || ''}
-                onChange={(e) => setAchieve({ ...achieve, issueDate: e.target.value })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Category</label>
-              <select
-                value={achieve.category}
-                onChange={(e) => setAchieve({ ...achieve, category: e.target.value as Achievement['category'] })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              >
-                <option value="certification">Certification</option>
-                <option value="award">Award</option>
-                <option value="achievement">Achievement</option>
-                <option value="competition">Competition</option>
-                <option value="leadership">Leadership</option>
-                <option value="project">Project</option>
-              </select>
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Importance</label>
-              <select
-                value={achieve.importance}
-                onChange={(e) => setAchieve({ ...achieve, importance: Number(e.target.value) as 1 | 2 | 3 })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              >
-                <option value={1}>High</option>
-                <option value={2}>Medium</option>
-                <option value={3}>Low</option>
-              </select>
-            </div>
-          </div>
-
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Skills (comma-separated)</label>
+            <label className="block text-sm font-medium mb-1">Skills (comma separated)</label>
             <input
               type="text"
-              value={achieve.skills.join(', ')}
-              onChange={(e) => handleSkillsChange(e.target.value)}
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              placeholder="JavaScript, React, Node.js"
+              value={ach.skills.join(', ')}
+              onChange={(e) => setAch({ ...ach, skills: e.target.value.split(',').map(s => s.trim()) })}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
             />
           </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Location (Optional)</label>
-              <input
-                type="text"
-                value={achieve.location || ''}
-                onChange={(e) => setAchieve({ ...achieve, location: e.target.value })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-                placeholder="City, Country"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Duration (Optional)</label>
-              <input
-                type="text"
-                value={achieve.duration || ''}
-                onChange={(e) => setAchieve({ ...achieve, duration: e.target.value })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-                placeholder="6 months"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Grade (Optional)</label>
-              <input
-                type="text"
-                value={achieve.grade || ''}
-                onChange={(e) => setAchieve({ ...achieve, grade: e.target.value })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-                placeholder="A+, 95%"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Expiry Date (Optional)</label>
-              <input
-                type="date"
-                value={achieve.expiryDate || ''}
-                onChange={(e) => setAchieve({ ...achieve, expiryDate: e.target.value })}
-                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              />
-            </div>
-          </div>
-
+          
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Image URL (Optional)</label>
-            <input
-              type="url"
-              value={achieve.imageUrl || ''}
-              onChange={(e) => setAchieve({ ...achieve, imageUrl: e.target.value })}
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              placeholder="https://example.com/image.jpg"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Certificate URL (Optional)</label>
-            <input
-              type="url"
-              value={achieve.certificateUrl || ''}
-              onChange={(e) => setAchieve({ ...achieve, certificateUrl: e.target.value })}
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              placeholder="https://example.com/certificate.pdf"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Verification URL (Optional)</label>
-            <input
-              type="url"
-              value={achieve.verificationUrl || ''}
-              onChange={(e) => setAchieve({ ...achieve, verificationUrl: e.target.value })}
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-              placeholder="https://verify.example.com/certificate"
-            />
+            <label className="block text-sm font-medium mb-1">Importance (1=High, 2=Medium, 3=Low)</label>
+            <select
+              value={ach.importance}
+              onChange={(e) => setAch({ ...ach, importance: parseInt(e.target.value) as any })}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+            >
+              <option value={1}>High Priority</option>
+              <option value={2}>Medium Priority</option>
+              <option value={3}>Low Priority</option>
+            </select>
           </div>
           
           <div className="flex items-center">
             <input
               type="checkbox"
-              checked={achieve.isVerified}
-              onChange={(e) => setAchieve({ ...achieve, isVerified: e.target.checked })}
+              checked={ach.isVerified}
+              onChange={(e) => setAch({ ...ach, isVerified: e.target.checked })}
               className="mr-2"
             />
-            <label className="text-sm text-gray-700 dark:text-gray-300">Verified achievement</label>
+            <label className="text-sm">Verified achievement</label>
           </div>
         </div>
         
         <div className="flex justify-end space-x-4 mt-6">
           <button
             onClick={onCancel}
-            className="px-4 py-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+            className="px-4 py-2 text-gray-600 hover:text-gray-800"
           >
             Cancel
           </button>
           <button
-            onClick={() => onSave(achieve)}
+            onClick={() => onSave(ach)}
             className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90"
-            disabled={!achieve.title.trim() || !achieve.organization.trim()}
           >
             Save
           </button>
@@ -1583,172 +1273,4 @@ function AchievementEditor({
   )
 }
 
-// Overview Dashboard Component
-function OverviewDashboard({ 
-  achievements, 
-  vaultDocuments, 
-  siteContent 
-}: { 
-  achievements: Achievement[]
-  vaultDocuments: Document[]
-  siteContent: any
-}) {
-  const stats = {
-    totalAchievements: achievements.length,
-    verifiedAchievements: achievements.filter(a => a.isVerified).length,
-    highPriorityAchievements: achievements.filter(a => a.importance === 1).length,
-    totalDocuments: vaultDocuments.length,
-    privateDocuments: vaultDocuments.filter(d => d.isPrivate).length,
-    totalHighlights: siteContent.highlights?.length || 0
-  }
-
-  return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white shadow-lg"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-purple-100 text-sm">Total Achievements</p>
-              <p className="text-3xl font-bold">{stats.totalAchievements}</p>
-            </div>
-            <div className="text-4xl">🏆</div>
-          </div>
-          <div className="mt-4 text-purple-100 text-sm">
-            {stats.verifiedAchievements} verified • {stats.highPriorityAchievements} high priority
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white shadow-lg"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-blue-100 text-sm">Vault Documents</p>
-              <p className="text-3xl font-bold">{stats.totalDocuments}</p>
-            </div>
-            <div className="text-4xl">📝</div>
-          </div>
-          <div className="mt-4 text-blue-100 text-sm">
-            {stats.privateDocuments} private documents
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white shadow-lg"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-green-100 text-sm">Highlights</p>
-              <p className="text-3xl font-bold">{stats.totalHighlights}</p>
-            </div>
-            <div className="text-4xl">⭐</div>
-          </div>
-          <div className="mt-4 text-green-100 text-sm">
-            Featured content pieces
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-6 text-white shadow-lg"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-orange-100 text-sm">Site Stats</p>
-              <p className="text-3xl font-bold">{siteContent.stats?.projects || 0}</p>
-            </div>
-            <div className="text-4xl">📊</div>
-          </div>
-          <div className="mt-4 text-orange-100 text-sm">
-            Projects completed
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  )
-}
-
-// Analytics Dashboard Component  
-function AnalyticsDashboard({ 
-  achievements, 
-  vaultDocuments, 
-  siteContent 
-}: { 
-  achievements: Achievement[]
-  vaultDocuments: Document[]
-  siteContent: any
-}) {
-  const skillsCount = achievements.reduce((acc, achievement) => {
-    achievement.skills.forEach(skill => {
-      acc[skill] = (acc[skill] || 0) + 1
-    })
-    return acc
-  }, {} as Record<string, number>)
-
-  const topSkills = Object.entries(skillsCount)
-    .sort(([,a], [,b]) => b - a)
-    .slice(0, 10)
-
-  return (
-    <div className="space-y-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 text-white shadow-lg"
-      >
-        <h2 className="text-2xl font-bold mb-2">Analytics Dashboard</h2>
-        <p className="text-purple-100">
-          Insights into your achievements, content, and growth patterns
-        </p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.2 }}
-        className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
-      >
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-          Top Skills
-        </h3>
-        <div className="space-y-3">
-          {topSkills.map(([skill, count], index) => (
-            <div key={skill} className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full bg-blue-500 text-white text-xs flex items-center justify-center font-bold">
-                  {index + 1}
-                </div>
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {skill}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-16 bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                  <div 
-                    className="bg-blue-500 h-2 rounded-full transition-all duration-500"
-                    style={{ width: `${topSkills.length > 0 ? (count / topSkills[0][1]) * 100 : 0}%` }}
-                  ></div>
-                </div>
-                <span className="text-sm font-bold text-gray-900 dark:text-white w-6">
-                  {count}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-    </div>
-  )
-}
+// ...existing code...

@@ -8,6 +8,7 @@ import OwnerFloatingControls from '@/components/OwnerFloatingControls'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import PWAInstallPrompt from '@/components/PWAInstallPrompt'
 import OfflineIndicator from '@/components/OfflineIndicator'
+import ClientLayout from '@/components/ClientLayout'
 import { Analytics } from "@vercel/analytics/next"
 import { ErrorHandler } from '@/utils/errorHandling'
 
@@ -141,16 +142,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className='min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text'>
         <ErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
-          <OfflineIndicator />
-          <OwnerAccessBanner />
-          <Navbar />
-          <main>
-            {children}
-            <Analytics/>
-          </main>
-          <Footer />
-          <OwnerFloatingControls />
-          <PWAInstallPrompt />
+          <ClientLayout>
+            <OfflineIndicator />
+            <OwnerAccessBanner />
+            <Navbar />
+            <main>
+              {children}
+              <Analytics/>
+            </main>
+            <Footer />
+            <OwnerFloatingControls />
+            <PWAInstallPrompt />
+          </ClientLayout>
         </ErrorBoundary>
       </body>
     </html>

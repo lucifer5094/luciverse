@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { isAuthenticated } from '@/utils/auth';
 import { Edit2, Check, X, Type, Image, Link } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { analyticsAPI } from '@/utils/analyticsAPI';
 
 interface InlineEditProps {
   children: React.ReactNode;
@@ -14,6 +15,8 @@ interface InlineEditProps {
   placeholder?: string;
   maxLength?: number;
   inline?: boolean; // New prop to determine if it should render inline
+  fieldName?: string; // For analytics tracking
+  section?: string; // For analytics tracking
 }
 
 export default function InlineEdit({ 
@@ -24,7 +27,9 @@ export default function InlineEdit({
   className = '',
   placeholder = 'Enter text...',
   maxLength,
-  inline = false
+  inline = false,
+  fieldName = 'unknown',
+  section = 'unknown'
 }: InlineEditProps) {
   const [isOwner, setIsOwner] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -56,7 +61,23 @@ export default function InlineEdit({
     setIsEditing(true);
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
+    if (editValue.trim() !== value.trim()) {
+      // Log the edit before saving (only in development)
+      try {
+        await analyticsAPI.logEdit({
+          page: window.location.pathname,
+          section,
+          fieldName,
+          oldValue: value,
+          newValue: editValue.trim(),
+          userAgent: navigator.userAgent
+        });
+      } catch (error) {
+        console.error('Failed to log edit:', error);
+      }
+    }
+    
     onSave(editValue);
     setIsEditing(false);
   };
