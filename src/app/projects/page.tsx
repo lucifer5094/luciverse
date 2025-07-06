@@ -23,85 +23,8 @@ interface Project {
   tags: string[]
 }
 
-// Sample projects data - you can replace this with your actual projects
-const projects: Project[] = [
-  {
-    id: '1',
-    title: 'AI-Powered Portfolio Website',
-    description: 'Personal portfolio with AI-enhanced features and modern design',
-    longDescription: 'A modern portfolio website built with Next.js, featuring AI-powered content generation, dynamic animations, and responsive design.',
-    image: '/next.svg', // Replace with actual project images
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    category: 'Web Dev',
-    status: 'completed',
-    githubUrl: 'https://github.com/yourusername/portfolio',
-    liveUrl: 'https://yourportfolio.com',
-    tags: ['react', 'typescript', 'portfolio', 'ai']
-  },
-  {
-    id: '2',
-    title: 'Machine Learning Classifier',
-    description: 'Advanced ML model for image classification with 95% accuracy',
-    longDescription: 'Deep learning model using TensorFlow and Python for multi-class image classification with data augmentation and transfer learning.',
-    image: '/next.svg',
-    stack: ['Python', 'TensorFlow', 'Keras', 'OpenCV'],
-    category: 'AI/ML',
-    status: 'completed',
-    githubUrl: 'https://github.com/yourusername/ml-classifier',
-    tags: ['machine-learning', 'python', 'tensorflow', 'computer-vision']
-  },
-  {
-    id: '3',
-    title: 'IoT Smart Home System',
-    description: 'Arduino-based home automation with mobile control',
-    longDescription: 'Complete smart home solution using Arduino, sensors, and mobile app for controlling lights, temperature, and security systems.',
-    image: '/next.svg',
-    stack: ['Arduino', 'C++', 'React Native', 'Firebase'],
-    category: 'Hardware',
-    status: 'ongoing',
-    githubUrl: 'https://github.com/yourusername/smart-home',
-    tags: ['iot', 'arduino', 'automation', 'mobile']
-  },
-  {
-    id: '4',
-    title: 'College Management System',
-    description: 'Full-stack web application for academic administration',
-    longDescription: 'Comprehensive college management system with student portal, faculty dashboard, and administrative tools built with MERN stack.',
-    image: '/next.svg',
-    stack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
-    category: 'College',
-    status: 'completed',
-    githubUrl: 'https://github.com/yourusername/college-management',
-    liveUrl: 'https://college-system.com',
-    tags: ['fullstack', 'mern', 'database', 'web-app']
-  },
-  {
-    id: '5',
-    title: 'Neural Network Visualization',
-    description: 'Interactive tool for visualizing neural network architectures',
-    longDescription: 'Web-based tool for creating, visualizing, and training neural networks with real-time performance metrics.',
-    image: '/next.svg',
-    stack: ['Python', 'D3.js', 'Flask', 'PyTorch'],
-    category: 'AI/ML',
-    status: 'ongoing',
-    githubUrl: 'https://github.com/yourusername/nn-visualizer',
-    demoUrl: 'https://nn-viz-demo.com',
-    tags: ['neural-networks', 'visualization', 'pytorch', 'web']
-  },
-  {
-    id: '6',
-    title: 'E-commerce Platform',
-    description: 'Modern e-commerce solution with payment integration',
-    longDescription: 'Full-featured e-commerce platform with user authentication, product management, cart functionality, and secure payment processing.',
-    image: '/next.svg',
-    stack: ['Next.js', 'PostgreSQL', 'Stripe', 'Prisma'],
-    category: 'Web Dev',
-    status: 'notable',
-    githubUrl: 'https://github.com/yourusername/ecommerce',
-    liveUrl: 'https://your-ecommerce.com',
-    tags: ['ecommerce', 'nextjs', 'database', 'payments']
-  }
-]
+// Projects data - add your actual projects here
+const projects: Project[] = []
 
 const categories = ['All', 'AI/ML', 'Web Dev', 'Hardware', 'College'] as const
 const statuses = ['All', 'completed', 'ongoing', 'notable'] as const

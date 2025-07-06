@@ -1,46 +1,69 @@
-
 {
   "heroTitle": "Welcome to Luciverse",
   "heroSubtitle": "Dive into my universe of development, design, and digital experiments",
   "aboutTitle": "About Me",
   "aboutSubtitle": "Developer • AI Enthusiast • Creative Thinker",
-  "aboutContent": "Welcome to my digital space! I'm a passionate developer who thrives on turning complex problems into elegant solutions. My journey in technology began with curiosity and has evolved into a deep love for creating meaningful digital experiences.\n\nFrom building responsive web applications to experimenting with AI and machine learning, I'm constantly pushing the boundaries of what's possible. Each project is an opportunity to learn, grow, and contribute to the ever-evolving landscape of technology.",
+  "aboutContent": "Welcome to my digital space! Add your personal story and background here.",
+  "aboutPersonalInfo": {
+    "name": "[Your Name]",
+    "education": "Add your education/background",
+    "personalStory": "Add your journey and passion details here."
+  },
+  "aboutJourney": {
+    "beginning": {
+      "year": "2020",
+      "title": "The Beginning",
+      "description": "Add your beginning story here."
+    },
+    "deepDive": {
+      "year": "2021-2022",
+      "title": "Deep Dive",
+      "description": "Add your learning phase description."
+    },
+    "innovation": {
+      "year": "2023-Present",
+      "title": "Innovation",
+      "description": "Add your current phase description."
+    }
+  },
+  "aboutPhilosophy": {
+    "coreBelief": "Add your core belief here.",
+    "principles": {
+      "magical": "Technology should feel seamless and intuitive",
+      "humanCentered": "AI should amplify human capabilities",
+      "globalImpact": "Solutions should solve real-world problems"
+    }
+  },
+  "aboutWhyAI": {
+    "introduction": "Add why AI/ML drives you.",
+    "humanAISynergy": "Add your thoughts on human-AI collaboration.",
+    "realWorldImpact": "Add your vision for real-world AI impact."
+  },
   "contactInfo": {
-    "email": "contact@luciverse.dev",
-    "location": "Digital Universe",
+    "email": "your-email@example.com",
+    "location": "Your Location",
     "availability": "Open to collaborations"
   },
   "projectsTitle": "My Projects",
   "projectsSubtitle": "Showcasing innovative solutions and creative experiments",
-  "projectsDescription": "Explore my portfolio of projects spanning AI/ML, web development, and experimental technologies. Each project represents a unique challenge and learning opportunity.",
+  "projectsDescription": "Explore my portfolio of projects. Add your project descriptions here.",
   "labTitle": "The Lab",
   "labSubtitle": "Experimental Zone • Interactive Demos • Creative Coding",
-  "labDescription": "Welcome to my digital laboratory! This is where I experiment with new technologies, test creative ideas, and build interactive demos.",
+  "labDescription": "Welcome to my digital laboratory! This is where I experiment with new technologies.",
   "contactTitle": "Let's Connect",
-  "contactSubtitle": "Ready to collaborate, discuss ideas, or just say hello? I'd love to hear from you!",
+  "contactSubtitle": "Ready to collaborate, discuss ideas, or just say hello?",
   "logsTitle": "Development Logs",
   "logsSubtitle": "My Journey • Learning • Building • Growing",
-  "logsDescription": "Track my development journey, learning milestones, and project progress through detailed logs and reflections.",
+  "logsDescription": "Track my development journey, learning milestones, and project progress.",
   "adminTitle": "Admin Dashboard",
   "adminSubtitle": "Content Management • System Controls",
-  "adminDescription": "Administrative interface for managing site content, vault documents, and system settings.",
-  "highlights": [
-    {
-      "id": 1751746678590,
-      "title": "GfG Campus Body - GITAM , Jhajjar",
-      "description": "The GeeksforGeeks Campus Body at GITAM, Jhajjar is a student-led initiative established under the official GFG Campus Program. As the Campus Mantri, I aim to build a thriving coding culture in our college by organizing workshops, contests, and community events. This chapter acts as a bridge between students and real-world tech exposure, empowering peers to grow through consistent learning, collaboration, and innovation.",
-      "icon": "🏫",
-      "image": "/Assets/Campus Mantri Logo.jpg",
-      "date": "2025-07",
-      "category": "Learning",
-      "featured": true
-    }
-  ],
+  "adminDescription": "Administrative interface for managing site content and system settings.",
+  "highlights": [],
   "stats": {
-    "projects": 15,
-    "years": 3,
-    "technologies": 24,
-    "achievements": 6
+    "projects": 0,
+    "years": 0,
+    "technologies": 0,
+    "achievements": 0
   },
-  "lastUpdated": "2025-01-06T20:45:00.000Z"
+  "lastUpdated": "2025-07-06T23:17:09.014Z"
 }

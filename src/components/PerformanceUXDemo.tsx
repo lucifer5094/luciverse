@@ -29,28 +29,14 @@ export default function PerformanceUXDemo() {
 
   // Sample data for search demo - memoized to prevent recreation on every render
   const sampleProjects = useMemo(() => [
-    { 
-      id: 1, 
-      title: 'AI-Powered Portfolio', 
-      description: 'Next.js application with machine learning features',
-      technologies: ['React', 'TypeScript', 'TensorFlow'],
-      category: 'Web Development'
-    },
-    { 
-      id: 2, 
-      title: 'Blockchain Voting System', 
-      description: 'Decentralized voting platform using smart contracts',
-      technologies: ['Solidity', 'Web3', 'Ethereum'],
-      category: 'Blockchain'
-    },
-    { 
-      id: 3, 
-      title: 'Mobile Weather App', 
-      description: 'React Native app with real-time weather data',
-      technologies: ['React Native', 'API Integration', 'Redux'],
-      category: 'Mobile Development'
-    }
-  ], [])
+    // Add your real projects here for search demo
+  ] as Array<{
+    id: number;
+    title: string;
+    description: string;
+    technologies: string[];
+    category: string;
+  }>, [])
 
   // Search implementation with debouncing
   const results = useMemo(() => {
@@ -367,7 +353,7 @@ export default function PerformanceUXDemo() {
                   </div>
                 ) : (
                   <div className="space-y-3">
-                    {sampleProjects.map((project) => (
+                    {sampleProjects.length > 0 ? sampleProjects.map((project) => (
                       <div key={project.id} className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
                         <h3 className="font-semibold mb-2">{project.title}</h3>
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{project.description}</p>
@@ -379,7 +365,11 @@ export default function PerformanceUXDemo() {
                           ))}
                         </div>
                       </div>
-                    ))}
+                    )) : (
+                      <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                        No demo projects available. Add your projects to see search functionality.
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

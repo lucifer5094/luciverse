@@ -1,10 +1,8 @@
-# Certificate Placeholder Files
+# Certificate Files
 
 This directory contains certificate files that can be downloaded from the achievements page.
 
-## Available Certificates:
-- python-certification.pdf
-- react-certification.pdf  
-- aws-certification.pdf
+## Instructions:
+Add your actual certificate PDF files here and reference them in your achievements data.
 
-Note: These are placeholder files. Replace with actual certificate PDFs.
+Note: Replace this README with your actual certificate files when ready.

@@ -4,6 +4,7 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect, useRef } from 'react'
 import InlineEdit from '@/components/InlineEdit'
+import OwnerControls from '@/components/OwnerControls'
 import { dataAPI } from '@/utils/dataAPI'
 import { useIntersectionObserver, useLocalStorage, useMediaQuery } from '@/hooks'
 import { ChevronDown, Code, Zap, Heart, Star, Download, ExternalLink, Volume2, VolumeX } from 'lucide-react'
@@ -152,7 +153,26 @@ export default function AboutPage() {
     // Editable content state - loaded from JSON
     const [pageTitle, setPageTitle] = useState('About Me')
     const [pageSubtitle, setPageSubtitle] = useState('Developer • AI Enthusiast • Creative Thinker')
-    const [pageContent, setPageContent] = useState('Welcome to my digital space! I\'m a passionate developer who thrives on turning complex problems into elegant solutions. My journey in technology began with curiosity and has evolved into a deep love for creating meaningful digital experiences.\n\nFrom building responsive web applications to experimenting with AI and machine learning, I\'m constantly pushing the boundaries of what\'s possible. Each project is an opportunity to learn, grow, and contribute to the ever-evolving landscape of technology.')
+    const [pageContent, setPageContent] = useState('Welcome to my digital space! Add your personal story and background here.')
+    
+    // Personal info section
+    const [personalName, setPersonalName] = useState('[Your Name]')
+    const [personalEducation, setPersonalEducation] = useState('Add your education/background')
+    const [personalStory, setPersonalStory] = useState('Add your journey and passion details here.')
+    
+    // Journey section
+    const [journeyBeginning, setJourneyBeginning] = useState('Add your beginning story here.')
+    const [journeyDeepDive, setJourneyDeepDive] = useState('Add your learning phase description.')
+    const [journeyInnovation, setJourneyInnovation] = useState('Add your current phase description.')
+    
+    // Philosophy section
+    const [coreBelief, setCoreBelief] = useState('Add your core belief here.')
+    
+    // Why AI section
+    const [whyAIIntro, setWhyAIIntro] = useState('Add why AI/ML drives you.')
+    const [humanAISynergy, setHumanAISynergy] = useState('Add your thoughts on human-AI collaboration.')
+    const [realWorldImpact, setRealWorldImpact] = useState('Add your vision for real-world AI impact.')
+    
     const [loading, setLoading] = useState(true)
     const [activeTab, setActiveTab] = useState('overview')
     const [showScrollToTop, setShowScrollToTop] = useState(false)
@@ -186,10 +206,36 @@ export default function AboutPage() {
     const loadSiteContent = async () => {
         try {
             setLoading(true)
-            const content = await dataAPI.getSiteContent()
+            const content = await dataAPI.getSiteContent() as any
             setPageTitle(content.aboutTitle)
             setPageSubtitle(content.aboutSubtitle)
             setPageContent(content.aboutContent)
+            
+            // Load personal info
+            if (content.aboutPersonalInfo) {
+                setPersonalName(content.aboutPersonalInfo.name)
+                setPersonalEducation(content.aboutPersonalInfo.education)
+                setPersonalStory(content.aboutPersonalInfo.personalStory)
+            }
+            
+            // Load journey info
+            if (content.aboutJourney) {
+                setJourneyBeginning(content.aboutJourney.beginning.description)
+                setJourneyDeepDive(content.aboutJourney.deepDive.description)
+                setJourneyInnovation(content.aboutJourney.innovation.description)
+            }
+            
+            // Load philosophy
+            if (content.aboutPhilosophy) {
+                setCoreBelief(content.aboutPhilosophy.coreBelief)
+            }
+            
+            // Load AI section
+            if (content.aboutWhyAI) {
+                setWhyAIIntro(content.aboutWhyAI.introduction)
+                setHumanAISynergy(content.aboutWhyAI.humanAISynergy)
+                setRealWorldImpact(content.aboutWhyAI.realWorldImpact)
+            }
         } catch (error) {
             console.error('Failed to load site content:', error)
             // Keep default values if loading fails
@@ -237,6 +283,189 @@ export default function AboutPage() {
             soundEffects.current?.play('success')
         } catch (error) {
             console.error('Failed to save about content:', error)
+        }
+    }
+
+    // Personal info save handlers
+    const handleSavePersonalName = async (newName: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutPersonalInfo: {
+                    ...currentContent.aboutPersonalInfo,
+                    name: newName
+                }
+            })
+            setPersonalName(newName)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save personal name:', error)
+        }
+    }
+
+    const handleSavePersonalEducation = async (newEducation: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutPersonalInfo: {
+                    ...currentContent.aboutPersonalInfo,
+                    education: newEducation
+                }
+            })
+            setPersonalEducation(newEducation)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save personal education:', error)
+        }
+    }
+
+    const handleSavePersonalStory = async (newStory: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutPersonalInfo: {
+                    ...currentContent.aboutPersonalInfo,
+                    personalStory: newStory
+                }
+            })
+            setPersonalStory(newStory)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save personal story:', error)
+        }
+    }
+
+    // Journey save handlers
+    const handleSaveJourneyBeginning = async (newDescription: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutJourney: {
+                    ...currentContent.aboutJourney,
+                    beginning: {
+                        ...currentContent.aboutJourney.beginning,
+                        description: newDescription
+                    }
+                }
+            })
+            setJourneyBeginning(newDescription)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save journey beginning:', error)
+        }
+    }
+
+    const handleSaveJourneyDeepDive = async (newDescription: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutJourney: {
+                    ...currentContent.aboutJourney,
+                    deepDive: {
+                        ...currentContent.aboutJourney.deepDive,
+                        description: newDescription
+                    }
+                }
+            })
+            setJourneyDeepDive(newDescription)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save journey deep dive:', error)
+        }
+    }
+
+    const handleSaveJourneyInnovation = async (newDescription: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutJourney: {
+                    ...currentContent.aboutJourney,
+                    innovation: {
+                        ...currentContent.aboutJourney.innovation,
+                        description: newDescription
+                    }
+                }
+            })
+            setJourneyInnovation(newDescription)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save journey innovation:', error)
+        }
+    }
+
+    // Philosophy save handlers
+    const handleSaveCoreBelief = async (newBelief: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutPhilosophy: {
+                    ...currentContent.aboutPhilosophy,
+                    coreBelief: newBelief
+                }
+            })
+            setCoreBelief(newBelief)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save core belief:', error)
+        }
+    }
+
+    // Why AI save handlers
+    const handleSaveWhyAIIntro = async (newIntro: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutWhyAI: {
+                    ...currentContent.aboutWhyAI,
+                    introduction: newIntro
+                }
+            })
+            setWhyAIIntro(newIntro)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save why AI intro:', error)
+        }
+    }
+
+    const handleSaveHumanAISynergy = async (newSynergy: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutWhyAI: {
+                    ...currentContent.aboutWhyAI,
+                    humanAISynergy: newSynergy
+                }
+            })
+            setHumanAISynergy(newSynergy)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save human AI synergy:', error)
+        }
+    }
+
+    const handleSaveRealWorldImpact = async (newImpact: string) => {
+        try {
+            const currentContent = await dataAPI.getSiteContent() as any
+            await dataAPI.updateSiteContent({
+                ...currentContent,
+                aboutWhyAI: {
+                    ...currentContent.aboutWhyAI,
+                    realWorldImpact: newImpact
+                }
+            })
+            setRealWorldImpact(newImpact)
+            soundEffects.current?.play('success')
+        } catch (error) {
+            console.error('Failed to save real world impact:', error)
         }
     }
 
@@ -555,21 +784,51 @@ export default function AboutPage() {
                                             <div className="w-2 h-2 bg-white rounded-full"></div>
                                         </div>
                                         <h4 className="font-bold text-gray-800 dark:text-white mb-2">The Beginning (2020)</h4>
-                                        <p>Started with curiosity about how things work. First &ldquo;Hello World&rdquo; led to building mini-bots and exploring automation.</p>
+                                        <p>
+                                            <InlineEdit
+                                                type="textarea"
+                                                value={journeyBeginning}
+                                                onSave={handleSaveJourneyBeginning}
+                                                placeholder="Enter your beginning story..."
+                                                maxLength={200}
+                                            >
+                                                {journeyBeginning}
+                                            </InlineEdit>
+                                        </p>
                                     </div>
                                     <div className="relative pl-8 border-l-4 border-purple-500">
                                         <div className="absolute -left-3 top-0 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
                                             <div className="w-2 h-2 bg-white rounded-full"></div>
                                         </div>
                                         <h4 className="font-bold text-gray-800 dark:text-white mb-2">Deep Dive (2021-2022)</h4>
-                                        <p>Discovered AI/ML and was fascinated by the potential. Started building smart systems and understanding neural networks.</p>
+                                        <p>
+                                            <InlineEdit
+                                                type="textarea"
+                                                value={journeyDeepDive}
+                                                onSave={handleSaveJourneyDeepDive}
+                                                placeholder="Enter your learning phase description..."
+                                                maxLength={200}
+                                            >
+                                                {journeyDeepDive}
+                                            </InlineEdit>
+                                        </p>
                                     </div>
                                     <div className="relative pl-8 border-l-4 border-green-500">
                                         <div className="absolute -left-3 top-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                                             <div className="w-2 h-2 bg-white rounded-full"></div>
                                         </div>
                                         <h4 className="font-bold text-gray-800 dark:text-white mb-2">Innovation (2023-Present)</h4>
-                                        <p>Building production-ready applications, contributing to open source, and exploring the frontiers of human-AI collaboration.</p>
+                                        <p>
+                                            <InlineEdit
+                                                type="textarea"
+                                                value={journeyInnovation}
+                                                onSave={handleSaveJourneyInnovation}
+                                                placeholder="Enter your current phase description..."
+                                                maxLength={200}
+                                            >
+                                                {journeyInnovation}
+                                            </InlineEdit>
+                                        </p>
                                     </div>
                                 </div>
                             )}
@@ -617,7 +876,23 @@ export default function AboutPage() {
                                     Background & Education
                                 </h3>
                                 <p>
-                                    Hey! I&apos;m <span className="font-semibold text-accent">Ankit Raj</span>, currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning. My journey started not from coaching centers or big-city schools—but from deep curiosity, a laptop, and countless nights of self-learning.
+                                    Hey! I&apos;m <InlineEdit
+                                        type="text"
+                                        value={personalName}
+                                        onSave={handleSavePersonalName}
+                                        placeholder="Enter your name..."
+                                        inline={true}
+                                    >
+                                        <span className="font-semibold text-accent">{personalName}</span>
+                                    </InlineEdit>, <InlineEdit
+                                        type="text"
+                                        value={personalEducation}
+                                        onSave={handleSavePersonalEducation}
+                                        placeholder="Enter your education/background..."
+                                        inline={true}
+                                    >
+                                        {personalEducation}
+                                    </InlineEdit>
                                 </p>
                             </div>
                             <div>
@@ -626,7 +901,15 @@ export default function AboutPage() {
                                     My Story
                                 </h3>
                                 <p>
-                                    From building mini-bots in my early teens to developing intelligent web apps and models today, my passion lies in creating things that not only work — but feel futuristic. I believe technology should feel magical yet meaningful. My path has been unconventional, driven by genuine curiosity rather than traditional academic routes.
+                                    <InlineEdit
+                                        type="textarea"
+                                        value={personalStory}
+                                        onSave={handleSavePersonalStory}
+                                        placeholder="Enter your personal story..."
+                                        maxLength={500}
+                                    >
+                                        {personalStory}
+                                    </InlineEdit>
                                 </p>
                             </div>
                         </div>
@@ -642,7 +925,15 @@ export default function AboutPage() {
                         </h2>
                         <div className="space-y-4 text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                             <p>
-                                <strong>What drives me?</strong> The infinite possibilities of artificial intelligence fascinate me. It&apos;s not just about building smart systems—it&apos;s about creating technology that understands, learns, and adapts like we do.
+                                <InlineEdit
+                                    type="textarea"
+                                    value={whyAIIntro}
+                                    onSave={handleSaveWhyAIIntro}
+                                    placeholder="Enter why AI/ML drives you..."
+                                    maxLength={300}
+                                >
+                                    <strong>What drives me?</strong> {whyAIIntro}
+                                </InlineEdit>
                             </p>
                             <div className="grid md:grid-cols-2 gap-6 mt-6">
                                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -651,7 +942,15 @@ export default function AboutPage() {
                                         Human-AI Synergy
                                     </h4>
                                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                                        I&apos;m passionate about creating AI that amplifies human creativity rather than replacing it. The future lies in collaboration, not competition.
+                                        <InlineEdit
+                                            type="textarea"
+                                            value={humanAISynergy}
+                                            onSave={handleSaveHumanAISynergy}
+                                            placeholder="Enter your thoughts on human-AI collaboration..."
+                                            maxLength={200}
+                                        >
+                                            {humanAISynergy}
+                                        </InlineEdit>
                                     </p>
                                 </div>
                                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -660,7 +959,15 @@ export default function AboutPage() {
                                         Real-world Impact
                                     </h4>
                                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                                        From environmental monitoring to empathetic chatbots, I want to build AI solutions that solve actual problems and improve lives.
+                                        <InlineEdit
+                                            type="textarea"
+                                            value={realWorldImpact}
+                                            onSave={handleSaveRealWorldImpact}
+                                            placeholder="Enter your vision for real-world AI impact..."
+                                            maxLength={200}
+                                        >
+                                            {realWorldImpact}
+                                        </InlineEdit>
                                     </p>
                                 </div>
                             </div>
@@ -698,7 +1005,15 @@ export default function AboutPage() {
                             </div>
                             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border-l-4 border-accent">
                                 <p className="text-base italic text-gray-700 dark:text-gray-300">
-                                    &ldquo;Philosophically, I admire the beauty of the cosmos — hence the name <span className="text-accent font-semibold bg-gradient-to-r from-accent to-purple-500 bg-clip-text text-transparent">Luciverse</span>. My dream is to contribute to the future of human-AI collaboration.&rdquo;
+                                    <InlineEdit
+                                        type="textarea"
+                                        value={coreBelief}
+                                        onSave={handleSaveCoreBelief}
+                                        placeholder="Enter your core belief or philosophy..."
+                                        maxLength={300}
+                                    >
+                                        &ldquo;{coreBelief}&rdquo;
+                                    </InlineEdit>
                                 </p>
                             </div>
                         </div>
@@ -1009,6 +1324,9 @@ export default function AboutPage() {
                     </div>
                 </motion.section>
             </motion.div>
+
+            {/* Owner Controls */}
+            <OwnerControls onOpenEditor={() => {/* Additional editing features can be added here */}} />
         </main>
     )
 }

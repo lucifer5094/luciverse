@@ -53,21 +53,21 @@ export default function AboutPage() {
                     className="max-w-4xl text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-6"
                 >
                     <p>
-                        Hey! I&apos;m <span className="font-semibold text-accent">Ankit Raj</span>, currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning. My journey started not from coaching centers or big-city schools—but from deep curiosity, a laptop, and countless nights of self-learning.
+                        Hey! I&apos;m <span className="font-semibold text-accent">[Your Name]</span>, currently pursuing [Your Education/Background]. Add your personal story here.
                     </p>
 
                     <p>
-                        From building mini-bots in my early teens to developing intelligent web apps and models today, my passion lies in creating things that not only work — but feel futuristic. I believe technology should feel magical yet meaningful.
+                        Add your journey and passion details here.
                     </p>
 
                     <p>
                         I&apos;ve worked on a variety of projects including:
                     </p>
                     <ul className="list-disc ml-6 space-y-2">
-                        <li>🔹 <strong>Luciverse</strong> — a personalized universe of my creations and ideas.</li>
-                        <li>🔹 <strong>AIDA</strong> — my custom AI chatbot project designed with empathy and utility in mind.</li>
-                        <li>🔹 <strong>Smart WaterBoat</strong> — an IoT-based autonomous water pollution monitoring system.</li>
-                        <li>🔹 <strong>AlgoGenesis</strong> — a Next.js-powered platform to share algorithms and coding knowledge.</li>
+                        <li>🔹 <strong>[Project 1]</strong> — Add your project description.</li>
+                        <li>🔹 <strong>[Project 2]</strong> — Add your project description.</li>
+                        <li>🔹 <strong>[Project 3]</strong> — Add your project description.</li>
+                        <li>🔹 <strong>[Project 4]</strong> — Add your project description.</li>
                     </ul>
 
                     <p>🎯 Personal Interests</p>
