@@ -143,12 +143,12 @@ const sampleEntries: TimelineEntry[] = [
 // Generate heatmap data based on timeline entries
 function generateHeatmapData(entries: TimelineEntry[]) {
   const data: { [key: string]: number } = {}
-  
+
   entries.forEach(entry => {
     const date = entry.date
     data[date] = (data[date] || 0) + entry.importance
   })
-  
+
   return data
 }
 
@@ -156,10 +156,10 @@ function generateHeatmapData(entries: TimelineEntry[]) {
 function GitHubStyleHeatmap({ data }: { data: { [key: string]: number } }) {
   const today = new Date()
   const yearAgo = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate())
-  
+
   const weeks = []
   const currentDate = new Date(yearAgo)
-  
+
   // Generate weeks for the past year
   while (currentDate <= today) {
     const week = []
@@ -220,8 +220,8 @@ function GitHubStyleHeatmap({ data }: { data: { [key: string]: number } }) {
 }
 
 // Timeline card component
-function TimelineCard({ entry, onUpdate, isOwner }: { 
-  entry: TimelineEntry; 
+function TimelineCard({ entry, onUpdate, isOwner }: {
+  entry: TimelineEntry;
   onUpdate?: (id: string, field: string, value: any) => void;
   isOwner?: boolean;
 }) {
@@ -231,27 +231,27 @@ function TimelineCard({ entry, onUpdate, isOwner }: {
     growth: Lightbulb,
     project: Star
   }
-  
+
   const categoryColors = {
     learning: 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700',
     building: 'bg-purple-100 dark:bg-purple-900 border-purple-300 dark:border-purple-700',
     growth: 'bg-yellow-100 dark:bg-yellow-900 border-yellow-300 dark:border-yellow-700',
     project: 'bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700'
   }
-  
+
   // Special styling for GFG-related entries
   const isGFGEntry = entry.tags.includes('gfg') || entry.tags.includes('leadership') || entry.tags.includes('community')
-  const cardClass = isGFGEntry 
+  const cardClass = isGFGEntry
     ? 'bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border-2 border-green-300 dark:border-green-600 shadow-lg'
     : categoryColors[entry.category]
-  
+
   const Icon = categoryIcons[entry.category]
   const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   })
-  
+
   return (
     <div className={`p-6 rounded-lg border-2 ${cardClass} 
                      hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative
@@ -279,7 +279,7 @@ function TimelineCard({ entry, onUpdate, isOwner }: {
           ))}
         </div>
       </div>
-      
+
       <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
         {isOwner ? (
           <InlineEdit
@@ -295,7 +295,7 @@ function TimelineCard({ entry, onUpdate, isOwner }: {
           entry.topic
         )}
       </h3>
-      
+
       <p className="text-gray-700 dark:text-gray-300 mb-4">
         {isOwner ? (
           <InlineEdit
@@ -311,17 +311,17 @@ function TimelineCard({ entry, onUpdate, isOwner }: {
           entry.description
         )}
       </p>
-      
+
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
           <Clock className="w-4 h-4" />
           {formattedDate}
         </div>
-        
+
         <div className="flex flex-wrap gap-1">
           {entry.tags.map(tag => (
-            <span key={tag} 
-                  className="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 
+            <span key={tag}
+              className="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 
                            text-gray-700 dark:text-gray-300 rounded-full">
               #{tag}
             </span>
@@ -333,10 +333,10 @@ function TimelineCard({ entry, onUpdate, isOwner }: {
 }
 
 // Add Entry Modal Component
-function AddEntryModal({ isOpen, onClose, onAdd }: { 
-  isOpen: boolean; 
-  onClose: () => void; 
-  onAdd: (entry: Omit<TimelineEntry, 'id'>) => void; 
+function AddEntryModal({ isOpen, onClose, onAdd }: {
+  isOpen: boolean;
+  onClose: () => void;
+  onAdd: (entry: Omit<TimelineEntry, 'id'>) => void;
 }) {
   const [formData, setFormData] = useState({
     date: new Date().toISOString().split('T')[0],
@@ -349,7 +349,7 @@ function AddEntryModal({ isOpen, onClose, onAdd }: {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!formData.topic.trim() || !formData.description.trim()) {
       alert('Please fill in all required fields')
       return
@@ -550,12 +550,12 @@ export default function LogsPage() {
   const [pageSubtitle, setPageSubtitle] = useState('My Journey • Learning • Building • Growing')
   const [pageDescription, setPageDescription] = useState('Track my development journey, learning milestones, and project progress through detailed logs and reflections.')
   const [loading, setLoading] = useState(true)
-  
+
   // Owner controls state
   const [showEditPanel, setShowEditPanel] = useState(false)
   const [isOwner, setIsOwner] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
-  
+
   const [entries, setEntries] = useState<TimelineEntry[]>(sampleEntries)
   const [filter, setFilter] = useState<string>('all')
   const [sortBy, setSortBy] = useState<'date' | 'importance'>('date')
@@ -625,9 +625,9 @@ export default function LogsPage() {
       console.error('Failed to save logs description:', error)
     }
   }
-  
+
   const heatmapData = useMemo(() => generateHeatmapData(entries), [entries])
-  
+
   const addNewEntry = (newEntryData: Omit<TimelineEntry, 'id'>) => {
     const newEntry: TimelineEntry = {
       ...newEntryData,
@@ -637,18 +637,18 @@ export default function LogsPage() {
   }
 
   const updateEntry = (id: string, field: string, value: any) => {
-    setEntries(prev => prev.map(entry => 
+    setEntries(prev => prev.map(entry =>
       entry.id === id ? { ...entry, [field]: value } : entry
     ))
   }
-  
+
   const filteredAndSortedEntries = useMemo(() => {
     let filtered = entries
-    
+
     if (filter !== 'all') {
       filtered = entries.filter(entry => entry.category === filter)
     }
-    
+
     return filtered.sort((a, b) => {
       if (sortBy === 'date') {
         return new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -657,13 +657,13 @@ export default function LogsPage() {
       }
     })
   }, [entries, filter, sortBy])
-  
+
   const stats = useMemo(() => {
     const categoryStats = entries.reduce((acc, entry) => {
       acc[entry.category] = (acc[entry.category] || 0) + 1
       return acc
     }, {} as Record<string, number>)
-    
+
     return {
       total: entries.length,
       categories: categoryStats,
@@ -751,7 +751,7 @@ export default function LogsPage() {
                 <p className="text-gray-600 dark:text-gray-400">Events • Experience • Community Building</p>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-lg mb-2 text-green-600">📛 Current Role</h3>
@@ -759,7 +759,7 @@ export default function LogsPage() {
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-lg mb-2 text-blue-600">🏁 Chapter Launched</h3>
-                <p className="text-gray-700 dark:text-gray-300">September 2024 - Successfully established first GFG chapter</p>
+                <p className="text-gray-700 dark:text-gray-300">July 2025 - Successfully established first GFG Campus Body</p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-lg mb-2 text-purple-600">🎯 Community Impact</h3>
@@ -791,7 +791,7 @@ export default function LogsPage() {
                   </ul>
                 </div>
               </div>
-              
+
               {/* Owner-only editable section */}
               {isMounted && isOwner && (
                 <div className="mt-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
@@ -827,8 +827,8 @@ export default function LogsPage() {
                 <Filter className="w-5 h-5" />
                 <label className="font-medium">Filter by category:</label>
               </div>
-              <select 
-                value={filter} 
+              <select
+                value={filter}
                 onChange={(e) => setFilter(e.target.value)}
                 className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
                          bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -840,11 +840,11 @@ export default function LogsPage() {
                 <option value="project">Projects</option>
               </select>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <label className="font-medium">Sort by:</label>
-              <select 
-                value={sortBy} 
+              <select
+                value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'importance')}
                 className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
                          bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -859,9 +859,9 @@ export default function LogsPage() {
         {/* Timeline Cards */}
         <div className="space-y-6">
           {filteredAndSortedEntries.map((entry) => (
-            <TimelineCard 
-              key={entry.id} 
-              entry={entry} 
+            <TimelineCard
+              key={entry.id}
+              entry={entry}
               onUpdate={updateEntry}
               isOwner={isOwner}
             />
@@ -877,7 +877,7 @@ export default function LogsPage() {
         )}        {/* Add Entry Button - Only for Owners */}
         {isMounted && isOwner && (
           <div className="text-center mt-12">
-            <button 
+            <button
               onClick={() => setIsModalOpen(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg 
                          transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto"
@@ -889,7 +889,7 @@ export default function LogsPage() {
         )}
 
         {/* Add Entry Modal */}
-        <AddEntryModal 
+        <AddEntryModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           onAdd={addNewEntry}
@@ -899,9 +899,9 @@ export default function LogsPage() {
         <OwnerControls onOpenEditor={() => setShowEditPanel(true)} />
 
         {/* Owner Edit Panel */}
-        <OwnerEditPanel 
-          isVisible={showEditPanel} 
-          onClose={() => setShowEditPanel(false)} 
+        <OwnerEditPanel
+          isVisible={showEditPanel}
+          onClose={() => setShowEditPanel(false)}
         />
       </div>
     </div>

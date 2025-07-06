@@ -92,6 +92,28 @@ export async function updateData<T>(type: string, data: T): Promise<void> {
   }
 }
 
+// Achievement interface
+export interface Achievement {
+  id: string
+  title: string
+  organization: string
+  date: string
+  category: 'certification' | 'award' | 'achievement' | 'competition' | 'leadership' | 'project'
+  description: string
+  imageUrl?: string
+  certificateUrl?: string
+  verificationUrl?: string
+  skills: string[]
+  importance: 1 | 2 | 3 // 1 = High, 2 = Medium, 3 = Low
+  isVerified: boolean
+  location?: string
+  duration?: string
+  grade?: string
+  issueDate?: string
+  expiryDate?: string
+  prize?: string
+}
+
 // Specific functions for different data types
 export const dataAPI = {
   // Vault documents
@@ -152,6 +174,51 @@ export const dataAPI = {
     const documents = await dataAPI.getVaultDocuments()
     const filteredDocs = documents.filter(doc => doc.id !== id)
     return dataAPI.updateVaultDocuments(filteredDocs)
+  },
+
+  // Achievements management
+  getAchievements: async (): Promise<Achievement[]> => {
+    const data = await fetchData<Record<string, Achievement | string>>('achievements')
+    // Filter out non-achievement properties like 'lastUpdated'
+    const achievements = Object.values(data).filter((item): item is Achievement => 
+      typeof item === 'object' && item !== null && 'id' in item
+    )
+    return achievements
+  },
+  
+  updateAchievements: async (achievements: Achievement[]): Promise<void> => {
+    // Convert array back to object format for storage
+    const achievementsObj: Record<string, Achievement | string> = {}
+    achievements.forEach((achievement, index) => {
+      achievementsObj[index.toString()] = achievement
+    })
+    achievementsObj.lastUpdated = new Date().toISOString()
+    return updateData('achievements', achievementsObj)
+  },
+  
+  // Add new achievement
+  addAchievement: async (newAchievement: Achievement): Promise<void> => {
+    const achievements = await dataAPI.getAchievements()
+    achievements.push(newAchievement)
+    return dataAPI.updateAchievements(achievements)
+  },
+  
+  // Update existing achievement
+  updateAchievement: async (id: string, updatedAchievement: Partial<Achievement>): Promise<void> => {
+    const achievements = await dataAPI.getAchievements()
+    const index = achievements.findIndex(achievement => achievement.id === id)
+    if (index !== -1) {
+      achievements[index] = { ...achievements[index], ...updatedAchievement }
+      return dataAPI.updateAchievements(achievements)
+    }
+    throw new Error('Achievement not found')
+  },
+  
+  // Delete achievement
+  deleteAchievement: async (id: string): Promise<void> => {
+    const achievements = await dataAPI.getAchievements()
+    const filteredAchievements = achievements.filter(achievement => achievement.id !== id)
+    return dataAPI.updateAchievements(filteredAchievements)
   }
 }
 

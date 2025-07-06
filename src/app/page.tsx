@@ -879,6 +879,14 @@ export default function Home() {
               accentColor: 'green'
             },
             {
+              title: 'Achievements',
+              path: '/achievements',
+              icon: '🏆',
+              description: 'View my certifications, awards & accomplishments',
+              gradient: 'from-yellow-500 to-orange-600',
+              accentColor: 'yellow'
+            },
+            {
               title: 'Vault',
               path: '/vault',
               icon: '🧠',
