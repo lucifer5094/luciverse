@@ -2,6 +2,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, useScroll, useTransform, Variants } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 import OwnerControls from '@/components/OwnerControls'
@@ -646,9 +647,11 @@ export default function Home() {
                               stiffness: 300
                             }}
                           >
-                            <img 
+                            <Image 
                               src={highlight.image} 
                               alt={highlight.title}
+                              width={400}
+                              height={240}
                               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                               onError={(e) => {
                                 // Fallback to icon if image fails to load

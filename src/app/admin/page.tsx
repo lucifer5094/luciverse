@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { dataAPI, isDevelopmentMode, Achievement } from '@/utils/dataAPI'
 import { Document } from '@/utils/vaultUtils'
 import LoginForm from '@/components/LoginForm'
@@ -1148,9 +1149,11 @@ function HighlightsManager({
                     <div className="flex-shrink-0">
                       {highlight.image ? (
                         <div className="w-12 h-12 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 border">
-                          <img 
+                          <Image 
                             src={highlight.image} 
                             alt={highlight.title}
+                            width={48}
+                            height={48}
                             className="w-full h-full object-cover"
                             onError={(e) => {
                               // Fallback to icon if image fails to load
