@@ -6,18 +6,30 @@ import { validatePassword, setAuthenticated, isAuthenticated } from '@/utils/aut
 import { Eye, EyeOff, Lock, Shield } from 'lucide-react';
 
 export default function AdminAuthPage() {
+  // All hooks must be called at the top level, before any conditional logic
+  const [mounted, setMounted] = useState(false);
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Redirect if already authenticated
   useEffect(() => {
-    if (isAuthenticated()) {
-      router.push('/secret-edit');
+    if (typeof window !== 'undefined') {
+      const auth = isAuthenticated()
+      if (auth) {
+        router.push('/secret-edit')
+      }
     }
   }, [router]);
+
+  if (!mounted) return null;
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +38,7 @@ export default function AdminAuthPage() {
 
     try {
       const result = await validatePassword(password);
-      
+
       if (result.success) {
         setAuthenticated(true);
         router.push('/secret-edit');
@@ -54,7 +66,7 @@ export default function AdminAuthPage() {
             Enter your password to access the admin dashboard
           </p>
         </div>
-        
+
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="password" className="sr-only">

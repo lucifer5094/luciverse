@@ -9,7 +9,8 @@ import ErrorBoundary from '@/components/ErrorBoundary'
 import PWAInstallPrompt from '@/components/PWAInstallPrompt'
 import OfflineIndicator from '@/components/OfflineIndicator'
 import ClientLayout from '@/components/ClientLayout'
-import { Analytics } from "@vercel/analytics/next"
+import SafeAnalytics from '@/components/SafeAnalytics'
+import ReloadHelper from '@/components/ReloadHelper'
 import { ErrorHandler } from '@/utils/errorHandling'
 
 // Initialize global error handling
@@ -148,11 +149,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main>
               {children}
-              <Analytics/>
             </main>
             <Footer />
             <OwnerFloatingControls />
             <PWAInstallPrompt />
+            <ReloadHelper />
+            <ErrorBoundary fallback={<div></div>}>
+              <SafeAnalytics/>
+            </ErrorBoundary>
           </ClientLayout>
         </ErrorBoundary>
       </body>

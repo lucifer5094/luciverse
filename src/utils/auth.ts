@@ -6,8 +6,9 @@ export const AUTH_TOKEN_KEY = 'owner-auth';
 export const isAuthenticated = (): boolean => {
   if (typeof window === 'undefined') return false;
   
-  const token = localStorage.getItem(AUTH_TOKEN_KEY);
-  return token === 'true';
+  // const token = localStorage.getItem(AUTH_TOKEN_KEY);
+  // return token === 'true';
+  return localStorage.getItem('owner-auth') === 'true'
 };
 
 // Set authentication status

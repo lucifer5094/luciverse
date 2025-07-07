@@ -42,12 +42,13 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    // Only allow in development mode
-    const isDevelopment = process.env.NODE_ENV === 'development' || 
-                         request.headers.get('host')?.includes('localhost')
+    // Allow in development and on production site
+    const isAllowed = process.env.NODE_ENV === 'development' || 
+                     request.headers.get('host')?.includes('localhost') ||
+                     request.headers.get('host')?.includes('luciverseai.vercel.app')
     
-    if (!isDevelopment) {
-      return NextResponse.json({ error: 'Analytics only available in development' }, { status: 403 })
+    if (!isAllowed) {
+      return NextResponse.json({ error: 'Analytics not available for this domain' }, { status: 403 })
     }
 
     const editRecord: EditRecord = await request.json()

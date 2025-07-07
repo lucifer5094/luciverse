@@ -1,4 +1,2561 @@
 {
-  "interactions": [],
-  "lastUpdated": "2025-01-06T15:25:11.911Z"
+  "interactions": [
+    {
+      "id": "interaction_1751881715363_0ch7nltsl",
+      "timestamp": "2025-07-07T15:18:38.310Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881715372_ezitkzeea",
+      "timestamp": "2025-07-07T15:18:38.312Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881721636_8a2xs0v4j",
+      "timestamp": "2025-07-07T15:18:41.914Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751881723473_vwh3p4vfi",
+      "timestamp": "2025-07-07T15:18:43.492Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751881726632_n7arvm3qx",
+      "timestamp": "2025-07-07T15:18:46.676Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751881729420_ql2jbxsz4",
+      "timestamp": "2025-07-07T15:18:50.288Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881729417_ri173lixt",
+      "timestamp": "2025-07-07T15:18:50.290Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881743478_1xr4nfiec",
+      "timestamp": "2025-07-07T15:19:03.489Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin",
+      "element": "span#unknown.truncate",
+      "action": "click",
+      "position": {
+        "x": 1267,
+        "y": 318
+      },
+      "metadata": {
+        "text": "Analytics",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881750517_o11vahkma",
+      "timestamp": "2025-07-07T15:19:10.533Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751881755990_hnvy9k7zk",
+      "timestamp": "2025-07-07T15:19:16.848Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751881758067_3qprl96sl",
+      "timestamp": "2025-07-07T15:19:18.100Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881758064_81h992y9h",
+      "timestamp": "2025-07-07T15:19:18.101Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881759665_dcokbp29g",
+      "timestamp": "2025-07-07T15:19:19.676Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "input#password.relative",
+      "action": "click",
+      "position": {
+        "x": 743,
+        "y": 517
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881762259_1jpavuame",
+      "timestamp": "2025-07-07T15:19:22.293Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "button#unknown.group",
+      "action": "click",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "metadata": {
+        "text": "Access Dashboard",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881767640_mklje147n",
+      "timestamp": "2025-07-07T15:19:27.691Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751881795711_mxpv6l1is",
+      "timestamp": "2025-07-07T15:19:55.742Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751881798730_nrjsbccsu",
+      "timestamp": "2025-07-07T15:19:58.780Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751881832196_tqqrpe69n",
+      "timestamp": "2025-07-07T15:20:32.222Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751881838470_ctvf5ois3",
+      "timestamp": "2025-07-07T15:20:38.512Z",
+      "sessionId": "session_1751881715363_txdhuxqew",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751881874671_7qff88uzj",
+      "timestamp": "2025-07-07T15:21:15.010Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881874667_xkrd1m1hz",
+      "timestamp": "2025-07-07T15:21:15.012Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881877735_xxunnb4rw",
+      "timestamp": "2025-07-07T15:21:17.767Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/admin",
+      "element": "span#unknown.unknown",
+      "action": "click",
+      "position": {
+        "x": 1353,
+        "y": 20
+      },
+      "metadata": {
+        "text": "Logout",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881879054_gnn7bkw4q",
+      "timestamp": "2025-07-07T15:21:19.079Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881879049_g3f3wozfj",
+      "timestamp": "2025-07-07T15:21:19.081Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881880078_5h8gqc0r5",
+      "timestamp": "2025-07-07T15:21:20.094Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "h1#unknown.text-xl",
+      "action": "click",
+      "position": {
+        "x": 260,
+        "y": 21
+      },
+      "metadata": {
+        "text": "Luciverse",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881881731_m24q5wfwr",
+      "timestamp": "2025-07-07T15:21:21.744Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 876,
+        "y": 23
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751881881915_z845ov5ab",
+      "timestamp": "2025-07-07T15:21:22.277Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 876,
+        "y": 23
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751881882135_gyhz7hfrw",
+      "timestamp": "2025-07-07T15:21:22.278Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 876,
+        "y": 23
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751881883011_9qieb390l",
+      "timestamp": "2025-07-07T15:21:23.044Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751881904408_twrwqgnv0",
+      "timestamp": "2025-07-07T15:21:44.440Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751881907917_h8ap382kv",
+      "timestamp": "2025-07-07T15:21:47.930Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1330,
+        "y": 31
+      },
+      "metadata": {
+        "text": "Contact",
+        "href": "/contact"
+      }
+    },
+    {
+      "id": "interaction_1751881912009_209nlh5jd",
+      "timestamp": "2025-07-07T15:21:52.036Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751881912033_padzqsbo6",
+      "timestamp": "2025-07-07T15:21:52.079Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751881912039_xcg26t9e7",
+      "timestamp": "2025-07-07T15:21:52.080Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "nextjs-portal#unknown.unknown",
+      "action": "click",
+      "position": {
+        "x": 73,
+        "y": 799
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881914810_ebwdqgsix",
+      "timestamp": "2025-07-07T15:21:54.823Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "button#unknown.p-2",
+      "action": "click",
+      "position": {
+        "x": 1372,
+        "y": 27
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881915655_o6v5d3uii",
+      "timestamp": "2025-07-07T15:21:55.667Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/",
+      "element": "button#unknown.p-2",
+      "action": "click",
+      "position": {
+        "x": 1372,
+        "y": 27
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751881917145_djxgpivhe",
+      "timestamp": "2025-07-07T15:21:57.436Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881917141_e0f6srr7i",
+      "timestamp": "2025-07-07T15:21:57.437Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751881918652_9wnr8ypgm",
+      "timestamp": "2025-07-07T15:21:58.664Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 351.20001220703125,
+        "scrollPercent": 47
+      }
+    },
+    {
+      "id": "interaction_1751881920718_230sx1qnr",
+      "timestamp": "2025-07-07T15:22:00.730Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1751881920966_3bts3jo77",
+      "timestamp": "2025-07-07T15:22:01.250Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 890,
+        "y": 24
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751881921729_wij9lpqnm",
+      "timestamp": "2025-07-07T15:22:01.753Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 890,
+        "y": 24
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751881921947_w7wwhusic",
+      "timestamp": "2025-07-07T15:22:02.373Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 890,
+        "y": 24
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751881923706_odklwqwl3",
+      "timestamp": "2025-07-07T15:22:03.729Z",
+      "sessionId": "session_1751881874667_xh3ppuwlz",
+      "page": "/contact",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882188097_xfecnthmd",
+      "timestamp": "2025-07-07T15:26:29.732Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882188104_5donbm7x6",
+      "timestamp": "2025-07-07T15:26:30.053Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882190783_9dq7kntho",
+      "timestamp": "2025-07-07T15:26:33.542Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "div#unknown.unknown",
+      "action": "click",
+      "position": {
+        "x": 1853,
+        "y": 57
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882197498_pva9un2ap",
+      "timestamp": "2025-07-07T15:26:37.522Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1751882200277_o8d58apyk",
+      "timestamp": "2025-07-07T15:26:40.298Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882204285_5qjac7sbf",
+      "timestamp": "2025-07-07T15:26:45.118Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882207322_gxciw51g3",
+      "timestamp": "2025-07-07T15:26:47.997Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882207318_k1qi0ggic",
+      "timestamp": "2025-07-07T15:26:47.998Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882210505_1xt1mul70",
+      "timestamp": "2025-07-07T15:26:50.517Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "input#password.w-full",
+      "action": "click",
+      "position": {
+        "x": 901,
+        "y": 562
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882214150_6v7fehsa8",
+      "timestamp": "2025-07-07T15:26:54.172Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "button#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "metadata": {
+        "text": "Access Admin Panel",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882217218_y4p9zof2a",
+      "timestamp": "2025-07-07T15:26:57.236Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882217654_rnte7vcd0",
+      "timestamp": "2025-07-07T15:26:57.730Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882222068_juifkh1c1",
+      "timestamp": "2025-07-07T15:27:02.088Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882227269_xw96tqi6n",
+      "timestamp": "2025-07-07T15:27:07.284Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882229242_stt94zl1n",
+      "timestamp": "2025-07-07T15:27:09.254Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "div#unknown.min-h-screen",
+      "action": "click",
+      "position": {
+        "x": 1054,
+        "y": 858
+      },
+      "metadata": {
+        "text": "Admin DashboardContent Management • System Control",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882229622_fseawh3y1",
+      "timestamp": "2025-07-07T15:27:09.695Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882231140_uo4ktbza2",
+      "timestamp": "2025-07-07T15:27:11.210Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882234338_7ubt7kbfv",
+      "timestamp": "2025-07-07T15:27:14.349Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "button#unknown.px-3",
+      "action": "click",
+      "position": {
+        "x": 1731,
+        "y": 1063
+      },
+      "metadata": {
+        "text": "Not now",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882237012_mevdbe4gs",
+      "timestamp": "2025-07-07T15:27:17.029Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882261459_pznbfudwd",
+      "timestamp": "2025-07-07T15:27:41.640Z",
+      "sessionId": "session_1751882261458_2oan1nzmc",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882261462_38stvmmry",
+      "timestamp": "2025-07-07T15:27:41.642Z",
+      "sessionId": "session_1751882261458_2oan1nzmc",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882262902_zidyiqv70",
+      "timestamp": "2025-07-07T15:27:42.941Z",
+      "sessionId": "session_1751882261458_2oan1nzmc",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882263262_l87jkbwpo",
+      "timestamp": "2025-07-07T15:27:44.321Z",
+      "sessionId": "session_1751882261458_2oan1nzmc",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882265803_zsk7fy5fk",
+      "timestamp": "2025-07-07T15:27:46.897Z",
+      "sessionId": "session_1751882261458_2oan1nzmc",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882268491_0m031nkm1",
+      "timestamp": "2025-07-07T15:27:48.709Z",
+      "sessionId": "session_1751882261458_2oan1nzmc",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882281251_fslmic1hm",
+      "timestamp": "2025-07-07T15:28:01.266Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882283902_f9e9kk1wy",
+      "timestamp": "2025-07-07T15:28:03.923Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882322607_fod2u3rl8",
+      "timestamp": "2025-07-07T15:28:42.644Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882323473_8gzapcr59",
+      "timestamp": "2025-07-07T15:28:44.571Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882323475_jwdd5nlgi",
+      "timestamp": "2025-07-07T15:28:44.573Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882325051_nsmjz2xnw",
+      "timestamp": "2025-07-07T15:28:45.482Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 403,
+        "scrollPercent": 96
+      }
+    },
+    {
+      "id": "interaction_1751882327286_vgy8go5vm",
+      "timestamp": "2025-07-07T15:28:47.356Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1751882328012_s1u8g7k9s",
+      "timestamp": "2025-07-07T15:28:48.140Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1057,
+        "y": 37
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751882328963_c2ff9ytjh",
+      "timestamp": "2025-07-07T15:28:49.593Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1057,
+        "y": 37
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751882329554_53gp47j56",
+      "timestamp": "2025-07-07T15:28:49.782Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 1057,
+        "y": 37
+      },
+      "metadata": {
+        "text": "LLuciverseHomeAboutProjectsAchievementsVaultContac",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882332518_6zbq0pyr1",
+      "timestamp": "2025-07-07T15:28:52.539Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882447983_7cfpuywyx",
+      "timestamp": "2025-07-07T15:30:48.504Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882447992_7zd2ou501",
+      "timestamp": "2025-07-07T15:30:48.506Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882608904_fkxpm2zvz",
+      "timestamp": "2025-07-07T15:33:28.967Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882612878_lep4b88e4",
+      "timestamp": "2025-07-07T15:33:32.902Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882639097_d2sus2lte",
+      "timestamp": "2025-07-07T15:33:59.338Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882639089_kdsnl1cgq",
+      "timestamp": "2025-07-07T15:33:59.340Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882640925_hrnwdy7zs",
+      "timestamp": "2025-07-07T15:34:00.947Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882640930_ie5l32758",
+      "timestamp": "2025-07-07T15:34:00.964Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882642386_q8mmc8xfd",
+      "timestamp": "2025-07-07T15:34:02.423Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882642393_tyg2xq53h",
+      "timestamp": "2025-07-07T15:34:02.424Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882644128_fzxx98qdn",
+      "timestamp": "2025-07-07T15:34:04.720Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882644122_bui44na9d",
+      "timestamp": "2025-07-07T15:34:04.722Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882646126_6dtw1tz0v",
+      "timestamp": "2025-07-07T15:34:06.690Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882646135_hbb7cnzqy",
+      "timestamp": "2025-07-07T15:34:06.692Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882647871_9k2jhyapx",
+      "timestamp": "2025-07-07T15:34:08.473Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882647878_e7mx5wmou",
+      "timestamp": "2025-07-07T15:34:08.475Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882649370_nrc0xjxhn",
+      "timestamp": "2025-07-07T15:34:10.278Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882649378_4haztcal8",
+      "timestamp": "2025-07-07T15:34:10.279Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882650992_z8c6ao8jy",
+      "timestamp": "2025-07-07T15:34:11.739Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882650983_kz0961qah",
+      "timestamp": "2025-07-07T15:34:11.741Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882652556_g6u96evrr",
+      "timestamp": "2025-07-07T15:34:13.215Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882652548_wourx9tzi",
+      "timestamp": "2025-07-07T15:34:13.217Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882654482_nm3hufyna",
+      "timestamp": "2025-07-07T15:34:14.540Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882654493_rx4b2znml",
+      "timestamp": "2025-07-07T15:34:14.542Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882656547_tfbjj39lm",
+      "timestamp": "2025-07-07T15:34:16.585Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882656555_63uf6h7yg",
+      "timestamp": "2025-07-07T15:34:16.587Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882658589_de8t6a2fp",
+      "timestamp": "2025-07-07T15:34:18.621Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882658596_28m35cluf",
+      "timestamp": "2025-07-07T15:34:18.622Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882660181_zw3af84hv",
+      "timestamp": "2025-07-07T15:34:20.213Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882660189_flz9ylj0s",
+      "timestamp": "2025-07-07T15:34:20.215Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882662063_5masc68py",
+      "timestamp": "2025-07-07T15:34:22.092Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882662071_xespoesyc",
+      "timestamp": "2025-07-07T15:34:22.111Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882664021_pvfwzem6i",
+      "timestamp": "2025-07-07T15:34:25.116Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882664030_0gv3spet7",
+      "timestamp": "2025-07-07T15:34:25.118Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882665991_p8cm3o0dj",
+      "timestamp": "2025-07-07T15:34:26.719Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882665998_0m99o9azt",
+      "timestamp": "2025-07-07T15:34:26.721Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882667477_4cemb3jsj",
+      "timestamp": "2025-07-07T15:34:28.379Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882667485_wjszkeihe",
+      "timestamp": "2025-07-07T15:34:28.381Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882668731_3pcpsdmyu",
+      "timestamp": "2025-07-07T15:34:29.202Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882668740_mbcyueh8b",
+      "timestamp": "2025-07-07T15:34:29.204Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882671500_we6pe70w1",
+      "timestamp": "2025-07-07T15:34:31.540Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882671516_sjno7kar2",
+      "timestamp": "2025-07-07T15:34:31.558Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882674095_ezghowffr",
+      "timestamp": "2025-07-07T15:34:34.130Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882674104_ciwlh312y",
+      "timestamp": "2025-07-07T15:34:34.132Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882676130_68oub47ol",
+      "timestamp": "2025-07-07T15:34:36.171Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882676138_47ibl4g6p",
+      "timestamp": "2025-07-07T15:34:36.173Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882677807_f67iag2oj",
+      "timestamp": "2025-07-07T15:34:37.842Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882677813_659p9mj56",
+      "timestamp": "2025-07-07T15:34:37.843Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882679622_csc8l57ym",
+      "timestamp": "2025-07-07T15:34:39.658Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882679628_mcxh06iqu",
+      "timestamp": "2025-07-07T15:34:39.660Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882681483_tketp2535",
+      "timestamp": "2025-07-07T15:34:41.521Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882681491_k9szhck73",
+      "timestamp": "2025-07-07T15:34:41.522Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882683208_fsp0ixbn0",
+      "timestamp": "2025-07-07T15:34:43.234Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882683215_hkjswy0to",
+      "timestamp": "2025-07-07T15:34:43.262Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882684836_6dfp4k0z1",
+      "timestamp": "2025-07-07T15:34:44.867Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882684843_nk4ve9x55",
+      "timestamp": "2025-07-07T15:34:44.869Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882686384_btsjif5ja",
+      "timestamp": "2025-07-07T15:34:46.411Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882686391_blt6jaexh",
+      "timestamp": "2025-07-07T15:34:46.413Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882687943_atcjuggma",
+      "timestamp": "2025-07-07T15:34:47.977Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882687949_ik9u3gjkx",
+      "timestamp": "2025-07-07T15:34:47.979Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882689605_eva95o1js",
+      "timestamp": "2025-07-07T15:34:49.639Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882689611_xsghdff33",
+      "timestamp": "2025-07-07T15:34:49.640Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882691313_6atvop7gx",
+      "timestamp": "2025-07-07T15:34:51.342Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882691319_l8ui23nd9",
+      "timestamp": "2025-07-07T15:34:51.364Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882692947_x7we464cr",
+      "timestamp": "2025-07-07T15:34:52.988Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882692955_yhj49rxim",
+      "timestamp": "2025-07-07T15:34:52.991Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882695012_8zptayyx7",
+      "timestamp": "2025-07-07T15:34:55.977Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882695024_jjhz1n6k8",
+      "timestamp": "2025-07-07T15:34:55.979Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882696563_5qfxmpnk6",
+      "timestamp": "2025-07-07T15:34:57.582Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882696572_vih9pgk1g",
+      "timestamp": "2025-07-07T15:34:57.585Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882697884_o0pji9esm",
+      "timestamp": "2025-07-07T15:34:58.417Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882697899_c3fsfcpuk",
+      "timestamp": "2025-07-07T15:34:58.419Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882699768_hc74hzdx5",
+      "timestamp": "2025-07-07T15:34:59.925Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882699781_0t85jrq43",
+      "timestamp": "2025-07-07T15:34:59.927Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882701618_498v5cfx8",
+      "timestamp": "2025-07-07T15:35:01.692Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882701627_ui547r53r",
+      "timestamp": "2025-07-07T15:35:01.693Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882703827_f3s4gg23r",
+      "timestamp": "2025-07-07T15:35:03.862Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882703834_t09w00612",
+      "timestamp": "2025-07-07T15:35:03.863Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882705512_0b11b9kzw",
+      "timestamp": "2025-07-07T15:35:05.548Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882705520_n3yo3lohw",
+      "timestamp": "2025-07-07T15:35:05.549Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882707084_b0tzcn4me",
+      "timestamp": "2025-07-07T15:35:07.125Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882707091_s9xgqmfe8",
+      "timestamp": "2025-07-07T15:35:07.127Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882708756_uwt8ephzz",
+      "timestamp": "2025-07-07T15:35:08.795Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882708763_0mol8mz3g",
+      "timestamp": "2025-07-07T15:35:08.796Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882710379_wsqk5f2wo",
+      "timestamp": "2025-07-07T15:35:10.418Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882710386_n8jh0bffq",
+      "timestamp": "2025-07-07T15:35:10.420Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882712011_7jte449zc",
+      "timestamp": "2025-07-07T15:35:12.056Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882712019_lwcnfahus",
+      "timestamp": "2025-07-07T15:35:12.057Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882713961_d56aucopg",
+      "timestamp": "2025-07-07T15:35:14.002Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882713972_whwyvwv4m",
+      "timestamp": "2025-07-07T15:35:14.004Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882715740_9u3edcjyu",
+      "timestamp": "2025-07-07T15:35:15.781Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882715747_ezsxn3krv",
+      "timestamp": "2025-07-07T15:35:15.783Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882718465_y0jsx80ir",
+      "timestamp": "2025-07-07T15:35:18.561Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882718478_hxd4gm1ac",
+      "timestamp": "2025-07-07T15:35:18.576Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882721973_znu3m17ym",
+      "timestamp": "2025-07-07T15:35:22.018Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882721988_w7d3gus2w",
+      "timestamp": "2025-07-07T15:35:22.046Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882724020_r28reeqtp",
+      "timestamp": "2025-07-07T15:35:25.257Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882724029_o0jpzii1v",
+      "timestamp": "2025-07-07T15:35:25.260Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882726271_f1voh5hvy",
+      "timestamp": "2025-07-07T15:35:26.641Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882726279_jyzce32yx",
+      "timestamp": "2025-07-07T15:35:26.642Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882728020_kgw5v2aqc",
+      "timestamp": "2025-07-07T15:35:28.735Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882728035_1ipxqm4i6",
+      "timestamp": "2025-07-07T15:35:28.737Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882731576_g2iuf9pvj",
+      "timestamp": "2025-07-07T15:35:31.745Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882731584_ol8my0d5x",
+      "timestamp": "2025-07-07T15:35:31.747Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882733415_fj47zrapa",
+      "timestamp": "2025-07-07T15:35:33.571Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882733426_jebjzsbpw",
+      "timestamp": "2025-07-07T15:35:33.574Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882735948_1g5ks5wxh",
+      "timestamp": "2025-07-07T15:35:36.001Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882735959_55gswg0gq",
+      "timestamp": "2025-07-07T15:35:36.003Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882737934_x45gvwfkn",
+      "timestamp": "2025-07-07T15:35:37.998Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882737945_2b9yywcu2",
+      "timestamp": "2025-07-07T15:35:38.001Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882739890_zrtbcxb9z",
+      "timestamp": "2025-07-07T15:35:40.686Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882739882_iaphnbvh0",
+      "timestamp": "2025-07-07T15:35:40.688Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882741429_jwwd74z3w",
+      "timestamp": "2025-07-07T15:35:41.871Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882741438_dt69r5yzx",
+      "timestamp": "2025-07-07T15:35:41.873Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882743272_8aocaxacx",
+      "timestamp": "2025-07-07T15:35:43.554Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882743282_gp4bkgn5x",
+      "timestamp": "2025-07-07T15:35:43.556Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882745682_6z9fnrjbh",
+      "timestamp": "2025-07-07T15:35:45.741Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882745690_6nk64px7y",
+      "timestamp": "2025-07-07T15:35:45.743Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882748045_m6ueuyv9r",
+      "timestamp": "2025-07-07T15:35:48.119Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882748056_5a3d9deoi",
+      "timestamp": "2025-07-07T15:35:48.122Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882750033_3fpfnxrf2",
+      "timestamp": "2025-07-07T15:35:50.100Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882750042_5m9psiaks",
+      "timestamp": "2025-07-07T15:35:50.103Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882752414_wsu5zkwo3",
+      "timestamp": "2025-07-07T15:35:52.476Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882752423_frmxr36ws",
+      "timestamp": "2025-07-07T15:35:52.478Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882754294_p5lbiai4e",
+      "timestamp": "2025-07-07T15:35:54.365Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882754302_zql1340ia",
+      "timestamp": "2025-07-07T15:35:54.367Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882756532_q2roed4xc",
+      "timestamp": "2025-07-07T15:35:56.596Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882756540_5bdcqwbs6",
+      "timestamp": "2025-07-07T15:35:56.598Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882758557_fly7rhpwg",
+      "timestamp": "2025-07-07T15:36:03.062Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882758548_bkoej5ttt",
+      "timestamp": "2025-07-07T15:36:03.066Z",
+      "sessionId": "session_1751882188097_r6x6gdeik",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882876169_cbxrbkwrl",
+      "timestamp": "2025-07-07T15:37:57.138Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882876180_s1h6i4b2r",
+      "timestamp": "2025-07-07T15:37:57.143Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882877204_g9x3y483o",
+      "timestamp": "2025-07-07T15:37:57.882Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 866,
+        "y": 32
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751882877909_k3qm7s4fa",
+      "timestamp": "2025-07-07T15:37:58.030Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 866,
+        "y": 32
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751882881561_saij8e1iz",
+      "timestamp": "2025-07-07T15:38:01.575Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1075,
+        "y": 43
+      },
+      "metadata": {
+        "text": "Achievements",
+        "href": "/achievements"
+      }
+    },
+    {
+      "id": "interaction_1751882882773_qx2uxb0px",
+      "timestamp": "2025-07-07T15:38:02.799Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1075,
+        "y": 43
+      },
+      "metadata": {
+        "text": "Achievements",
+        "href": "/achievements"
+      }
+    },
+    {
+      "id": "interaction_1751882883636_wze2d5dcp",
+      "timestamp": "2025-07-07T15:38:03.650Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1075,
+        "y": 43
+      },
+      "metadata": {
+        "text": "Achievements",
+        "href": "/achievements"
+      }
+    },
+    {
+      "id": "interaction_1751882886421_nady2z02b",
+      "timestamp": "2025-07-07T15:38:06.437Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/about",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882893051_mepwoztis",
+      "timestamp": "2025-07-07T15:38:13.096Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin-auth",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882893054_zremsbd1w",
+      "timestamp": "2025-07-07T15:38:13.098Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin-auth",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882895513_6r2prum1j",
+      "timestamp": "2025-07-07T15:38:15.528Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 860,
+        "y": 49
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751882897002_tum2eus3t",
+      "timestamp": "2025-07-07T15:38:17.015Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882900902_w2cxc42u2",
+      "timestamp": "2025-07-07T15:38:21.382Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882900899_xeek2cx6n",
+      "timestamp": "2025-07-07T15:38:21.384Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751882908577_o7f33v76m",
+      "timestamp": "2025-07-07T15:38:28.590Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "span#unknown.unknown",
+      "action": "click",
+      "position": {
+        "x": 1237,
+        "y": 319
+      },
+      "metadata": {
+        "text": "📈",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882913246_y9dxmfwiz",
+      "timestamp": "2025-07-07T15:38:33.257Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 961,
+        "y": 604
+      },
+      "metadata": {
+        "text": "👆Total Clicks48",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882916899_ndwv1jtbt",
+      "timestamp": "2025-07-07T15:38:36.911Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "p#unknown.text-sm",
+      "action": "click",
+      "position": {
+        "x": 189,
+        "y": 680
+      },
+      "metadata": {
+        "text": "ℹ️ Analytics dashboard is running in safe mode wit",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751882920113_v0kn8fws5",
+      "timestamp": "2025-07-07T15:38:40.136Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882932011_kfk2rpdcf",
+      "timestamp": "2025-07-07T15:38:52.484Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882935817_0eds32sv2",
+      "timestamp": "2025-07-07T15:38:55.836Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751882951986_qtjkebci6",
+      "timestamp": "2025-07-07T15:39:12.047Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751882952904_9yyub4pt9",
+      "timestamp": "2025-07-07T15:39:12.921Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751883024237_yk0yfu12t",
+      "timestamp": "2025-07-07T15:40:24.258Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751883027448_kb2cg2b7v",
+      "timestamp": "2025-07-07T15:40:27.466Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751883094553_4axfrd77d",
+      "timestamp": "2025-07-07T15:41:34.579Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751883097441_a3kq7f79i",
+      "timestamp": "2025-07-07T15:41:37.450Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 839,
+        "y": 41
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751883099534_zeafporbt",
+      "timestamp": "2025-07-07T15:41:42.316Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 917,
+        "y": 34
+      },
+      "metadata": {
+        "text": "About",
+        "href": "/about"
+      }
+    },
+    {
+      "id": "interaction_1751883100902_jj3rc2fas",
+      "timestamp": "2025-07-07T15:41:42.318Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "button#unknown.bg-red-600",
+      "action": "click",
+      "position": {
+        "x": 1320,
+        "y": 137
+      },
+      "metadata": {
+        "text": "🚪 Logout",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751883098471_i6qqtpeyb",
+      "timestamp": "2025-07-07T15:41:42.320Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 839,
+        "y": 41
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751883104878_bcy6qite3",
+      "timestamp": "2025-07-07T15:41:44.914Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 835,
+        "y": 44
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1751883107541_dhznsgc7a",
+      "timestamp": "2025-07-07T15:41:47.560Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751883113216_n9fqcm086",
+      "timestamp": "2025-07-07T15:41:54.211Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883113212_wglbgbiw2",
+      "timestamp": "2025-07-07T15:41:54.213Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883115850_kj8ma2psd",
+      "timestamp": "2025-07-07T15:41:56.501Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883115847_5mde46do7",
+      "timestamp": "2025-07-07T15:41:56.503Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883120775_l9mrj1ses",
+      "timestamp": "2025-07-07T15:42:00.842Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883120778_a2hj75bwu",
+      "timestamp": "2025-07-07T15:42:00.844Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883121808_fhssp8ai2",
+      "timestamp": "2025-07-07T15:42:01.821Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 185.60000610351562,
+        "scrollPercent": 44
+      }
+    },
+    {
+      "id": "interaction_1751883125335_dhldwd8ij",
+      "timestamp": "2025-07-07T15:42:05.345Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1751883126567_9k6568ken",
+      "timestamp": "2025-07-07T15:42:06.579Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "input#password.w-full",
+      "action": "click",
+      "position": {
+        "x": 752,
+        "y": 451
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751883129938_1belpl7sg",
+      "timestamp": "2025-07-07T15:42:10.033Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "button#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "metadata": {
+        "text": "Access Admin Panel",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751883135161_vsxwbpnhg",
+      "timestamp": "2025-07-07T15:42:15.171Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 1257,
+        "y": 310
+      },
+      "metadata": {
+        "text": "📈Analytics",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751883139529_h3p3p3b8p",
+      "timestamp": "2025-07-07T15:42:19.544Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751883141546_pkmic93ta",
+      "timestamp": "2025-07-07T15:42:21.562Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751883144373_4awilghgo",
+      "timestamp": "2025-07-07T15:42:24.426Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883144374_avqlha1s5",
+      "timestamp": "2025-07-07T15:42:24.429Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883145385_453l05p3l",
+      "timestamp": "2025-07-07T15:42:25.395Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 389.6000061035156,
+        "scrollPercent": 93
+      }
+    },
+    {
+      "id": "interaction_1751883147162_jk2g0qeyo",
+      "timestamp": "2025-07-07T15:42:27.234Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883147165_me6yzw1j6",
+      "timestamp": "2025-07-07T15:42:27.236Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883148192_3lf9e5rpt",
+      "timestamp": "2025-07-07T15:42:28.202Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 381.6000061035156,
+        "scrollPercent": 91
+      }
+    },
+    {
+      "id": "interaction_1751883149580_05tn7ut9c",
+      "timestamp": "2025-07-07T15:42:29.589Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 1229,
+        "y": 747
+      },
+      "metadata": {
+        "text": "⚠️Experiencing Issues?You've reloaded 7 times rece",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751883152748_ibciwp6hy",
+      "timestamp": "2025-07-07T15:42:32.800Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1751883155163_0wn57w7vz",
+      "timestamp": "2025-07-07T15:42:35.175Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 410.3999938964844,
+        "scrollPercent": 98
+      }
+    },
+    {
+      "id": "interaction_1751883260262_780l0kvt2",
+      "timestamp": "2025-07-07T15:44:20.404Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1751883261270_r9kql75uy",
+      "timestamp": "2025-07-07T15:44:21.281Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 410.3999938964844,
+        "scrollPercent": 98
+      }
+    },
+    {
+      "id": "interaction_1751883261720_b7u7pe856",
+      "timestamp": "2025-07-07T15:44:22.343Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883261719_hscv60eov",
+      "timestamp": "2025-07-07T15:44:22.345Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1751883263999_9bck2ukxa",
+      "timestamp": "2025-07-07T15:44:24.011Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 402.3999938964844,
+        "scrollPercent": 96
+      }
+    },
+    {
+      "id": "interaction_1751883266545_81gprcavj",
+      "timestamp": "2025-07-07T15:44:26.558Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1751883268516_tw1j7w4iy",
+      "timestamp": "2025-07-07T15:44:28.529Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "span#unknown.truncate",
+      "action": "click",
+      "position": {
+        "x": 1266,
+        "y": 300
+      },
+      "metadata": {
+        "text": "Analytics",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1751883271056_2jjntcqmb",
+      "timestamp": "2025-07-07T15:44:31.077Z",
+      "sessionId": "session_1751882876169_1kr8xgx1e",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    }
+  ],
+  "lastUpdated": "2025-07-07T15:44:31.077Z"
 }

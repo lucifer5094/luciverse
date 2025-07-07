@@ -69,6 +69,12 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
+    // Clear any pending timeouts before retry
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId)
+      this.retryTimeoutId = null
+    }
+
     const { retryCount } = this.state
     
     if (retryCount < 3) {
@@ -81,18 +87,30 @@ export default class ErrorBoundary extends Component<Props, State> {
     } else {
       // Auto-retry after delay if max retries reached
       this.retryTimeoutId = setTimeout(() => {
-        this.setState({ 
-          hasError: false, 
-          error: undefined, 
-          errorInfo: undefined,
-          retryCount: 0
-        })
+        // Check if component is still mounted before setting state
+        if (this.retryTimeoutId) {
+          this.setState({ 
+            hasError: false, 
+            error: undefined, 
+            errorInfo: undefined,
+            retryCount: 0
+          })
+        }
       }, 5000)
     }
   }
 
   handleReload = () => {
-    window.location.reload()
+    // Clear any pending timeouts before reload
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId)
+      this.retryTimeoutId = null
+    }
+    
+    // Add small delay to ensure cleanup is complete
+    setTimeout(() => {
+      window.location.reload()
+    }, 100)
   }
 
   render() {
@@ -211,6 +229,8 @@ export default class ErrorBoundary extends Component<Props, State> {
 
 // Specialized error boundaries for different sections
 export class AsyncErrorBoundary extends Component<Props, State> {
+  private reloadTimeoutId: NodeJS.Timeout | null = null
+
   constructor(props: Props) {
     super(props)
     this.state = { hasError: false, retryCount: 0 }
@@ -225,22 +245,53 @@ export class AsyncErrorBoundary extends Component<Props, State> {
     this.setState({ errorInfo })
     this.props.onError?.(error, errorInfo)
 
-    // Auto-retry for async errors
+    // Handle chunk load errors more gracefully
     if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) {
-      setTimeout(() => {
-        window.location.reload()
-      }, 1000)
+      // Give user a chance to manually refresh instead of automatic reload
+      console.warn('Chunk loading failed. User may need to refresh manually.')
+      // Only auto-reload if user hasn't interacted for a while
+      this.reloadTimeoutId = setTimeout(() => {
+        if (document.hidden) { // Only reload if page is not active
+          window.location.reload()
+        }
+      }, 3000)
     }
+  }
+
+  componentWillUnmount() {
+    if (this.reloadTimeoutId) {
+      clearTimeout(this.reloadTimeoutId)
+    }
+  }
+
+  handleManualReload = () => {
+    if (this.reloadTimeoutId) {
+      clearTimeout(this.reloadTimeoutId)
+      this.reloadTimeoutId = null
+    }
+    window.location.reload()
   }
 
   render() {
     if (this.state.hasError) {
+      const isChunkError = this.state.error?.name === 'ChunkLoadError' || 
+                          this.state.error?.message.includes('Loading chunk')
+      
       return (
         <div className="p-4 text-center bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
           <div className="text-yellow-600 dark:text-yellow-400 mb-2">⚠️</div>
-          <p className="text-sm text-yellow-800 dark:text-yellow-200">
-            Failed to load component. Refreshing...
+          <p className="text-sm text-yellow-800 dark:text-yellow-200 mb-3">
+            {isChunkError 
+              ? 'Failed to load component. This usually happens after updates.'
+              : 'Failed to load component.'
+            }
           </p>
+          <button
+            onClick={this.handleManualReload}
+            className="px-3 py-1 bg-yellow-600 text-white text-sm rounded hover:bg-yellow-700 transition-colors"
+          >
+            Refresh Page
+          </button>
         </div>
       )
     }
@@ -271,8 +322,7 @@ export class NetworkErrorBoundary extends Component<Props, State> {
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-    // Trigger a network retry
-    window.location.reload()
+    // Don't automatically reload - let user decide
   }
 
   render() {
@@ -286,12 +336,20 @@ export class NetworkErrorBoundary extends Component<Props, State> {
           <p className="text-sm text-red-600 dark:text-red-400 mb-4">
             Unable to load content. Please check your internet connection.
           </p>
-          <button
-            onClick={this.handleRetry}
-            className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-          >
-            Retry
-          </button>
+          <div className="space-x-2">
+            <button
+              onClick={this.handleRetry}
+              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+            >
+              Try Again
+            </button>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            >
+              Refresh Page
+            </button>
+          </div>
         </div>
       )
     }

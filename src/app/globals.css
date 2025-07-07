@@ -45,7 +45,7 @@ html {
 
 body {
   @apply bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text transition-colors duration-300;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
 /* Enhanced Loading State Animations */
@@ -112,27 +112,6 @@ body {
   backface-visibility: hidden;
 }
 
-/* Shimmer effect for skeleton loaders */
-@keyframes shimmer {
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
-}
-
-.shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  background-size: 200px 100%;
-  animation: shimmer 1.2s ease-in-out infinite;
-}
-
-.dark .shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  background-size: 200px 100%;
-}
-
 /* Enhanced focus styles for accessibility */
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
@@ -150,7 +129,7 @@ body {
 
 /* Link styling (remove underline, add hover effect) */
 a {
-  @apply text-accent no-underline transition-colors duration-300;
+  @apply text-blue-600 dark:text-blue-400 no-underline transition-colors duration-300 hover:text-blue-700 dark:hover:text-blue-300;
 }
 
 /* Enhanced Custom Button Styles */
@@ -195,54 +174,41 @@ button:active, .btn:active {
 }
 
 .nav-btn:hover {
-  color: white;
-  background-color: theme('colors.accent');
-  border-color: theme('colors.accent');
+  @apply text-white bg-accent border-accent;
 }
 
 /* Primary CTA Button */
 .btn-primary {
-  background-color: theme('colors.accent');
-  color: white;
-  border-color: theme('colors.accent');
+  @apply bg-accent text-white border-accent;
 }
 
 .btn-primary:hover {
-  background-color: theme('colors.sky.500');
-  border-color: theme('colors.sky.500');
+  @apply bg-blue-500 border-blue-500;
 }
 
 .dark .btn-primary {
-  background-color: #6D28D9; /* violet-700 */
-  border-color: #6D28D9;
+  @apply bg-violet-700 border-violet-700;
 }
 
 .dark .btn-primary:hover {
-  background-color: #2563EB; /* blue-600 */
-  border-color: #2563EB;
+  @apply bg-blue-600 border-blue-600;
 }
 
 /* Outline CTA Button */
 .btn-outline {
-  background-color: transparent;
-  border-color: theme('colors.accent');
-  color: theme('colors.accent');
+  @apply bg-transparent border-accent text-accent;
 }
 
 .btn-outline:hover {
-  background-color: theme('colors.accent');
-  color: white;
+  @apply bg-accent text-white;
 }
 
 .dark .btn-outline {
-  border-color: #6D28D9; /* violet-700 */
-  color: #6D28D9;
+  @apply border-violet-700 text-violet-700;
 }
 
 .dark .btn-outline:hover {
-  background-color: #2563EB; /* blue-600 */
-  border-color: #2563EB;
-  color: white;
+  @apply bg-blue-600 border-blue-600 text-white;
 }
 
 /* Glassmorphism effect */
@@ -339,6 +305,11 @@ button:active, .btn:active {
 }
 
 ::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -457,6 +428,139 @@ button:active, .btn:active {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .animate-scale-in {
   animation: scale-in 0.3s ease-out;
+}
+
+/* Additional utility classes */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700;
+}
+
+.card-header {
+  @apply p-6 border-b border-gray-200 dark:border-gray-700;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+.card-footer {
+  @apply p-6 border-t border-gray-200 dark:border-gray-700;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
+         bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100
+         focus:ring-2 focus:ring-blue-500 focus:border-transparent
+         transition-colors duration-200;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2;
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4;
+}
+
+.modal-content {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply animate-spin rounded-full border-4 border-gray-300 border-t-blue-600;
+}
+
+/* Success/Error states */
+.state-success {
+  @apply text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800;
+}
+
+.state-error {
+  @apply text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800;
+}
+
+.state-warning {
+  @apply text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800;
+}
+
+.state-info {
+  @apply text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    @apply text-black bg-white;
+  }
+  
+  .card {
+    @apply shadow-none border border-gray-300;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-2 border-gray-900 dark:border-gray-100;
+  }
+  
+  .btn {
+    @apply border-2;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

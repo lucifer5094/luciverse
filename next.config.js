@@ -57,21 +57,47 @@ const nextConfig = {
     ]
   },
   
-  // Bundle analyzer (development only)
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config, { isServer }) => {
-      if (!isServer) {
-        const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-        config.plugins.push(
-          new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            openAnalyzer: false,
-          })
-        )
+  // Webpack configuration for better stability
+  webpack: (config, { dev, isServer }) => {
+    // Bundle analyzer (development only)
+    if (process.env.ANALYZE === 'true' && !isServer) {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+        })
+      )
+    }
+
+    // Improve chunk loading reliability
+    if (dev && !isServer) {
+      // Better error handling for chunk loading
+      config.output.crossOriginLoading = 'anonymous'
+      
+      // Optimize chunk splitting for development
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          ...config.optimization.splitChunks,
+          cacheGroups: {
+            ...config.optimization.splitChunks?.cacheGroups,
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+              enforce: true,
+            },
+          },
+        },
       }
-      return config
-    },
-  }),
+
+      // Add retry logic for chunk loading
+      config.output.chunkLoadTimeout = 30000 // 30 seconds instead of default 120
+    }
+
+    return config
+  },
 }
 
 module.exports = nextConfig
