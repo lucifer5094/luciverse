@@ -148,3 +148,7 @@ export function useMediaQuery(query: string): boolean {
 
   return matches
 }
+
+// Hook exports
+export { useUserTracking } from './useUserTracking'
+export { useSiteContent } from './useSiteContent'

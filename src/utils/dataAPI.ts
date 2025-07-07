@@ -145,6 +145,13 @@ export const dataAPI = {
     adminTitle: string
     adminSubtitle: string
     adminDescription: string
+    highlights: any[]
+    stats: {
+      projects: number
+      years: number
+      technologies: number
+      achievements: number
+    }
     lastUpdated: string
   }> => fetchData('site-content'),
   

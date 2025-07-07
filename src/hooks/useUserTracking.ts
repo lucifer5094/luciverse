@@ -1,14 +1,19 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { analyticsAPI } from '@/utils/analyticsAPI'
 
 export function useUserTracking() {
   const isInitializedRef = useRef(false)
   const scrollTimeoutRef = useRef<NodeJS.Timeout>()
   const cleanupFunctionsRef = useRef<(() => void)[]>([])
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    // Prevent multiple initializations
-    if (isInitializedRef.current) return
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    // Prevent multiple initializations and ensure we're on client
+    if (isInitializedRef.current || !isClient) return
 
     // Add error boundary for the entire tracking hook
     try {
@@ -161,5 +166,5 @@ export function useUserTracking() {
       console.warn('User tracking hook error:', err)
       isInitializedRef.current = false
     }
-  }, [])
+  }, [isClient])
 }

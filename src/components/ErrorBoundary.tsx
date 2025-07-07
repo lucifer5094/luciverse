@@ -77,7 +77,9 @@ export default class ErrorBoundary extends Component<Props, State> {
 
     const { retryCount } = this.state
     
-    if (retryCount < 3) {
+    // Reduced retry limit and added more conservative logic
+    if (retryCount < 2) { // Reduced from 3 to 2
+      console.log(`ErrorBoundary retry attempt ${retryCount + 1} (conservative mode)`)
       this.setState({ 
         hasError: false, 
         error: undefined, 
@@ -85,18 +87,8 @@ export default class ErrorBoundary extends Component<Props, State> {
         retryCount: retryCount + 1
       })
     } else {
-      // Auto-retry after delay if max retries reached
-      this.retryTimeoutId = setTimeout(() => {
-        // Check if component is still mounted before setting state
-        if (this.retryTimeoutId) {
-          this.setState({ 
-            hasError: false, 
-            error: undefined, 
-            errorInfo: undefined,
-            retryCount: 0
-          })
-        }
-      }, 5000)
+      // Don't auto-retry, let user decide
+      console.warn('Max retries reached. User intervention required.')
     }
   }
 
@@ -248,13 +240,8 @@ export class AsyncErrorBoundary extends Component<Props, State> {
     // Handle chunk load errors more gracefully
     if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) {
       // Give user a chance to manually refresh instead of automatic reload
-      console.warn('Chunk loading failed. User may need to refresh manually.')
-      // Only auto-reload if user hasn't interacted for a while
-      this.reloadTimeoutId = setTimeout(() => {
-        if (document.hidden) { // Only reload if page is not active
-          window.location.reload()
-        }
-      }, 3000)
+      console.warn('Chunk loading failed. Manual refresh may be needed.')
+      // Don't auto-reload - let user decide
     }
   }
 
@@ -423,4 +410,62 @@ export function withErrorBoundary<P extends object>(
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`
   
   return WrappedComponent
+}
+
+// Hydration-specific error boundary
+export class HydrationErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false, retryCount: 0 }
+  }
+
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    // Only catch hydration errors
+    if (error.message.includes('hydrating') || 
+        error.message.includes('hydration') ||
+        error.message.includes('Hydration failed')) {
+      return { hasError: true, error }
+    }
+    // Re-throw other errors
+    throw error
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Hydration Error:', error, errorInfo)
+    this.setState({ errorInfo })
+    this.props.onError?.(error, errorInfo)
+  }
+
+  handleRetry = () => {
+    this.setState({ 
+      hasError: false, 
+      error: undefined, 
+      errorInfo: undefined,
+      retryCount: this.state.retryCount + 1
+    })
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-6 text-center bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-blue-600 dark:text-blue-400 text-3xl mb-4">⚡</div>
+          <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">
+            Content Loading
+          </h3>
+          <p className="text-sm text-blue-600 dark:text-blue-400 mb-4">
+            There was a mismatch in content loading. Retrying...
+          </p>
+          <button
+            onClick={this.handleRetry}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Retry Loading
+          </button>
+        </div>
+      )
+    }
+
+    return this.props.children
+  }
 }

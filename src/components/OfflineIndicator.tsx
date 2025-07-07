@@ -7,8 +7,15 @@ export default function OfflineIndicator() {
   const { isOnline } = usePWA()
   const [showReconnected, setShowReconnected] = useState(false)
   const [wasOffline, setWasOffline] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
     if (!isOnline) {
       setWasOffline(true)
     } else if (wasOffline) {
@@ -19,7 +26,12 @@ export default function OfflineIndicator() {
       }, 3000)
       return () => clearTimeout(timer)
     }
-  }, [isOnline, wasOffline])
+  }, [isOnline, wasOffline, isClient])
+
+  // Only render after client-side hydration to prevent mismatches
+  if (!isClient) {
+    return null
+  }
 
   // Show reconnected message
   if (showReconnected) {
@@ -41,10 +53,18 @@ export default function OfflineIndicator() {
           <div className="w-2 h-2 bg-yellow-900 rounded-full animate-pulse"></div>
           <span>📱 You&apos;re offline. Cached content available.</span>
           <button 
-            onClick={() => window.location.reload()}
+            onClick={() => {
+              // Try to reconnect instead of hard reload
+              if (navigator.onLine) {
+                window.location.reload()
+              } else {
+                // Just check connection status
+                console.log('Still offline, please check your connection')
+              }
+            }}
             className="ml-4 px-2 py-1 bg-yellow-600 text-yellow-100 rounded text-xs hover:bg-yellow-700 transition-colors"
           >
-            Retry
+            Check Connection
           </button>
         </div>
       </div>

@@ -17,25 +17,27 @@ export default function ReloadHelper({ onReloadDetected }: ReloadHelperProps) {
     setReloadCount(reloadCountFromStorage)
 
     // Show helper if user has reloaded frequently
-    if (reloadCountFromStorage >= 3) {
+    if (reloadCountFromStorage >= 5) { // Increased threshold
       setShowHelper(true)
     }
 
     // Listen for reload attempts
     const handleBeforeUnload = () => {
-      const newCount = reloadCountFromStorage + 1
+      // Get fresh count from storage to avoid stale closure
+      const currentCount = parseInt(localStorage.getItem('reload-count') || '0')
+      const newCount = currentCount + 1
       localStorage.setItem('reload-count', newCount.toString())
       onReloadDetected?.()
     }
 
     ReloadDetector.onBeforeReload(handleBeforeUnload)
 
-    // Reset count after 5 minutes
+    // Reset count after 10 minutes (increased time)
     const resetTimer = setTimeout(() => {
       localStorage.setItem('reload-count', '0')
       setReloadCount(0)
       setShowHelper(false)
-    }, 5 * 60 * 1000)
+    }, 10 * 60 * 1000) // 10 minutes instead of 5
 
     return () => {
       ReloadDetector.removeBeforeReloadHandler(handleBeforeUnload)
@@ -66,8 +68,10 @@ export default function ReloadHelper({ onReloadDetected }: ReloadHelperProps) {
     setReloadCount(0)
     localStorage.setItem('reload-count', '0')
     
-    // Force reload after cleanup
-    window.location.reload()
+    // Ask user before reload
+    if (confirm('Cache cleared! Do you want to reload the page now?')) {
+      window.location.reload()
+    }
   }
 
   const handleDismiss = () => {

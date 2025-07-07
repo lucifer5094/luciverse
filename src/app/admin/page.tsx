@@ -10,6 +10,7 @@ import InlineEdit from '@/components/InlineEdit'
 import Notification from '@/components/Notification'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import SimpleAnalyticsDashboard from '@/components/SimpleAnalyticsDashboard'
+import AnalyticsTestButton from '@/components/AnalyticsTestButton'
 
 // Remove dynamic imports temporarily to fix webpack module loading issues
  
@@ -747,7 +748,10 @@ export default function AdminPage() {
         {/* Analytics Tab */}
         {activeTab === 'analytics' && (
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Analytics Dashboard</h2>
+            <div className="flex justify-between items-center">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Analytics Dashboard</h2>
+              <AnalyticsTestButton />
+            </div>
             <ErrorBoundary fallback={<div className="p-4 text-center text-gray-500">Analytics temporarily unavailable</div>}>
               <SimpleAnalyticsDashboard />
             </ErrorBoundary>

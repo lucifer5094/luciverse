@@ -12,8 +12,15 @@ export default function PWAInstallPrompt() {
   const [showPrompt, setShowPrompt] = useState(false)
   const [isInstalled, setIsInstalled] = useState(false)
   const [installProgress, setInstallProgress] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
     // Check if already installed
     const checkInstalled = () => {
       if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) {
@@ -79,7 +86,7 @@ export default function PWAInstallPrompt() {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
       window.removeEventListener('appinstalled', handleAppInstalled)
     }
-  }, [isInstalled])
+  }, [isInstalled, isClient])
 
   const handleInstall = async () => {
     if (!deferredPrompt) return
@@ -118,6 +125,11 @@ export default function PWAInstallPrompt() {
     if (typeof window !== 'undefined' && window.sessionStorage) {
       sessionStorage.setItem('pwa-prompt-dismissed', 'true')
     }
+  }
+
+  // Prevent hydration mismatch by only rendering on client
+  if (!isClient) {
+    return null
   }
 
   // Don't show if already dismissed in this session
@@ -186,9 +198,16 @@ export default function PWAInstallPrompt() {
 // Hook for PWA utilities
 export function usePWA() {
   const [isInstalled, setIsInstalled] = useState(false)
-  const [isOnline, setIsOnline] = useState(true)
+  const [isOnline, setIsOnline] = useState(true) // Default to true to prevent hydration mismatch
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
     // Check installation status
     const checkInstalled = () => {
       return window.matchMedia && window.matchMedia('(display-mode: standalone)').matches ||
@@ -209,7 +228,7 @@ export function usePWA() {
       window.removeEventListener('online', handleOnline)
       window.removeEventListener('offline', handleOffline)
     }
-  }, [])
+  }, [isClient])
 
   return { isInstalled, isOnline }
 }

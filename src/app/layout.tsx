@@ -11,11 +11,15 @@ import OfflineIndicator from '@/components/OfflineIndicator'
 import ClientLayout from '@/components/ClientLayout'
 import SafeAnalytics from '@/components/SafeAnalytics'
 import ReloadHelper from '@/components/ReloadHelper'
+import ReloadPrevention from '@/components/ReloadPrevention'
+import ClientOnly from '@/components/ClientOnly'
 import { ErrorHandler } from '@/utils/errorHandling'
 
-// Initialize global error handling
-if (typeof window !== 'undefined') {
-  ErrorHandler.setupGlobalErrorHandling()
+// Initialize global error handling only on client
+const initializeErrorHandling = () => {
+  if (typeof window !== 'undefined') {
+    ErrorHandler.setupGlobalErrorHandling()
+  }
 }
 
 export const metadata: Metadata = {
@@ -143,22 +147,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className='min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text'>
         <ErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
-          <ClientLayout>
-            <OfflineIndicator />
-            <OwnerAccessBanner />
-            <Navbar />
-            <main>
-              {children}
-            </main>
-            <Footer />
-            <OwnerFloatingControls />
-            <PWAInstallPrompt />
-            <ReloadHelper />
-            <ErrorBoundary fallback={<div></div>}>
-              <SafeAnalytics/>
-            </ErrorBoundary>
-          </ClientLayout>
+          <ClientOnly>
+            <ClientLayout>
+              <ReloadPrevention />
+              <OfflineIndicator />
+              <OwnerAccessBanner />
+              <Navbar />
+              <main>
+                {children}
+              </main>
+              <Footer />
+              <OwnerFloatingControls />
+              <PWAInstallPrompt />
+              <ReloadHelper />
+              <ErrorBoundary fallback={<div></div>}>
+                <SafeAnalytics/>
+              </ErrorBoundary>
+            </ClientLayout>
+          </ClientOnly>
         </ErrorBoundary>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(${initializeErrorHandling.toString()})();`,
+          }}
+        />
       </body>
     </html>
   )
