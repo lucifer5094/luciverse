@@ -161,9 +161,7 @@ export default function SecretEditPage() {
                   {/* Stats Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                     {[
-                      { label: 'Total Visitors', value: '12,345', icon: Users, color: 'blue' },
                       { label: 'Projects', value: config.content.projects.featured.length.toString(), icon: FileText, color: 'green' },
-                      { label: 'Page Views', value: '45,672', icon: BarChart3, color: 'purple' },
                       { label: 'Status', value: 'Active', icon: Settings, color: 'emerald' },
                     ].map((stat, index) => (
                       <motion.div

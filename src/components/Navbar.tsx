@@ -63,6 +63,7 @@ export default function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
     { name: 'Achievements', href: '/achievements' },
+    { name: 'Interview Prep', href: '/interview-prep' },
     { name: 'Vault', href: '/vault' },
     { name: 'Contact', href: '/contact' },
   ]

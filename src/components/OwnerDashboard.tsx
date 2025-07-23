@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { isAuthenticated } from '@/utils/auth';
 import { Edit, Settings, Eye, Users, FileText, BarChart3, Save, Plus, Trash2, Image, Link, Type } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { analyticsAPI } from '@/utils/analyticsAPI';
 
 interface OwnerDashboardProps {
   isVisible: boolean;
@@ -26,46 +27,85 @@ export default function OwnerDashboard({ isVisible, onClose }: OwnerDashboardPro
   const [stats, setStats] = useState({
     totalSections: 0,
     recentEdits: 0,
-    pageViews: '12,345',
+    pageViews: 0,
     lastUpdate: new Date().toLocaleDateString()
   });
 
-  const loadEditableSections = useCallback(() => {
-    // This would typically load from a database or API
-    const mockSections: EditableSection[] = [
-      {
-        id: '1',
-        page: 'Home',
-        title: 'Hero Title',
-        content: 'Welcome to Luciverse',
-        type: 'text',
-        lastModified: new Date()
-      },
-      {
-        id: '2',
-        page: 'About',
-        title: 'Page Title',
-        content: 'About Me',
-        type: 'text',
-        lastModified: new Date()
-      },
-      {
-        id: '3',
-        page: 'Projects',
-        title: 'Page Description',
-        content: 'Showcasing all completed, ongoing, and notable works...',
-        type: 'textarea',
-        lastModified: new Date()
-      }
-    ];
-    setEditableSections(mockSections);
-    setStats(prevStats => ({
-      ...prevStats,
-      totalSections: mockSections.length,
-      recentEdits: mockSections.filter(s => 
-        new Date().getTime() - s.lastModified.getTime() < 24 * 60 * 60 * 1000
-      ).length
-    }));
+  const loadEditableSections = useCallback(async () => {
+    // Load actual editable sections from local storage or content files
+    const savedSections = localStorage.getItem('editableSections');
+    let sections: EditableSection[] = [];
+    
+    if (savedSections) {
+      sections = JSON.parse(savedSections);
+    } else {
+      // Default sections if none exist
+      sections = [
+        {
+          id: '1',
+          page: 'Home',
+          title: 'Hero Title',
+          content: 'Welcome to Luciverse',
+          type: 'text',
+          lastModified: new Date()
+        },
+        {
+          id: '2',
+          page: 'About',
+          title: 'Page Title',
+          content: 'About Me',
+          type: 'text',
+          lastModified: new Date()
+        },
+        {
+          id: '3',
+          page: 'Projects',
+          title: 'Page Description',
+          content: 'Showcasing all completed, ongoing, and notable works...',
+          type: 'textarea',
+          lastModified: new Date()
+        }
+      ];
+      // Save initial sections to localStorage
+      localStorage.setItem('editableSections', JSON.stringify(sections));
+    }
+    
+    setEditableSections(sections);
+    
+    // Load real analytics data
+    try {
+      const [analyticsStats, userInteractions] = await Promise.all([
+        analyticsAPI.getAnalyticsStats(),
+        analyticsAPI.getUserInteractions(undefined, 1000)
+      ]);
+      
+      // Calculate real page views from interactions
+      const pageViewCount = userInteractions.interactions?.filter(
+        (interaction: any) => interaction.action === 'page_view'
+      ).length || 0;
+      
+      setStats(prevStats => ({
+        ...prevStats,
+        totalSections: sections.length,
+        recentEdits: sections.filter(s => 
+          new Date().getTime() - new Date(s.lastModified).getTime() < 24 * 60 * 60 * 1000
+        ).length,
+        pageViews: pageViewCount,
+        lastUpdate: new Date().toLocaleDateString()
+      }));
+    } catch (error) {
+      console.error('Failed to load analytics data:', error);
+      // Fallback to basic stats without analytics
+      setStats(prevStats => ({
+        ...prevStats,
+        totalSections: sections.length,
+        recentEdits: sections.filter(s => 
+          new Date().getTime() - new Date(s.lastModified).getTime() < 24 * 60 * 60 * 1000
+        ).length,
+        pageViews: 0,
+        lastUpdate: new Date().toLocaleDateString()
+      }));
+    }
   }, []);
 
   useEffect(() => {
@@ -75,7 +115,14 @@ export default function OwnerDashboard({ isVisible, onClose }: OwnerDashboardPro
   }, [loadEditableSections]);
 
   const handleDeleteSection = (sectionId: string) => {
-    setEditableSections(prev => prev.filter(s => s.id !== sectionId));
+    const updatedSections = editableSections.filter(s => s.id !== sectionId);
+    setEditableSections(updatedSections);
+    localStorage.setItem('editableSections', JSON.stringify(updatedSections));
+  };
+
+  const saveEditableSections = (sections: EditableSection[]) => {
+    setEditableSections(sections);
+    localStorage.setItem('editableSections', JSON.stringify(sections));
   };
 
   const handleExportData = () => {

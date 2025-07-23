@@ -1,0 +1,27 @@
+{
+  "problems": [
+    {
+      "id": "1753237173152",
+      "timeSpent": 0,
+      "attempts": 0,
+      "solved": false,
+      "lastAttempted": "2025-07-23T02:19:33.152Z",
+      "createdAt": "2025-07-23T02:19:33.152Z",
+      "title": "Test Sync Problem",
+      "description": "This is a test problem to verify sync functionality",
+      "difficulty": "Easy",
+      "topic": "Testing",
+      "company": [
+        "Test Company"
+      ],
+      "solution": "This is a test solution",
+      "notes": "Test sync notes",
+      "tags": [
+        "test",
+        "sync"
+      ]
+    }
+  ],
+  "lastUpdated": "2025-07-23T08:00:02.909Z",
+  "totalProblems": 1
+}

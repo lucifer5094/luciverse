@@ -54,6 +54,19 @@ export default class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       this.reportError(error, errorInfo)
     }
+    
+    // NEVER auto-retry - wait for user action only
+    console.log('Error boundary activated. Waiting for user interaction.')
+    
+    // In development, log helpful debugging info
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔍 Error Details:', {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack
+      })
+      console.log('💡 To fix: Check the component tree above for errors')
+    }
   }
 
   componentWillUnmount() {
@@ -77,9 +90,9 @@ export default class ErrorBoundary extends Component<Props, State> {
 
     const { retryCount } = this.state
     
-    // Reduced retry limit and added more conservative logic
-    if (retryCount < 2) { // Reduced from 3 to 2
-      console.log(`ErrorBoundary retry attempt ${retryCount + 1} (conservative mode)`)
+    // STOP all automatic retries - only allow manual user retries
+    if (retryCount < 1) { // Only allow 1 manual retry
+      console.log(`ErrorBoundary manual retry attempt ${retryCount + 1}`)
       this.setState({ 
         hasError: false, 
         error: undefined, 
@@ -87,19 +100,39 @@ export default class ErrorBoundary extends Component<Props, State> {
         retryCount: retryCount + 1
       })
     } else {
-      // Don't auto-retry, let user decide
-      console.warn('Max retries reached. User intervention required.')
+      // Show user a message that they need to reload manually
+      console.warn('Max retries reached. Please refresh the page manually.')
+      alert('Maximum retries reached. Please refresh the page manually using your browser refresh button.')
     }
   }
 
   handleReload = () => {
+    // COMPLETELY disable reload in development to prevent infinite loops
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('🚫 Reload BLOCKED in development mode to prevent infinite loops')
+      console.log('💡 If you need to reload, use browser refresh button manually')
+      return
+    }
+    
+    // In production, only allow reload if not recently attempted
+    const lastReload = localStorage.getItem('last-error-reload')
+    const now = Date.now()
+    
+    if (lastReload && (now - parseInt(lastReload)) < 10000) {
+      console.warn('🚫 Reload prevented - too recent (within 10 seconds)')
+      return
+    }
+    
     // Clear any pending timeouts before reload
     if (this.retryTimeoutId) {
       clearTimeout(this.retryTimeoutId)
       this.retryTimeoutId = null
     }
     
-    // Add small delay to ensure cleanup is complete
+    // Store reload timestamp
+    localStorage.setItem('last-error-reload', now.toString())
+    
+    // Add delay to ensure cleanup is complete
     setTimeout(() => {
       window.location.reload()
     }, 100)
@@ -112,7 +145,7 @@ export default class ErrorBoundary extends Component<Props, State> {
       }
 
       const { error, errorInfo, retryCount } = this.state
-      const maxRetries = retryCount >= 3
+      const maxRetries = retryCount >= 1 // Changed to match handleRetry logic
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-light-background dark:bg-dark-background p-4">
@@ -164,7 +197,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             {/* Retry Count Indicator */}
             {retryCount > 0 && !maxRetries && (
               <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                Attempt {retryCount} of 3
+                Attempt {retryCount} of 1
               </div>
             )}
 
@@ -178,8 +211,9 @@ export default class ErrorBoundary extends Component<Props, State> {
                   Try Again
                 </button>
               ) : (
-                <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                  Auto-retrying in a few seconds...
+                <div className="text-sm text-red-600 dark:text-red-400 mb-4 p-3 bg-red-50 dark:bg-red-900/20 rounded border">
+                  <strong>Maximum retries reached.</strong><br />
+                  Please refresh the page manually using your browser's refresh button.
                 </div>
               )}
               
@@ -252,6 +286,12 @@ export class AsyncErrorBoundary extends Component<Props, State> {
   }
 
   handleManualReload = () => {
+    // Prevent reload in development mode
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Manual reload prevented in development mode')
+      return
+    }
+    
     if (this.reloadTimeoutId) {
       clearTimeout(this.reloadTimeoutId)
       this.reloadTimeoutId = null
@@ -331,7 +371,15 @@ export class NetworkErrorBoundary extends Component<Props, State> {
               Try Again
             </button>
             <button
-              onClick={() => window.location.reload()}
+              onClick={() => {
+                // Prevent reload in development mode
+                if (process.env.NODE_ENV === 'development') {
+                  console.warn('🚫 Manual reload prevented in development mode')
+                  alert('Reload blocked in development mode. Use browser refresh button.')
+                  return
+                }
+                window.location.reload()
+              }}
               className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
             >
               Refresh Page

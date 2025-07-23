@@ -12,6 +12,12 @@ export default function ReloadHelper({ onReloadDetected }: ReloadHelperProps) {
   const [reloadCount, setReloadCount] = useState(0)
 
   useEffect(() => {
+    // Disable in development to prevent interference
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🚫 ReloadHelper disabled in development mode')
+      return
+    }
+    
     // Track reload frequency
     const reloadCountFromStorage = parseInt(localStorage.getItem('reload-count') || '0')
     setReloadCount(reloadCountFromStorage)

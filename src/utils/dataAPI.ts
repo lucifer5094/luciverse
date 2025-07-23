@@ -226,6 +226,26 @@ export const dataAPI = {
     const achievements = await dataAPI.getAchievements()
     const filteredAchievements = achievements.filter(achievement => achievement.id !== id)
     return dataAPI.updateAchievements(filteredAchievements)
+  },
+
+  // Interview Problems management
+  getInterviewProblems: async (): Promise<any[]> => {
+    try {
+      const data = await fetchData<{ problems: any[]; lastUpdated?: string }>('interview-problems')
+      return data.problems || []
+    } catch (error) {
+      console.warn('No interview problems file found, returning empty array')
+      return []
+    }
+  },
+  
+  updateInterviewProblems: async (problems: any[]): Promise<void> => {
+    const data = {
+      problems: problems,
+      lastUpdated: new Date().toISOString(),
+      totalProblems: problems.length
+    }
+    return updateData('interview-problems', data)
   }
 }
 

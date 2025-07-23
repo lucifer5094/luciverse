@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { dataAPI, isDevelopmentMode, Achievement } from '@/utils/dataAPI'
 import { Document } from '@/utils/vaultUtils'
+import { interviewProblemsAPI, InterviewProblem, DIFFICULTY_OPTIONS, TOPIC_OPTIONS, COMPANY_OPTIONS } from '@/utils/interviewProblemsAPI'
 import LoginForm from '@/components/LoginForm'
 import InlineEdit from '@/components/InlineEdit'
 import Notification from '@/components/Notification'
@@ -18,13 +19,14 @@ import AnalyticsTestButton from '@/components/AnalyticsTestButton'
 interface OverviewDashboardProps {
   achievements: Achievement[]
   vaultDocuments: Document[]
+  interviewProblems: InterviewProblem[]
   siteContent: any
 }
 
-function OverviewDashboard({ achievements, vaultDocuments, siteContent }: OverviewDashboardProps) {
+function OverviewDashboard({ achievements, vaultDocuments, interviewProblems, siteContent }: OverviewDashboardProps) {
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Vault Documents</h3>
           <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">{vaultDocuments.length}</p>
@@ -34,6 +36,11 @@ function OverviewDashboard({ achievements, vaultDocuments, siteContent }: Overvi
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Achievements</h3>
           <p className="text-3xl font-bold text-green-600 dark:text-green-400">{achievements.length}</p>
           <p className="text-sm text-gray-500 dark:text-gray-400">Total achievements</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Interview Problems</h3>
+          <p className="text-3xl font-bold text-orange-600 dark:text-orange-400">{interviewProblems.length}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Total problems</p>
         </div>
         <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Site Content</h3>
@@ -211,9 +218,10 @@ export default function AdminPage() {
   const [loginLoading, setLoginLoading] = useState(false)
   const [vaultDocuments, setVaultDocuments] = useState<Document[]>([])
   const [achievements, setAchievements] = useState<Achievement[]>([])
+  const [interviewProblems, setInterviewProblems] = useState<InterviewProblem[]>([])
   const [siteContent, setSiteContent] = useState<any>({})
   const [loading, setLoading] = useState(true)
-  const [activeTab, setActiveTab] = useState<'overview' | 'vault' | 'content' | 'highlights' | 'achievements' | 'analytics'>('overview')
+  const [activeTab, setActiveTab] = useState<'overview' | 'vault' | 'content' | 'highlights' | 'achievements' | 'interview-problems' | 'analytics'>('overview')
   const [editingDoc, setEditingDoc] = useState<Document | null>(null)
   const [editingAchievement, setEditingAchievement] = useState<Achievement | null>(null)
   const [notification, setNotification] = useState<{ type: 'success' | 'error' | 'info', message: string } | null>(null)
@@ -260,6 +268,7 @@ export default function AdminPage() {
       const data = {
         vault: vaultDocuments,
         achievements,
+        interviewProblems,
         siteContent,
         exportDate: new Date().toISOString()
       }
@@ -273,6 +282,60 @@ export default function AdminPage() {
       showNotification('success', 'Data exported successfully!')
     } catch (error) {
       showNotification('error', 'Failed to export data')
+    }
+  }
+
+  const syncInterviewProblemsToFile = async () => {
+    try {
+      const problems = interviewProblemsAPI.getProblems()
+      await dataAPI.updateInterviewProblems(problems)
+      showNotification('success', 'Interview problems synced to file system!')
+    } catch (error) {
+      showNotification('error', 'Failed to sync interview problems')
+    }
+  }
+
+  const loadInterviewProblemsFromFile = async () => {
+    try {
+      const fileProblems = await dataAPI.getInterviewProblems()
+      if (fileProblems.length > 0) {
+        // Save to localStorage
+        localStorage.setItem('interview-problems', JSON.stringify(fileProblems))
+        // Reload data
+        setInterviewProblems(interviewProblemsAPI.getProblems())
+        showNotification('success', `Loaded ${fileProblems.length} interview problems from file!`)
+      } else {
+        showNotification('info', 'No interview problems found in file')
+      }
+    } catch (error) {
+      showNotification('error', 'Failed to load interview problems from file')
+    }
+  }
+
+  const testSyncFunction = async () => {
+    try {
+      showNotification('info', 'Testing sync functionality...')
+      
+      // Create a test problem
+      const testProblem = {
+        title: 'Test Sync Problem',
+        description: 'This is a test problem to verify sync functionality',
+        difficulty: 'Easy' as const,
+        topic: 'Testing',
+        company: ['Test Company'],
+        solution: 'This is a test solution',
+        notes: 'Test sync notes',
+        tags: ['test', 'sync']
+      }
+      
+      // Add via API
+      const addedProblem = interviewProblemsAPI.addProblem(testProblem)
+      setInterviewProblems(interviewProblemsAPI.getProblems())
+      
+      showNotification('success', 'Test problem added! Check console for sync logs.')
+    } catch (error) {
+      console.error('Test sync failed:', error)
+      showNotification('error', 'Test sync failed')
     }
   }
 
@@ -318,6 +381,9 @@ export default function AdminPage() {
       } else if (activeTab === 'vault') {
         await Promise.all(bulkSelection.map(id => dataAPI.deleteVaultDocument(id)))
         setVaultDocuments(prev => prev.filter(d => !bulkSelection.includes(d.id)))
+      } else if (activeTab === 'interview-problems') {
+        bulkSelection.forEach(id => interviewProblemsAPI.deleteProblem(id))
+        setInterviewProblems(prev => prev.filter(p => !bulkSelection.includes(p.id)))
       }
       setBulkSelection([])
       showNotification('success', `Successfully deleted ${bulkSelection.length} items`)
@@ -370,6 +436,7 @@ export default function AdminPage() {
       setVaultDocuments(vault)
       setSiteContent(content)
       setAchievements(achievementsData)
+      setInterviewProblems(interviewProblemsAPI.getProblems())
       
       // Load page-specific content
       setPageTitle(content.adminTitle)
@@ -612,6 +679,27 @@ export default function AdminPage() {
               
               <div className="flex items-center gap-3">
                 <button
+                  onClick={testSyncFunction}
+                  className="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-all duration-200 flex items-center gap-2 shadow-lg"
+                  title="Test sync functionality"
+                >
+                  🧪 Test Sync
+                </button>
+                <button
+                  onClick={syncInterviewProblemsToFile}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-200 flex items-center gap-2 shadow-lg"
+                  title="Sync interview problems to file system"
+                >
+                  💾 Sync to File
+                </button>
+                <button
+                  onClick={loadInterviewProblemsFromFile}
+                  className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all duration-200 flex items-center gap-2 shadow-lg"
+                  title="Load interview problems from file system"
+                >
+                  📂 Load from File
+                </button>
+                <button
                   onClick={exportData}
                   className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all duration-200 flex items-center gap-2 shadow-lg"
                 >
@@ -638,6 +726,7 @@ export default function AdminPage() {
                 { id: 'content', label: 'Site Content', icon: '📝' },
                 { id: 'highlights', label: 'Highlights', icon: '⭐' },
                 { id: 'achievements', label: `Achievements (${achievements.length})`, icon: '🏆' },
+                { id: 'interview-problems', label: `Interview Problems (${interviewProblems.length})`, icon: '🧠' },
                 { id: 'analytics', label: 'Analytics', icon: '📈' }
               ].map((tab) => (
                 <button
@@ -665,7 +754,7 @@ export default function AdminPage() {
         </div>
 
         {/* Search and Filter Bar for applicable tabs */}
-        {(activeTab === 'vault' || activeTab === 'achievements') && (
+        {(activeTab === 'vault' || activeTab === 'achievements' || activeTab === 'interview-problems') && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -741,6 +830,7 @@ export default function AdminPage() {
           <OverviewDashboard 
             achievements={achievements}
             vaultDocuments={vaultDocuments}
+            interviewProblems={interviewProblems}
             siteContent={siteContent}
           />
         )}
@@ -1029,6 +1119,14 @@ export default function AdminPage() {
           </div>
         )}
 
+        {/* Interview Problems Tab */}
+        {activeTab === 'interview-problems' && (
+          <InterviewProblemsManager 
+            problems={interviewProblems}
+            onUpdateProblems={() => setInterviewProblems(interviewProblemsAPI.getProblems())}
+          />
+        )}
+
         {/* Document Editor Modal */}
         {editingDoc && (
           <DocumentEditor
@@ -1280,6 +1378,377 @@ function AchievementEditor({
             Save
           </button>
         </div>
+      </div>
+    </div>
+  )
+}
+
+// Interview Problems Manager Component
+interface InterviewProblemsManagerProps {
+  problems: InterviewProblem[]
+  onUpdateProblems: () => void
+}
+
+function InterviewProblemsManager({ problems, onUpdateProblems }: InterviewProblemsManagerProps) {
+  const [editingProblem, setEditingProblem] = useState<InterviewProblem | null>(null)
+  const [showAddForm, setShowAddForm] = useState(false)
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const filteredProblems = problems.filter(problem =>
+    problem.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    problem.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    problem.topic.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+
+  const handleAddProblem = async (problemData: Omit<InterviewProblem, 'id' | 'timeSpent' | 'attempts' | 'solved' | 'lastAttempted' | 'createdAt'>) => {
+    try {
+      interviewProblemsAPI.addProblem(problemData)
+      onUpdateProblems()
+      setShowAddForm(false)
+      
+      // Auto-sync to file system
+      setTimeout(async () => {
+        try {
+          const problems = interviewProblemsAPI.getProblems()
+          await dataAPI.updateInterviewProblems(problems)
+          console.log('Interview problems auto-synced to file system')
+        } catch (error) {
+          console.warn('Auto-sync failed:', error)
+        }
+      }, 500)
+    } catch (error) {
+      console.error('Failed to add problem:', error)
+    }
+  }
+
+  const handleUpdateProblem = async (problemId: string, updates: Partial<InterviewProblem>) => {
+    try {
+      interviewProblemsAPI.updateProblem(problemId, updates)
+      onUpdateProblems()
+      setEditingProblem(null)
+      
+      // Auto-sync to file system
+      setTimeout(async () => {
+        try {
+          const problems = interviewProblemsAPI.getProblems()
+          await dataAPI.updateInterviewProblems(problems)
+          console.log('Interview problems auto-synced to file system')
+        } catch (error) {
+          console.warn('Auto-sync failed:', error)
+        }
+      }, 500)
+    } catch (error) {
+      console.error('Failed to update problem:', error)
+    }
+  }
+
+  const handleDeleteProblem = async (problemId: string) => {
+    if (confirm('Are you sure you want to delete this problem?')) {
+      try {
+        interviewProblemsAPI.deleteProblem(problemId)
+        onUpdateProblems()
+        
+        // Auto-sync to file system
+        setTimeout(async () => {
+          try {
+            const problems = interviewProblemsAPI.getProblems()
+            await dataAPI.updateInterviewProblems(problems)
+            console.log('Interview problems auto-synced to file system')
+          } catch (error) {
+            console.warn('Auto-sync failed:', error)
+          }
+        }, 500)
+      } catch (error) {
+        console.error('Failed to delete problem:', error)
+      }
+    }
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Interview Problems Management</h3>
+        <button
+          onClick={() => setShowAddForm(true)}
+          className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Add New Problem
+        </button>
+      </div>
+
+      <div className="mb-4">
+        <input
+          type="text"
+          placeholder="Search problems..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+        />
+      </div>
+
+      <div className="grid gap-4">
+        {filteredProblems.map((problem) => (
+          <div key={problem.id} className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="flex justify-between items-start">
+              <div className="flex-1">
+                <h4 className="font-semibold text-gray-900 dark:text-white">{problem.title}</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{problem.description}</p>
+                <div className="flex gap-2 mt-2">
+                  <span className={`px-2 py-1 text-xs rounded ${
+                    problem.difficulty === 'Easy' ? 'bg-green-100 text-green-800' :
+                    problem.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
+                    'bg-red-100 text-red-800'
+                  }`}>
+                    {problem.difficulty}
+                  </span>
+                  <span className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded">{problem.topic}</span>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setEditingProblem(problem)}
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDeleteProblem(problem.id)}
+                  className="text-red-500 hover:text-red-700"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Add/Edit Problem Modal */}
+      {(showAddForm || editingProblem) && (
+        <InterviewProblemEditor
+          problem={editingProblem}
+          onSave={editingProblem ? 
+            (updates) => handleUpdateProblem(editingProblem.id, updates) :
+            handleAddProblem
+          }
+          onCancel={() => {
+            setShowAddForm(false)
+            setEditingProblem(null)
+          }}
+        />
+      )}
+    </div>
+  )
+}
+
+// Interview Problem Editor Component
+interface InterviewProblemEditorProps {
+  problem?: InterviewProblem | null
+  onSave: (problemData: any) => void
+  onCancel: () => void
+}
+
+function InterviewProblemEditor({ problem, onSave, onCancel }: InterviewProblemEditorProps) {
+  const [formData, setFormData] = useState({
+    title: problem?.title || '',
+    description: problem?.description || '',
+    questionImage: problem?.questionImage || '',
+    difficulty: problem?.difficulty || 'Medium',
+    topic: problem?.topic || '',
+    company: problem?.company?.join(', ') || '',
+    solution: problem?.solution || '',
+    solutionImage: problem?.solutionImage || '',
+    notes: problem?.notes || '',
+    tags: problem?.tags?.join(', ') || ''
+  })
+
+  const [questionImageFile, setQuestionImageFile] = useState<File | null>(null)
+  const [solutionImageFile, setSolutionImageFile] = useState<File | null>(null)
+
+  const handleImageUpload = async (file: File, type: 'question' | 'solution') => {
+    try {
+      const imageDataUrl = await interviewProblemsAPI.uploadImage(file)
+      if (type === 'question') {
+        setFormData(prev => ({ ...prev, questionImage: imageDataUrl }))
+      } else {
+        setFormData(prev => ({ ...prev, solutionImage: imageDataUrl }))
+      }
+    } catch (error) {
+      console.error('Failed to upload image:', error)
+    }
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    const problemData = {
+      ...formData,
+      company: formData.company.split(',').map(c => c.trim()).filter(Boolean),
+      tags: formData.tags.split(',').map(t => t.trim()).filter(Boolean)
+    }
+
+    onSave(problemData)
+  }
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          {problem ? 'Edit Problem' : 'Add New Problem'}
+        </h3>
+        
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Title *</label>
+              <input
+                type="text"
+                value={formData.title}
+                onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
+                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Topic</label>
+              <select
+                value={formData.topic}
+                onChange={(e) => setFormData(prev => ({ ...prev, topic: e.target.value }))}
+                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+              >
+                <option value="">Select Topic</option>
+                {TOPIC_OPTIONS.map(topic => (
+                  <option key={topic} value={topic}>{topic}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Difficulty</label>
+              <select
+                value={formData.difficulty}
+                onChange={(e) => setFormData(prev => ({ ...prev, difficulty: e.target.value as any }))}
+                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+              >
+                {DIFFICULTY_OPTIONS.map(diff => (
+                  <option key={diff} value={diff}>{diff}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Companies (comma separated)</label>
+              <input
+                type="text"
+                value={formData.company}
+                onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+                placeholder="Google, Microsoft, Amazon"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Description *</label>
+            <textarea
+              value={formData.description}
+              onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
+              rows={4}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Question Image</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => {
+                const file = e.target.files?.[0]
+                if (file) {
+                  setQuestionImageFile(file)
+                  handleImageUpload(file, 'question')
+                }
+              }}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+            />
+            {formData.questionImage && (
+              <img src={formData.questionImage} alt="Question" className="mt-2 max-w-xs h-auto rounded" />
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Solution</label>
+            <textarea
+              value={formData.solution}
+              onChange={(e) => setFormData(prev => ({ ...prev, solution: e.target.value }))}
+              rows={6}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white font-mono text-sm"
+              placeholder="Solution code or explanation..."
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Solution Image</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => {
+                const file = e.target.files?.[0]
+                if (file) {
+                  setSolutionImageFile(file)
+                  handleImageUpload(file, 'solution')
+                }
+              }}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+            />
+            {formData.solutionImage && (
+              <img src={formData.solutionImage} alt="Solution" className="mt-2 max-w-xs h-auto rounded" />
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Notes</label>
+            <textarea
+              value={formData.notes}
+              onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
+              rows={3}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+              placeholder="Additional notes, hints, or explanations..."
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Tags (comma separated)</label>
+            <input
+              type="text"
+              value={formData.tags}
+              onChange={(e) => setFormData(prev => ({ ...prev, tags: e.target.value }))}
+              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-gray-900 dark:text-white"
+              placeholder="array, hashmap, recursion"
+            />
+          </div>
+
+          <div className="flex justify-end space-x-4 mt-6">
+            <button
+              type="button"
+              onClick={onCancel}
+              className="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            >
+              {problem ? 'Update' : 'Add'} Problem
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   )

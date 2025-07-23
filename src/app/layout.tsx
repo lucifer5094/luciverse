@@ -126,8 +126,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="msapplication-TileColor" content="#8b5cf6" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         
-        {/* Service Worker Registration */}
-        <script
+        {/* Service Worker Registration - TEMPORARILY DISABLED */}
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               if ('serviceWorker' in navigator) {
@@ -143,34 +143,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }
             `,
           }}
-        />
+        /> */}
       </head>
       <body className='min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text'>
-        <ErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
-          <ClientOnly>
-            <ClientLayout>
-              <ReloadPrevention />
-              <OfflineIndicator />
-              <OwnerAccessBanner />
-              <Navbar />
-              <main>
-                {children}
-              </main>
-              <Footer />
-              <OwnerFloatingControls />
-              <PWAInstallPrompt />
-              <ReloadHelper />
-              <ErrorBoundary fallback={<div></div>}>
-                <SafeAnalytics/>
-              </ErrorBoundary>
-            </ClientLayout>
-          </ClientOnly>
-        </ErrorBoundary>
-        <script
+        {/* Step-by-step re-enable: Start with basic layout structure */}
+        <ClientOnly>
+          <ClientLayout>
+            <Navbar />
+            <main>
+              {children}
+            </main>
+            <Footer />
+          </ClientLayout>
+        </ClientOnly>
+        {/* Error handling script - TEMPORARILY DISABLED */}
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `(${initializeErrorHandling.toString()})();`,
           }}
-        />
+        /> */}
       </body>
     </html>
   )

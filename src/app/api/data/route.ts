@@ -32,36 +32,43 @@ export async function POST(request: NextRequest) {
     if (!isDevelopment) {
       return NextResponse.json({ error: 'Editing only allowed in development' }, { status: 403 })
     }
+
+    // Skip session validation for interview-problems in development
+    const body = await request.json()
+    const { type } = body
     
-    // Check authentication
-    const sessionCookie = request.cookies.get('admin-session')
-    if (!sessionCookie) {
-      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
-    }
-    
-    // Simple session validation
-    try {
-      const decoded = Buffer.from(sessionCookie.value, 'base64').toString()
-      const [user, timestamp] = decoded.split(':')
+    if (type === 'interview-problems' && isDevelopment) {
+      // Skip auth for interview problems in development
+    } else {
+      // Check authentication for other data types
+      const sessionCookie = request.cookies.get('admin-session')
+      if (!sessionCookie) {
+        return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+      }
       
-      if (user !== 'admin') {
+      // Simple session validation
+      try {
+        const decoded = Buffer.from(sessionCookie.value, 'base64').toString()
+        const [user, timestamp] = decoded.split(':')
+        
+        if (user !== 'admin') {
+          return NextResponse.json({ error: 'Invalid session' }, { status: 401 })
+        }
+        
+        // Check if session is expired (24 hours)
+        const sessionTime = parseInt(timestamp)
+        const now = Date.now()
+        const twentyFourHours = 24 * 60 * 60 * 1000
+        
+        if (now - sessionTime > twentyFourHours) {
+          return NextResponse.json({ error: 'Session expired' }, { status: 401 })
+        }
+      } catch (error) {
         return NextResponse.json({ error: 'Invalid session' }, { status: 401 })
       }
-      
-      // Check if session is expired (24 hours)
-      const sessionTime = parseInt(timestamp)
-      const now = Date.now()
-      const twentyFourHours = 24 * 60 * 60 * 1000
-      
-      if (now - sessionTime > twentyFourHours) {
-        return NextResponse.json({ error: 'Session expired' }, { status: 401 })
-      }
-    } catch (error) {
-      return NextResponse.json({ error: 'Invalid session' }, { status: 401 })
     }
     
-    const body = await request.json()
-    const { type, data } = body
+    const { data } = body
     
     if (!type || !data) {
       return NextResponse.json({ error: 'Type and data required' }, { status: 400 })

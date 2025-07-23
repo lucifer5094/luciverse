@@ -54,6 +54,13 @@ export default function OfflineIndicator() {
           <span>📱 You&apos;re offline. Cached content available.</span>
           <button 
             onClick={() => {
+              // In development, never reload to prevent loops
+              if (process.env.NODE_ENV === 'development') {
+                console.log('🚫 Reload blocked in development mode')
+                console.log('💡 Connection status:', navigator.onLine ? 'Online' : 'Offline')
+                return
+              }
+              
               // Try to reconnect instead of hard reload
               if (navigator.onLine) {
                 window.location.reload()

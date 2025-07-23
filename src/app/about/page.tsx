@@ -685,10 +685,10 @@ export default function AboutPage() {
                         className="flex flex-wrap justify-center gap-6 md:gap-8 mb-12"
                     >
                         {[
-                            { label: 'Projects Built', value: '25+', icon: '🚀' },
-                            { label: 'Technologies', value: '20+', icon: '⚡' },
+                            { label: 'Projects Built', value: '0', icon: '🚀' },
+                            { label: 'Technologies', value: '0', icon: '⚡' },
                             { label: 'Coffee Consumed', value: '0☕', icon: '🎵' },
-                            { label: 'Years Coding', value: '4+', icon: '💻' }
+                            { label: 'Years Coding', value: '0', icon: '💻' }
                         ].map((stat, index) => (
                             <motion.div
                                 key={index}

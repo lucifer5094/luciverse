@@ -65,21 +65,24 @@ export default function SimpleAnalyticsDashboard() {
   useEffect(() => {
     fetchRealTimeData()
     
-    // Set up real-time updates every 15 seconds
-    const interval = setInterval(() => fetchRealTimeData(), 15000)
-    
-    // Listen for visibility changes to refresh when tab becomes active
-    const handleVisibilityChange = () => {
-      if (!document.hidden) {
-        fetchRealTimeData()
+    // Only set up intervals in production to avoid dev server conflicts
+    if (process.env.NODE_ENV === 'production') {
+      // Set up real-time updates every 15 seconds
+      const interval = setInterval(() => fetchRealTimeData(), 15000)
+      
+      // Listen for visibility changes to refresh when tab becomes active
+      const handleVisibilityChange = () => {
+        if (!document.hidden) {
+          fetchRealTimeData()
+        }
       }
-    }
-    
-    document.addEventListener('visibilitychange', handleVisibilityChange)
-    
-    return () => {
-      clearInterval(interval)
-      document.removeEventListener('visibilitychange', handleVisibilityChange)
+      
+      document.addEventListener('visibilitychange', handleVisibilityChange)
+      
+      return () => {
+        clearInterval(interval)
+        document.removeEventListener('visibilitychange', handleVisibilityChange)
+      }
     }
   }, [])
 
