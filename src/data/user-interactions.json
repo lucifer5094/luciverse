@@ -9007,7 +9007,1311 @@
       "page": "/",
       "element": "window",
       "action": "blur"
+    },
+    {
+      "id": "interaction_1753237884250_b7a4doy6q",
+      "timestamp": "2025-07-23T08:01:24.304Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753237884461_h0xhw62nz",
+      "timestamp": "2025-07-23T08:01:25.468Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/",
+      "element": "div#unknown.max-w-7xl",
+      "action": "click",
+      "position": {
+        "x": 200,
+        "y": 259
+      },
+      "metadata": {
+        "text": "🚀 Interview Prep HubMaster your coding interviews",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237886701_055ndqj6j",
+      "timestamp": "2025-07-23T08:01:26.725Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237889203_9e5s57u93",
+      "timestamp": "2025-07-23T08:01:29.222Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237890129_qdojyysy0",
+      "timestamp": "2025-07-23T08:01:30.153Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753237897328_jek6vzevj",
+      "timestamp": "2025-07-23T08:01:37.859Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753237899169_n3taskqql",
+      "timestamp": "2025-07-23T08:01:39.199Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753237899385_7vq9r3mih",
+      "timestamp": "2025-07-23T08:01:39.952Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin",
+      "element": "input#password.w-full",
+      "action": "click",
+      "position": {
+        "x": 613,
+        "y": 329
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237906439_pvr9lrkx1",
+      "timestamp": "2025-07-23T08:01:46.477Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753237911004_gbyx9z4j4",
+      "timestamp": "2025-07-23T08:01:51.044Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753237912621_6tjp030x2",
+      "timestamp": "2025-07-23T08:01:52.659Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753237912842_6t273qorw",
+      "timestamp": "2025-07-23T08:01:53.393Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "input#password.relative",
+      "action": "click",
+      "position": {
+        "x": 550,
+        "y": 376
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237916650_92hha7mra",
+      "timestamp": "2025-07-23T08:01:57.125Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "button#unknown.group",
+      "action": "click",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "metadata": {
+        "text": "Access Dashboard",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237923038_9hbdjuseu",
+      "timestamp": "2025-07-23T08:02:03.071Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "button#unknown.group",
+      "action": "click",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "metadata": {
+        "text": "Access Dashboard",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237926193_hihjwg2oj",
+      "timestamp": "2025-07-23T08:02:06.215Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237930316_do0whbhct",
+      "timestamp": "2025-07-23T08:02:10.337Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237934049_a4g7ebdlb",
+      "timestamp": "2025-07-23T08:02:14.078Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0.8333333134651184,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237934633_18tjjuw4k",
+      "timestamp": "2025-07-23T08:02:16.661Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 904,
+        "y": 30
+      },
+      "metadata": {
+        "text": "Achievements",
+        "href": "/achievements"
+      }
+    },
+    {
+      "id": "interaction_1753237937322_m8uqle1h9",
+      "timestamp": "2025-07-23T08:02:17.514Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 972,
+        "y": 27
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753237938927_9gf6rrqiu",
+      "timestamp": "2025-07-23T08:02:18.965Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 639,
+        "y": 40
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753237940152_3e4jvb28d",
+      "timestamp": "2025-07-23T08:02:20.175Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 639,
+        "y": 40
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753237943289_qtbe7k1p6",
+      "timestamp": "2025-07-23T08:02:23.319Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 984,
+        "y": 30
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753237946800_7ws4zwuts",
+      "timestamp": "2025-07-23T08:02:26.826Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237947495_hg9mr3cme",
+      "timestamp": "2025-07-23T08:02:27.622Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 913,
+        "y": 50
+      },
+      "metadata": {
+        "text": "LLuciverseHomeAboutProjectsAchievementsInterview P",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237951136_y6gaxirnl",
+      "timestamp": "2025-07-23T08:02:32.420Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1125,
+        "y": 15
+      },
+      "metadata": {
+        "text": "Vault",
+        "href": "/vault"
+      }
+    },
+    {
+      "id": "interaction_1753237959420_ufhbd3qch",
+      "timestamp": "2025-07-23T08:02:39.445Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237960039_kxcwjzhzq",
+      "timestamp": "2025-07-23T08:02:40.277Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1010,
+        "y": 35
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753237966382_zf5k9tiwo",
+      "timestamp": "2025-07-23T08:02:46.405Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753237968033_h37zpdvyp",
+      "timestamp": "2025-07-23T08:02:48.084Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1236,
+        "y": 37
+      },
+      "metadata": {
+        "text": "Contact",
+        "href": "/contact"
+      }
+    },
+    {
+      "id": "interaction_1753237968834_2r9hernqq",
+      "timestamp": "2025-07-23T08:02:49.629Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "button#unknown.p-2",
+      "action": "click",
+      "position": {
+        "x": 1245,
+        "y": 34
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237969613_51nuzzchx",
+      "timestamp": "2025-07-23T08:02:50.348Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "button#unknown.p-2",
+      "action": "click",
+      "position": {
+        "x": 1245,
+        "y": 34
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237975962_tciokjtpg",
+      "timestamp": "2025-07-23T08:02:55.988Z",
+      "sessionId": "session_1753237794639_jy7akvvyj",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753237978734_x0tmuasy5",
+      "timestamp": "2025-07-23T08:02:59.406Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753237981290_zqk5vg4x9",
+      "timestamp": "2025-07-23T08:03:01.315Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "input#password.relative",
+      "action": "click",
+      "position": {
+        "x": 781,
+        "y": 528
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237985453_7j208hw6e",
+      "timestamp": "2025-07-23T08:03:05.502Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "button#unknown.group",
+      "action": "click",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "metadata": {
+        "text": "Access Dashboard",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753237989884_umk3gdpj3",
+      "timestamp": "2025-07-23T08:03:09.936Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753237990337_ersrneed3",
+      "timestamp": "2025-07-23T08:03:10.980Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753237994711_ss0hv8v6n",
+      "timestamp": "2025-07-23T08:03:14.756Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 725,
+        "y": 35
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753237996486_6ijjjpbpg",
+      "timestamp": "2025-07-23T08:03:16.528Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 725,
+        "y": 35
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753238001037_jraplyol9",
+      "timestamp": "2025-07-23T08:03:21.067Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "div#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 1475,
+        "y": 802
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238002229_n8kquq44t",
+      "timestamp": "2025-07-23T08:03:22.333Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "div#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 1475,
+        "y": 802
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238004984_dliyt8uo7",
+      "timestamp": "2025-07-23T08:03:25.011Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 806,
+        "y": 33
+      },
+      "metadata": {
+        "text": "About",
+        "href": "/about"
+      }
+    },
+    {
+      "id": "interaction_1753238009036_z7k7jzouf",
+      "timestamp": "2025-07-23T08:03:29.077Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753238010068_3frbqf596",
+      "timestamp": "2025-07-23T08:03:30.428Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1086,
+        "y": 24
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753238014303_ypy6pbdex",
+      "timestamp": "2025-07-23T08:03:35.123Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753238016033_flhk1jkep",
+      "timestamp": "2025-07-23T08:03:36.173Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 742,
+        "y": 56
+      },
+      "metadata": {
+        "text": "LLuciverseHomeAboutProjectsAchievementsInterview P",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238019600_ia2eqh23j",
+      "timestamp": "2025-07-23T08:03:39.628Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753238019984_1gffm5xn3",
+      "timestamp": "2025-07-23T08:03:40.767Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 740,
+        "y": 34
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753238025809_y393el3rh",
+      "timestamp": "2025-07-23T08:03:45.839Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 3043.199951171875,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753238028694_e0pc27fm9",
+      "timestamp": "2025-07-23T08:03:48.723Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753238032259_odxyrfzzo",
+      "timestamp": "2025-07-23T08:03:52.291Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin-auth",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238038954_7sdqcxdbx",
+      "timestamp": "2025-07-23T08:03:59.731Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753238041731_85n6cgkmr",
+      "timestamp": "2025-07-23T08:04:01.805Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "input#password.w-full",
+      "action": "click",
+      "position": {
+        "x": 743,
+        "y": 445
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238044496_h9g4ojj92",
+      "timestamp": "2025-07-23T08:04:04.543Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "metadata": {
+        "text": "Access Admin Panel",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238046509_9sjsjazh2",
+      "timestamp": "2025-07-23T08:04:06.558Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238046938_lyuij5j47",
+      "timestamp": "2025-07-23T08:04:07.685Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238049711_xmqft2pba",
+      "timestamp": "2025-07-23T08:04:09.738Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.flex-1",
+      "action": "click",
+      "position": {
+        "x": 1125,
+        "y": 347
+      },
+      "metadata": {
+        "text": "🧠Interview Problems (1)",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238055439_vrqrr9je2",
+      "timestamp": "2025-07-23T08:04:15.507Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.text-red-500",
+      "action": "click",
+      "position": {
+        "x": 1298,
+        "y": 652
+      },
+      "metadata": {
+        "text": "Delete",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238055440_46lqk20e7",
+      "timestamp": "2025-07-23T08:04:15.517Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238055440_l8jvg8vjb",
+      "timestamp": "2025-07-23T08:04:15.525Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238056956_2uevmh0sg",
+      "timestamp": "2025-07-23T08:04:17.785Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.bg-blue-500",
+      "action": "click",
+      "position": {
+        "x": 1272,
+        "y": 505
+      },
+      "metadata": {
+        "text": "Add New Problem",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238059602_237l8ya2v",
+      "timestamp": "2025-07-23T08:04:19.672Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238069885_ywkj53p9j",
+      "timestamp": "2025-07-23T08:04:29.935Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238071204_w0iyhwrjv",
+      "timestamp": "2025-07-23T08:04:31.239Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "input#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 564,
+        "y": 158
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238073731_7ln88avy5",
+      "timestamp": "2025-07-23T08:04:33.759Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "select#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 801,
+        "y": 166
+      },
+      "metadata": {
+        "text": "Select TopicArraysStringsLinked ListsTreesGraphsDy",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238075060_1t239m84z",
+      "timestamp": "2025-07-23T08:04:35.094Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "select#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 768,
+        "y": 147
+      },
+      "metadata": {
+        "text": "Select TopicArraysStringsLinked ListsTreesGraphsDy",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238076663_c1tbelwlh",
+      "timestamp": "2025-07-23T08:04:36.691Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "select#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 728,
+        "y": 256
+      },
+      "metadata": {
+        "text": "EasyMediumHard",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238077968_ypgjb2f8r",
+      "timestamp": "2025-07-23T08:04:37.995Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "div#unknown.unknown",
+      "action": "click",
+      "position": {
+        "x": 752,
+        "y": 356
+      },
+      "metadata": {
+        "text": "Description *",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238078373_62iiiji5d",
+      "timestamp": "2025-07-23T08:04:38.882Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "textarea#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 752,
+        "y": 356
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238080031_dmho417a8",
+      "timestamp": "2025-07-23T08:04:40.077Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238086945_e37wgd6gm",
+      "timestamp": "2025-07-23T08:04:47.004Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238089737_gpfw8eeeh",
+      "timestamp": "2025-07-23T08:04:49.807Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238093022_ww2bdk4tz",
+      "timestamp": "2025-07-23T08:04:53.079Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238095112_qe6p54rg0",
+      "timestamp": "2025-07-23T08:04:55.145Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "input#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 426,
+        "y": 492
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238095327_svf39tii6",
+      "timestamp": "2025-07-23T08:04:56.519Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238103617_pbcdotlx9",
+      "timestamp": "2025-07-23T08:05:03.663Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238107114_0xkrzawc7",
+      "timestamp": "2025-07-23T08:05:07.189Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238116161_xy2hzij8s",
+      "timestamp": "2025-07-23T08:05:16.219Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238117435_2mvfuwetz",
+      "timestamp": "2025-07-23T08:05:17.480Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "textarea#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 563,
+        "y": 341
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238124781_vezmuia4e",
+      "timestamp": "2025-07-23T08:05:24.810Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "textarea#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 347,
+        "y": 327
+      },
+      "metadata": {
+        "text": "The above puzzle can be solved in two ways, and we",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238129818_jzmud2wns",
+      "timestamp": "2025-07-23T08:05:29.851Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 28,
+        "scrollPercent": 7
+      }
+    },
+    {
+      "id": "interaction_1753238131220_s1yy0qq3n",
+      "timestamp": "2025-07-23T08:05:31.252Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "textarea#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 486,
+        "y": 425
+      },
+      "metadata": {
+        "text": "The above puzzle can be solved in two ways, and we",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238132122_7nv9qtdjn",
+      "timestamp": "2025-07-23T08:05:32.222Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "textarea#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 342,
+        "y": 395
+      },
+      "metadata": {
+        "text": "The above puzzle can be solved in two ways, and we",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238134568_k8xglfkok",
+      "timestamp": "2025-07-23T08:05:34.598Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 418.3999938964844,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753238139516_80hle5rf0",
+      "timestamp": "2025-07-23T08:05:39.558Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1094,
+        "y": 788
+      },
+      "metadata": {
+        "text": "Add Problem",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238141762_vdw02liah",
+      "timestamp": "2025-07-23T08:05:41.788Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753238142635_vttuamedc",
+      "timestamp": "2025-07-23T08:05:42.773Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.bg-blue-600",
+      "action": "click",
+      "position": {
+        "x": 820,
+        "y": 141
+      },
+      "metadata": {
+        "text": "💾 Sync to File",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238143612_zcqhqylqh",
+      "timestamp": "2025-07-23T08:05:43.774Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238154311_473cgl1zt",
+      "timestamp": "2025-07-23T08:05:54.358Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238157093_4fem045pj",
+      "timestamp": "2025-07-23T08:05:57.130Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 822,
+        "y": 154
+      },
+      "metadata": {
+        "text": "🧪 Test Sync💾 Sync to File📂 Load from File📦 Exp",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238158448_p3kai3okj",
+      "timestamp": "2025-07-23T08:05:58.474Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.bg-purple-600",
+      "action": "click",
+      "position": {
+        "x": 940,
+        "y": 136
+      },
+      "metadata": {
+        "text": "📂 Load from File",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238164009_hhuatk4r3",
+      "timestamp": "2025-07-23T08:06:04.059Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "button#unknown.bg-red-600",
+      "action": "click",
+      "position": {
+        "x": 1293,
+        "y": 130
+      },
+      "metadata": {
+        "text": "🚪 Logout",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238165255_ymx9wpom2",
+      "timestamp": "2025-07-23T08:06:05.284Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "div#unknown.min-h-screen",
+      "action": "click",
+      "position": {
+        "x": 939,
+        "y": 153
+      },
+      "metadata": {
+        "text": "🔐 Admin AccessEnter password to access admin pane",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753238166223_xduggb9eu",
+      "timestamp": "2025-07-23T08:06:06.325Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 722,
+        "y": 28
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753238167582_6ttyknze7",
+      "timestamp": "2025-07-23T08:06:07.607Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 728,
+        "y": 29
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753238175110_yt0utae1z",
+      "timestamp": "2025-07-23T08:06:15.140Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753238175394_6zxhuhb5y",
+      "timestamp": "2025-07-23T08:06:16.252Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1120,
+        "y": 23
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753238177359_gonyjqbqk",
+      "timestamp": "2025-07-23T08:06:17.510Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1120,
+        "y": 23
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753238179142_71v7z5nyi",
+      "timestamp": "2025-07-23T08:06:19.173Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1120,
+        "y": 23
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753238182235_yag160he6",
+      "timestamp": "2025-07-23T08:06:22.259Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753238184445_36qwhwwzt",
+      "timestamp": "2025-07-23T08:06:24.473Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
     }
   ],
-  "lastUpdated": "2025-07-23T08:00:22.924Z"
+  "lastUpdated": "2025-07-23T08:06:24.473Z"
 }
