@@ -10359,7 +10359,215 @@
       "page": "/admin",
       "element": "window",
       "action": "blur"
+    },
+    {
+      "id": "interaction_1753238699033_ghde6mebf",
+      "timestamp": "2025-07-23T08:14:59.240Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238700382_wiktql7xi",
+      "timestamp": "2025-07-23T08:15:00.416Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238841936_lcr0ibgd2",
+      "timestamp": "2025-07-23T08:17:21.964Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753307492762_rbar32wc2",
+      "timestamp": "2025-07-24T03:21:33.455Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753307501801_cmt46sipd",
+      "timestamp": "2025-07-24T03:21:41.813Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753307502144_054h7m468",
+      "timestamp": "2025-07-24T03:21:42.437Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753307502361_ehi3cf4l0",
+      "timestamp": "2025-07-24T03:21:42.467Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 772,
+        "y": 35
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753307506738_q07bndhxq",
+      "timestamp": "2025-07-24T03:21:46.861Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753307508597_93yk423g8",
+      "timestamp": "2025-07-24T03:21:48.609Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 31.66666603088379,
+        "scrollPercent": 8
+      }
+    },
+    {
+      "id": "interaction_1753307509236_0g58lh3mw",
+      "timestamp": "2025-07-24T03:21:49.252Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 393,
+        "y": 38
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753307514035_hhza3xol1",
+      "timestamp": "2025-07-24T03:21:54.046Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753307565766_pfvyz4vbs",
+      "timestamp": "2025-07-24T03:22:45.786Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753307602576_8imfjfyyo",
+      "timestamp": "2025-07-24T03:23:22.617Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753307602660_ikwfk762s",
+      "timestamp": "2025-07-24T03:23:23.848Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753308072397_f92dykomm",
+      "timestamp": "2025-07-24T03:31:12.906Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753308075123_onx3q2h7s",
+      "timestamp": "2025-07-24T03:31:15.146Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753308075349_gsgvpkmpz",
+      "timestamp": "2025-07-24T03:31:15.984Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 799,
+        "y": 50
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753308077655_8rqiatrrc",
+      "timestamp": "2025-07-24T03:31:17.678Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 799,
+        "y": 50
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753308081241_q01dtminf",
+      "timestamp": "2025-07-24T03:31:21.264Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753308081476_ubb7v4iqx",
+      "timestamp": "2025-07-24T03:31:22.150Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
     }
   ],
-  "lastUpdated": "2025-07-23T08:13:55.826Z"
+  "lastUpdated": "2025-07-24T03:31:22.150Z"
 }
