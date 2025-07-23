@@ -213,7 +213,7 @@ export default class ErrorBoundary extends Component<Props, State> {
               ) : (
                 <div className="text-sm text-red-600 dark:text-red-400 mb-4 p-3 bg-red-50 dark:bg-red-900/20 rounded border">
                   <strong>Maximum retries reached.</strong><br />
-                  Please refresh the page manually using your browser's refresh button.
+                  Please refresh the page manually using your browser&apos;s refresh button.
                 </div>
               )}
               

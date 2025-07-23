@@ -1,5 +1,5 @@
 // EMERGENCY: MINIMAL LAYOUT FOR TESTING
-import './globals.css'
+import '../globals.css'
 
 export default function TestLayout({ children }: { children: React.ReactNode }) {
   return (

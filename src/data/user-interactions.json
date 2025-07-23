@@ -10311,7 +10311,55 @@
       "page": "/admin",
       "element": "window",
       "action": "blur"
+    },
+    {
+      "id": "interaction_1753238293407_x7eq658uc",
+      "timestamp": "2025-07-23T08:08:13.507Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238294794_rhadikl05",
+      "timestamp": "2025-07-23T08:08:14.936Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238509154_m5ieon9eh",
+      "timestamp": "2025-07-23T08:11:49.506Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238511382_z9w7dajly",
+      "timestamp": "2025-07-23T08:11:51.404Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753238633584_kcbxgofcn",
+      "timestamp": "2025-07-23T08:13:53.919Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753238635783_s7mwb7fnm",
+      "timestamp": "2025-07-23T08:13:55.826Z",
+      "sessionId": "session_1753237978734_a7wu60s6h",
+      "page": "/admin",
+      "element": "window",
+      "action": "blur"
     }
   ],
-  "lastUpdated": "2025-07-23T08:06:24.473Z"
+  "lastUpdated": "2025-07-23T08:13:55.826Z"
 }
