@@ -31,7 +31,6 @@ import {
   Archive,
   MessageCircle
 } from 'lucide-react'
-import { dataAPI } from '@/utils/dataAPI'
 
 // Types for GFG Campus Body data
 interface TeamMember {
@@ -222,13 +221,14 @@ export default function GFGChapterPage() {
 
   useEffect(() => {
     loadChapterData()
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const loadChapterData = async () => {
     try {
       setLoading(true)
       // In a real implementation, this would load from your API
-      const data = await dataAPI.getGFGChapterData() || getDefaultChapterData()
+      // For now, using default data
+      const data = getDefaultChapterData()
       setChapterData(data)
     } catch (error) {
       console.error('Failed to load GFG campus body data:', error)
@@ -1489,7 +1489,7 @@ export default function GFGChapterPage() {
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Achievements</h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400">
-                  Celebrating our members' success and chapter milestones
+                  Celebrating our members&apos; success and chapter milestones
                 </p>
               </div>
 
@@ -1714,7 +1714,7 @@ export default function GFGChapterPage() {
                     </div>
                     
                     <p className="text-gray-600 dark:text-gray-400 mb-4 italic">
-                      "{testimonial.message}"
+                      &quot;{testimonial.message}&quot;
                     </p>
                     
                     <div className="border-t pt-4">
@@ -1797,7 +1797,7 @@ export default function GFGChapterPage() {
                       Get In Touch
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Have questions? We're here to help!
+                      Have questions? We&apos;re here to help!
                     </p>
                   </div>
                   
