@@ -637,7 +637,7 @@ export default function LogsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-lg mb-2 text-green-600">📛 Current Role</h3>
-                <p className="text-gray-700 dark:text-gray-300">Campus Mantri, GFG Chapter Lead @ GITAM, Jhajjar</p>
+                <p className="text-gray-700 dark:text-gray-300">Campus Mantri, GFG Campus Body Lead @ GITAM, Jhajjar</p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-lg mb-2 text-blue-600">🏁 Chapter Launched</h3>

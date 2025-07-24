@@ -246,6 +246,25 @@ export const dataAPI = {
       totalProblems: problems.length
     }
     return updateData('interview-problems', data)
+  },
+
+  // GFG Campus Body data management
+  getGFGChapterData: async (): Promise<any> => {
+    try {
+      const data = await fetchData<any>('gfg-chapter-data')
+      return data
+    } catch (error) {
+      console.warn('No GFG campus body data file found, returning null')
+      return null
+    }
+  },
+  
+  updateGFGChapterData: async (chapterData: any): Promise<void> => {
+    const data = {
+      ...chapterData,
+      lastUpdated: new Date().toISOString()
+    }
+    return updateData('gfg-chapter-data', data)
   }
 }
 

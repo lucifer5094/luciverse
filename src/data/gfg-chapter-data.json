@@ -1,0 +1,428 @@
+{
+  "about": {
+    "tagline": "Learn to Code, Grow Together, Conquer the Future! 🚀",
+    "shortIntro": "We are the official campus body of GFG, helping students develop coding skills, prepare for competitions, and connect with the tech world.",
+    "vision": "Building a strong coding culture in our college to prepare every student for the tech industry and connect them with industry experts",
+    "mission": "Providing students with practical coding skills, competitive programming, interview preparation, and industry connections through hands-on workshops, real-world projects, and collaborative learning environment",
+    "history": "Our GeeksforGeeks Campus Body was established in September 2024. What initially started with 20 enthusiastic students has now grown into a strong community of 500+ active members. Our chapter's goal is to make every student successful in the coding field and provide them with industry-ready skills.",
+    "chapterEstablished": "September 2024",
+    "collegePartnership": "GITAM University, Jhajjar Campus",
+    "officialRecognition": "GeeksforGeeks Certified Campus Chapter",
+    "whatWeDo": [
+      "Weekly Coding Workshops (DSA, Web Dev, Mobile Dev)",
+      "Competitive Programming Sessions and Contest Training", 
+      "Technical Interview Preparation and Mock Interviews",
+      "Industry Expert Guest Lectures and Mentorship",
+      "Hackathons and Coding Contests (CodeFest 2024)",
+      "Project Collaboration and Team Building",
+      "Career Guidance and Resume Building Workshops",
+      "1-on-1 Mentorship Program (30+ Mentor-Mentee Pairs)",
+      "Campus Placement Preparation Sessions",
+      "Open Source Contribution Guidance"
+    ]
+  },
+  "team": [
+    {
+      "id": "1",
+      "name": "Ankit Kumar",
+      "role": "Chapter President (Campus Mantri)",
+      "description": "Leading the chapter with passion for competitive programming and community building. Spearheading initiatives to connect students with industry opportunities.",
+      "linkedin": "https://linkedin.com/in/ankit-kumar-dev",
+      "github": "https://github.com/lucifer5094",
+      "email": "ankit.president@gfgchapter.com",
+      "achievements": ["Chapter Establishment", "500+ Member Growth", "Industry Partnerships"],
+      "responsibilities": ["Strategic Planning", "Industry Relations", "Team Leadership", "Event Oversight"]
+    },
+    {
+      "id": "2", 
+      "name": "Priya Sharma",
+      "role": "Vice President (Technical)",
+      "description": "Technical lead handling workshop organization, curriculum development, and technical content creation for our learning programs.",
+      "linkedin": "https://linkedin.com/in/priya-tech",
+      "github": "https://github.com/priyatech",
+      "email": "priya.vp@gfgchapter.com",
+      "achievements": ["25+ Workshops Organized", "Curriculum Design", "Mentorship Program"],
+      "responsibilities": ["Workshop Planning", "Technical Content", "Mentor Coordination", "Skill Assessment"]
+    },
+    {
+      "id": "3",
+      "name": "Rohit Agarwal", 
+      "role": "Event Coordinator",
+      "description": "Expert in event management, coordinating hackathons, contests, and guest lectures. Building connections with industry professionals.",
+      "linkedin": "https://linkedin.com/in/rohit-events",
+      "github": "https://github.com/rohitevent",
+      "email": "rohit.events@gfgchapter.com",
+      "achievements": ["CodeFest 2024 Success", "15+ Guest Lectures", "Industry Partnerships"],
+      "responsibilities": ["Event Management", "Guest Relations", "Logistics", "Partnership Development"]
+    },
+    {
+      "id": "4",
+      "name": "Sneha Verma",
+      "role": "Technical Lead (DSA & CP)",
+      "description": "Competitive programming expert leading DSA sessions, contest preparations, and guiding students for coding competitions.",
+      "linkedin": "https://linkedin.com/in/sneha-cp",
+      "github": "https://github.com/snehacp",
+      "email": "sneha.tech@gfgchapter.com",
+      "achievements": ["200+ Students Trained", "Contest Winners", "CP Roadmap Creation"],
+      "responsibilities": ["DSA Training", "Contest Preparation", "Code Review", "Performance Analysis"]
+    },
+    {
+      "id": "5",
+      "name": "Arjun Patel",
+      "role": "Social Media & Outreach Head",
+      "description": "Managing chapter's digital presence, student outreach, and community engagement across all social media platforms.",
+      "linkedin": "https://linkedin.com/in/arjun-social",
+      "instagram": "https://instagram.com/arjun_gfg",
+      "email": "arjun.social@gfgchapter.com",
+      "achievements": ["5K+ Social Media Reach", "Community Growth", "Brand Building"],
+      "responsibilities": ["Social Media", "Content Creation", "Community Engagement", "Brand Management"]
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "title": "Web Development Bootcamp 2025",
+      "description": "3-day intensive bootcamp covering React, Node.js, MongoDB, and modern web development practices. Hands-on projects and real-world applications with industry experts.",
+      "date": "2025-08-15",
+      "time": "10:00 AM - 4:00 PM",
+      "venue": "Computer Lab, Block A",
+      "type": "workshop",
+      "status": "upcoming",
+      "registrationLink": "https://forms.google.com/webdev-bootcamp",
+      "expectedParticipants": 150,
+      "prerequisites": "Basic HTML, CSS knowledge",
+      "highlights": ["Industry Mentors", "Live Projects", "Certificate Provided", "Placement Support"]
+    },
+    {
+      "id": "2",
+      "title": "AI/ML Workshop Series",
+      "description": "Python, Machine Learning algorithms, and practical AI applications focused comprehensive workshop series.",
+      "date": "2025-09-10",
+      "time": "2:00 PM - 6:00 PM",
+      "venue": "Innovation Lab, Block C",
+      "type": "workshop",
+      "status": "upcoming",
+      "registrationLink": "https://forms.google.com/ai-workshop",
+      "expectedParticipants": 100,
+      "prerequisites": "Python basics",
+      "highlights": ["Hands-on Projects", "Industry Case Studies", "Certificate", "Career Guidance"]
+    },
+    {
+      "id": "3",
+      "title": "CodeFest 2024 - Annual Hackathon",
+      "description": "24-hour coding marathon with industry mentors, exciting prizes worth 50K+, aur real-world problem solving challenges.",
+      "date": "2024-10-20",
+      "time": "10:00 AM (Day 1) - 10:00 AM (Day 2)",
+      "venue": "Innovation Lab & Main Auditorium",
+      "type": "hackathon",
+      "status": "completed",
+      "participants": 85,
+      "teams": 15,
+      "prizes": "₹50,000+ Total Prize Pool",
+      "sponsors": ["TechCorp", "InnovateX", "StartupHub"],
+      "highlights": ["15 Teams Participated", "Industry Mentors", "Live Judging", "Networking Sessions"],
+      "images": ["/assets/codefest-2024-1.jpg", "/assets/codefest-2024-2.jpg"],
+      "winners": [
+        { "position": 1, "team": "Code Warriors", "project": "Smart Campus Management System" },
+        { "position": 2, "team": "Tech Innovators", "project": "AI-powered Study Assistant" },
+        { "position": 3, "team": "Future Builders", "project": "Eco-friendly Transport Tracker" }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "DSA Masterclass Series - Batch 2",
+      "description": "Comprehensive Data Structures and Algorithms masterclass series with competitive programming focus and interview preparation.",
+      "date": "2024-11-05",
+      "time": "3:00 PM - 6:00 PM",
+      "venue": "Seminar Hall, Block B",
+      "type": "workshop",
+      "status": "completed",
+      "participants": 200,
+      "duration": "6 weeks",
+      "highlights": ["200+ Students Trained", "CP Contest Practice", "Interview Questions", "Performance Tracking"],
+      "outcome": "85% students showed significant improvement in problem-solving skills"
+    },
+    {
+      "id": "5",
+      "title": "Industry Expert Session - Google Engineer",
+      "description": "Exclusive session with Google software engineer on 'Career in Tech Giants' and real industry insights.",
+      "date": "2024-12-15",
+      "time": "4:00 PM - 6:00 PM",
+      "venue": "Main Auditorium",
+      "type": "lecture",
+      "status": "completed",
+      "participants": 300,
+      "speaker": {
+        "name": "Rahul Singh",
+        "designation": "Senior Software Engineer, Google",
+        "experience": "5+ years at Google, Previously at Microsoft"
+      },
+      "highlights": ["Career Guidance", "Interview Tips", "Google Culture Insights", "Q&A Session"]
+    },
+    {
+      "id": "6",
+      "title": "Chapter Launch Event - GFG GITAM",
+      "description": "Official launch event of GeeksforGeeks Campus Chapter at GITAM University with inaugural ceremony aur future roadmap presentation.",
+      "date": "2024-09-01",
+      "time": "11:00 AM - 1:00 PM",
+      "venue": "Main Auditorium",
+      "type": "meetup",
+      "status": "completed",
+      "participants": 80,
+      "highlights": ["Official Chapter Launch", "Roadmap Presentation", "Team Introduction", "Registration Drive"],
+      "outcome": "Successfully established chapter with 80+ founding members"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "1",
+      "title": "Best Campus Chapter Award 2024",
+      "description": "Officially recognized by GeeksforGeeks as the most active and impactful campus body in North India region for exceptional community building and student engagement.",
+      "date": "2024-10-15",
+      "type": "recognition",
+      "awardedBy": "GeeksforGeeks Official",
+      "significance": "Regional Recognition",
+      "media": "/assets/best-chapter-award.jpg"
+    },
+    {
+      "id": "2",
+      "title": "CodeFest 2024 - Record Breaking Participation",
+      "description": "Successfully organized our flagship hackathon with 85+ participants, 15 teams, and ₹50,000+ prize pool. Judging panel and live mentoring with industry experts.",
+      "date": "2024-10-20",
+      "type": "project",
+      "impact": "85 participants, 15 teams, ₹50,000+ prizes",
+      "partners": ["TechCorp", "InnovateX", "StartupHub"]
+    },
+    {
+      "id": "3",
+      "title": "Inter-College Hackathon Winners",
+      "description": "Our campus body team members achieved first place in regional inter-college hackathon with innovative AI-powered campus management solution.",
+      "date": "2024-11-20",
+      "type": "hackathon",
+      "members": ["Ankit Kumar", "Priya Sharma", "Rohit Agarwal"],
+      "project": "Smart Campus Management System using AI/ML",
+      "achievement": "1st Place - Regional Level"
+    },
+    {
+      "id": "4",
+      "title": "500+ Member Milestone",
+      "description": "Chapter membership crossed 500+ active students mark within 8 months of establishment, making it one of the fastest growing GFG Campus Bodies in India.",
+      "date": "2024-12-01",
+      "type": "recognition",
+      "milestone": "500+ Active Members",
+      "timeframe": "8 months since establishment",
+      "significance": "Fastest Growth in Region"
+    },
+    {
+      "id": "5",
+      "title": "Industry Partnership Success",
+      "description": "Successfully established partnerships with 5+ tech companies for placements, internships, aur guest lectures. 20+ students placed in top companies through chapter connections.",
+      "date": "2024-12-20",
+      "type": "recognition",
+      "companies": ["Google", "Microsoft", "Amazon", "Flipkart", "Paytm"],
+      "placements": "20+ students placed",
+      "internships": "35+ internship offers"
+    },
+    {
+      "id": "6",
+      "title": "CodeChef Contest Champions",
+      "description": "Multiple campus body members consistently ranking in top 100 of CodeChef monthly contests and representing college at national level competitions.",
+      "date": "2024-09-30",
+      "type": "contest",
+      "members": ["Sneha Verma", "Arjun Patel", "Rohit Agarwal"],
+      "achievement": "Top 100 Rankings in CodeChef",
+      "contests": ["Cook-Off", "Long Challenge", "Lunchtime"]
+    }
+  ],
+  "resources": [
+    {
+      "title": "DSA Complete Roadmap - Hindi Edition",
+      "description": "Step-by-step Data Structures and Algorithms roadmap specially designed for beginners with Hindi explanations and examples",
+      "link": "https://geeksforgeeks.org/dsa-roadmap",
+      "type": "roadmap",
+      "language": "Hindi/English",
+      "difficulty": "Beginner to Advanced",
+      "estimatedTime": "4-6 months"
+    },
+    {
+      "title": "Interview Preparation Kit 2024",
+      "description": "Complete interview preparation guide with 500+ coding problems, system design basics, and behavioral interview tips",
+      "link": "https://geeksforgeeks.org/interview-preparation",
+      "type": "practice",
+      "problems": "500+",
+      "companies": "FAANG + Indian Startups",
+      "difficulty": "Easy to Hard"
+    },
+    {
+      "title": "Competitive Programming Masterclass",
+      "description": "Comprehensive CP guide from basics to advanced topics with contest strategies, time management, aur problem-solving techniques",
+      "link": "https://geeksforgeeks.org/competitive-programming",
+      "type": "article",
+      "topics": ["Algorithms", "Math", "Graph Theory", "DP"],
+      "level": "Beginner to Expert"
+    },
+    {
+      "title": "System Design Fundamentals",
+      "description": "System design concepts for beginners with real-world examples, scalability patterns, aur industry best practices",
+      "link": "https://geeksforgeeks.org/system-design",
+      "type": "article",
+      "focus": "Scalability, Architecture, Design Patterns",
+      "audience": "Intermediate to Advanced"
+    },
+    {
+      "title": "GFG Practice Portal",
+      "description": "Official GeeksforGeeks practice platform with curated problems, difficulty levels, aur detailed solutions",
+      "link": "https://practice.geeksforgeeks.org",
+      "type": "practice",
+      "features": ["Problem Categories", "Difficulty Levels", "Solutions", "Test Cases"],
+      "free": true
+    },
+    {
+      "title": "Full-Stack Web Development Path",
+      "description": "Complete roadmap for modern web development covering React, Node.js, databases, deployment, aur industry tools",
+      "link": "https://geeksforgeeks.org/web-development",
+      "type": "roadmap",
+      "stack": "MERN/MEAN",
+      "duration": "6-8 months",
+      "projects": "10+ hands-on projects"
+    },
+    {
+      "title": "Mobile App Development Guide",
+      "description": "React Native aur Flutter ke saath mobile app development ki complete guide with project-based learning",
+      "link": "https://geeksforgeeks.org/mobile-development",
+      "type": "roadmap",
+      "platforms": "Android & iOS",
+      "frameworks": ["React Native", "Flutter"],
+      "projects": "5+ apps"
+    },
+    {
+      "title": "Machine Learning Crash Course",
+      "description": "Python-based ML course with practical examples, real datasets, aur industry applications for beginners",
+      "link": "https://geeksforgeeks.org/machine-learning",
+      "type": "article",
+      "tools": ["Python", "Scikit-learn", "TensorFlow"],
+      "focus": "Practical Implementation"
+    },
+    {
+      "title": "Open Source Contribution Guide",
+      "description": "GitHub aur open source contribution ki complete guide with project suggestions aur best practices",
+      "link": "https://geeksforgeeks.org/open-source",
+      "type": "tool",
+      "skills": ["Git", "GitHub", "Collaboration"],
+      "projects": "Beginner-friendly repositories"
+    },
+    {
+      "title": "Placement Preparation Toolkit",
+      "description": "Complete placement preparation guide with company-wise questions, salary negotiations, aur career guidance",
+      "link": "/resources/placement-prep",
+      "type": "practice",
+      "companies": "50+ top companies",
+      "resources": ["Resume Templates", "Mock Interviews", "Salary Data"],
+      "custom": true
+    }
+  ],
+  "contact": {
+    "email": "gfg.chapter@gitam.edu",
+    "chapterEmail": "ankit.president@gfgchapter.com",
+    "joinFormLink": "https://forms.google.com/join-gfg-gitam-chapter",
+    "whatsappGroup": "https://chat.whatsapp.com/gfgchapter-gitam",
+    "discordServer": "https://discord.gg/gfgchapter-gitam",
+    "socialMedia": {
+      "instagram": "https://instagram.com/gfg_gitam_chapter",
+      "linkedin": "https://linkedin.com/company/gfg-gitam-chapter",
+      "twitter": "https://twitter.com/gfg_gitam",
+      "youtube": "https://youtube.com/@gfggitamchapter",
+      "github": "https://github.com/gfg-gitam-chapter"
+    },
+    "meetingSchedule": {
+      "weeklyMeetings": "Every Saturday 4:00 PM - 6:00 PM",
+      "location": "Computer Lab, Block A",
+      "onlineMeetings": "Discord Server",
+      "officeHours": "Monday-Friday 2:00 PM - 4:00 PM"
+    },
+    "mentorship": {
+      "signupLink": "https://forms.google.com/mentorship-program",
+      "description": "1-on-1 mentorship program with industry professionals and senior students",
+      "duration": "3-6 months",
+      "areas": ["DSA", "Web Development", "Mobile Apps", "AI/ML", "Competitive Programming"]
+    }
+  },
+  "stats": {
+    "totalMembers": 500,
+    "eventsHosted": 50,
+    "workshopsCompleted": 25,
+    "activeProjects": 8,
+    "industryConnections": 15,
+    "placementAssistance": 20,
+    "mentorshipPairs": 30,
+    "competitionWinners": 12,
+    "monthlyGrowth": "15%",
+    "averageAttendance": "85%"
+  },
+  "upcomingInitiatives": [
+    {
+      "title": "GFG Campus Ambassador Program",
+      "description": "Training students to become official GFG campus ambassadors with special recognition aur perks",
+      "timeline": "March 2025",
+      "expectedImpact": "10+ Campus Ambassadors"
+    },
+    {
+      "title": "Industry Internship Drive",
+      "description": "Exclusive internship opportunities with partner companies for chapter members",
+      "timeline": "Summer 2025",
+      "partners": ["TechCorp", "StartupX", "InnovateHub"],
+      "expectedImpact": "50+ Internship Offers"
+    },
+    {
+      "title": "Open Source Contribution Month",
+      "description": "Month-long program to encourage open source contributions with GitHub workshops aur project collaborations",
+      "timeline": "April 2025",
+      "expectedImpact": "100+ Contributions, 5+ New Projects"
+    },
+    {
+      "title": "Inter-Chapter Coding Championship",
+      "description": "National level coding competition among all GFG campus chapters across India",
+      "timeline": "December 2025",
+      "scope": "National Level",
+      "expectedImpact": "500+ Participants from 50+ Chapters"
+    }
+  ],
+  "partnerships": {
+    "industryPartners": [
+      { "name": "Google", "type": "Guest Lectures & Mentorship", "established": "2024-10-01" },
+      { "name": "Microsoft", "type": "Workshop & Internships", "established": "2024-11-15" },
+      { "name": "Amazon", "type": "Placement Support", "established": "2024-12-01" },
+      { "name": "Flipkart", "type": "Hackathon Sponsorship", "established": "2024-10-20" },
+      { "name": "Paytm", "type": "Technical Sessions", "established": "2024-11-30" }
+    ],
+    "academicPartners": [
+      { "name": "GITAM University", "type": "Official Recognition & Support", "established": "2024-09-01" },
+      { "name": "IIT Delhi Alumni Network", "type": "Mentorship Program", "established": "2024-10-15" },
+      { "name": "Coding Ninjas", "type": "Course Discounts", "established": "2024-11-01" }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Ravi Kumar",
+      "role": "Final Year Student",
+      "company": "Placed at Google",
+      "message": "GFG Campus Body completely transformed my coding journey. Thanks to the DSA workshops and mock interviews, I got placed at Google!",
+      "rating": 5
+    },
+    {
+      "name": "Ananya Singh",
+      "role": "Third Year Student",
+      "achievement": "Internship at Microsoft",
+      "message": "The mentor I got through the campus body helped a lot with resume building and interview preparation. I got selected for Microsoft internship!",
+      "rating": 5
+    },
+    {
+      "name": "Vikash Sharma",
+      "role": "Second Year Student",
+      "achievement": "Won CodeChef Contest",
+      "message": "After attending competitive programming sessions, my confidence level increased. I got top 10 rank in CodeChef contest!",
+      "rating": 5
+    }
+  ],
+  "lastUpdated": "2025-07-24T03:45:00.000Z"
+}

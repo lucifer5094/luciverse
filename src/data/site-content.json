@@ -58,12 +58,40 @@
   "adminTitle": "Admin Dashboard",
   "adminSubtitle": "Content Management • System Controls",
   "adminDescription": "Administrative interface for managing site content and system settings.",
-  "highlights": [],
+  "highlights": [
+    {
+      "id": "gfg-chapter",
+      "title": "GfG Campus Body - GITAM, Jhajjar",
+      "subtitle": "Learn to Code, Grow Together, Conquer the Future! 🚀",
+      "description": "Official GeeksforGeeks campus body empowering 500+ students with coding skills, competitive programming, and industry connections through workshops, hackathons, and collaborative learning. Leading GITAM University Jhajjar in the role of Campus Body President.",
+      "image": "/Assets/Campus Mantri Logo.jpg",
+      "stats": {
+        "members": "500+",
+        "events": "50+",
+        "workshops": "25+",
+        "partnerships": "15+"
+      },
+      "achievements": [
+        "Best Campus Body Award 2024",
+        "₹50,000+ Prize Pool Events",
+        "20+ Students Placed in Top Companies",
+        "30+ Mentor-Mentee Pairs"
+      ],
+      "cta": {
+        "text": "Explore Our Campus Body",
+        "link": "/gfg-chapter"
+      },
+      "badge": "Leadership Excellence",
+      "type": "community",
+      "featured": true,
+      "priority": 1
+    }
+  ],
   "stats": {
-    "projects": 0,
-    "years": 0,
-    "technologies": 0,
-    "achievements": 0
+    "projects": 15,
+    "years": 3,
+    "technologies": 25,
+    "achievements": 12
   },
   "lastUpdated": "2025-07-06T23:33:21.537Z"
 }

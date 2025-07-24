@@ -10567,7 +10567,3811 @@
       "page": "/",
       "element": "window",
       "action": "blur"
+    },
+    {
+      "id": "interaction_1753308185660_pu107u07l",
+      "timestamp": "2025-07-24T03:33:05.694Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 418.33331298828125,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753308188196_rm614q3tt",
+      "timestamp": "2025-07-24T03:33:08.218Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753308190759_axzcqr7k3",
+      "timestamp": "2025-07-24T03:33:10.780Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.p-2",
+      "action": "click",
+      "position": {
+        "x": 140,
+        "y": 431
+      },
+      "metadata": {
+        "text": "",
+        "href": "https://twitter.com"
+      }
+    },
+    {
+      "id": "interaction_1753308195392_pfrc8me7x",
+      "timestamp": "2025-07-24T03:33:15.421Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753308196091_bj81oed7d",
+      "timestamp": "2025-07-24T03:33:16.241Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 474,
+        "y": 36
+      },
+      "metadata": {
+        "text": "About",
+        "href": "/about"
+      }
+    },
+    {
+      "id": "interaction_1753308197448_a3i12cr24",
+      "timestamp": "2025-07-24T03:33:18.446Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 411,
+        "y": 36
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753308200162_ncwuxcsdj",
+      "timestamp": "2025-07-24T03:33:20.188Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753308821098_6lfj0sim8",
+      "timestamp": "2025-07-24T03:43:41.137Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 3194.16650390625,
+        "scrollPercent": 96
+      }
+    },
+    {
+      "id": "interaction_1753308941505_c3ty8pspw",
+      "timestamp": "2025-07-24T03:45:41.529Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 778.3333129882812,
+        "scrollPercent": 23
+      }
+    },
+    {
+      "id": "interaction_1753309314743_c5nmqytoh",
+      "timestamp": "2025-07-24T03:51:55.024Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 263.33331298828125,
+        "scrollPercent": 8
+      }
+    },
+    {
+      "id": "interaction_1753309314724_2l0rusqdv",
+      "timestamp": "2025-07-24T03:51:55.032Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753309314944_hdio6rshl",
+      "timestamp": "2025-07-24T03:51:55.058Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 641,
+        "y": 47
+      },
+      "metadata": {
+        "text": "GFG Chapter",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753309317732_cv411b7no",
+      "timestamp": "2025-07-24T03:51:57.750Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753309320676_gbecom24d",
+      "timestamp": "2025-07-24T03:52:00.686Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 641,
+        "y": 47
+      },
+      "metadata": {
+        "text": "GFG Chapter",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753309327616_hc3wxyi4j",
+      "timestamp": "2025-07-24T03:52:07.628Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 581.6666259765625,
+        "scrollPercent": 38
+      }
+    },
+    {
+      "id": "interaction_1753309332274_cxjbydgpv",
+      "timestamp": "2025-07-24T03:52:12.286Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1162.5,
+        "scrollPercent": 76
+      }
+    },
+    {
+      "id": "interaction_1753309336440_bnpmldxyh",
+      "timestamp": "2025-07-24T03:52:16.451Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753309336889_kmesbokep",
+      "timestamp": "2025-07-24T03:52:16.945Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 276,
+        "y": 49
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753309339682_16a6rgbe6",
+      "timestamp": "2025-07-24T03:52:19.697Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 641,
+        "y": 32
+      },
+      "metadata": {
+        "text": "GFG Chapter",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753309341196_bo8df947a",
+      "timestamp": "2025-07-24T03:52:21.213Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753309516157_m3ufv55sy",
+      "timestamp": "2025-07-24T03:55:16.198Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753309516164_ttpb2z0dr",
+      "timestamp": "2025-07-24T03:55:16.211Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753309524150_a9gf8uwqc",
+      "timestamp": "2025-07-24T03:55:24.164Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1155,
+        "scrollPercent": 75
+      }
+    },
+    {
+      "id": "interaction_1753309612386_s7di2gugm",
+      "timestamp": "2025-07-24T03:56:52.641Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1046.6666259765625,
+        "scrollPercent": 74
+      }
+    },
+    {
+      "id": "interaction_1753309629110_luvdevuud",
+      "timestamp": "2025-07-24T03:57:09.217Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1226.6666259765625,
+        "scrollPercent": 76
+      }
+    },
+    {
+      "id": "interaction_1753309667025_7iiew77sd",
+      "timestamp": "2025-07-24T03:57:47.051Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753309677750_6lm5fgywh",
+      "timestamp": "2025-07-24T03:57:57.766Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753309677976_36x5zs9gc",
+      "timestamp": "2025-07-24T03:57:58.441Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "button#unknown.px-8",
+      "action": "click",
+      "position": {
+        "x": 683,
+        "y": 375
+      },
+      "metadata": {
+        "text": "View Events",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753309688410_lnhmbta7x",
+      "timestamp": "2025-07-24T03:58:08.431Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753309689713_s6by4spqe",
+      "timestamp": "2025-07-24T03:58:09.740Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753309689720_a9b5umngj",
+      "timestamp": "2025-07-24T03:58:09.747Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753309729184_ovojoiytw",
+      "timestamp": "2025-07-24T03:58:49.201Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753309729408_8xu8zyo0g",
+      "timestamp": "2025-07-24T03:58:49.794Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "button#unknown.px-8",
+      "action": "click",
+      "position": {
+        "x": 636,
+        "y": 328
+      },
+      "metadata": {
+        "text": "View Events",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753309733607_djge43ztl",
+      "timestamp": "2025-07-24T03:58:53.618Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1038.333251953125,
+        "scrollPercent": 65
+      }
+    },
+    {
+      "id": "interaction_1753309742418_bv3q49bcf",
+      "timestamp": "2025-07-24T03:59:02.431Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753309743296_o1i9v0340",
+      "timestamp": "2025-07-24T03:59:03.321Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753309745164_prbx5w5vy",
+      "timestamp": "2025-07-24T03:59:05.201Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753309745176_erae3a8xx",
+      "timestamp": "2025-07-24T03:59:05.219Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753309869814_axvouyq65",
+      "timestamp": "2025-07-24T04:01:09.838Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1494.1666259765625,
+        "scrollPercent": 93
+      }
+    },
+    {
+      "id": "interaction_1753310012017_re8ec5e6n",
+      "timestamp": "2025-07-24T04:03:32.319Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753310018432_bkf5a7jv9",
+      "timestamp": "2025-07-24T04:03:38.457Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753310026066_uqm35eke2",
+      "timestamp": "2025-07-24T04:03:46.083Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 428.33331298828125,
+        "scrollPercent": 13
+      }
+    },
+    {
+      "id": "interaction_1753310028946_dx9s3v209",
+      "timestamp": "2025-07-24T04:03:48.960Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753310029170_kjg83yo1g",
+      "timestamp": "2025-07-24T04:03:49.586Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "p#unknown.text-gray-600",
+      "action": "click",
+      "position": {
+        "x": 716,
+        "y": 285
+      },
+      "metadata": {
+        "text": "Join our upcoming React, Node.js, and MongoDB boot",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310031655_qk6wycfmq",
+      "timestamp": "2025-07-24T04:03:51.671Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "p#unknown.text-gray-600",
+      "action": "click",
+      "position": {
+        "x": 716,
+        "y": 285
+      },
+      "metadata": {
+        "text": "Join our upcoming React, Node.js, and MongoDB boot",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310033551_0uw46rgmd",
+      "timestamp": "2025-07-24T04:03:53.566Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "p#unknown.text-gray-600",
+      "action": "click",
+      "position": {
+        "x": 716,
+        "y": 285
+      },
+      "metadata": {
+        "text": "Join our upcoming React, Node.js, and MongoDB boot",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310035184_vq9dy2hg6",
+      "timestamp": "2025-07-24T04:03:55.201Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 992,
+        "y": 315
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310039058_yrga3gnjx",
+      "timestamp": "2025-07-24T04:03:59.075Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 992,
+        "y": 315
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310040818_lc5040g9l",
+      "timestamp": "2025-07-24T04:04:00.835Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 989,
+        "y": 320
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310043037_mrprcoxwi",
+      "timestamp": "2025-07-24T04:04:03.058Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 447,
+        "y": 398
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310044261_9njj3oxy4",
+      "timestamp": "2025-07-24T04:04:04.279Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 447,
+        "y": 398
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310044990_5c5h0vxk1",
+      "timestamp": "2025-07-24T04:04:05.016Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 447,
+        "y": 398
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310045214_2kvmniha7",
+      "timestamp": "2025-07-24T04:04:05.667Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 447,
+        "y": 398
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310046682_n43z199u7",
+      "timestamp": "2025-07-24T04:04:06.706Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 635,
+        "y": 23
+      },
+      "metadata": {
+        "text": "HomeAboutProjectsAchievementsGFG ChapterInterview ",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310048831_uubdnz490",
+      "timestamp": "2025-07-24T04:04:08.851Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 475,
+        "y": 390
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310050944_khtqacjs5",
+      "timestamp": "2025-07-24T04:04:10.969Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 653,
+        "y": 35
+      },
+      "metadata": {
+        "text": "GFG Chapter",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753310052894_uprv1y3n8",
+      "timestamp": "2025-07-24T04:04:12.910Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753310062383_evm6jvesd",
+      "timestamp": "2025-07-24T04:04:22.397Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 635.8333129882812,
+        "scrollPercent": 35
+      }
+    },
+    {
+      "id": "interaction_1753310067559_r4qelxhes",
+      "timestamp": "2025-07-24T04:04:27.572Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1809.9998779296875,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753310068502_m5zao6jqc",
+      "timestamp": "2025-07-24T04:04:28.516Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753310078890_j267yw346",
+      "timestamp": "2025-07-24T04:04:38.909Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753310079113_l3jr5vtc1",
+      "timestamp": "2025-07-24T04:04:39.472Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 277,
+        "y": 21
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753310080686_mohmtojji",
+      "timestamp": "2025-07-24T04:04:40.699Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 295,
+        "y": 35
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753310081111_agdxvg9n5",
+      "timestamp": "2025-07-24T04:04:41.233Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753310083850_1271m72tu",
+      "timestamp": "2025-07-24T04:04:43.865Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 315.83331298828125,
+        "scrollPercent": 10
+      }
+    },
+    {
+      "id": "interaction_1753310083887_54xn7fi74",
+      "timestamp": "2025-07-24T04:04:44.382Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 450,
+        "y": 533
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310085085_kirq7yndz",
+      "timestamp": "2025-07-24T04:04:45.103Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 455,
+        "y": 525
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310086472_c8s6vr6o2",
+      "timestamp": "2025-07-24T04:04:46.487Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 480,
+        "y": 505
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310088703_bfhillrzz",
+      "timestamp": "2025-07-24T04:04:48.723Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 361.6666564941406,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753310092402_oud020lhy",
+      "timestamp": "2025-07-24T04:04:52.426Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753310103351_840bemvzr",
+      "timestamp": "2025-07-24T04:05:03.369Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 782.4999389648438,
+        "scrollPercent": 24
+      }
+    },
+    {
+      "id": "interaction_1753310113751_6onqpisg5",
+      "timestamp": "2025-07-24T04:05:13.767Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 14.166666030883789,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753310121645_3tlzykfho",
+      "timestamp": "2025-07-24T04:05:21.666Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 527.5,
+        "scrollPercent": 16
+      }
+    },
+    {
+      "id": "interaction_1753310402665_succdc0fs",
+      "timestamp": "2025-07-24T04:10:02.695Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 152.5,
+        "scrollPercent": 5
+      }
+    },
+    {
+      "id": "interaction_1753310407355_63br6z5wj",
+      "timestamp": "2025-07-24T04:10:07.374Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 356.6666564941406,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753310409665_6b83zohkv",
+      "timestamp": "2025-07-24T04:10:10.108Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753310413121_0xkt9r0vw",
+      "timestamp": "2025-07-24T04:10:13.137Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 489.1666564941406,
+        "scrollPercent": 16
+      }
+    },
+    {
+      "id": "interaction_1753310414347_psjqeoqy5",
+      "timestamp": "2025-07-24T04:10:14.367Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753310414567_yqwnqpkas",
+      "timestamp": "2025-07-24T04:10:15.118Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 830,
+        "y": 290
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310415670_k496fc7o7",
+      "timestamp": "2025-07-24T04:10:15.988Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 879,
+        "y": 270
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310419455_18p8mn7e5",
+      "timestamp": "2025-07-24T04:10:19.472Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753310466635_tdbqe38c3",
+      "timestamp": "2025-07-24T04:11:06.688Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753310466862_ipjd02m25",
+      "timestamp": "2025-07-24T04:11:07.894Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 858,
+        "y": 350
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753310466943_qleu9b29m",
+      "timestamp": "2025-07-24T04:11:07.908Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 404.9999694824219,
+        "scrollPercent": 13
+      }
+    },
+    {
+      "id": "interaction_1753310471890_k6ijieemx",
+      "timestamp": "2025-07-24T04:11:11.909Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 659,
+        "y": 28
+      },
+      "metadata": {
+        "text": "GFG Chapter",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753310474023_bbmiiih3o",
+      "timestamp": "2025-07-24T04:11:14.035Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753310479333_zq2npskpj",
+      "timestamp": "2025-07-24T04:11:19.358Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753310480967_v61v83ojb",
+      "timestamp": "2025-07-24T04:11:21.036Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1290.833251953125,
+        "scrollPercent": 71
+      }
+    },
+    {
+      "id": "interaction_1753310532071_58i154c4t",
+      "timestamp": "2025-07-24T04:12:12.154Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753310532082_qao4fclzu",
+      "timestamp": "2025-07-24T04:12:12.168Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753310538404_qbf3wd6yw",
+      "timestamp": "2025-07-24T04:12:18.419Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 603.3333129882812,
+        "scrollPercent": 33
+      }
+    },
+    {
+      "id": "interaction_1753310546342_5nqunjejk",
+      "timestamp": "2025-07-24T04:12:26.371Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 609.1666259765625,
+        "scrollPercent": 34
+      }
+    },
+    {
+      "id": "interaction_1753310552143_bvo4ajvjh",
+      "timestamp": "2025-07-24T04:12:32.175Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 594.1666259765625,
+        "scrollPercent": 33
+      }
+    },
+    {
+      "id": "interaction_1753310559868_0a6pdz3im",
+      "timestamp": "2025-07-24T04:12:39.902Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 300,
+        "scrollPercent": 17
+      }
+    },
+    {
+      "id": "interaction_1753310609618_p70me441n",
+      "timestamp": "2025-07-24T04:13:29.649Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 426.6666564941406,
+        "scrollPercent": 24
+      }
+    },
+    {
+      "id": "interaction_1753310681447_kvy76c5da",
+      "timestamp": "2025-07-24T04:14:41.495Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 412.4999694824219,
+        "scrollPercent": 23
+      }
+    },
+    {
+      "id": "interaction_1753310913688_7ri7koo5d",
+      "timestamp": "2025-07-24T04:18:33.722Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753310913719_souu8r7ce",
+      "timestamp": "2025-07-24T04:18:34.518Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753310913940_4e05xrk1v",
+      "timestamp": "2025-07-24T04:18:34.797Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 284,
+        "y": 34
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753310915665_6mc4zbn5u",
+      "timestamp": "2025-07-24T04:18:35.789Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 284,
+        "y": 34
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753310922056_vq0na7ymj",
+      "timestamp": "2025-07-24T04:18:45.096Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 414.1666564941406,
+        "scrollPercent": 13
+      }
+    },
+    {
+      "id": "interaction_1753311102546_e0y3txd8c",
+      "timestamp": "2025-07-24T04:21:43.047Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311104482_3u3h6gpwe",
+      "timestamp": "2025-07-24T04:21:44.515Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311104702_ectm2tn34",
+      "timestamp": "2025-07-24T04:21:45.493Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 628,
+        "y": 24
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753311107641_803ddael7",
+      "timestamp": "2025-07-24T04:21:47.794Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753311112810_ecxbg62oz",
+      "timestamp": "2025-07-24T04:21:52.844Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 591.6666259765625,
+        "scrollPercent": 29
+      }
+    },
+    {
+      "id": "interaction_1753311124560_wvkj01qdf",
+      "timestamp": "2025-07-24T04:22:04.592Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 641.6666259765625,
+        "scrollPercent": 31
+      }
+    },
+    {
+      "id": "interaction_1753311130988_gbmxynu9o",
+      "timestamp": "2025-07-24T04:22:11.018Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 457.4999694824219,
+        "scrollPercent": 22
+      }
+    },
+    {
+      "id": "interaction_1753311136115_3i95uqky3",
+      "timestamp": "2025-07-24T04:22:16.147Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311143227_kwgdvn7bm",
+      "timestamp": "2025-07-24T04:22:23.256Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 709.1666259765625,
+        "scrollPercent": 34
+      }
+    },
+    {
+      "id": "interaction_1753311144677_3hjf7y5bg",
+      "timestamp": "2025-07-24T04:22:24.710Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 618.3333129882812,
+        "scrollPercent": 30
+      }
+    },
+    {
+      "id": "interaction_1753311150161_wpcp8ymnz",
+      "timestamp": "2025-07-24T04:22:30.229Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 760.8333129882812,
+        "scrollPercent": 37
+      }
+    },
+    {
+      "id": "interaction_1753311172019_9ctlokeh5",
+      "timestamp": "2025-07-24T04:22:52.049Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311172235_wbmvkxes4",
+      "timestamp": "2025-07-24T04:22:53.176Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 249,
+        "y": 32
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753311173500_57wuku4zh",
+      "timestamp": "2025-07-24T04:22:54.400Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311175403_wvmkkmwrf",
+      "timestamp": "2025-07-24T04:22:55.714Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753311249385_1d0q0arxa",
+      "timestamp": "2025-07-24T04:24:09.505Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311249407_ljrig929g",
+      "timestamp": "2025-07-24T04:24:09.519Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311253765_hf8uui2ft",
+      "timestamp": "2025-07-24T04:24:15.229Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 411.6666564941406,
+        "scrollPercent": 13
+      }
+    },
+    {
+      "id": "interaction_1753311255404_qo276hk4v",
+      "timestamp": "2025-07-24T04:24:17.201Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "span#unknown.text-xs",
+      "action": "click",
+      "position": {
+        "x": 871,
+        "y": 340
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311255183_xkpflymtf",
+      "timestamp": "2025-07-24T04:24:17.216Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311267154_y0wflkwtr",
+      "timestamp": "2025-07-24T04:24:27.190Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311269788_oagjlj4t3",
+      "timestamp": "2025-07-24T04:24:29.821Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311270008_5hswmo7ni",
+      "timestamp": "2025-07-24T04:24:30.838Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 877,
+        "y": 340
+      },
+      "metadata": {
+        "text": "Explore",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311273990_99rg87pqu",
+      "timestamp": "2025-07-24T04:24:34.024Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.text-2xl",
+      "action": "click",
+      "position": {
+        "x": 366,
+        "y": 540
+      },
+      "metadata": {
+        "text": "3",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311276795_xo7m8c4f0",
+      "timestamp": "2025-07-24T04:24:36.826Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.text-2xl",
+      "action": "click",
+      "position": {
+        "x": 134,
+        "y": 415
+      },
+      "metadata": {
+        "text": "15",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311277004_xoqh52bgp",
+      "timestamp": "2025-07-24T04:24:37.834Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 530.8333129882812,
+        "scrollPercent": 17
+      }
+    },
+    {
+      "id": "interaction_1753311278182_psu8gdnac",
+      "timestamp": "2025-07-24T04:24:38.862Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.text-2xl",
+      "action": "click",
+      "position": {
+        "x": 704,
+        "y": 410
+      },
+      "metadata": {
+        "text": "25",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311278975_jix41ig0d",
+      "timestamp": "2025-07-24T04:24:39.812Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.text-2xl",
+      "action": "click",
+      "position": {
+        "x": 881,
+        "y": 402
+      },
+      "metadata": {
+        "text": "12",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311284107_kimlt371b",
+      "timestamp": "2025-07-24T04:24:44.145Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 321,
+        "y": 21
+      },
+      "metadata": {
+        "text": "About",
+        "href": "/about"
+      }
+    },
+    {
+      "id": "interaction_1753311287373_m781qb5yv",
+      "timestamp": "2025-07-24T04:24:47.416Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753311289146_t0zpz7eos",
+      "timestamp": "2025-07-24T04:24:49.178Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753311289575_f7u0rlzua",
+      "timestamp": "2025-07-24T04:24:50.128Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 240,
+        "y": 41
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753311296001_795puuxby",
+      "timestamp": "2025-07-24T04:24:56.036Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 593.3333129882812,
+        "scrollPercent": 19
+      }
+    },
+    {
+      "id": "interaction_1753311306646_j5523rl16",
+      "timestamp": "2025-07-24T04:25:06.703Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 535,
+        "scrollPercent": 17
+      }
+    },
+    {
+      "id": "interaction_1753311311454_9ydrgeh7b",
+      "timestamp": "2025-07-24T04:25:11.768Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311318949_1tspqybw1",
+      "timestamp": "2025-07-24T04:25:19.479Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753311325722_zusm0eons",
+      "timestamp": "2025-07-24T04:25:25.759Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 990.8333129882812,
+        "scrollPercent": 39
+      }
+    },
+    {
+      "id": "interaction_1753311328934_lz4s7uegt",
+      "timestamp": "2025-07-24T04:25:28.965Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1092.5,
+        "scrollPercent": 43
+      }
+    },
+    {
+      "id": "interaction_1753311331906_fxxybte0a",
+      "timestamp": "2025-07-24T04:25:31.941Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1520,
+        "scrollPercent": 60
+      }
+    },
+    {
+      "id": "interaction_1753311336658_6kcynpi5v",
+      "timestamp": "2025-07-24T04:25:36.690Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 809.9999389648438,
+        "scrollPercent": 32
+      }
+    },
+    {
+      "id": "interaction_1753311365984_ppglp02dm",
+      "timestamp": "2025-07-24T04:26:06.054Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 906.6666259765625,
+        "scrollPercent": 36
+      }
+    },
+    {
+      "id": "interaction_1753311367940_ag3wz6dxi",
+      "timestamp": "2025-07-24T04:26:07.973Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1215,
+        "scrollPercent": 48
+      }
+    },
+    {
+      "id": "interaction_1753311377942_mp5dsjel4",
+      "timestamp": "2025-07-24T04:26:17.979Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1095,
+        "scrollPercent": 43
+      }
+    },
+    {
+      "id": "interaction_1753311441046_utpim58dl",
+      "timestamp": "2025-07-24T04:27:21.091Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 651.6666259765625,
+        "scrollPercent": 26
+      }
+    },
+    {
+      "id": "interaction_1753311448795_vz0vgwx61",
+      "timestamp": "2025-07-24T04:27:28.844Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 655,
+        "scrollPercent": 26
+      }
+    },
+    {
+      "id": "interaction_1753311450325_f23bmxd80",
+      "timestamp": "2025-07-24T04:27:30.361Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 864.9999389648438,
+        "scrollPercent": 34
+      }
+    },
+    {
+      "id": "interaction_1753311455433_liag5hnbh",
+      "timestamp": "2025-07-24T04:27:36.409Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 788.3333129882812,
+        "scrollPercent": 31
+      }
+    },
+    {
+      "id": "interaction_1753311460908_btgfqoevq",
+      "timestamp": "2025-07-24T04:27:40.945Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1490.833251953125,
+        "scrollPercent": 59
+      }
+    },
+    {
+      "id": "interaction_1753311464697_mbd6yqzit",
+      "timestamp": "2025-07-24T04:27:45.538Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1554.1666259765625,
+        "scrollPercent": 61
+      }
+    },
+    {
+      "id": "interaction_1753311489567_rxmn4xim7",
+      "timestamp": "2025-07-24T04:28:09.615Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1080.833251953125,
+        "scrollPercent": 43
+      }
+    },
+    {
+      "id": "interaction_1753311565786_7efvob3n9",
+      "timestamp": "2025-07-24T04:29:25.830Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 810.8333129882812,
+        "scrollPercent": 32
+      }
+    },
+    {
+      "id": "interaction_1753311567833_07bgn10u9",
+      "timestamp": "2025-07-24T04:29:27.862Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 779.9999389648438,
+        "scrollPercent": 31
+      }
+    },
+    {
+      "id": "interaction_1753311572735_s77292ex7",
+      "timestamp": "2025-07-24T04:29:32.772Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1410.833251953125,
+        "scrollPercent": 56
+      }
+    },
+    {
+      "id": "interaction_1753311577391_p5czd3lt0",
+      "timestamp": "2025-07-24T04:29:37.422Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311577622_t7ny5za3j",
+      "timestamp": "2025-07-24T04:29:38.693Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 237,
+        "y": 22
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753311579463_wrg2qwltq",
+      "timestamp": "2025-07-24T04:29:40.045Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 165,
+        "y": 36
+      },
+      "metadata": {
+        "text": "LLuciverseHomeAboutProjectsAchievementsGfG Campus ",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311581243_4pfn2lbtc",
+      "timestamp": "2025-07-24T04:29:41.318Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311584029_fr5cd11ft",
+      "timestamp": "2025-07-24T04:29:44.070Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753311589456_a0od11d59",
+      "timestamp": "2025-07-24T04:29:49.542Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311589488_2ifn0r5sp",
+      "timestamp": "2025-07-24T04:29:49.557Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311592644_owztjl9dj",
+      "timestamp": "2025-07-24T04:29:52.685Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 437.4999694824219,
+        "scrollPercent": 14
+      }
+    },
+    {
+      "id": "interaction_1753311600605_xv1byoyf9",
+      "timestamp": "2025-07-24T04:30:00.657Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311600825_9l8xnw2po",
+      "timestamp": "2025-07-24T04:30:01.742Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 655,
+        "y": 28
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753311602057_n1vr2vu4i",
+      "timestamp": "2025-07-24T04:30:02.849Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311605103_d6z134goc",
+      "timestamp": "2025-07-24T04:30:05.131Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753311615703_iczmlk4ia",
+      "timestamp": "2025-07-24T04:30:15.721Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311615740_pemvdnmz7",
+      "timestamp": "2025-07-24T04:30:16.331Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311665243_5mjdrvw6z",
+      "timestamp": "2025-07-24T04:31:06.587Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1043.333251953125,
+        "scrollPercent": 41
+      }
+    },
+    {
+      "id": "interaction_1753311669164_hagke31nb",
+      "timestamp": "2025-07-24T04:31:09.202Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1050,
+        "scrollPercent": 41
+      }
+    },
+    {
+      "id": "interaction_1753311671251_jyfo9r5j4",
+      "timestamp": "2025-07-24T04:31:11.291Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 798.3333129882812,
+        "scrollPercent": 32
+      }
+    },
+    {
+      "id": "interaction_1753311675263_b95v7bo9v",
+      "timestamp": "2025-07-24T04:31:15.300Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 897.4999389648438,
+        "scrollPercent": 35
+      }
+    },
+    {
+      "id": "interaction_1753311747753_hhp4gypm9",
+      "timestamp": "2025-07-24T04:32:27.792Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311747968_np4ry30gy",
+      "timestamp": "2025-07-24T04:32:28.812Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.grid",
+      "action": "click",
+      "position": {
+        "x": 277,
+        "y": 400
+      },
+      "metadata": {
+        "text": "GGfG Campus BodyGITAM, Jhajjar - Empowering Future",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311749296_cv0yxjmgk",
+      "timestamp": "2025-07-24T04:32:30.075Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.grid",
+      "action": "click",
+      "position": {
+        "x": 277,
+        "y": 400
+      },
+      "metadata": {
+        "text": "GGfG Campus BodyGITAM, Jhajjar - Empowering Future",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311750783_0gz5e76r0",
+      "timestamp": "2025-07-24T04:32:31.495Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311756516_8wb32o9yn",
+      "timestamp": "2025-07-24T04:32:36.556Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1078.333251953125,
+        "scrollPercent": 43
+      }
+    },
+    {
+      "id": "interaction_1753311762104_g8e2al9q7",
+      "timestamp": "2025-07-24T04:32:42.146Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311763227_u2btusrdp",
+      "timestamp": "2025-07-24T04:32:43.306Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.w-20",
+      "action": "click",
+      "position": {
+        "x": 215,
+        "y": 289
+      },
+      "metadata": {
+        "text": "G",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311764174_uqmcfyxyx",
+      "timestamp": "2025-07-24T04:32:44.270Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.w-20",
+      "action": "click",
+      "position": {
+        "x": 215,
+        "y": 289
+      },
+      "metadata": {
+        "text": "G",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311765260_he7me72fg",
+      "timestamp": "2025-07-24T04:32:45.313Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "main#unknown.min-h-screen",
+      "action": "click",
+      "position": {
+        "x": 194,
+        "y": 309
+      },
+      "metadata": {
+        "text": "GfG Campus BodyGITAM, Jhajjar - Official Campus Bo",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311792040_m8aoz3hyt",
+      "timestamp": "2025-07-24T04:33:12.105Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311814680_wzk4y6xkz",
+      "timestamp": "2025-07-24T04:33:34.731Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311846942_xummmmqo7",
+      "timestamp": "2025-07-24T04:34:07.601Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753311851500_a7ja2gppa",
+      "timestamp": "2025-07-24T04:34:11.549Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1013.3333129882812,
+        "scrollPercent": 40
+      }
+    },
+    {
+      "id": "interaction_1753311859515_8eug1erag",
+      "timestamp": "2025-07-24T04:34:19.571Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1538.333251953125,
+        "scrollPercent": 61
+      }
+    },
+    {
+      "id": "interaction_1753311862087_7bdfc0z6m",
+      "timestamp": "2025-07-24T04:34:22.127Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1183.333251953125,
+        "scrollPercent": 47
+      }
+    },
+    {
+      "id": "interaction_1753311862242_hccsjiiyf",
+      "timestamp": "2025-07-24T04:34:23.241Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311862491_3re14zhda",
+      "timestamp": "2025-07-24T04:34:23.254Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 228,
+        "y": 480
+      },
+      "metadata": {
+        "text": "Our Team",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311865689_hrtthfldu",
+      "timestamp": "2025-07-24T04:34:25.730Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1266.6666259765625,
+        "scrollPercent": 47
+      }
+    },
+    {
+      "id": "interaction_1753311872511_zxljzcmgw",
+      "timestamp": "2025-07-24T04:34:32.552Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1669.1666259765625,
+        "scrollPercent": 62
+      }
+    },
+    {
+      "id": "interaction_1753311872777_6pwzdqs6h",
+      "timestamp": "2025-07-24T04:34:33.500Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 330,
+        "y": 96
+      },
+      "metadata": {
+        "text": "Events",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311874304_2p0acwst2",
+      "timestamp": "2025-07-24T04:34:34.435Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 209,
+        "y": 97
+      },
+      "metadata": {
+        "text": "Our Team",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311879855_0isxgquf1",
+      "timestamp": "2025-07-24T04:34:39.894Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 297,
+        "y": 90
+      },
+      "metadata": {
+        "text": "Events",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311882154_527ml9xpr",
+      "timestamp": "2025-07-24T04:34:42.190Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 432,
+        "y": 85
+      },
+      "metadata": {
+        "text": "Achievements",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311887602_gucklyzoe",
+      "timestamp": "2025-07-24T04:34:47.636Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 593,
+        "y": 115
+      },
+      "metadata": {
+        "text": "Resources",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311893396_qehs1n5kw",
+      "timestamp": "2025-07-24T04:34:53.428Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 2560,
+        "scrollPercent": 88
+      }
+    },
+    {
+      "id": "interaction_1753311894062_2p19cx6k5",
+      "timestamp": "2025-07-24T04:34:54.568Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 729,
+        "y": 86
+      },
+      "metadata": {
+        "text": "Partnerships",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311895076_zyg5aam7v",
+      "timestamp": "2025-07-24T04:34:55.597Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 2231.66650390625,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753311898011_mm3h4z16i",
+      "timestamp": "2025-07-24T04:34:58.048Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1712.4998779296875,
+        "scrollPercent": 77
+      }
+    },
+    {
+      "id": "interaction_1753311899015_kc2u1gtdr",
+      "timestamp": "2025-07-24T04:34:59.308Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 849,
+        "y": 107
+      },
+      "metadata": {
+        "text": "Testimonials",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311901726_7qad4pys9",
+      "timestamp": "2025-07-24T04:35:01.760Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1761.6666259765625,
+        "scrollPercent": 90
+      }
+    },
+    {
+      "id": "interaction_1753311903503_do1nyb9ji",
+      "timestamp": "2025-07-24T04:35:03.539Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 966,
+        "y": 93
+      },
+      "metadata": {
+        "text": "Join Us",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311904496_gw7m37qcv",
+      "timestamp": "2025-07-24T04:35:04.546Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 879,
+        "y": 98
+      },
+      "metadata": {
+        "text": "Testimonials",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311904942_cyek0posk",
+      "timestamp": "2025-07-24T04:35:05.549Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1761.6666259765625,
+        "scrollPercent": 24
+      }
+    },
+    {
+      "id": "interaction_1753311908349_jtbhdokul",
+      "timestamp": "2025-07-24T04:35:08.386Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1689.1666259765625,
+        "scrollPercent": 87
+      }
+    },
+    {
+      "id": "interaction_1753311914571_9isjul85n",
+      "timestamp": "2025-07-24T04:35:14.604Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 319,
+        "y": 108
+      },
+      "metadata": {
+        "text": "Events",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311915518_taxd4mqwy",
+      "timestamp": "2025-07-24T04:35:15.602Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 212,
+        "y": 96
+      },
+      "metadata": {
+        "text": "Our Team",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311916684_6kr990hzz",
+      "timestamp": "2025-07-24T04:35:16.716Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "main#unknown.min-h-screen",
+      "action": "click",
+      "position": {
+        "x": 101,
+        "y": 88
+      },
+      "metadata": {
+        "text": "GfG Campus BodyGITAM, Jhajjar - Official Campus Bo",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311917779_ndrkbei8r",
+      "timestamp": "2025-07-24T04:35:17.888Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 251,
+        "y": 33
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753311917962_xx44ng8zd",
+      "timestamp": "2025-07-24T04:35:18.918Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1738.333251953125,
+        "scrollPercent": 65
+      }
+    },
+    {
+      "id": "interaction_1753311919228_9k7ach3e5",
+      "timestamp": "2025-07-24T04:35:19.877Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 251,
+        "y": 33
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753311922258_uue2debhr",
+      "timestamp": "2025-07-24T04:35:22.297Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753311924683_idsssipe4",
+      "timestamp": "2025-07-24T04:35:24.717Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 435.83331298828125,
+        "scrollPercent": 14
+      }
+    },
+    {
+      "id": "interaction_1753311935340_5sjx4wxow",
+      "timestamp": "2025-07-24T04:35:35.356Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.w-20",
+      "action": "click",
+      "position": {
+        "x": 229,
+        "y": 274
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311936325_ygdqkp1tl",
+      "timestamp": "2025-07-24T04:35:36.341Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.w-20",
+      "action": "click",
+      "position": {
+        "x": 229,
+        "y": 274
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311936550_3tfd9k3sd",
+      "timestamp": "2025-07-24T04:35:36.844Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.w-20",
+      "action": "click",
+      "position": {
+        "x": 229,
+        "y": 274
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311939712_w9jkhktv6",
+      "timestamp": "2025-07-24T04:35:39.728Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311941295_v6m8f61f2",
+      "timestamp": "2025-07-24T04:35:41.328Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753311944678_87rl01ih1",
+      "timestamp": "2025-07-24T04:35:44.710Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753311947156_g26ndyawb",
+      "timestamp": "2025-07-24T04:35:47.174Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 340.83331298828125,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753311947784_bu7itnu6o",
+      "timestamp": "2025-07-24T04:35:47.810Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311948007_bnwc2grpd",
+      "timestamp": "2025-07-24T04:35:48.314Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 220,
+        "y": 378
+      },
+      "metadata": {
+        "text": "GfG Campus Body - GITAM, JhajjarOfficial GeeksforG",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311948467_544hrmpu6",
+      "timestamp": "2025-07-24T04:35:48.815Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.w-full",
+      "action": "click",
+      "position": {
+        "x": 220,
+        "y": 378
+      },
+      "metadata": {
+        "text": "✨Work Highlights🌟Recent achievements, featured pr",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311948688_1kz1kt6vi",
+      "timestamp": "2025-07-24T04:35:48.821Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.text-2xl",
+      "action": "click",
+      "position": {
+        "x": 220,
+        "y": 378
+      },
+      "metadata": {
+        "text": "🏆",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311949851_u3u72ly97",
+      "timestamp": "2025-07-24T04:35:49.868Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 341.6666564941406,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753311949942_58zznrez9",
+      "timestamp": "2025-07-24T04:35:50.361Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.w-20",
+      "action": "click",
+      "position": {
+        "x": 246,
+        "y": 349
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753311951974_5ls0b6qcw",
+      "timestamp": "2025-07-24T04:35:52.006Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 342.5,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753311956917_lurmcywsh",
+      "timestamp": "2025-07-24T04:35:56.946Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311979880_sjfn4ev5e",
+      "timestamp": "2025-07-24T04:36:19.962Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753311979888_inetsdjeh",
+      "timestamp": "2025-07-24T04:36:19.973Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753311982359_5iufjfv8a",
+      "timestamp": "2025-07-24T04:36:22.407Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 343.33331298828125,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753312188796_d41msufti",
+      "timestamp": "2025-07-24T04:39:48.828Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753312189028_h23sgh4c6",
+      "timestamp": "2025-07-24T04:39:49.666Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.w-20",
+      "action": "click",
+      "position": {
+        "x": 243,
+        "y": 269
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753312189281_ia0ed27dd",
+      "timestamp": "2025-07-24T04:39:49.677Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 393.33331298828125,
+        "scrollPercent": 12
+      }
+    },
+    {
+      "id": "interaction_1753312196821_3jmabjhxl",
+      "timestamp": "2025-07-24T04:39:56.843Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753312298617_8ewnhtsnr",
+      "timestamp": "2025-07-24T04:41:38.653Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753312298851_zjoxjbaac",
+      "timestamp": "2025-07-24T04:41:39.615Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 657,
+        "y": 46
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753312301580_6xg0pwmfu",
+      "timestamp": "2025-07-24T04:41:41.603Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753312304563_98mimw0h2",
+      "timestamp": "2025-07-24T04:41:44.593Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 989.9999389648438,
+        "scrollPercent": 39
+      }
+    },
+    {
+      "id": "interaction_1753312305337_7mxevzcd0",
+      "timestamp": "2025-07-24T04:41:45.704Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753312774370_bznfkp0zb",
+      "timestamp": "2025-07-24T04:49:35.433Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753312780620_bkw6p9paz",
+      "timestamp": "2025-07-24T04:49:40.703Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 348.33331298828125,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753312782029_qe62u3pdb",
+      "timestamp": "2025-07-24T04:49:42.047Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753312782278_nn4i5y89a",
+      "timestamp": "2025-07-24T04:49:42.922Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 894,
+        "y": 47
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753312782500_r8sqmhuby",
+      "timestamp": "2025-07-24T04:49:42.933Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 894,
+        "y": 47
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753312786632_ayi7zfu8r",
+      "timestamp": "2025-07-24T04:49:46.648Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753312795219_3s0cp5x7y",
+      "timestamp": "2025-07-24T04:49:55.236Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 685.8333129882812,
+        "scrollPercent": 27
+      }
+    },
+    {
+      "id": "interaction_1753312799255_jz402zvxi",
+      "timestamp": "2025-07-24T04:49:59.275Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753312800471_hgg098d3h",
+      "timestamp": "2025-07-24T04:50:00.485Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 499,
+        "y": 28
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753312807418_ot6e2cqqy",
+      "timestamp": "2025-07-24T04:50:07.434Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753312807454_sx2rru67v",
+      "timestamp": "2025-07-24T04:50:08.113Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 564,
+        "y": 28
+      },
+      "metadata": {
+        "text": "About",
+        "href": "/about"
+      }
+    },
+    {
+      "id": "interaction_1753312832271_ik2tpa3i7",
+      "timestamp": "2025-07-24T04:50:32.302Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753312860314_5z8qqmrco",
+      "timestamp": "2025-07-24T04:51:00.344Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753312860320_gen65jv9r",
+      "timestamp": "2025-07-24T04:51:00.354Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753312860522_6y4xbhglv",
+      "timestamp": "2025-07-24T04:51:01.325Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "div#unknown.max-w-6xl",
+      "action": "click",
+      "position": {
+        "x": 443,
+        "y": 495
+      },
+      "metadata": {
+        "text": "About MeDeveloper • AI Enthusiast • Creative Think",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753312861538_q8upfndgv",
+      "timestamp": "2025-07-24T04:51:02.148Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753312861754_bl9kr3tup",
+      "timestamp": "2025-07-24T04:51:02.159Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 517,
+        "y": 26
+      },
+      "metadata": {
+        "text": "LLuciverse",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753312863193_e7qucdrdx",
+      "timestamp": "2025-07-24T04:51:03.209Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 474,
+        "y": 34
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753312866285_yaplrkuef",
+      "timestamp": "2025-07-24T04:51:06.298Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753313013418_0uxhq3kxu",
+      "timestamp": "2025-07-24T04:53:33.439Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 495.83331298828125,
+        "scrollPercent": 8
+      }
+    },
+    {
+      "id": "interaction_1753313019567_u6bqca0of",
+      "timestamp": "2025-07-24T04:53:39.582Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 997.4999389648438,
+        "scrollPercent": 14
+      }
+    },
+    {
+      "id": "interaction_1753313023703_fdmy7rwpe",
+      "timestamp": "2025-07-24T04:53:43.713Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1220,
+        "scrollPercent": 17
+      }
+    },
+    {
+      "id": "interaction_1753313046289_529kqxppp",
+      "timestamp": "2025-07-24T04:54:06.312Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0.8333333134651184,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753313068424_6z46utfje",
+      "timestamp": "2025-07-24T04:54:28.455Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1576.6666259765625,
+        "scrollPercent": 23
+      }
+    },
+    {
+      "id": "interaction_1753313083672_osmaysw6y",
+      "timestamp": "2025-07-24T04:54:43.696Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 422.4999694824219,
+        "scrollPercent": 6
+      }
+    },
+    {
+      "id": "interaction_1753313104621_9xntcycl6",
+      "timestamp": "2025-07-24T04:55:04.636Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1413.333251953125,
+        "scrollPercent": 20
+      }
+    },
+    {
+      "id": "interaction_1753313119921_pyavcuprj",
+      "timestamp": "2025-07-24T04:55:19.933Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1193.333251953125,
+        "scrollPercent": 17
+      }
+    },
+    {
+      "id": "interaction_1753313144705_pqr2be8ox",
+      "timestamp": "2025-07-24T04:55:44.722Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1352.5,
+        "scrollPercent": 19
+      }
+    },
+    {
+      "id": "interaction_1753313262294_e06u2mq6a",
+      "timestamp": "2025-07-24T04:57:42.609Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1692.4998779296875,
+        "scrollPercent": 22
+      }
+    },
+    {
+      "id": "interaction_1753313264515_w0r8gk881",
+      "timestamp": "2025-07-24T04:57:45.795Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1563.333251953125,
+        "scrollPercent": 21
+      }
+    },
+    {
+      "id": "interaction_1753313363098_4pejjr1bp",
+      "timestamp": "2025-07-24T04:59:23.118Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 330,
+        "scrollPercent": 10
+      }
+    },
+    {
+      "id": "interaction_1753313371352_xu9o0m50y",
+      "timestamp": "2025-07-24T04:59:31.371Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753313371579_6g5zk73p4",
+      "timestamp": "2025-07-24T04:59:32.278Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 864,
+        "y": 25
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753313374842_sl92v5g1i",
+      "timestamp": "2025-07-24T04:59:34.854Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753313382493_xyz9ju2gn",
+      "timestamp": "2025-07-24T04:59:42.507Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1094.1666259765625,
+        "scrollPercent": 44
+      }
+    },
+    {
+      "id": "interaction_1753313384061_6kmpol38s",
+      "timestamp": "2025-07-24T04:59:44.077Z",
+      "sessionId": "session_1753307492762_g7mxme8vy",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1030.833251953125,
+        "scrollPercent": 41
+      }
+    },
+    {
+      "id": "interaction_1753345507897_ayo67kfqc",
+      "timestamp": "2025-07-24T13:55:08.965Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753345513674_lsk36izkh",
+      "timestamp": "2025-07-24T13:55:13.699Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753345513868_csmi7wu1v",
+      "timestamp": "2025-07-24T13:55:14.835Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 340.83331298828125,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753345513889_38ydivjdc",
+      "timestamp": "2025-07-24T13:55:14.848Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 849,
+        "y": 55
+      },
+      "metadata": {
+        "text": "LLuciverseHomeAboutProjectsAchievementsGfG Campus ",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345515142_3z9iodzji",
+      "timestamp": "2025-07-24T13:55:15.898Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 867,
+        "y": 37
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753345518126_t8ww86yc1",
+      "timestamp": "2025-07-24T13:55:18.160Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 894,
+        "y": 34
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753345519100_388li7250",
+      "timestamp": "2025-07-24T13:55:19.182Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753345527739_ha8jxbazv",
+      "timestamp": "2025-07-24T13:55:27.767Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "div#unknown.text-center",
+      "action": "click",
+      "position": {
+        "x": 579,
+        "y": 335
+      },
+      "metadata": {
+        "text": "GfG Campus BodyGITAM, Jhajjar - Official Campus Bo",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345531550_hcqczpzsh",
+      "timestamp": "2025-07-24T13:55:31.571Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "span#unknown.text-green-600",
+      "action": "click",
+      "position": {
+        "x": 954,
+        "y": 213
+      },
+      "metadata": {
+        "text": "Campus Body",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345531783_nm2up1mka",
+      "timestamp": "2025-07-24T13:55:32.523Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "span#unknown.text-green-600",
+      "action": "click",
+      "position": {
+        "x": 954,
+        "y": 213
+      },
+      "metadata": {
+        "text": "Campus Body",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345535955_9v7ohbe0d",
+      "timestamp": "2025-07-24T13:55:35.979Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753345558637_zlytxhwid",
+      "timestamp": "2025-07-24T13:55:58.670Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 848.3333129882812,
+        "scrollPercent": 33
+      }
+    },
+    {
+      "id": "interaction_1753345563636_yvnzffiuv",
+      "timestamp": "2025-07-24T13:56:03.668Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1361.6666259765625,
+        "scrollPercent": 54
+      }
+    },
+    {
+      "id": "interaction_1753345563695_capwjj6wk",
+      "timestamp": "2025-07-24T13:56:05.323Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753345563951_wcrq878pv",
+      "timestamp": "2025-07-24T13:56:05.758Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 437,
+        "y": 295
+      },
+      "metadata": {
+        "text": "Achievements",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345565109_rjcrq1g34",
+      "timestamp": "2025-07-24T13:56:05.778Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 563,
+        "y": 304
+      },
+      "metadata": {
+        "text": "Resources",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345567077_ueoqib3jt",
+      "timestamp": "2025-07-24T13:56:07.451Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 450,
+        "y": 295
+      },
+      "metadata": {
+        "text": "Achievements",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345573228_j7ndjp8no",
+      "timestamp": "2025-07-24T13:56:13.253Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753345795787_eqoi3fwdj",
+      "timestamp": "2025-07-24T13:59:55.811Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753345801072_9dn08s9rk",
+      "timestamp": "2025-07-24T14:00:01.096Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 748.3333129882812,
+        "scrollPercent": 26
+      }
+    },
+    {
+      "id": "interaction_1753345803018_tyjp0ls5u",
+      "timestamp": "2025-07-24T14:00:03.093Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753345803243_yfr3958ok",
+      "timestamp": "2025-07-24T14:00:03.888Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 254,
+        "y": 20
+      },
+      "metadata": {
+        "text": "Home",
+        "href": "/"
+      }
+    },
+    {
+      "id": "interaction_1753345805124_2t75d3pcu",
+      "timestamp": "2025-07-24T14:00:05.148Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753345806755_so319ff9u",
+      "timestamp": "2025-07-24T14:00:10.227Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 244.16665649414062,
+        "scrollPercent": 8
+      }
+    },
+    {
+      "id": "interaction_1753345810817_qxigg0ypm",
+      "timestamp": "2025-07-24T14:00:11.754Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "div#unknown.text-sm",
+      "action": "click",
+      "position": {
+        "x": 224,
+        "y": 401
+      },
+      "metadata": {
+        "text": "Years",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753345812903_qll0hg67z",
+      "timestamp": "2025-07-24T14:00:13.089Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 244.99998474121094,
+        "scrollPercent": 8
+      }
+    },
+    {
+      "id": "interaction_1753345815312_2khpestcg",
+      "timestamp": "2025-07-24T14:00:15.365Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 246.66665649414062,
+        "scrollPercent": 8
+      }
+    },
+    {
+      "id": "interaction_1753345816857_0ht6rpej4",
+      "timestamp": "2025-07-24T14:00:16.881Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 627,
+        "y": 20
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753345817984_po21x0xk4",
+      "timestamp": "2025-07-24T14:00:18.007Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753345821622_h56vp1e4s",
+      "timestamp": "2025-07-24T14:00:21.647Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 986.6666259765625,
+        "scrollPercent": 39
+      }
+    },
+    {
+      "id": "interaction_1753345828704_y0gzv4gdk",
+      "timestamp": "2025-07-24T14:00:28.733Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1418.333251953125,
+        "scrollPercent": 56
+      }
+    },
+    {
+      "id": "interaction_1753345837486_2jd1grfrn",
+      "timestamp": "2025-07-24T14:00:37.511Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1042.5,
+        "scrollPercent": 41
+      }
+    },
+    {
+      "id": "interaction_1753345901244_t2nxm1b67",
+      "timestamp": "2025-07-24T14:01:41.286Z",
+      "sessionId": "session_1753345507897_1vfgkgiqm",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753346102422_hq06fblrl",
+      "timestamp": "2025-07-24T14:05:03.453Z",
+      "sessionId": "session_1753346102422_1ty10huso",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753346107054_79dxq6tus",
+      "timestamp": "2025-07-24T14:05:08.565Z",
+      "sessionId": "session_1753346102422_1ty10huso",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 426.6666564941406,
+        "scrollPercent": 14
+      }
+    },
+    {
+      "id": "interaction_1753346113838_l5tbn4zyw",
+      "timestamp": "2025-07-24T14:05:13.912Z",
+      "sessionId": "session_1753346102422_1ty10huso",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
     }
   ],
-  "lastUpdated": "2025-07-24T03:31:22.150Z"
+  "lastUpdated": "2025-07-24T14:05:13.912Z"
 }
