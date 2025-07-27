@@ -586,10 +586,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.3, duration: 0.6 }}
               className={`grid gap-6 relative ${highlights.filter((h: any) => h.featured).length === 1
-                  ? "grid-cols-1"
-                  : highlights.filter((h: any) => h.featured).length === 2
-                    ? "grid-cols-1 md:grid-cols-2"
-                    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                ? "grid-cols-1"
+                : highlights.filter((h: any) => h.featured).length === 2
+                  ? "grid-cols-1 md:grid-cols-2"
+                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 }`}
             >
               {/* Spotlight effect for highlights */}
@@ -622,8 +622,8 @@ export default function Home() {
                       boxShadow: "0 25px 50px rgba(79, 70, 229, 0.25)",
                     }}
                     className={`group bg-white/90 dark:bg-dark-background/90 backdrop-blur-md border border-gray-200/60 dark:border-gray-700/60 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 relative overflow-hidden cursor-pointer ${highlights.filter((h: any) => h.featured).length === 1
-                        ? "max-w-3xl mx-auto"
-                        : ""
+                      ? "max-w-3xl mx-auto"
+                      : ""
                       }`}
                   >
                     {/* Enhanced animated border glow with gradient */}
@@ -804,32 +804,33 @@ export default function Home() {
                             </div>
 
                             {/* Enhanced Hover indicator */}
-                            <motion.div
-                              className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                              whileHover={{ x: 5 }}
-                            >
-                              <span className="text-xs text-accent font-medium">
-                                Explore
-                              </span>
-                              <motion.svg
-                                width="18"
-                                height="18"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="text-accent"
-                                whileHover={{ rotate: 45 }}
-                                transition={{ duration: 0.3 }}
+
+                            <Link href="/gfg-chapter">
+                              <motion.div
+                                className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+                                whileHover={{ x: 5 }}
                               >
-                                <path
-                                  d="M7 17L17 7M17 7H7M17 7V17"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                />
-                              </motion.svg>
-                            </motion.div>
+                                <span className="text-xs text-accent font-medium">
+                                  Explore
+                                </span>
+                                <motion.svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="text-accent"
+                                >
+                                  <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </motion.svg>
+                              </motion.div>
+                            </Link>
                           </motion.div>
                         </div>
                       </div>
@@ -907,8 +908,8 @@ export default function Home() {
                 <div className="text-2xl mb-2">{stat.icon}</div>
                 <div
                   className={`text-2xl font-bold mb-1 ${stat.number === "---"
-                      ? "text-gray-400 dark:text-gray-500"
-                      : "text-accent"
+                    ? "text-gray-400 dark:text-gray-500"
+                    : "text-accent"
                     }`}
                 >
                   {stat.number}

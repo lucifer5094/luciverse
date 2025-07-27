@@ -686,8 +686,8 @@ export default function GFGChapterPage() {
                   {/* Live Stats Counter */}
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      { label: 'Members', value: 500, icon: '👥' },
-                      { label: 'Events', value: 50, icon: '🎯' }
+                      { label: 'Members', value: 5, icon: '👥' },
+                      { label: 'Events', value: 0, icon: '🎯' }
                     ].map((stat, i) => (
                       <motion.div
                         key={i}
