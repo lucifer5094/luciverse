@@ -1240,7 +1240,7 @@ export default function GFGChapterPage() {
 
                 {/* Description */}
                 <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-400 mb-8">
-                  We're currently brewing up some amazing workshops, hackathons, and tech talks for you. Get ready for some serious learning and fun!
+                  We&apos;re currently brewing up some amazing workshops, hackathons, and tech talks for you. Get ready for some serious learning and fun!
                 </p>
 
                 {/* Call to Action */}
@@ -1273,7 +1273,7 @@ export default function GFGChapterPage() {
 
                 {/* Description */}
                 <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-400 mb-8">
-                  We're gathering all the incredible hackathon wins, contest rankings, and project showcases from our talented members. This space will soon shine with inspiration!
+                  We&apos;re gathering all the incredible hackathon wins, contest rankings, and project showcases from our talented members. This space will soon shine with inspiration!
                 </p>
 
                 {/* Call to Action */}
@@ -1394,7 +1394,7 @@ export default function GFGChapterPage() {
                 {/* Call to Action */}
                 <div className="px-6 py-3 bg-white dark:bg-gray-900 rounded-full shadow-lg">
                   <p className="font-semibold text-blue-800 dark:text-blue-200">
-                    Want to partner with us? We'd love to connect! 🤝
+                    Want to partner with us? We&apos;d love to connect! 🤝
                   </p>
                 </div>
               </div>
@@ -1421,7 +1421,7 @@ export default function GFGChapterPage() {
 
                 {/* Description */}
                 <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-400 mb-8">
-                  We're gathering the success stories and valuable feedback from our amazing members. Their experiences and journeys will be shared here very soon.
+                  We&apos;re gathering the success stories and valuable feedback from our amazing members. Their experiences and journeys will be shared here very soon.
                 </p>
 
                 {/* Call to Action */}

@@ -21523,7 +21523,71 @@
       "page": "/gfg-chapter",
       "element": "window",
       "action": "blur"
+    },
+    {
+      "id": "interaction_1753640050364_ays7m9frg",
+      "timestamp": "2025-07-27T23:44:10.429Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753640051183_wlddcppzu",
+      "timestamp": "2025-07-27T23:44:11.320Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753640061192_5450jyg4q",
+      "timestamp": "2025-07-27T23:44:21.240Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753640062388_9oc8xlt1c",
+      "timestamp": "2025-07-27T23:44:22.451Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753641177520_k1oss4aw5",
+      "timestamp": "2025-07-28T00:02:57.650Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753641178911_28kain5l7",
+      "timestamp": "2025-07-28T00:02:59.404Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753641246650_ahadg3bib",
+      "timestamp": "2025-07-28T00:04:06.761Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753641247473_0puqlhcmk",
+      "timestamp": "2025-07-28T00:04:08.178Z",
+      "sessionId": "session_1753627260635_kvivwrowd",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
     }
   ],
-  "lastUpdated": "2025-07-27T23:41:56.422Z"
+  "lastUpdated": "2025-07-28T00:04:08.178Z"
 }
