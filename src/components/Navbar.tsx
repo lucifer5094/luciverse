@@ -22,7 +22,7 @@ export default function Navbar() {
   // Apply theme on mount and when theme changes
   useEffect(() => {
     if (!mounted || !themeLoaded) return
-    
+
     // Apply the theme to the document
     if (darkMode) {
       document.documentElement.classList.add('dark')
@@ -34,7 +34,7 @@ export default function Navbar() {
   // Initialize theme based on stored preference or system preference
   useEffect(() => {
     if (!mounted || !themeLoaded) return
-    
+
     // If no stored preference, use system preference
     const storedTheme = localStorage.getItem('darkMode')
     if (storedTheme === null) {
@@ -71,6 +71,7 @@ export default function Navbar() {
     { name: 'Achievements', href: '/achievements' },
     { name: 'GfG Campus Body', href: '/gfg-chapter' },
     { name: 'Interview Prep', href: '/interview-prep' },
+    { name: 'GameZone', href: '/gamezone' },
     { name: 'Vault', href: '/vault' },
     { name: 'Contact', href: '/contact' },
   ]
@@ -102,11 +103,10 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 ${
-                    pathname === link.href
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 ${pathname === link.href
                       ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -157,16 +157,15 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 ${
-                  pathname === link.href
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 ${pathname === link.href
                     ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
             ))}
-            
+
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -204,7 +203,7 @@ export default function Navbar() {
                 </svg>
               )}
             </button>
-            
+
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
@@ -232,11 +231,10 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 ${
-                  pathname === link.href
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 ${pathname === link.href
                     ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>

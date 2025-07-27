@@ -39,7 +39,23 @@ const featuresData: { implemented: FeatureData; todo: FeatureData } = {
         { name: 'Lab Page (/lab)', subfeatures: ['Interactive experiments playground', 'Color palette tool', 'CSS animations showcase', 'Component testing area', 'Live code demonstrations', 'Performance testing tools', 'UI component gallery', 'Technical demos', 'Experimental features testing'] },
         { name: 'Performance Demo Page (/performance-demo)', subfeatures: ['Performance & UX showcase', 'Loading states demonstration', 'Image optimization examples', 'Error boundary testing', 'Search functionality demo', 'PWA features showcase', 'Technical metrics display'] },
         { name: 'Test Pages (/test-*)', subfeatures: ['Hydration testing', 'Simple component testing', 'Development debugging tools', 'Feature validation'] },
-        { name: 'Interview Prep Hub (/interview-prep)', subfeatures: ['System to add and manage interview problems with solutions', 'Filterable by topic, company, and difficulty', 'Practice timer and tracking', 'Solution explanations and notes', 'Progress tracking and statistics', 'Local storage persistence', 'Grid and list view modes', 'Comprehensive problem management', 'Real-time search functionality', 'Difficulty-based color coding', 'Session tracking and analytics'] }
+        { name: 'Interview Prep Hub (/interview-prep)', subfeatures: ['System to add and manage interview problems with solutions', 'Filterable by topic, company, and difficulty', 'Practice timer and tracking', 'Solution explanations and notes', 'Progress tracking and statistics', 'Local storage persistence', 'Grid and list view modes', 'Comprehensive problem management', 'Real-time search functionality', 'Difficulty-based color coding', 'Session tracking and analytics'] },
+        {
+          name: 'GFG Campus Chapter Page (/gfg-chapter)',
+          subfeatures: [
+            'Hero section with dynamic chapter name',
+            'Sticky tab-based navigation (About, Team, Events, etc.)',
+            'Detailed "About Us" section with vision and mission',
+            'Core Team showcase with roles and social links',
+            'Dynamic "Coming Soon" placeholders for Events',
+            'Dynamic "Coming Soon" placeholders for Achievements',
+            'Dynamic "Coming Soon" placeholders for Partnerships',
+            'Dynamic "Coming Soon" placeholders for Testimonials',
+            'Responsive design for mobile and desktop',
+            'Framer Motion for smooth animations and transitions',
+            'Lucide-react for clean and consistent icons',
+          ]
+        }
       ]
     },
     "Admin & Management": {
@@ -108,6 +124,34 @@ const featuresData: { implemented: FeatureData; todo: FeatureData } = {
     }
   },
   todo: {
+    "Gaming & Entertainment": {
+      icon: '🎮',
+      description: 'A personal hub for all gaming activities and entertainment.',
+      features: [
+        {
+          name: 'Gamezone Hub',
+          subfeatures: [
+            'Static library of favorite games with personal ratings',
+            'Dynamic "Currently Playing" status from Steam/PSN API',
+            'Showcase of total playtime and recent achievements',
+            '"My Top 5 Games" ranked list',
+            'Section for PC specs and gaming setup',
+            'Embedded Twitch/YouTube channel feed'
+          ]
+        },
+        {
+          name: 'Clash of Clans Stats Dashboard',
+          subfeatures: [
+            'API integration with developer.clashofclans.com',
+            'Fetch live clan data using Clan Tag',
+            'Display core clan stats (Level, Members, War Wins)',
+            'Live list of all clan members with their roles',
+            'Clan Capital and War League information',
+            'Real-time data refresh mechanism'
+          ]
+        }
+      ]
+    },
     "Enhanced Productivity": {
       icon: '🚀',
       description: 'Advanced features to boost personal productivity and workflow management.',
@@ -205,7 +249,7 @@ export default function FeaturesPage() {
 
   const filteredFeatures = (features: Feature[]) => {
     return features.filter(feature => {
-      const matchesSearch = searchTerm === '' || 
+      const matchesSearch = searchTerm === '' ||
         feature.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         feature.subfeatures.some(sub => sub.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesSearch;
@@ -256,11 +300,10 @@ export default function FeaturesPage() {
                 setCurrentView('implemented');
                 setCurrentCategory('Overview');
               }}
-              className={`w-1/2 py-1.5 text-sm font-semibold rounded-md transition-colors ${
-                currentView === 'implemented'
-                  ? 'bg-white dark:bg-gray-600 text-sky-600 dark:text-sky-400 shadow'
-                  : 'text-stone-500 dark:text-gray-400'
-              }`}
+              className={`w-1/2 py-1.5 text-sm font-semibold rounded-md transition-colors ${currentView === 'implemented'
+                ? 'bg-white dark:bg-gray-600 text-sky-600 dark:text-sky-400 shadow'
+                : 'text-stone-500 dark:text-gray-400'
+                }`}
             >
               Implemented
             </button>
@@ -269,11 +312,10 @@ export default function FeaturesPage() {
                 setCurrentView('todo');
                 setCurrentCategory(Object.keys(featuresData.todo)[0]);
               }}
-              className={`w-1/2 py-1.5 text-sm font-semibold rounded-md transition-colors ${
-                currentView === 'todo'
-                  ? 'bg-white dark:bg-gray-600 text-sky-600 dark:text-sky-400 shadow'
-                  : 'text-stone-500 dark:text-gray-400'
-              }`}
+              className={`w-1/2 py-1.5 text-sm font-semibold rounded-md transition-colors ${currentView === 'todo'
+                ? 'bg-white dark:bg-gray-600 text-sky-600 dark:text-sky-400 shadow'
+                : 'text-stone-500 dark:text-gray-400'
+                }`}
             >
               Roadmap
             </button>
@@ -324,16 +366,15 @@ export default function FeaturesPage() {
               {Object.keys(currentData).map((category) => {
                 const categoryData = currentData[category];
                 const featureCount = categoryData.features.length;
-                
+
                 return (
                   <button
                     key={category}
                     onClick={() => setCurrentCategory(category)}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      currentCategory === category
-                        ? 'bg-sky-500 text-white shadow'
-                        : 'text-stone-600 dark:text-gray-300 hover:bg-sky-100 dark:hover:bg-gray-700'
-                    }`}
+                    className={`w-full text-left p-3 rounded-lg transition-colors ${currentCategory === category
+                      ? 'bg-sky-500 text-white shadow'
+                      : 'text-stone-600 dark:text-gray-300 hover:bg-sky-100 dark:hover:bg-gray-700'
+                      }`}
                   >
                     <div className="flex items-center justify-between">
                       <span className="flex items-center">
@@ -341,13 +382,12 @@ export default function FeaturesPage() {
                         <span className="text-sm">{category}</span>
                       </span>
                       {featureCount > 0 && (
-                        <span className={`text-xs px-2 py-1 rounded-full ${
-                          currentCategory === category
-                            ? 'bg-white/20 text-white'
-                            : currentView === 'implemented'
-                              ? 'bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300'
-                              : 'bg-orange-100 text-orange-700 dark:bg-orange-900/50 dark:text-orange-300'
-                        }`}>
+                        <span className={`text-xs px-2 py-1 rounded-full ${currentCategory === category
+                          ? 'bg-white/20 text-white'
+                          : currentView === 'implemented'
+                            ? 'bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300'
+                            : 'bg-orange-100 text-orange-700 dark:bg-orange-900/50 dark:text-orange-300'
+                          }`}>
                           {featureCount}
                         </span>
                       )}
@@ -407,13 +447,12 @@ export default function FeaturesPage() {
                         <ChevronDown className="w-5 h-5 text-stone-500 dark:text-gray-400" />
                       )}
                     </div>
-                    
+
                     <div className="flex items-center gap-2 mb-3">
-                      <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                        currentView === 'implemented'
-                          ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                          : 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400'
-                      }`}>
+                      <span className={`text-xs font-semibold px-3 py-1 rounded-full ${currentView === 'implemented'
+                        ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                        : 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400'
+                        }`}>
                         {currentView === 'implemented' ? 'Implemented' : 'To-Do'}
                       </span>
                       <span className="text-xs bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400 px-3 py-1 rounded-full">
