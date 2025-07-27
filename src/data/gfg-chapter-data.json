@@ -10,7 +10,7 @@
     "officialRecognition": "GeeksforGeeks Certified Campus Chapter",
     "whatWeDo": [
       "Weekly Coding Workshops (DSA, Web Dev, Mobile Dev)",
-      "Competitive Programming Sessions and Contest Training", 
+      "Competitive Programming Sessions and Contest Training",
       "Technical Interview Preparation and Mock Interviews",
       "Industry Expert Guest Lectures and Mentorship",
       "Hackathons and Coding Contests (CodeFest 2024)",
@@ -21,61 +21,123 @@
       "Open Source Contribution Guidance"
     ]
   },
+
   "team": [
     {
       "id": "1",
-      "name": "Ankit Kumar",
-      "role": "Chapter President (Campus Mantri)",
-      "description": "Leading the chapter with passion for competitive programming and community building. Spearheading initiatives to connect students with industry opportunities.",
-      "linkedin": "https://linkedin.com/in/ankit-kumar-dev",
+      "name": "Ankit Raj",
+      "role": "Campus Mantri",
+      "description": "Leading the chapter with a passion for competitive programming and community building. Spearheading initiatives to connect students with industry opportunities.",
+      "linkedin": "https://linkedin.com/in/lucifer5094",
       "github": "https://github.com/lucifer5094",
-      "email": "ankit.president@gfgchapter.com",
-      "achievements": ["Chapter Establishment", "500+ Member Growth", "Industry Partnerships"],
-      "responsibilities": ["Strategic Planning", "Industry Relations", "Team Leadership", "Event Oversight"]
+      "email": "ankitraj85455@gmail.com",
+      "achievements": [
+        "Chapter Establishment",
+        "Industry Partnerships",
+        "Team Leadership"
+      ],
+      "responsibilities": [
+        "Strategic Planning",
+        "Industry Relations",
+        "Team Leadership",
+        "Overall Vision"
+      ]
     },
     {
-      "id": "2", 
-      "name": "Priya Sharma",
-      "role": "Vice President (Technical)",
-      "description": "Technical lead handling workshop organization, curriculum development, and technical content creation for our learning programs.",
-      "linkedin": "https://linkedin.com/in/priya-tech",
-      "github": "https://github.com/priyatech",
-      "email": "priya.vp@gfgchapter.com",
-      "achievements": ["25+ Workshops Organized", "Curriculum Design", "Mentorship Program"],
-      "responsibilities": ["Workshop Planning", "Technical Content", "Mentor Coordination", "Skill Assessment"]
+      "id": "2",
+      "name": "Aman Sharma",
+      "role": "Chief Coordinator",
+      "description": "The backbone of our chapter, ensuring smooth execution of all activities and managing internal team coordination to bring our vision to life.",
+      "linkedin": "",
+      "github": "",
+      "email": "",
+      "achievements": [
+        "Streamlined Operations",
+        "Successful Event Series",
+        "Team Synergy"
+      ],
+      "responsibilities": [
+        "Overall Coordination",
+        "Resource Management",
+        "Team Communication",
+        "Execution Oversight"
+      ]
     },
     {
       "id": "3",
-      "name": "Rohit Agarwal", 
-      "role": "Event Coordinator",
-      "description": "Expert in event management, coordinating hackathons, contests, and guest lectures. Building connections with industry professionals.",
-      "linkedin": "https://linkedin.com/in/rohit-events",
-      "github": "https://github.com/rohitevent",
-      "email": "rohit.events@gfgchapter.com",
-      "achievements": ["CodeFest 2024 Success", "15+ Guest Lectures", "Industry Partnerships"],
-      "responsibilities": ["Event Management", "Guest Relations", "Logistics", "Partnership Development"]
+      "name": "To Be Announced",
+      "role": "Technical Head",
+      "description": "We are looking for a passionate tech enthusiast to lead our technical domain, from workshops on cutting-edge technologies to competitive programming contests.",
+      "linkedin": "",
+      "github": "",
+      "email": "",
+      "achievements": ["Position Open"],
+      "responsibilities": [
+        "Leading Workshops",
+        "Organizing Hackathons",
+        "Curriculum Design",
+        "Mentoring Students"
+      ]
     },
     {
       "id": "4",
-      "name": "Sneha Verma",
-      "role": "Technical Lead (DSA & CP)",
-      "description": "Competitive programming expert leading DSA sessions, contest preparations, and guiding students for coding competitions.",
-      "linkedin": "https://linkedin.com/in/sneha-cp",
-      "github": "https://github.com/snehacp",
-      "email": "sneha.tech@gfgchapter.com",
-      "achievements": ["200+ Students Trained", "Contest Winners", "CP Roadmap Creation"],
-      "responsibilities": ["DSA Training", "Contest Preparation", "Code Review", "Performance Analysis"]
+      "name": "Nikhil",
+      "role": "Event & Operations Head",
+      "description": "Mastermind behind our events, managing everything from planning and logistics to flawless on-ground execution. Ensures every event is a memorable experience.",
+      "linkedin": "",
+      "github": "",
+      "email": "",
+      "achievements": [
+        "Flawless Event Execution",
+        "Improved Operational Efficiency",
+        "Vendor Management"
+      ],
+      "responsibilities": [
+        "Event Planning & Management",
+        "Logistics Coordination",
+        "On-ground Operations",
+        "Budgeting"
+      ]
     },
     {
       "id": "5",
-      "name": "Arjun Patel",
-      "role": "Social Media & Outreach Head",
-      "description": "Managing chapter's digital presence, student outreach, and community engagement across all social media platforms.",
-      "linkedin": "https://linkedin.com/in/arjun-social",
-      "instagram": "https://instagram.com/arjun_gfg",
-      "email": "arjun.social@gfgchapter.com",
-      "achievements": ["5K+ Social Media Reach", "Community Growth", "Brand Building"],
-      "responsibilities": ["Social Media", "Content Creation", "Community Engagement", "Brand Management"]
+      "name": "Sagar Baghel",
+      "role": "Media & Creative Design Head",
+      "description": "The creative soul of our chapter. Responsible for our brand's visual identity, from stunning social media posts to event banners and videos.",
+      "linkedin": "",
+      "instagram": "",
+      "email": "",
+      "achievements": [
+        "Brand Identity Revamp",
+        "High-Engagement Creatives",
+        "Video Content Production"
+      ],
+      "responsibilities": [
+        "Graphic Design",
+        "Video Editing",
+        "Social Media Creatives",
+        "Brand Consistency"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Ankit Yadav",
+      "role": "Public Relations & Outreach Head",
+      "description": "The voice of our chapter. Building bridges with other communities, institutions, and media to amplify our reach and impact.",
+      "linkedin": "",
+      "twitter": "",
+      "email": "",
+      "achievements": [
+        "Cross-Community Collaborations",
+        "Increased Campus Presence",
+        "Media Mentions"
+      ],
+      "responsibilities": [
+        "Public Relations",
+        "Community Outreach",
+        "Partnership Building",
+        "Communication Strategy"
+      ]
     }
   ],
   "events": [
@@ -91,7 +153,12 @@
       "registrationLink": "https://forms.google.com/webdev-bootcamp",
       "expectedParticipants": 150,
       "prerequisites": "Basic HTML, CSS knowledge",
-      "highlights": ["Industry Mentors", "Live Projects", "Certificate Provided", "Placement Support"]
+      "highlights": [
+        "Industry Mentors",
+        "Live Projects",
+        "Certificate Provided",
+        "Placement Support"
+      ]
     },
     {
       "id": "2",
@@ -105,7 +172,12 @@
       "registrationLink": "https://forms.google.com/ai-workshop",
       "expectedParticipants": 100,
       "prerequisites": "Python basics",
-      "highlights": ["Hands-on Projects", "Industry Case Studies", "Certificate", "Career Guidance"]
+      "highlights": [
+        "Hands-on Projects",
+        "Industry Case Studies",
+        "Certificate",
+        "Career Guidance"
+      ]
     },
     {
       "id": "3",
@@ -120,12 +192,29 @@
       "teams": 15,
       "prizes": "₹50,000+ Total Prize Pool",
       "sponsors": ["TechCorp", "InnovateX", "StartupHub"],
-      "highlights": ["15 Teams Participated", "Industry Mentors", "Live Judging", "Networking Sessions"],
+      "highlights": [
+        "15 Teams Participated",
+        "Industry Mentors",
+        "Live Judging",
+        "Networking Sessions"
+      ],
       "images": ["/assets/codefest-2024-1.jpg", "/assets/codefest-2024-2.jpg"],
       "winners": [
-        { "position": 1, "team": "Code Warriors", "project": "Smart Campus Management System" },
-        { "position": 2, "team": "Tech Innovators", "project": "AI-powered Study Assistant" },
-        { "position": 3, "team": "Future Builders", "project": "Eco-friendly Transport Tracker" }
+        {
+          "position": 1,
+          "team": "Code Warriors",
+          "project": "Smart Campus Management System"
+        },
+        {
+          "position": 2,
+          "team": "Tech Innovators",
+          "project": "AI-powered Study Assistant"
+        },
+        {
+          "position": 3,
+          "team": "Future Builders",
+          "project": "Eco-friendly Transport Tracker"
+        }
       ]
     },
     {
@@ -139,7 +228,12 @@
       "status": "completed",
       "participants": 200,
       "duration": "6 weeks",
-      "highlights": ["200+ Students Trained", "CP Contest Practice", "Interview Questions", "Performance Tracking"],
+      "highlights": [
+        "200+ Students Trained",
+        "CP Contest Practice",
+        "Interview Questions",
+        "Performance Tracking"
+      ],
       "outcome": "85% students showed significant improvement in problem-solving skills"
     },
     {
@@ -157,7 +251,12 @@
         "designation": "Senior Software Engineer, Google",
         "experience": "5+ years at Google, Previously at Microsoft"
       },
-      "highlights": ["Career Guidance", "Interview Tips", "Google Culture Insights", "Q&A Session"]
+      "highlights": [
+        "Career Guidance",
+        "Interview Tips",
+        "Google Culture Insights",
+        "Q&A Session"
+      ]
     },
     {
       "id": "6",
@@ -169,7 +268,12 @@
       "type": "meetup",
       "status": "completed",
       "participants": 80,
-      "highlights": ["Official Chapter Launch", "Roadmap Presentation", "Team Introduction", "Registration Drive"],
+      "highlights": [
+        "Official Chapter Launch",
+        "Roadmap Presentation",
+        "Team Introduction",
+        "Registration Drive"
+      ],
       "outcome": "Successfully established chapter with 80+ founding members"
     }
   ],
@@ -274,7 +378,12 @@
       "description": "Official GeeksforGeeks practice platform with curated problems, difficulty levels, aur detailed solutions",
       "link": "https://practice.geeksforgeeks.org",
       "type": "practice",
-      "features": ["Problem Categories", "Difficulty Levels", "Solutions", "Test Cases"],
+      "features": [
+        "Problem Categories",
+        "Difficulty Levels",
+        "Solutions",
+        "Test Cases"
+      ],
       "free": true
     },
     {
@@ -344,20 +453,26 @@
       "signupLink": "https://forms.google.com/mentorship-program",
       "description": "1-on-1 mentorship program with industry professionals and senior students",
       "duration": "3-6 months",
-      "areas": ["DSA", "Web Development", "Mobile Apps", "AI/ML", "Competitive Programming"]
+      "areas": [
+        "DSA",
+        "Web Development",
+        "Mobile Apps",
+        "AI/ML",
+        "Competitive Programming"
+      ]
     }
   },
   "stats": {
-    "totalMembers": 500,
-    "eventsHosted": 50,
-    "workshopsCompleted": 25,
-    "activeProjects": 8,
-    "industryConnections": 15,
-    "placementAssistance": 20,
-    "mentorshipPairs": 30,
-    "competitionWinners": 12,
-    "monthlyGrowth": "15%",
-    "averageAttendance": "85%"
+    "totalMembers": 0,
+    "eventsHosted": 0,
+    "workshopsCompleted": 0,
+    "activeProjects": 0,
+    "industryConnections": 0,
+    "placementAssistance": 0,
+    "mentorshipPairs": 0,
+    "competitionWinners": 0,
+    "monthlyGrowth": "0",
+    "averageAttendance": "0"
   },
   "upcomingInitiatives": [
     {
@@ -389,16 +504,48 @@
   ],
   "partnerships": {
     "industryPartners": [
-      { "name": "Google", "type": "Guest Lectures & Mentorship", "established": "2024-10-01" },
-      { "name": "Microsoft", "type": "Workshop & Internships", "established": "2024-11-15" },
-      { "name": "Amazon", "type": "Placement Support", "established": "2024-12-01" },
-      { "name": "Flipkart", "type": "Hackathon Sponsorship", "established": "2024-10-20" },
-      { "name": "Paytm", "type": "Technical Sessions", "established": "2024-11-30" }
+      {
+        "name": "Google",
+        "type": "Guest Lectures & Mentorship",
+        "established": "2024-10-01"
+      },
+      {
+        "name": "Microsoft",
+        "type": "Workshop & Internships",
+        "established": "2024-11-15"
+      },
+      {
+        "name": "Amazon",
+        "type": "Placement Support",
+        "established": "2024-12-01"
+      },
+      {
+        "name": "Flipkart",
+        "type": "Hackathon Sponsorship",
+        "established": "2024-10-20"
+      },
+      {
+        "name": "Paytm",
+        "type": "Technical Sessions",
+        "established": "2024-11-30"
+      }
     ],
     "academicPartners": [
-      { "name": "GITAM University", "type": "Official Recognition & Support", "established": "2024-09-01" },
-      { "name": "IIT Delhi Alumni Network", "type": "Mentorship Program", "established": "2024-10-15" },
-      { "name": "Coding Ninjas", "type": "Course Discounts", "established": "2024-11-01" }
+      {
+        "name": "GITAM University",
+        "type": "Official Recognition & Support",
+        "established": "2024-09-01"
+      },
+      {
+        "name": "IIT Delhi Alumni Network",
+        "type": "Mentorship Program",
+        "established": "2024-10-15"
+      },
+      {
+        "name": "Coding Ninjas",
+        "type": "Course Discounts",
+        "established": "2024-11-01"
+      }
     ]
   },
   "testimonials": [
