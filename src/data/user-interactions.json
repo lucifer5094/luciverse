@@ -29671,7 +29671,699 @@
       "page": "/gamezone",
       "element": "window",
       "action": "blur"
+    },
+    {
+      "id": "interaction_1753741532087_ja9hwghiv",
+      "timestamp": "2025-07-29T03:55:32.164Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741533162_by3y14dd8",
+      "timestamp": "2025-07-29T03:55:33.431Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741890124_ykrdj6w9r",
+      "timestamp": "2025-07-29T04:01:30.725Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741893852_q9ybeuu6d",
+      "timestamp": "2025-07-29T04:01:34.245Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753741896360_56w90paqf",
+      "timestamp": "2025-07-29T04:01:36.522Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "span#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 788,
+        "y": 200
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741898008_vli6f72ng",
+      "timestamp": "2025-07-29T04:01:38.058Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 745,
+        "y": 392
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741898679_jr9pqmo4n",
+      "timestamp": "2025-07-29T04:01:39.306Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 814,
+        "y": 403
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741899774_84xo23fth",
+      "timestamp": "2025-07-29T04:01:40.442Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 654,
+        "y": 415
+      },
+      "metadata": {
+        "text": "Members",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741900784_u0saw3fbm",
+      "timestamp": "2025-07-29T04:01:41.616Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 850,
+        "y": 399
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741902242_1kgxxbkjg",
+      "timestamp": "2025-07-29T04:01:42.881Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 753,
+        "y": 400
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741902917_i7o8agx60",
+      "timestamp": "2025-07-29T04:01:43.959Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "div#unknown.bg-white",
+      "action": "click",
+      "position": {
+        "x": 668,
+        "y": 398
+      },
+      "metadata": {
+        "text": "The GamezoneA look into my gaming world. From epic",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741904449_5w42dna2q",
+      "timestamp": "2025-07-29T04:01:44.539Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753742474739_d0svupm3p",
+      "timestamp": "2025-07-29T04:11:15.053Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753742476997_knlo4i1ko",
+      "timestamp": "2025-07-29T04:11:17.018Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "span#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 780,
+        "y": 204
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753742479788_v4porzw3u",
+      "timestamp": "2025-07-29T04:11:20.681Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753742481214_4tafs6r3h",
+      "timestamp": "2025-07-29T04:11:21.411Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "span#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 739,
+        "y": 543
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753742484077_drg8c6nka",
+      "timestamp": "2025-07-29T04:11:24.100Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 322.3999938964844,
+        "scrollPercent": 11
+      }
+    },
+    {
+      "id": "interaction_1753742484269_b64q0l7nr",
+      "timestamp": "2025-07-29T04:11:24.671Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 772,
+        "y": 420
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753742485307_w68akr1oa",
+      "timestamp": "2025-07-29T04:11:25.336Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "div#unknown.bg-white",
+      "action": "click",
+      "position": {
+        "x": 687,
+        "y": 416
+      },
+      "metadata": {
+        "text": "The GamezoneA look into my gaming world. From epic",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753742486061_yw87xh4ig",
+      "timestamp": "2025-07-29T04:11:26.085Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 687,
+        "y": 416
+      },
+      "metadata": {
+        "text": "Members",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753742487197_2dgzy2pmk",
+      "timestamp": "2025-07-29T04:11:27.230Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 862,
+        "y": 423
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753742490031_7yxszmqe7",
+      "timestamp": "2025-07-29T04:11:30.075Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753742491168_pljyzif1e",
+      "timestamp": "2025-07-29T04:11:31.190Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753743160573_l5i2j0tct",
+      "timestamp": "2025-07-29T04:22:41.265Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753743165506_k4q25cfm8",
+      "timestamp": "2025-07-29T04:22:47.185Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753743167237_zuipvu502",
+      "timestamp": "2025-07-29T04:22:48.308Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.text-primary",
+      "action": "click",
+      "position": {
+        "x": 749,
+        "y": 522
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743169916_18oheklv8",
+      "timestamp": "2025-07-29T04:22:50.045Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753743170168_84iaqaa13",
+      "timestamp": "2025-07-29T04:22:51.195Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753743192765_car6o1ep3",
+      "timestamp": "2025-07-29T04:23:12.891Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753743195281_a9mxf209v",
+      "timestamp": "2025-07-29T04:23:15.605Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753743196708_g8wvvc6k7",
+      "timestamp": "2025-07-29T04:23:16.863Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "span#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 778,
+        "y": 536
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743198846_iw9m42pva",
+      "timestamp": "2025-07-29T04:23:18.906Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 524,
+        "scrollPercent": 17
+      }
+    },
+    {
+      "id": "interaction_1753743200125_aqlf8ply0",
+      "timestamp": "2025-07-29T04:23:20.318Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753743207193_ft4puzfj9",
+      "timestamp": "2025-07-29T04:23:42.647Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753743228958_65q4b9n15",
+      "timestamp": "2025-07-29T04:23:50.125Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753743227093_cne5mdatf",
+      "timestamp": "2025-07-29T04:23:50.154Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753743229989_3carxaan8",
+      "timestamp": "2025-07-29T04:23:51.380Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 524,
+        "scrollPercent": 88
+      }
+    },
+    {
+      "id": "interaction_1753743232055_hd234ckka",
+      "timestamp": "2025-07-29T04:23:52.992Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "canvas#unknown.absolute",
+      "action": "click",
+      "position": {
+        "x": 765,
+        "y": 396
+      },
+      "metadata": {
+        "text": "",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743233269_plccx8rk0",
+      "timestamp": "2025-07-29T04:23:54.047Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "span#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 782,
+        "y": 398
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743233424_yp47pp2nc",
+      "timestamp": "2025-07-29T04:23:54.071Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 140,
+        "scrollPercent": 5
+      }
+    },
+    {
+      "id": "interaction_1753743236189_v7p1gmdve",
+      "timestamp": "2025-07-29T04:23:56.508Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 298.3999938964844,
+        "scrollPercent": 10
+      }
+    },
+    {
+      "id": "interaction_1753743236278_s2g7zm7y6",
+      "timestamp": "2025-07-29T04:23:56.556Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 833,
+        "y": 432
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743237546_ahfrz445v",
+      "timestamp": "2025-07-29T04:23:57.766Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 692,
+        "y": 453
+      },
+      "metadata": {
+        "text": "Members",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743239746_a4qxbe1nf",
+      "timestamp": "2025-07-29T04:23:59.846Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 847,
+        "y": 168
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743240141_4iect5no2",
+      "timestamp": "2025-07-29T04:24:00.889Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 845,
+        "y": 176
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743240802_emir8b3s2",
+      "timestamp": "2025-07-29T04:24:00.920Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 563.2000122070312,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753743244860_64dflq456",
+      "timestamp": "2025-07-29T04:24:04.900Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753743403070_bzn6d3gx7",
+      "timestamp": "2025-07-29T04:26:43.085Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753743406989_zzltbp3sb",
+      "timestamp": "2025-07-29T04:26:46.998Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 484.79998779296875,
+        "scrollPercent": 86
+      }
+    },
+    {
+      "id": "interaction_1753743407114_kkfwywrkb",
+      "timestamp": "2025-07-29T04:26:47.446Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 740,
+        "y": 256
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743411477_c88ey5bqn",
+      "timestamp": "2025-07-29T04:26:51.492Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753743412179_1ce03b1ai",
+      "timestamp": "2025-07-29T04:26:52.188Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753743422043_va46dk28s",
+      "timestamp": "2025-07-29T04:27:02.067Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753743426175_1tgx9qsm5",
+      "timestamp": "2025-07-29T04:27:06.183Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 303.20001220703125,
+        "scrollPercent": 5
+      }
+    },
+    {
+      "id": "interaction_1753743426251_38efp7aol",
+      "timestamp": "2025-07-29T04:27:06.932Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.text-primary",
+      "action": "click",
+      "position": {
+        "x": 620,
+        "y": 216
+      },
+      "metadata": {
+        "text": "Favorite Games",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753743428079_tr7os3u1m",
+      "timestamp": "2025-07-29T04:27:08.095Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753743432563_5qq55vlfl",
+      "timestamp": "2025-07-29T04:27:12.579Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753743433963_50u93x8y0",
+      "timestamp": "2025-07-29T04:27:13.997Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
     }
   ],
-  "lastUpdated": "2025-07-29T03:54:46.436Z"
+  "lastUpdated": "2025-07-29T04:27:13.997Z"
 }
