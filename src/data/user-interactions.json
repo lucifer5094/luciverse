@@ -27727,7 +27727,1951 @@
         "scrollY": 0,
         "scrollPercent": 0
       }
+    },
+    {
+      "id": "interaction_1753657418670_25togtn8q",
+      "timestamp": "2025-07-28T04:33:38.690Z",
+      "sessionId": "session_1753648656947_6p0qf459b",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753657453298_kf5ka06zt",
+      "timestamp": "2025-07-28T04:34:13.657Z",
+      "sessionId": "session_1753648656947_6p0qf459b",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753657461965_x3a9wndhh",
+      "timestamp": "2025-07-28T04:34:21.985Z",
+      "sessionId": "session_1753648656947_6p0qf459b",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753657464886_jc03cu99n",
+      "timestamp": "2025-07-28T04:34:24.918Z",
+      "sessionId": "session_1753648656947_6p0qf459b",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753657465168_9uwxf0lmx",
+      "timestamp": "2025-07-28T04:34:25.371Z",
+      "sessionId": "session_1753648656947_6p0qf459b",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0.800000011920929,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753657490387_r48s0k8mi",
+      "timestamp": "2025-07-28T04:34:50.414Z",
+      "sessionId": "session_1753648656947_6p0qf459b",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753739369656_xj6duk2o3",
+      "timestamp": "2025-07-29T03:19:32.343Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753739402260_na6vyy1rk",
+      "timestamp": "2025-07-29T03:20:02.290Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753739405698_eln1s01zb",
+      "timestamp": "2025-07-29T03:20:05.725Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 871,
+        "y": 36
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753739407705_ntff7lm29",
+      "timestamp": "2025-07-29T03:20:09.167Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 871,
+        "y": 36
+      },
+      "metadata": {
+        "text": "GfG Campus Body",
+        "href": "/gfg-chapter"
+      }
+    },
+    {
+      "id": "interaction_1753739416631_mhcljywdt",
+      "timestamp": "2025-07-29T03:20:16.656Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753739419148_6yl8yji1d",
+      "timestamp": "2025-07-29T03:20:19.173Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 430.3999938964844,
+        "scrollPercent": 30
+      }
+    },
+    {
+      "id": "interaction_1753739420022_0yq068mor",
+      "timestamp": "2025-07-29T03:20:20.381Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 816,
+        "y": 438
+      },
+      "metadata": {
+        "text": "Resources",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753739426059_kqm6zfakz",
+      "timestamp": "2025-07-29T03:20:26.105Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753739426476_f0i0trcs2",
+      "timestamp": "2025-07-29T03:20:27.466Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 692.7999877929688,
+        "scrollPercent": 40
+      }
+    },
+    {
+      "id": "interaction_1753739476850_lhmd5kxzf",
+      "timestamp": "2025-07-29T03:21:16.898Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753739478154_yxty060uc",
+      "timestamp": "2025-07-29T03:21:18.303Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753739489140_drejl3dkk",
+      "timestamp": "2025-07-29T03:21:29.168Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753739490380_m3j0phkwn",
+      "timestamp": "2025-07-29T03:21:30.439Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753739560084_jme7grh46",
+      "timestamp": "2025-07-29T03:22:40.480Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753739560811_cpmulc3t0",
+      "timestamp": "2025-07-29T03:22:41.627Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753739912802_q73muvca4",
+      "timestamp": "2025-07-29T03:28:33.836Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740111956_00s1dgm9z",
+      "timestamp": "2025-07-29T03:31:52.499Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740115224_pbebk61j2",
+      "timestamp": "2025-07-29T03:31:56.513Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740117785_64v8axaxt",
+      "timestamp": "2025-07-29T03:31:57.880Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 572,
+        "scrollPercent": 39
+      }
+    },
+    {
+      "id": "interaction_1753740120578_ls9z4qocj",
+      "timestamp": "2025-07-29T03:32:00.620Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740288450_cuw09z92i",
+      "timestamp": "2025-07-29T03:34:48.506Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740291038_vykan8ltg",
+      "timestamp": "2025-07-29T03:34:51.068Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 772,
+        "scrollPercent": 52
+      }
+    },
+    {
+      "id": "interaction_1753740293656_4e9wspuge",
+      "timestamp": "2025-07-29T03:34:53.692Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740296019_sd5gypxr8",
+      "timestamp": "2025-07-29T03:34:56.055Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 793,
+        "y": 276
+      },
+      "metadata": {
+        "text": "Resources",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740296089_qb9mbcql4",
+      "timestamp": "2025-07-29T03:34:56.995Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 604.7999877929688,
+        "scrollPercent": 29
+      }
+    },
+    {
+      "id": "interaction_1753740300088_owvunqt4p",
+      "timestamp": "2025-07-29T03:35:00.119Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 739.2000122070312,
+        "scrollPercent": 36
+      }
+    },
+    {
+      "id": "interaction_1753740301820_yqt3jvhcf",
+      "timestamp": "2025-07-29T03:35:01.855Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1020.7999877929688,
+        "scrollPercent": 49
+      }
+    },
+    {
+      "id": "interaction_1753740303172_bv6yzvtzy",
+      "timestamp": "2025-07-29T03:35:03.208Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 927.2000122070312,
+        "scrollPercent": 45
+      }
+    },
+    {
+      "id": "interaction_1753740309087_ett9uxs6i",
+      "timestamp": "2025-07-29T03:35:09.121Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1176.800048828125,
+        "scrollPercent": 57
+      }
+    },
+    {
+      "id": "interaction_1753740314691_giupfsaoe",
+      "timestamp": "2025-07-29T03:35:14.728Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 856.7999877929688,
+        "scrollPercent": 41
+      }
+    },
+    {
+      "id": "interaction_1753740321338_fbzyyydcr",
+      "timestamp": "2025-07-29T03:35:21.369Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 824,
+        "scrollPercent": 40
+      }
+    },
+    {
+      "id": "interaction_1753740326086_k2q7d9sxf",
+      "timestamp": "2025-07-29T03:35:26.145Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1069.5999755859375,
+        "scrollPercent": 51
+      }
+    },
+    {
+      "id": "interaction_1753740327871_upprofrwb",
+      "timestamp": "2025-07-29T03:35:27.906Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 876,
+        "scrollPercent": 42
+      }
+    },
+    {
+      "id": "interaction_1753740336387_yatkdjhau",
+      "timestamp": "2025-07-29T03:35:36.423Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1604,
+        "scrollPercent": 77
+      }
+    },
+    {
+      "id": "interaction_1753740339137_3lemtx5ul",
+      "timestamp": "2025-07-29T03:35:39.167Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 905.5999755859375,
+        "scrollPercent": 44
+      }
+    },
+    {
+      "id": "interaction_1753740343592_4sk4tnoia",
+      "timestamp": "2025-07-29T03:35:43.662Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740348330_zk8bkh6tt",
+      "timestamp": "2025-07-29T03:35:48.374Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740351588_r7emx6qoo",
+      "timestamp": "2025-07-29T03:35:51.623Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1440,
+        "scrollPercent": 69
+      }
+    },
+    {
+      "id": "interaction_1753740353338_xskqryzso",
+      "timestamp": "2025-07-29T03:35:53.372Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1248.800048828125,
+        "scrollPercent": 60
+      }
+    },
+    {
+      "id": "interaction_1753740357120_c4jb3ho5h",
+      "timestamp": "2025-07-29T03:35:57.156Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 972.7999877929688,
+        "scrollPercent": 47
+      }
+    },
+    {
+      "id": "interaction_1753740360090_bd67t9n4s",
+      "timestamp": "2025-07-29T03:36:00.125Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1717.5999755859375,
+        "scrollPercent": 83
+      }
+    },
+    {
+      "id": "interaction_1753740361411_tv9dg7vx4",
+      "timestamp": "2025-07-29T03:36:01.522Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740368504_0frmld6th",
+      "timestamp": "2025-07-29T03:36:08.546Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740370855_w7fakhkg9",
+      "timestamp": "2025-07-29T03:36:10.886Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1644.800048828125,
+        "scrollPercent": 79
+      }
+    },
+    {
+      "id": "interaction_1753740373109_srk5ealxe",
+      "timestamp": "2025-07-29T03:36:13.205Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "h3#unknown.text-lg",
+      "action": "click",
+      "position": {
+        "x": 781,
+        "y": 456
+      },
+      "metadata": {
+        "text": "Machine Learning Crash Course",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740373152_1u1gje94u",
+      "timestamp": "2025-07-29T03:36:13.261Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740379209_bbn5pkosl",
+      "timestamp": "2025-07-29T03:36:19.282Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740383172_fba2z27dm",
+      "timestamp": "2025-07-29T03:36:23.210Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 877.5999755859375,
+        "scrollPercent": 42
+      }
+    },
+    {
+      "id": "interaction_1753740385659_pt2nz2yh5",
+      "timestamp": "2025-07-29T03:36:25.773Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 1108,
+        "y": 584
+      },
+      "metadata": {
+        "text": "Explore Resource",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740385702_hnry0mpx8",
+      "timestamp": "2025-07-29T03:36:25.794Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740388376_r52ft3sqs",
+      "timestamp": "2025-07-29T03:36:28.451Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740390922_hn2tnuia1",
+      "timestamp": "2025-07-29T03:36:30.959Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1138.4000244140625,
+        "scrollPercent": 55
+      }
+    },
+    {
+      "id": "interaction_1753740391772_g8qnsptf3",
+      "timestamp": "2025-07-29T03:36:32.034Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "p#unknown.text-gray-600",
+      "action": "click",
+      "position": {
+        "x": 758,
+        "y": 552
+      },
+      "metadata": {
+        "text": "Official GeeksforGeeks practice platform with cura",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740391821_lppaybmlu",
+      "timestamp": "2025-07-29T03:36:32.056Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740395460_vmycz69lk",
+      "timestamp": "2025-07-29T03:36:35.538Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740396689_sgay14myy",
+      "timestamp": "2025-07-29T03:36:36.795Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "p#unknown.text-gray-600",
+      "action": "click",
+      "position": {
+        "x": 758,
+        "y": 552
+      },
+      "metadata": {
+        "text": "Official GeeksforGeeks practice platform with cura",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740396731_4bh1at8jt",
+      "timestamp": "2025-07-29T03:36:36.856Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740548853_t4exghw14",
+      "timestamp": "2025-07-29T03:39:08.914Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740551374_74ceu0m41",
+      "timestamp": "2025-07-29T03:39:11.412Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1866.4000244140625,
+        "scrollPercent": 90
+      }
+    },
+    {
+      "id": "interaction_1753740552447_et4w9upq1",
+      "timestamp": "2025-07-29T03:39:12.670Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "h3#unknown.text-lg",
+      "action": "click",
+      "position": {
+        "x": 477,
+        "y": 534
+      },
+      "metadata": {
+        "text": "Placement Preparation Toolkit",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740552505_4hepseiob",
+      "timestamp": "2025-07-29T03:39:12.691Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740554681_cac6uw0x0",
+      "timestamp": "2025-07-29T03:39:14.733Z",
+      "sessionId": "session_1753740554681_yykyknvb7",
+      "page": "/resources/placement-prep",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740556333_grat93ybe",
+      "timestamp": "2025-07-29T03:39:16.395Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740557861_jo1e8f408",
+      "timestamp": "2025-07-29T03:39:18.021Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "span#unknown.text-sm",
+      "action": "click",
+      "position": {
+        "x": 285,
+        "y": 644
+      },
+      "metadata": {
+        "text": "Explore Resource",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740557898_tr5j6vapt",
+      "timestamp": "2025-07-29T03:39:18.045Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740560449_s9tsgettv",
+      "timestamp": "2025-07-29T03:39:21.049Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "span#unknown.text-sm",
+      "action": "click",
+      "position": {
+        "x": 285,
+        "y": 644
+      },
+      "metadata": {
+        "text": "Explore Resource",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740560490_oo49tlh9d",
+      "timestamp": "2025-07-29T03:39:21.079Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740559512_aumvtin80",
+      "timestamp": "2025-07-29T03:39:21.103Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740564162_tgdpzsidq",
+      "timestamp": "2025-07-29T03:39:24.200Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740566107_n3ld30gry",
+      "timestamp": "2025-07-29T03:39:26.184Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740567347_cvmmuvo12",
+      "timestamp": "2025-07-29T03:39:29.362Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1045,
+        "y": 31
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753740568372_uc1ew9ohu",
+      "timestamp": "2025-07-29T03:39:29.448Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1045,
+        "y": 31
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753740571098_4rnr2081b",
+      "timestamp": "2025-07-29T03:39:31.201Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740572191_61ci2pc54",
+      "timestamp": "2025-07-29T03:39:32.416Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740573822_xri4xko8s",
+      "timestamp": "2025-07-29T03:39:34.741Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740594879_bob330mco",
+      "timestamp": "2025-07-29T03:39:54.947Z",
+      "sessionId": "session_1753740564162_4bqxymd4c",
+      "page": "/resources/placement-prep",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740597156_8vlziflsg",
+      "timestamp": "2025-07-29T03:39:57.228Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740598396_79812gvy8",
+      "timestamp": "2025-07-29T03:39:58.697Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "h3#unknown.text-lg",
+      "action": "click",
+      "position": {
+        "x": 385,
+        "y": 508
+      },
+      "metadata": {
+        "text": "Placement Preparation Toolkit",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740598437_fr206tgc6",
+      "timestamp": "2025-07-29T03:39:58.732Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740626155_nlkvne1v8",
+      "timestamp": "2025-07-29T03:40:26.225Z",
+      "sessionId": "session_1753740626154_6ozk4oam6",
+      "page": "/resources/placement-prep",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740627435_ozagri5oc",
+      "timestamp": "2025-07-29T03:40:27.641Z",
+      "sessionId": "session_1753740626154_6ozk4oam6",
+      "page": "/resources/placement-prep",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1016,
+        "y": 30
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753740629616_0k17at39f",
+      "timestamp": "2025-07-29T03:40:29.665Z",
+      "sessionId": "session_1753740626154_6ozk4oam6",
+      "page": "/resources/placement-prep",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 995,
+        "y": 41
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753740631389_euf2cgvt9",
+      "timestamp": "2025-07-29T03:40:31.540Z",
+      "sessionId": "session_1753740626154_6ozk4oam6",
+      "page": "/resources/placement-prep",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740635816_8w7t4x5oh",
+      "timestamp": "2025-07-29T03:40:36.396Z",
+      "sessionId": "session_1753740626154_6ozk4oam6",
+      "page": "/resources/placement-prep",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740637310_k6krzpfc1",
+      "timestamp": "2025-07-29T03:40:38.084Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740640607_tt2cec6n6",
+      "timestamp": "2025-07-29T03:40:41.728Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740643271_fiktb6dgj",
+      "timestamp": "2025-07-29T03:40:43.450Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 420,
+        "scrollPercent": 20
+      }
+    },
+    {
+      "id": "interaction_1753740643226_xwqqrj4s4",
+      "timestamp": "2025-07-29T03:40:43.473Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 838,
+        "y": 455
+      },
+      "metadata": {
+        "text": "Resources",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740647208_sjazq03yk",
+      "timestamp": "2025-07-29T03:40:47.361Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "p#unknown.text-gray-600",
+      "action": "click",
+      "position": {
+        "x": 332,
+        "y": 448
+      },
+      "metadata": {
+        "text": "Complete placement preparation guide with company-",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753740647256_pxo7yry2h",
+      "timestamp": "2025-07-29T03:40:47.382Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740648172_xl0grqs5y",
+      "timestamp": "2025-07-29T03:40:49.629Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1988,
+        "scrollPercent": 96
+      }
+    },
+    {
+      "id": "interaction_1753740651511_a73nr8get",
+      "timestamp": "2025-07-29T03:40:51.590Z",
+      "sessionId": "session_1753740651511_093ldi3in",
+      "page": "/interview-prep",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753740656189_k8tziecs0",
+      "timestamp": "2025-07-29T03:40:56.268Z",
+      "sessionId": "session_1753740651511_093ldi3in",
+      "page": "/interview-prep",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753740692337_gvzcnjouj",
+      "timestamp": "2025-07-29T03:41:33.106Z",
+      "sessionId": "session_1753740651511_093ldi3in",
+      "page": "/interview-prep",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753740693239_ph8y0qaln",
+      "timestamp": "2025-07-29T03:41:34.654Z",
+      "sessionId": "session_1753740651511_093ldi3in",
+      "page": "/interview-prep",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741001306_5txe19r7y",
+      "timestamp": "2025-07-29T03:46:41.773Z",
+      "sessionId": "session_1753740651511_093ldi3in",
+      "page": "/interview-prep",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741005148_ikq7qxhgy",
+      "timestamp": "2025-07-29T03:46:45.859Z",
+      "sessionId": "session_1753740651511_093ldi3in",
+      "page": "/interview-prep",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753741008928_govbw3bvb",
+      "timestamp": "2025-07-29T03:46:48.990Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741012062_c0vfii5ns",
+      "timestamp": "2025-07-29T03:46:52.175Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753741014481_nqzseuxnk",
+      "timestamp": "2025-07-29T03:46:54.528Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 1264,
+        "y": 329
+      },
+      "metadata": {
+        "text": "Join Us",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741014915_qhy97uks8",
+      "timestamp": "2025-07-29T03:46:55.639Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 550.4000244140625,
+        "scrollPercent": 37
+      }
+    },
+    {
+      "id": "interaction_1753741016581_l2m2scpp1",
+      "timestamp": "2025-07-29T03:46:56.774Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 936,
+        "scrollPercent": 64
+      }
+    },
+    {
+      "id": "interaction_1753741018143_8w99aktyo",
+      "timestamp": "2025-07-29T03:46:58.183Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 960.7999877929688,
+        "scrollPercent": 65
+      }
+    },
+    {
+      "id": "interaction_1753741026680_8ns049oor",
+      "timestamp": "2025-07-29T03:47:06.729Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1354.4000244140625,
+        "scrollPercent": 92
+      }
+    },
+    {
+      "id": "interaction_1753741029964_eh29y1qnx",
+      "timestamp": "2025-07-29T03:47:10.013Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1045.5999755859375,
+        "scrollPercent": 71
+      }
+    },
+    {
+      "id": "interaction_1753741031278_f0br0vyr4",
+      "timestamp": "2025-07-29T03:47:11.327Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741031613_78huy0zmi",
+      "timestamp": "2025-07-29T03:47:12.491Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1045.5999755859375,
+        "scrollPercent": 71
+      }
+    },
+    {
+      "id": "interaction_1753741034915_45foo9cjp",
+      "timestamp": "2025-07-29T03:47:14.969Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741036965_0zyu5p9x3",
+      "timestamp": "2025-07-29T03:47:17.012Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 851.2000122070312,
+        "scrollPercent": 58
+      }
+    },
+    {
+      "id": "interaction_1753741038780_2nlrouyg6",
+      "timestamp": "2025-07-29T03:47:18.823Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 851.2000122070312,
+        "scrollPercent": 58
+      }
+    },
+    {
+      "id": "interaction_1753741046030_iggor3u1h",
+      "timestamp": "2025-07-29T03:47:26.080Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 851.2000122070312,
+        "scrollPercent": 58
+      }
+    },
+    {
+      "id": "interaction_1753741046589_jew3dbqn3",
+      "timestamp": "2025-07-29T03:47:27.128Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741066426_0i88p7m9v",
+      "timestamp": "2025-07-29T03:47:46.479Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741068078_zs82i5it5",
+      "timestamp": "2025-07-29T03:47:48.197Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741084300_a98pxkk09",
+      "timestamp": "2025-07-29T03:48:04.357Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741086622_8rluppba9",
+      "timestamp": "2025-07-29T03:48:06.680Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741102778_ljklgroqm",
+      "timestamp": "2025-07-29T03:48:22.860Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741107066_f4o5rcnlf",
+      "timestamp": "2025-07-29T03:48:27.118Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741179021_ffrl2cvwb",
+      "timestamp": "2025-07-29T03:49:40.658Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741182668_06x93j47u",
+      "timestamp": "2025-07-29T03:49:45.887Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753741185353_7zwher96n",
+      "timestamp": "2025-07-29T03:49:46.151Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 577.5999755859375,
+        "scrollPercent": 39
+      }
+    },
+    {
+      "id": "interaction_1753741185425_m74ptb2wh",
+      "timestamp": "2025-07-29T03:49:46.172Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 1249,
+        "y": 316
+      },
+      "metadata": {
+        "text": "Join Us",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741187949_fyo4kfw9a",
+      "timestamp": "2025-07-29T03:49:47.992Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 759.2000122070312,
+        "scrollPercent": 52
+      }
+    },
+    {
+      "id": "interaction_1753741188345_mpwyg6py8",
+      "timestamp": "2025-07-29T03:49:49.203Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741199656_vbctfyt0r",
+      "timestamp": "2025-07-29T03:49:59.878Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741202155_6umiuy92y",
+      "timestamp": "2025-07-29T03:50:02.233Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741205281_zp2xxy0q7",
+      "timestamp": "2025-07-29T03:50:05.342Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741213888_br4xuxl5y",
+      "timestamp": "2025-07-29T03:50:13.956Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741224487_riy8kvuvy",
+      "timestamp": "2025-07-29T03:50:24.540Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741224864_0u0u1g6wx",
+      "timestamp": "2025-07-29T03:50:25.599Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741226131_v9xhnqvvl",
+      "timestamp": "2025-07-29T03:50:26.747Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741228269_31cmlf15g",
+      "timestamp": "2025-07-29T03:50:28.330Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741240943_1b73t6sc5",
+      "timestamp": "2025-07-29T03:50:40.995Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741242783_25lja5vcu",
+      "timestamp": "2025-07-29T03:50:42.824Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 912,
+        "scrollPercent": 62
+      }
+    },
+    {
+      "id": "interaction_1753741247445_kpbztxx1b",
+      "timestamp": "2025-07-29T03:50:47.554Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741252837_e2ft7c47g",
+      "timestamp": "2025-07-29T03:50:54.189Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741261818_3b8gp2qaa",
+      "timestamp": "2025-07-29T03:51:01.903Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741266515_yh3m8x3og",
+      "timestamp": "2025-07-29T03:51:06.651Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741267237_xzc8cykit",
+      "timestamp": "2025-07-29T03:51:07.967Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741270280_gkhswcys0",
+      "timestamp": "2025-07-29T03:51:10.422Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741272719_rc3n7gg6w",
+      "timestamp": "2025-07-29T03:51:12.766Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1334.4000244140625,
+        "scrollPercent": 91
+      }
+    },
+    {
+      "id": "interaction_1753741275272_3xl7cgfcu",
+      "timestamp": "2025-07-29T03:51:15.313Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1470.4000244140625,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753741276734_sp21cgapz",
+      "timestamp": "2025-07-29T03:51:16.779Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 1470.4000244140625,
+        "scrollPercent": 100
+      }
+    },
+    {
+      "id": "interaction_1753741279932_r1u5n5y2v",
+      "timestamp": "2025-07-29T03:51:19.981Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753741280462_2qh2ocs2h",
+      "timestamp": "2025-07-29T03:51:21.312Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 988,
+        "y": 25
+      },
+      "metadata": {
+        "text": "Interview Prep",
+        "href": "/interview-prep"
+      }
+    },
+    {
+      "id": "interaction_1753741283402_3lihvel2x",
+      "timestamp": "2025-07-29T03:51:23.477Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1112,
+        "y": 27
+      },
+      "metadata": {
+        "text": "GameZone",
+        "href": "/gamezone"
+      }
+    },
+    {
+      "id": "interaction_1753741286779_286nm1wh6",
+      "timestamp": "2025-07-29T03:51:27.133Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1112,
+        "y": 27
+      },
+      "metadata": {
+        "text": "GameZone",
+        "href": "/gamezone"
+      }
+    },
+    {
+      "id": "interaction_1753741289037_3f57c4t9e",
+      "timestamp": "2025-07-29T03:51:29.607Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "a#unknown.px-4",
+      "action": "click",
+      "position": {
+        "x": 1112,
+        "y": 27
+      },
+      "metadata": {
+        "text": "GameZone",
+        "href": "/gamezone"
+      }
+    },
+    {
+      "id": "interaction_1753741292076_sleshfm3j",
+      "timestamp": "2025-07-29T03:51:32.115Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 235.1999969482422,
+        "scrollPercent": 39
+      }
+    },
+    {
+      "id": "interaction_1753741292274_ch109kv9n",
+      "timestamp": "2025-07-29T03:51:33.244Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "span#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 792,
+        "y": 291
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741296533_1boclzglg",
+      "timestamp": "2025-07-29T03:51:36.576Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 842.4000244140625,
+        "scrollPercent": 28
+      }
+    },
+    {
+      "id": "interaction_1753741299642_y0r36i26u",
+      "timestamp": "2025-07-29T03:51:39.681Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "td#unknown.whitespace-nowrap",
+      "action": "click",
+      "position": {
+        "x": 224,
+        "y": 485
+      },
+      "metadata": {
+        "text": "SHROUD",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741303862_rporea4s5",
+      "timestamp": "2025-07-29T03:51:43.903Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 241.60000610351562,
+        "scrollPercent": 8
+      }
+    },
+    {
+      "id": "interaction_1753741305645_f43seppht",
+      "timestamp": "2025-07-29T03:51:45.687Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 413.6000061035156,
+        "scrollPercent": 14
+      }
+    },
+    {
+      "id": "interaction_1753741306692_zh8h19ugh",
+      "timestamp": "2025-07-29T03:51:46.731Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 781,
+        "y": 324
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741310612_cvjw5blr0",
+      "timestamp": "2025-07-29T03:51:50.658Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 464,
+        "scrollPercent": 7
+      }
+    },
+    {
+      "id": "interaction_1753741310686_oh8ojjk6y",
+      "timestamp": "2025-07-29T03:51:51.477Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 856,
+        "y": 284
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741311725_guri850n9",
+      "timestamp": "2025-07-29T03:51:51.899Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 464,
+        "scrollPercent": 82
+      }
+    },
+    {
+      "id": "interaction_1753741318213_8unfd0h9u",
+      "timestamp": "2025-07-29T03:51:58.258Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 744,
+        "y": 280
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741331046_ntvtd9e5b",
+      "timestamp": "2025-07-29T03:52:11.093Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 0,
+        "scrollPercent": 0
+      }
+    },
+    {
+      "id": "interaction_1753741331734_gtcvudpid",
+      "timestamp": "2025-07-29T03:52:12.234Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 652,
+        "y": 753
+      },
+      "metadata": {
+        "text": "Members",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741333776_ny80852vb",
+      "timestamp": "2025-07-29T03:52:13.817Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 279.20001220703125,
+        "scrollPercent": 9
+      }
+    },
+    {
+      "id": "interaction_1753741334119_ueewjgoe1",
+      "timestamp": "2025-07-29T03:52:14.795Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 792,
+        "y": 461
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741334818_amoitka4p",
+      "timestamp": "2025-07-29T03:52:15.680Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 840,
+        "y": 461
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741337031_lwu3o5chs",
+      "timestamp": "2025-07-29T03:52:17.103Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753741474169_k6osanp29",
+      "timestamp": "2025-07-29T03:54:34.865Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gfg-chapter",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753741478838_848akvlfm",
+      "timestamp": "2025-07-29T03:54:39.230Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
+    },
+    {
+      "id": "interaction_1753741481032_e74prmy1w",
+      "timestamp": "2025-07-29T03:54:41.208Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "scroll",
+      "metadata": {
+        "scrollY": 342.3999938964844,
+        "scrollPercent": 57
+      }
+    },
+    {
+      "id": "interaction_1753741481202_xp5x21e3z",
+      "timestamp": "2025-07-29T03:54:42.111Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "span#unknown.hidden",
+      "action": "click",
+      "position": {
+        "x": 807,
+        "y": 201
+      },
+      "metadata": {
+        "text": "Clash of Clans",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741482517_rkne1nw0x",
+      "timestamp": "2025-07-29T03:54:42.566Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 867,
+        "y": 396
+      },
+      "metadata": {
+        "text": "Currentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741483918_qthd6tiwn",
+      "timestamp": "2025-07-29T03:54:43.970Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "div#unknown.flex",
+      "action": "click",
+      "position": {
+        "x": 756,
+        "y": 405
+      },
+      "metadata": {
+        "text": "MembersWarlogCurrentwar",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741484321_f72jhib3v",
+      "timestamp": "2025-07-29T03:54:45.166Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 756,
+        "y": 405
+      },
+      "metadata": {
+        "text": "Warlog",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741485226_l6bg5l3yv",
+      "timestamp": "2025-07-29T03:54:46.268Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "button#unknown.py-2",
+      "action": "click",
+      "position": {
+        "x": 645,
+        "y": 412
+      },
+      "metadata": {
+        "text": "Members",
+        "href": null
+      }
+    },
+    {
+      "id": "interaction_1753741486203_hri8osspo",
+      "timestamp": "2025-07-29T03:54:46.436Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
     }
   ],
-  "lastUpdated": "2025-07-28T04:32:32.642Z"
+  "lastUpdated": "2025-07-29T03:54:46.436Z"
 }

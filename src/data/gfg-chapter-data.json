@@ -340,37 +340,37 @@
   ],
   "resources": [
     {
-      "title": "DSA Complete Roadmap - Hindi Edition",
-      "description": "Step-by-step Data Structures and Algorithms roadmap specially designed for beginners with Hindi explanations and examples",
-      "link": "https://geeksforgeeks.org/dsa-roadmap",
-      "type": "roadmap",
-      "language": "Hindi/English",
+      "title": "DSA Complete Roadmap",
+      "description": "Step-by-step Data Structures and Algorithms roadmap specially designed for beginners with explanations and examples",
+      "link": "https://www.geeksforgeeks.org/dsa/complete-roadmap-to-learn-dsa-from-scratch/",
+      "type": "article,roadmap",
+      "language": "English",
       "difficulty": "Beginner to Advanced",
       "estimatedTime": "4-6 months"
     },
     {
-      "title": "Interview Preparation Kit 2024",
-      "description": "Complete interview preparation guide with 500+ coding problems, system design basics, and behavioral interview tips",
-      "link": "https://geeksforgeeks.org/interview-preparation",
-      "type": "practice",
-      "problems": "500+",
+      "title": "100 Days of Interview Puzzles - Skill Up",
+      "description": "Get ready to conquer technical interviews with Skill Up - 100 Days of Interview Puzzlesa dynamic 100-day journey that sharpens your problem-solving skills, one puzzle at a time. Perfect for aspiring software engineers, data scientists, or anyone aiming to excel in high-stakes interviews, this course delivers daily challenges to keep you on your toes.",
+      "link": "https://www.geeksforgeeks.org/courses/100-days-of-interview-puzzles-skill-up",
+      "type": "article,practice",
+      "problems": "100",
       "companies": "FAANG + Indian Startups",
       "difficulty": "Easy to Hard"
     },
     {
-      "title": "Competitive Programming Masterclass",
-      "description": "Comprehensive CP guide from basics to advanced topics with contest strategies, time management, aur problem-solving techniques",
-      "link": "https://geeksforgeeks.org/competitive-programming",
-      "type": "article",
-      "topics": ["Algorithms", "Math", "Graph Theory", "DP"],
+      "title": "Complete Machine Learning & Data Science - Nation Skill Up",
+      "description": "Complete Machine Learning & Data Science Program - With Python, Deep Learning is a structured, hands-on program designed to help learners build a solid foundation and expertise in the data science field. Covering everything from programming in Python to advanced deep learning techniques and reinforcement learning, this course provides end-to-end knowledge for aspiring data science students.",
+      "link": "https://www.geeksforgeeks.org/courses/ds-16",
+      "type": "article, course, practice",
+      "topics": ["Data Science", "Artificial Intelligence", "Machine Learning","Deep Learning"],
       "level": "Beginner to Expert"
     },
     {
-      "title": "System Design Fundamentals",
-      "description": "System design concepts for beginners with real-world examples, scalability patterns, aur industry best practices",
-      "link": "https://geeksforgeeks.org/system-design",
-      "type": "article",
-      "focus": "Scalability, Architecture, Design Patterns",
+      "title": "Full Stack Web Development - Skill Up",
+      "description": "The Full Stack Web Development Program is a structured, hands-on course designed to help learners build responsive, dynamic, and scalable web applications from scratch. Covering everything from HTML5 and modular CSS architectures to asynchronous JavaScript, ES6+ standards, and modern frontend frameworks like React and TypeScript. On the backend, you'll architect RESTful APIs using Node.js and Express, integrate NoSQL databases with Mongoose and MongoDB.",
+      "link": "https://www.geeksforgeeks.org/courses/full-stack-web-dev-skill-up",
+      "type": "article,course,practice",
+      "focus": "Web Development, MERN Stack, NodeJS",
       "audience": "Intermediate to Advanced"
     },
     {
@@ -421,9 +421,9 @@
       "projects": "Beginner-friendly repositories"
     },
     {
-      "title": "Placement Preparation Toolkit",
-      "description": "Complete placement preparation guide with company-wise questions, salary negotiations, aur career guidance",
-      "link": "/resources/placement-prep",
+      "title": "Interview Preparation Toolkit",
+      "description": "Complete Interview preparation guide with company-wise questions, salary negotiations, aur career guidance",
+      "link": "/interview-prep",
       "type": "practice",
       "companies": "50+ top companies",
       "resources": ["Resume Templates", "Mock Interviews", "Salary Data"],
@@ -431,17 +431,17 @@
     }
   ],
   "contact": {
-    "email": "gfg.chapter@gitam.edu",
-    "chapterEmail": "ankit.president@gfgchapter.com",
-    "joinFormLink": "https://forms.google.com/join-gfg-gitam-chapter",
-    "whatsappGroup": "https://chat.whatsapp.com/gfgchapter-gitam",
-    "discordServer": "https://discord.gg/gfgchapter-gitam",
+    "email": "gfgcampusbodygitam@gmail.com",
+    "chapterEmail": "ankitraj85455@gmail.com",
+    "joinFormLink": "",
+    "whatsappGroup": "https://chat.whatsapp.com/LeiykV41OFJ6SULABq9qKh",
+    "discordServer": "",
     "socialMedia": {
-      "instagram": "https://instagram.com/gfg_gitam_chapter",
-      "linkedin": "https://linkedin.com/company/gfg-gitam-chapter",
-      "twitter": "https://twitter.com/gfg_gitam",
-      "youtube": "https://youtube.com/@gfggitamchapter",
-      "github": "https://github.com/gfg-gitam-chapter"
+      "instagram": "https://www.instagram.com/gfg_gitam_jhajjar/",
+      "linkedin": "https://linkedin.com/company/gfg-gitam-jhajjar",
+      "twitter": "",
+      "youtube": "",
+      "github": ""
     },
     "meetingSchedule": {
       "weeklyMeetings": "Every Saturday 4:00 PM - 6:00 PM",
@@ -450,7 +450,7 @@
       "officeHours": "Monday-Friday 2:00 PM - 4:00 PM"
     },
     "mentorship": {
-      "signupLink": "https://forms.google.com/mentorship-program",
+      "signupLink": "",
       "description": "1-on-1 mentorship program with industry professionals and senior students",
       "duration": "3-6 months",
       "areas": [
