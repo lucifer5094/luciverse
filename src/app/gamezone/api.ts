@@ -1,63 +1,64 @@
-import { CoCStats, WarLogEntry, CurrentWar } from './data';
+// File: app/gamezone/api.ts
 
-const API_KEY = process.env.NEXT_PUBLIC_COC_API_KEY;
+// Zaroori: Apne clan ka tag yahan daalo
 const CLAN_TAG = '#2QUU9L9QV'; 
-const formattedClanTag = encodeURIComponent(CLAN_TAG);
+// Note: '#' ko URL-friendly banane ke liye '%23' mein convert karna hoga.
+const ENCODED_CLAN_TAG = `%23${CLAN_TAG.slice(1)}`;
 
-async function fetchFromApi(endpoint: string) {
-    if (!API_KEY) {
-        console.error('Clash of Clans API Key not found.');
-        return null;
-    }
-    try {
-        const res = await fetch(`https://api.clashofclans.com/v1${endpoint}`, {
-            headers: { 'Authorization': `Bearer ${API_KEY}` },
-            next: { revalidate: 300 } // 5 min cache
-        });
-        if (!res.ok) {
-            console.error(`Failed to fetch ${endpoint}:`, res.status, res.statusText);
-            return null;
-        } 
-        return res.json();
-    } catch (error) {
-        console.error(`Error fetching from ${endpoint}:`, error);
-        return null;
-    }
-}
+const BASE_URL = 'https://api.clashofclans.com/v1';
 
-// Basic Clan Data
-export async function getClanData(): Promise<{ basicInfo: CoCStats, memberList: any[] } | null> {
-    const data = await fetchFromApi(`/clans/${formattedClanTag}`);
-    if (!data) return null;
-    
-    return {
-        basicInfo: {
-            clanName: data.name,
-            clanTag: data.tag,
-            clanLevel: data.clanLevel,
-            members: data.members,
-            warLeague: data.warLeague.name,
-            warWins: data.warWins,
-            winStreak: data.warWinStreak,
-        },
-        memberList: data.memberList
+// Yeh helper function server par API call karega
+async function fetchFromCocApi(endpoint: string) {
+    const apiKey = process.env.NEXT_PUBLIC_COC_API_KEY;
+
+    if (!apiKey) {
+        // Yeh error server console mein dikhega
+        console.error("Clash of Clans API key is not configured.");
+        // App ko crash hone se bachao, khaali data bhejo ya error throw karo
+        throw new Error("Missing authorization: API key not found on server.");
+    }
+
+    const headers = {
+        'Authorization': `Bearer ${apiKey}`,
+        'Accept': 'application/json',
     };
-}
 
-// War Log Data
-export async function getClanWarLog(): Promise<{ items: WarLogEntry[] } | null> {
-    return fetchFromApi(`/clans/${formattedClanTag}/warlog`);
-}
+    try {
+        const response = await fetch(`${BASE_URL}${endpoint}`, { 
+            headers,
+            // Data ko fresh rakhne ke liye cache ko revalidate kar sakte hain
+            next: { revalidate: 300 } // Har 5 minute (300 seconds) mein data refresh hoga
+        });
 
-// Current War Data
-export async function getClanCurrentWar(): Promise<CurrentWar | null> {
-    const data = await fetchFromApi(`/clans/${formattedClanTag}/currentwar`);
+        if (!response.ok) {
+            const errorBody = await response.text();
+            console.error(`API Error (${response.status}): ${errorBody}`);
+            throw new Error(`Failed to fetch from CoC API. Status: ${response.status}`);
+        }
 
-    console.log("Current War API Response : ", data);
+        return await response.json();
 
-    if (data && data.state === 'notInWar') {
-        console.log("Status : Clan is not in a war.");
+    } catch (error) {
+        console.error("Failed to fetch from CoC API:", error);
+        // Production mein user ko aacha error dikhane ke liye null return kar sakte hain
         return null;
     }
-    return data;
+}
+
+// Function 1: Clan ki general info laayega
+export async function getClanData() {
+    console.log("Fetching clan data...");
+    return fetchFromCocApi(`/clans/${ENCODED_CLAN_TAG}`);
+}
+
+// Function 2: Clan ka war log laayega
+export async function getClanWarLog() {
+    console.log("Fetching clan war log...");
+    return fetchFromCocApi(`/clans/${ENCODED_CLAN_TAG}/warlog`);
+}
+
+// Function 3: Clan ki current war ki details laayega
+export async function getClanCurrentWar() {
+    console.log("Fetching current clan war...");
+    return fetchFromCocApi(`/clans/${ENCODED_CLAN_TAG}/currentwar`);
 }
