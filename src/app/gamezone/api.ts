@@ -11,8 +11,8 @@ const BASE_URL = 'https://api.clashofclans.com/v1';
 async function fetchFromCocApi(endpoint: string) {
 
     console.log("Is API Key available on Vercel? ->", !!process.env.COC_API_KEY);
-    
-    const apiKey = process.env.NEXT_PUBLIC_COC_API_KEY;
+
+    const apiKey = process.env.LUCI_COC_API_KEY;
 
     if (!apiKey) {
         // Yeh error server console mein dikhega

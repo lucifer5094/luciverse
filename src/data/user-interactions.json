@@ -31399,7 +31399,31 @@
       "page": "/gamezone",
       "element": "window",
       "action": "blur"
+    },
+    {
+      "id": "interaction_1753747184046_ssb1zszkb",
+      "timestamp": "2025-07-29T05:29:44.310Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "focus"
+    },
+    {
+      "id": "interaction_1753747185301_wj46cewit",
+      "timestamp": "2025-07-29T05:29:45.344Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "window",
+      "action": "blur"
+    },
+    {
+      "id": "interaction_1753747272537_v1hmjgk5n",
+      "timestamp": "2025-07-29T05:31:13.306Z",
+      "sessionId": "session_1753739369656_lwpotouhx",
+      "page": "/gamezone",
+      "element": "page",
+      "action": "page_view"
     }
   ],
-  "lastUpdated": "2025-07-29T05:17:48.581Z"
+  "lastUpdated": "2025-07-29T05:31:13.306Z"
 }
