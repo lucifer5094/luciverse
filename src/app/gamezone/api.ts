@@ -127,3 +127,51 @@ export async function getCWLWarDetails(warTag: string) {
     console.log(`Fetching details for CWL war: ${encodedWarTag}`);
     return fetchFromCocApi(`/clanwarleagues/wars/${encodedWarTag}`);
 }
+
+// app/gamezone/api.ts -> Find and replace the getChessData function
+
+const CHESS_USERNAME = 'etherealpie1925';
+const CHESS_BASE_URL = 'https://api.chess.com/pub';
+
+/**
+ * FINAL UPGRADED FUNCTION: Chess.com se profile, stats, aur recent games laayega
+ */
+export async function getChessData() {
+    console.log(`Fetching ALL Chess.com data for ${CHESS_USERNAME}...`);
+    try {
+        // Step 1: Player profile aur stats ko ek saath fetch karo
+        const [profileRes, statsRes] = await Promise.all([
+            fetch(`${CHESS_BASE_URL}/player/${CHESS_USERNAME}`),
+            fetch(`${CHESS_BASE_URL}/player/${CHESS_USERNAME}/stats`)
+        ]);
+
+        if (!profileRes.ok) throw new Error('Failed to fetch Chess.com profile.');
+        if (!statsRes.ok) throw new Error('Failed to fetch Chess.com stats.');
+
+        const profile = await profileRes.json();
+        const stats = await statsRes.json();
+        
+        // Step 2: Current month ke games ka archive fetch karo
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = (now.getMonth() + 1).toString().padStart(2, '0'); // e.g., "07" for July
+
+        const archivesRes = await fetch(`${CHESS_BASE_URL}/player/${CHESS_USERNAME}/games/${year}/${month}`);
+        
+        let recent_games = [];
+        if (archivesRes.ok) {
+            const archives = await archivesRes.json();
+            // API games ko oldest first bhejta hai, hum reverse karke latest first karenge
+            recent_games = archives.games.reverse();
+        } else {
+            console.log("No games found for the current month.");
+        }
+
+        // Step 3: Sab kuch ek object mein combine karke return karo
+        return { profile, stats, recent_games };
+
+    } catch (error) {
+        console.error("Error fetching Chess.com data:", error);
+        return null;
+    }
+}

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { Gamepad2, Swords, Heart } from 'lucide-react';
+// STEP 1: Chess ke liye naya icon import karo
+import { Gamepad2, Swords, Heart, BrainCircuit } from 'lucide-react';
 
 // API helper functions
 import { 
@@ -10,7 +11,8 @@ import {
     getClanWarLog, 
     getClanCurrentWar, 
     getClanCapitalRaidSeasons,
-    getClanWarLeagueGroup
+    getClanWarLeagueGroup,
+    getChessData
 } from './api';
 
 // Client component
@@ -21,35 +23,31 @@ import { Tab } from './data';
 
 const ParticleConstellation = dynamic(() => import('@/components/animations/ParticleConstellation'), { ssr: false });
 
+// STEP 2: Naya 'chess' tab add karo
 const tabs: Tab[] = [
     { id: 'favorites', label: 'Favorite Games', icon: <Heart className="w-5 h-5" /> },
     { id: 'coc', label: 'Clash of Clans', icon: <Swords className="w-5 h-5" /> },
+    { id: 'chess', label: 'Chess', icon: <BrainCircuit className="w-5 h-5" /> }, // YEH NAHI THA
     { id: 'upcoming', label: 'More Games', icon: <Gamepad2 className="w-5 h-5" /> },
 ];
 
 const GamezonePage = async () => {
-    // STEP 1: Saare data variables ko null se initialize karo
-    let clanInfo = null;
-    let warLog = null;
-    let currentWar = null;
-    let capitalRaids = null;
-    let cwlGroup = null;
-    let isCocDisabled = false;
+    let clanInfo = null, warLog = null, currentWar = null, capitalRaids = null, cwlGroup = null, isCocDisabled = false, chessData = null;
 
-    // STEP 2: Check karo ki environment production hai ya nahi
     if (process.env.NODE_ENV === 'production') {
-        // Agar production hai, to ek flag set karo aur API calls skip kar do
         console.log("Production environment detected. Skipping CoC data fetch.");
         isCocDisabled = true;
+        // Production mein bhi Chess data fetch kar sakte hain kyunki iski API open hai
+        chessData = await getChessData();
     } else {
-        // Agar development (localhost) hai, to saara data fetch karo
-        console.log("Development environment detected. Fetching all CoC data...");
-        [clanInfo, warLog, currentWar, capitalRaids, cwlGroup] = await Promise.all([
+        console.log("Development environment detected. Fetching all data...");
+        [clanInfo, warLog, currentWar, capitalRaids, cwlGroup, chessData] = await Promise.all([
             getClanData(),
             getClanWarLog(),
             getClanCurrentWar(),
             getClanCapitalRaidSeasons(),
-            getClanWarLeagueGroup()
+            getClanWarLeagueGroup(),
+            getChessData()
         ]);
     }
 
@@ -63,8 +61,8 @@ const GamezonePage = async () => {
                 currentWar={currentWar}
                 capitalRaids={capitalRaids}
                 cwlGroup={cwlGroup}
-                // STEP 3: Naya flag client component ko pass karo
                 isCocDisabled={isCocDisabled}
+                chessData={chessData}
             />
         </div>
     );

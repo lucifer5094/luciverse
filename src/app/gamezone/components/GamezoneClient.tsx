@@ -5,23 +5,25 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Trophy } from 'lucide-react';
 
 // Data and Type imports
-// STEP 1: Naye CWL type ko import karo
-import { Tab, Clan, WarLogEntry, CurrentWar, CapitalRaidSeason, ClanWarLeagueGroup } from '../data';
+// STEP 1: Naye ChessData type ko import karo
+import { Tab, Clan, WarLogEntry, CurrentWar, CapitalRaidSeason, ClanWarLeagueGroup, ChessData } from '../data';
 
 // Component imports
 import FavoritesSection from './FavoritesSection';
 import ClashSection from './ClashSection';
 import UpcomingSection from './UpcomingSection';
+import ChessSection from './ChessSection'; // STEP 2: Naya component import karo
 
-// STEP 2: Props ke interface mein naya cwlGroup prop add karo
+// STEP 3: Props ke interface mein naya chessData prop add karo
 interface GamezoneClientProps {
     tabs: Tab[];
     clanInfo: Clan | null;
     warLog: { items: WarLogEntry[] } | null;
     currentWar: CurrentWar | null;
     capitalRaids: { items: CapitalRaidSeason[] } | null;
-    cwlGroup: ClanWarLeagueGroup | null; // Naya prop
-    isCocDisabled?: boolean; // Production check ke liye prop
+    cwlGroup: ClanWarLeagueGroup | null;
+    isCocDisabled?: boolean;
+    chessData: ChessData | null; // Naya prop
 }
 
 const GamezoneClient: React.FC<GamezoneClientProps> = ({ 
@@ -30,17 +32,17 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
     warLog, 
     currentWar, 
     capitalRaids,
-    cwlGroup, // STEP 3: Naye prop ko yahan receive karo
-    isCocDisabled 
+    cwlGroup,
+    isCocDisabled,
+    chessData // STEP 4: Naye prop ko yahan receive karo
 }) => {
     const [activeTab, setActiveTab] = useState('coc');
-
     const { scrollYProgress } = useScroll();
     const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
 
     return (
         <>
-            {/* Hero Section (unchanged) */}
+            {/* Hero Section & Nav (unchanged) */}
             <section className="relative text-center pt-20 pb-12 sm:pt-32 sm:pb-20 bg-gray-50 dark:bg-gray-800/50 overflow-hidden">
                 <motion.div style={{ y }} className="absolute inset-0 bg-grid-gray-200 dark:bg-grid-gray-700/50 [mask-image:linear-gradient(to_bottom,white_50%,transparent_100%)]" />
                 <div className="relative z-10">
@@ -55,8 +57,6 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
                     </p>
                 </div>
             </section>
-
-            {/* Navigation Tabs (unchanged) */}
             <nav className="sticky top-0 z-20 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-center space-x-2 sm:space-x-4 py-3">
@@ -81,6 +81,7 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
                 <AnimatePresence mode="wait">
                     {activeTab === 'favorites' && <FavoritesSection />}
+                    
                     {activeTab === 'coc' && (
                         isCocDisabled ? (
                             <motion.div 
@@ -105,6 +106,14 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
                             />
                         )
                     )}
+
+                    {/* STEP 5: Naye tab ka content render karo */}
+                    {activeTab === 'chess' && (
+                        chessData 
+                            ? <ChessSection chessData={chessData} />
+                            : <p className="text-center text-gray-400">Could not load Chess.com data.</p>
+                    )}
+                    
                     {activeTab === 'upcoming' && <UpcomingSection />}
                 </AnimatePresence>
             </main>

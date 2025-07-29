@@ -46,7 +46,7 @@ export interface Player {
   bestVersusTrophies?: number;
   versusBattleWins?: number;
   role: string;
-  warPreference?: 'in' | 'out';
+  warPreference?: "in" | "out";
   donations: number;
   donationsReceived: number;
   clan: {
@@ -266,38 +266,143 @@ export interface ClanWarLeagueGroup {
 
 // ===================================
 // FAVORITE GAMES (STATIC DATA)
-// This section is unchanged
+// This section is now updated with your actual favorite games!
 // ===================================
 
 export interface Game {
   name: string;
   genre: string;
   rating: number;
-  image: string;
+  image: string; // Note: You'll need to add these images to your /public/images/ folder
   description: string;
 }
 
 export const favoriteGames: Game[] = [
   {
-    name: "The Witcher 3: Wild Hunt",
-    genre: "Action RPG",
+    name: "Minecraft",
+    genre: "Sandbox & Survival",
     rating: 5,
-    image: "/images/witcher3.jpg",
+    image: "/images/minecraft.jpg",
     description:
-      "My all-time favorite. The story, the world, the gameplay... simply a masterpiece.",
+      "The ultimate creative freedom. Building anything you can imagine is just pure fun.",
   },
   {
-    name: "Red Dead Redemption 2",
+    name: "Clash of Clans",
+    genre: "Strategy",
+    rating: 5,
+    image: "/images/coc.jpg",
+    description:
+      "My go-to mobile game. The strategy in clan wars is on another level.",
+  },
+  {
+    name: "Garena Free Fire",
+    genre: "Battle Royale",
+    rating: 4,
+    image: "/images/freefire.jpg",
+    description:
+      "Quick, intense matches. Perfect for when you want some fast-paced action.",
+  },
+  {
+    name: "Grand Theft Auto V",
     genre: "Action-Adventure",
     rating: 5,
-    image: "/images/rdr2.jpg",
-    description: "A visual marvel with an incredibly immersive story.",
+    image: "/images/gtav.jpg",
+    description:
+      "An incredible open world with endless things to do. The story is just iconic.",
   },
   {
-    name: "Elden Ring",
-    genre: "Souls-like",
+    name: "Chess",
+    genre: "Board & Strategy",
+    rating: 5,
+    image: "/images/chess.jpg",
+    description:
+      "The timeless classic. Nothing beats the mental challenge of a good chess match.",
+  },
+  {
+    name: "Cities: Skylines",
+    genre: "City-Builder",
     rating: 4,
-    image: "/images/eldenring.jpg",
-    description: "Brutally challenging yet incredibly rewarding.",
+    image: "/images/citiesskylines.jpg",
+    description:
+      "Love designing and managing my own city. It's super relaxing and complex at the same time.",
   },
 ];
+
+// ===================================
+// CHESS.COM API TYPES (NEW!)
+// ===================================
+
+export interface ChessStats {
+  last: {
+    rating: number;
+    date: number; // Timestamp
+  };
+  best: {
+    rating: number;
+    date: number; // Timestamp
+    game: string; // URL to the game
+  };
+  record: {
+    win: number;
+    loss: number;
+    draw: number;
+  };
+}
+
+export interface ChessProfile {
+  player_id: number;
+  "@id": string;
+  url: string;
+  username: string;
+  name?: string;
+  title?: string;
+  followers: number;
+  country: string; // URL to country details
+  last_online: number; // Timestamp
+  joined: number; // Timestamp
+  status: string;
+  is_streamer: boolean;
+  avatar?: string;
+}
+
+export interface ChessData {
+  profile: ChessProfile;
+  stats: {
+    chess_rapid?: ChessStats;
+    chess_blitz?: ChessStats;
+    chess_bullet?: ChessStats;
+    puzzle_rush?: PuzzleRushStats;
+    tactics?: {
+      highest: {
+        rating: number;
+        date: number;
+      };
+    };
+  };
+  recent_games: ChessGame[];
+}
+
+export interface PuzzleRushStats {
+  best: {
+    total_attempts: number;
+    score: number;
+  };
+}
+
+export interface ChessGame {
+  url: string;
+  pgn?: string;
+  time_control: string;
+  end_time: number;
+  rated: boolean;
+  white: {
+    rating: number;
+    result: string;
+    username: string;
+  };
+  black: {
+    rating: number;
+    result: string;
+    username: string;
+  };
+}
