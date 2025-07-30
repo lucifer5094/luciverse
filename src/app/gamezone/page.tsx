@@ -3,7 +3,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 // STEP 1: Chess ke liye naya icon import karo
-import { Gamepad2, Swords, Heart, BrainCircuit, Puzzle } from 'lucide-react';
+import { Gamepad2, Swords, Heart, BrainCircuit, Puzzle, Rocket } from 'lucide-react';
 
 // API helper functions
 import {
@@ -29,6 +29,7 @@ const tabs: Tab[] = [
     { id: 'coc', label: 'Clash of Clans', icon: <Swords className="w-5 h-5" /> },
     { id: 'chess', label: 'Chess', icon: <BrainCircuit className="w-5 h-5" /> },
     { id: 'algorhythm', label: 'AlgoRhythm', icon: <Puzzle className='w-5 h-5' /> },
+    { id: 'navigator', label: 'My Universe', icon: <Rocket className='w-5 h-5' />},
     { id: 'upcoming', label: 'More Games', icon: <Gamepad2 className="w-5 h-5" /> },
 ];
 

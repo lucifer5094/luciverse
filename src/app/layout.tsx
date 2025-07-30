@@ -22,6 +22,7 @@ const initializeErrorHandling = () => {
   }
 }
 
+// FIX: 'viewport' ki saari settings ko 'metadata' ke andar le aao
 export const metadata: Metadata = {
   title: {
     template: '%s | Luciverse',
@@ -94,18 +95,16 @@ export const metadata: Metadata = {
   },
   applicationName: 'Luciverse',
   category: 'technology',
-}
-
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
+  
+  // Viewport settings yahaan add karo
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=true',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
     { media: '(prefers-color-scheme: dark)', color: '#000000' },
   ],
 }
+
+// 'export const viewport' waala poora block yahaan se HATA DO
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -126,27 +125,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="msapplication-TileColor" content="#8b5cf6" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         
-        {/* Service Worker Registration - TEMPORARILY DISABLED */}
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                      console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                      console.log('SW registration failed: ', registrationError);
-                    });
-                });
-              }
-            `,
-          }}
-        /> */}
       </head>
       <body className='min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text'>
-        {/* Step-by-step re-enable: Start with basic layout structure */}
         <ClientOnly fallback={
           <nav className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,12 +160,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </ClientLayout>
         </ClientOnly>
-        {/* Error handling script - TEMPORARILY DISABLED */}
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `(${initializeErrorHandling.toString()})();`,
-          }}
-        /> */}
       </body>
     </html>
   )
