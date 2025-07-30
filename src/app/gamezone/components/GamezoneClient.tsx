@@ -5,16 +5,17 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Trophy } from 'lucide-react';
 
 // Data and Type imports
-// STEP 1: Naye ChessData type ko import karo
+
 import { Tab, Clan, WarLogEntry, CurrentWar, CapitalRaidSeason, ClanWarLeagueGroup, ChessData } from '../data';
 
 // Component imports
 import FavoritesSection from './FavoritesSection';
 import ClashSection from './ClashSection';
 import UpcomingSection from './UpcomingSection';
-import ChessSection from './ChessSection'; // STEP 2: Naya component import karo
+import ChessSection from './ChessSection';
+import AlgoRhythmSection from './AlgoRhythmSection';
 
-// STEP 3: Props ke interface mein naya chessData prop add karo
+
 interface GamezoneClientProps {
     tabs: Tab[];
     clanInfo: Clan | null;
@@ -23,18 +24,18 @@ interface GamezoneClientProps {
     capitalRaids: { items: CapitalRaidSeason[] } | null;
     cwlGroup: ClanWarLeagueGroup | null;
     isCocDisabled?: boolean;
-    chessData: ChessData | null; // Naya prop
+    chessData: ChessData | null; 
 }
 
-const GamezoneClient: React.FC<GamezoneClientProps> = ({ 
-    tabs, 
-    clanInfo, 
-    warLog, 
-    currentWar, 
+const GamezoneClient: React.FC<GamezoneClientProps> = ({
+    tabs,
+    clanInfo,
+    warLog,
+    currentWar,
     capitalRaids,
     cwlGroup,
     isCocDisabled,
-    chessData // STEP 4: Naye prop ko yahan receive karo
+    chessData
 }) => {
     const [activeTab, setActiveTab] = useState('coc');
     const { scrollYProgress } = useScroll();
@@ -42,7 +43,7 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
 
     return (
         <>
-            {/* Hero Section & Nav (unchanged) */}
+            {/* Hero Section & Nav */}
             <section className="relative text-center pt-20 pb-12 sm:pt-32 sm:pb-20 bg-gray-50 dark:bg-gray-800/50 overflow-hidden">
                 <motion.div style={{ y }} className="absolute inset-0 bg-grid-gray-200 dark:bg-grid-gray-700/50 [mask-image:linear-gradient(to_bottom,white_50%,transparent_100%)]" />
                 <div className="relative z-10">
@@ -81,10 +82,10 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
                 <AnimatePresence mode="wait">
                     {activeTab === 'favorites' && <FavoritesSection />}
-                    
+
                     {activeTab === 'coc' && (
                         isCocDisabled ? (
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 className="text-center bg-gray-800/50 p-8 rounded-lg"
@@ -92,7 +93,7 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
                                 <h2 className="text-2xl font-bold text-yellow-400">Under Development!</h2>
                                 <p className="text-gray-400 mt-2">
                                     The Clash of Clans live stats feature is currently in a special testing phase.
-                                    <br/>
+                                    <br />
                                     Full data is visible only in the local development environment for now.
                                 </p>
                             </motion.div>
@@ -107,13 +108,16 @@ const GamezoneClient: React.FC<GamezoneClientProps> = ({
                         )
                     )}
 
-                    {/* STEP 5: Naye tab ka content render karo */}
                     {activeTab === 'chess' && (
-                        chessData 
+                        chessData
                             ? <ChessSection chessData={chessData} />
                             : <p className="text-center text-gray-400">Could not load Chess.com data.</p>
                     )}
-                    
+
+                    {activeTab === 'algorhythm' && (
+                        <AlgoRhythmSection />
+                    )}
+
                     {activeTab === 'upcoming' && <UpcomingSection />}
                 </AnimatePresence>
             </main>
