@@ -3,31 +3,31 @@
   "heroSubtitle": "Dive into my universe of development, design, and digital experiments",
   "aboutTitle": "About Me",
   "aboutSubtitle": "Developer • AI Enthusiast • Creative Thinker",
-  "aboutContent": "Welcome to my digital space! Add your personal story and background here.",
+  "aboutContent": "Namaste! I'm Ankit Raj, a B.Tech CSE (AIML) student passionate about building intelligent systems and impactful tech. My journey from a small town to the world of Artificial Intelligence is driven by grit, dreams, and an endless curiosity to explore the unknown.",
   "aboutPersonalInfo": {
-    "name": "[Your Name]",
-    "education": "Add your education/background",
-    "personalStory": "Add your journey and passion details here."
+    "name": "Ankit Raj",
+    "education": "B.Tech in Computer Science & Engineering (AI & ML), GITAM University, Jhajjar",
+    "personalStory": "Growing up without guidance, I had to explore every step of my academic and technical journey on my own. With a deep passion for AI/ML and a determination to rise above limitations, I now work on impactful tech projects while leading the GfG Campus Body as President."
   },
   "aboutJourney": {
     "beginning": {
       "year": "2020",
       "title": "The Beginning",
-      "description": "Add your beginning story here."
+      "description": "My tech journey began with a fascination for how machines can learn. I started exploring coding with C++ and gradually stepped into Python and AI."
     },
     "deepDive": {
       "year": "2021-2022",
       "title": "Deep Dive",
-      "description": "Add your learning phase description."
+      "description": "These years were about mastering the fundamentals — from DSA to deep learning. I spent days and nights building mini-projects, learning frameworks, and building the foundation of 'Luciverse'."
     },
     "innovation": {
       "year": "2023-Present",
       "title": "Innovation",
-      "description": "Add your current phase description."
+      "description": "Now I'm building AI chatbots, real-time systems, and experimental AI tools from scratch — no shortcuts, no copy-paste. I'm also mentoring peers, leading communities, and creating platforms that matter."
     }
   },
   "aboutPhilosophy": {
-    "coreBelief": "Add your core belief here.",
+    "coreBelief": "Tech should uplift, not replace. Real innovation serves humanity.",
     "principles": {
       "magical": "Technology should feel seamless and intuitive",
       "humanCentered": "AI should amplify human capabilities",
@@ -35,29 +35,29 @@
     }
   },
   "aboutWhyAI": {
-    "introduction": "Add why AI/ML drives you.",
-    "humanAISynergy": "Add your thoughts on human-AI collaboration.",
-    "realWorldImpact": "Add your vision for real-world AI impact."
+    "introduction": "AI/ML fascinates me because it mimics human intelligence and has the potential to automate, enhance, and revolutionize industries.",
+    "humanAISynergy": "I believe AI is at its best when it collaborates with human intelligence — combining logic with empathy, data with experience.",
+    "realWorldImpact": "My goal is to create AI solutions that address grassroots-level problems — from education access to environment monitoring and assistive tech."
   },
   "contactInfo": {
-    "email": "your-email@example.com",
-    "location": "Your Location",
-    "availability": "Open to collaborations"
+    "email": "ankit.luciverse@gmail.com",
+    "location": "Jhajjar, Haryana, India",
+    "availability": "Open to collaborations, mentorship, and idea-sharing"
   },
   "projectsTitle": "My Projects",
   "projectsSubtitle": "Showcasing innovative solutions and creative experiments",
-  "projectsDescription": "Explore my portfolio of projects. Add your project descriptions here.",
+  "projectsDescription": "From AI chatbots like Aida to smart IoT boats, my projects reflect a deep drive to build meaningful and efficient tech. Stay tuned as I keep adding more!",
   "labTitle": "The Lab",
   "labSubtitle": "Experimental Zone • Interactive Demos • Creative Coding",
-  "labDescription": "Welcome to my digital laboratory! This is where I experiment with new technologies.",
+  "labDescription": "This is my digital playground — a space for curiosity-driven projects, unfinished experiments, and future ideas in the making.",
   "contactTitle": "Let's Connect",
   "contactSubtitle": "Ready to collaborate, discuss ideas, or just say hello?",
   "logsTitle": "Development Logs",
   "logsSubtitle": "My Journey • Learning • Building • Growing",
-  "logsDescription": "Track my development journey, learning milestones, and project progress.",
+  "logsDescription": "These logs document my growth as a developer — wins, failures, and everything in between.",
   "adminTitle": "Admin Dashboard",
   "adminSubtitle": "Content Management • System Controls",
-  "adminDescription": "Administrative interface for managing site content and system settings.",
+  "adminDescription": "Administrative panel to manage project data, experiment flags, and system-level settings securely.",
   "highlights": [
     {
       "id": "gfg-chapter",
@@ -72,7 +72,6 @@
         "partnerships": "15+"
       },
       "achievements": [
-        "Best Campus Body Award 2024",
         "₹50,000+ Prize Pool Events",
         "20+ Students Placed in Top Companies",
         "30+ Mentor-Mentee Pairs"
@@ -88,10 +87,10 @@
     }
   ],
   "stats": {
-    "projects": 15,
-    "years": 3,
-    "technologies": 25,
-    "achievements": 12
+    "projects": 0,
+    "years": 0,
+    "technologies": 0,
+    "achievements": 0
   },
-  "lastUpdated": "2025-07-06T23:33:21.537Z"
+  "lastUpdated": "2025-07-31T21:00:00.000Z"
 }

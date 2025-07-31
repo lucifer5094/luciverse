@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "id": "doc_gfg_01",
+    "title": "GFG Campus Body - Q3 Roadmap",
+    "type": "note",
+    "content": "Plan for Q3:\n1. Organize a university-level hackathon - 'CodeCrush 2025'.\n2. Conduct bi-weekly workshops on DSA and Web Development.\n3. Collaborate with the placement cell for mock interviews.",
+    "description": "Strategic planning document outlining the goals and key activities for the GeeksforGeeks Campus Body for the third quarter.",
+    "tags": ["gfg", "leadership", "planning", "roadmap"],
+    "createdAt": "2025-07-15T10:00:00Z",
+    "updatedAt": "2025-07-28T14:30:00Z",
+    "isPrivate": false,
+    "author": "Lucifer",
+    "fileSize": 15360,
+    "fileUrl": null
+  },
+  {
+    "id": "doc_dsa_02",
+    "title": "Advanced DSA Notes (PDF)",
+    "type": "pdf",
+    "content": "This document contains notes on advanced Data Structures and Algorithms including Graphs, Dynamic Programming, and Tries.",
+    "description": "Comprehensive notes for final year students preparing for placements. Sourced from multiple top educators.",
+    "tags": ["dsa", "placements", "study-material", "interview"],
+    "createdAt": "2025-06-20T11:45:00Z",
+    "updatedAt": "2025-07-25T09:00:00Z",
+    "isPrivate": false,
+    "author": "Lucifer",
+    "fileSize": 2097152,
+    "fileUrl": "/documents/advanced_dsa_notes.pdf"
+  },
+  {
+    "id": "doc_idea_03",
+    "title": "My Secret Project Ideas",
+    "type": "scratchpad",
+    "content": "- AI-based resume builder\n- Real-time attendance tracker using face-rec\n- A social network for book lovers",
+    "description": "A quick scratchpad for brainstorming future project ideas. Confidential.",
+    "tags": ["ideas", "projects", "personal"],
+    "createdAt": "2025-07-30T18:20:00Z",
+    "updatedAt": "2025-07-31T09:15:00Z",
+    "isPrivate": true,
+    "author": "Lucifer",
+    "fileSize": null,
+    "fileUrl": null
+  },
+  {
+    "id": "doc_prompt_04",
+    "title": "Useful ChatGPT Prompts",
+    "type": "prompt-dump",
+    "content": "1. 'Act as a senior software developer and review the following Python code for bugs and optimization opportunities...'\n2. 'Explain the concept of React Server Components to a 5-year-old.'",
+    "description": "A collection of effective prompts for interacting with LLMs like ChatGPT for coding, learning, and content creation.",
+    "tags": ["ai", "chatgpt", "prompts"],
+    "createdAt": "2025-05-10T20:00:00Z",
+    "updatedAt": "2025-07-19T13:00:00Z",
+    "isPrivate": false,
+    "author": "Lucifer",
+    "fileSize": null,
+    "fileUrl": null
+  },
+  {
+    "id": "doc_link_05",
+    "title": "React Official Docs",
+    "type": "link",
+    "content": "https://react.dev/",
+    "description": "The official documentation for React. The best place to start for learning modern React with hooks and concurrent features.",
+    "tags": ["react", "web-dev", "documentation", "resource"],
+    "createdAt": "2025-04-01T08:00:00Z",
+    "updatedAt": "2025-04-01T08:00:00Z",
+    "isPrivate": false,
+    "author": "Lucifer",
+    "fileSize": null,
+    "fileUrl": null
+  }
+]

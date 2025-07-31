@@ -1,3 +1,50 @@
 {
-  "lastUpdated": "2025-07-06T15:25:11.911Z"
+  "0": {
+    "id": "UNIQUE_ID_GOES_HERE",
+    "title": "Naam of Your Achievement",
+    "organization": "Jis Organization se mila",
+    "date": "YYYY-MM-DD",
+    "category": "certification",
+    "description": "Yaha pe achievement ke baare me thoda detail me likhein. Kya seekha, kya project banaya, etc.",
+    "skills": ["Skill 1", "Skill 2", "Technology 3"],
+    "importance": 1,
+    "isVerified": true,
+    "imageUrl": "",
+    "certificateUrl": "https://example.com/path/to/certificate.pdf",
+    "verificationUrl": "https://example.com/path/to/verify/credential",
+    "location": "City, Country",
+    "grade": "A+",
+    "duration": "6 Mahine",
+    "expiryDate": "YYYY-MM-DD"
+  },
+
+  "1": {
+    "id": "1753975583160",
+    "title": "Python (Basic)",
+    "organization": "HackerRank",
+    "date": "2024-12-20",
+    "category": "certification",
+    "description": "Python (Basic)\nIt covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes",
+    "skills": ["Python"],
+    "importance": 3,
+    "isVerified": true,
+    "imageUrl": "/images/pythonBasicCertificate.jpg",
+    "certificateUrl": "https://www.hackerrank.com/certificates/6682af92e2c0"
+  },
+
+  "2": {
+    "id": "1753976189911",
+    "title": "Responsive Web Design",
+    "organization": "freecodecamp",
+    "date": "2024-06-08",
+    "category": "certification",
+    "description": "",
+    "skills": ["html", "css"],
+    "importance": 2,
+    "isVerified": true,
+    "imageUrl": "/images/responsiveWebDesign.jpg",
+    "certificateUrl": "https://www.freecodecamp.org/certification/lucifer5094/responsive-web-design",
+    "duration": "300 hours"
+  },
+  "lastUpdated": "2025-07-31T21:06:29.930Z"
 }

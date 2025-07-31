@@ -885,7 +885,11 @@ export default function Home() {
                 label: "Projects",
                 icon: "🚀",
               },
-              { number: stats.years || "---", label: "Years", icon: "⏱️" },
+              {
+                number: stats.years || "---",
+                label: "Years",
+                icon: "⏱️"
+              },
               {
                 number: stats.technologies || "---",
                 label: "Technologies",
