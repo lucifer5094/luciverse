@@ -15,7 +15,17 @@ const nextConfig = {
     }
     return config
   },
-  // Basic setup only
-}
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'apod.nasa.gov',
+        port: '',
+        pathname: '/apod/image/**',
+      },
+    ],
+  },
+};
+
 
 module.exports = nextConfig
